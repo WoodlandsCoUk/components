@@ -24,6 +24,9 @@ module.exports = {
   default: 'default',
   context: {
     title: 'New woods for sale',
-    cards: items
+    cards: items,
+    listing: {
+      modifiers: ['grid', 'gray']
+    }
   }
 }

@@ -21,6 +21,9 @@ module.exports = {
   default: 'default',
   context: {
     title: 'Popular topics',
-    buttons: items
+    buttons: items,
+    listing: {
+      modifiers: ['gray']
+    }
   }
 }

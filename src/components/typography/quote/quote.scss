@@ -1,0 +1,19 @@
+.quote {
+    @apply p-6 bg-gray-light text-brand-red-dark font-bold text-center;
+
+    &__content {
+        @apply font-display leading-none tracking-wide text-2xl;
+
+        @screen md {
+            @apply text-3xl;
+        }
+    }
+
+    &__by {
+        @apply uppercase text-xs tracking-widest pt-10 mt-10 border-t border-gray;
+
+        cite {
+            @apply not-italic;
+        }
+    }
+}
