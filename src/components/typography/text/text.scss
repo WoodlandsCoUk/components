@@ -1,0 +1,7 @@
+@use 'sass:meta';
+
+.typography {
+    @apply max-w-screen-md mx-auto;
+
+    @include meta.load-css('typography');
+}

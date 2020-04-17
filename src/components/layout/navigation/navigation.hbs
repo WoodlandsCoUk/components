@@ -1,0 +1,8 @@
+<nav class="navigation">
+    <ul>
+        {{#each navigation.items}}
+            <li class="{{#ifeq ../active @key}}active{{/ifeq}}"><a href="{{@key}}">{{ this }}</a></li>
+        {{/each}}
+    </ul>
+
+</nav>

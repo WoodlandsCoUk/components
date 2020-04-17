@@ -1,0 +1,58 @@
+@use 'sass:map';
+
+$variants: (
+    'red': (
+        'text': 'white',
+        'bg': 'brand-red-dark',
+        'border': 'brand-red-dark'
+    ),
+    'green': (
+        'text': 'white',
+        'bg': 'brand-green-dark',
+        'border': 'brand-green-dark'
+    ),
+    'yellow': (
+        'text': 'brand-red-dark',
+        'bg': 'brand-yellow',
+        'border': 'brand-yellow'
+    ),
+);
+
+.button {
+    @apply flex justify-center w-full rounded-md px-5 py-4 uppercase text-sm font-medium tracking-widest;
+    @apply bg-white text-brand-red-dark border border-brand-red-dark;
+
+    &--inline {
+        @apply w-auto;
+    }
+
+    &--small {
+        @apply text-sm;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        // @apply border-brand-red text-brand-red;
+    }
+
+    &:focus {
+        @apply outline-none;
+    }
+
+    @each $prefix, $colors in $variants {
+        $text: map.get($colors, 'text');
+        $bg: map.get($colors, 'bg');
+        $border: map.get($colors, 'border');
+
+        &--#{$prefix} {
+            @apply text-#{$text} bg-#{$bg} border-#{$border};
+
+            &:hover,
+            &:focus,
+            &:active {
+                // @apply text-#{$text} bg-#{$bg};
+            }
+        }
+    }
+}

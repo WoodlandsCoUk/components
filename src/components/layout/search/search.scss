@@ -1,0 +1,15 @@
+.search {
+    @apply pb-16 pt-8 px-6 text-center bg-brand-red-dark;
+
+    label {
+        @apply block w-full text-3xl text-brand-yellow pb-12;
+    }
+
+    input {
+        @apply block w-full mb-6 rounded-md px-5 py-4 text-center text-brand-red-dark;
+
+        &::placeholder {
+            @apply italic text-brand-red-dark;
+        }
+    }
+}

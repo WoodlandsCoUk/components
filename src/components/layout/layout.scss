@@ -1,0 +1,16 @@
+@import "header/header";
+@import "footer/footer";
+@import "navigation/navigation";
+@import "search/search";
+
+body {
+    @apply bg-background text-text font-normal text-base;
+}
+
+main {
+    @apply relative mx-auto p-6 pt-32 max-w-screen-xl;
+
+    &.narrow {
+        @apply max-w-screen-md;
+    }
+}

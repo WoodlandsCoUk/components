@@ -1,0 +1,43 @@
+.social {
+    @apply inline-flex;
+
+    a {
+        @apply flex items-center justify-center h-12 w-12 p-2 rounded-full overflow-hidden border-2 border-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply border-brand-red-dark;
+
+            svg {
+                fill: theme('colors.brand-red.dark')
+            }
+        }
+    }
+
+    svg {
+        @apply fill-current;
+    }
+
+    &--medium {
+        a {
+            @apply h-24 w-24 p-3;
+        }
+    }
+
+    &--large {
+        a {
+            @apply h-32 w-32 p-4;
+        }
+    }
+}
+
+.listing--social {
+    ul {
+        @apply flex justify-center;
+    }
+
+    li {
+        @apply mx-2;
+    }
+}

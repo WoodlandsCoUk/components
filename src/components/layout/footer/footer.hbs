@@ -1,0 +1,16 @@
+{{ render '@layout-search' }}
+
+<footer class="footer">
+    {{ render '@social' }}
+
+    <p class="footer__org">{{ footer.org }}</p>
+
+    <p class="footer__copyright">Copyright © {{ footer.year }}</p>
+
+    <p class="footer__text">{{ footer.text }}</p>
+
+    <ul class="footer__navigation">
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+    </ul>
+</footer>

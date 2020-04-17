@@ -1,0 +1,82 @@
+{
+  "name": "woodlands-co-uk-components",
+  "version": "0.0.0",
+  "title": "Woodlands.co.uk Component Library",
+  "description": "Web components for Woodlands.co.uk using Fractal.",
+  "private": true,
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woodlands.co.uk/component-library.git"
+  },
+  "scripts": {
+    "start": "npm run development && fractal start --sync",
+    "build": "npm run production && fractal build",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "",
+    "lint": "npm run lint:js",
+    "lint:js": "npx standard --fix",
+    "deploy": "npm run build && push-dir --dir=build --branch=gh-pages --force",
+    "release": "standard-version --tag-prefix=",
+    "install": "npm run production"
+  },
+  "dependencies": {
+    "@frctl/fractal": "^1.2.1",
+    "alpinejs": "^2.2.5",
+    "cross-env": "^7.0.2",
+    "deepmerge": "^4.2.2",
+    "faker": "^4.1.0",
+    "hamburgers": "^1.1.3",
+    "heroicons": "^0.1.0",
+    "highlight.js": "^9.18.1",
+    "laravel-mix": "^5.0.4",
+    "simple-icons": "^2.9.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "push-dir": "^0.4.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "standard": "^14.3.3",
+    "standard-version": "^7.1.0",
+    "stylelint": "^13.3.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.17.0",
+    "stylelint-webpack-plugin": "^1.2.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "lint-staged": {
+    "*.(vue|js)": [
+      "npm run lint:js",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
+  }
+}

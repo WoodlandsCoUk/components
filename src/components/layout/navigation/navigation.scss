@@ -1,0 +1,49 @@
+$hamburger-hover-opacity: 0.5;
+$hamburger-layer-width: 32px;
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-color: theme('colors.brand-red.dark');
+$hamburger-types: (
+    spin,
+    squeeze
+);
+
+@import '~hamburgers/_sass/hamburgers/hamburgers';
+
+.navigation {
+    @apply flex;
+
+    ul {
+        @apply fixed inset-0 z-30 flex flex-col justify-start items-center bg-brand-red px-6 mt-24 overflow-hidden;
+
+        transform-origin: top;
+        transform: translateY(-100%);
+        transition: transform 250ms ease-out;
+
+        body.navigation--shown & {
+            transform: translateY(0);
+        }
+    }
+
+    li {
+        @apply relative;
+
+        &.active a {
+            @apply text-brand-yellow-light;
+        }
+    }
+
+    a {
+        @apply block text-4xl py-2 text-brand-yellow font-bold;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply text-brand-yellow-light;
+        }
+    }
+
+    &__icon {
+        //
+    }
+}

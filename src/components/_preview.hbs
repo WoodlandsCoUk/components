@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ _target.title }} | Component Library</title>
+
+    <link media="all" rel="stylesheet" href="{{ path '/css/site.css' }}" />
+</head>
+<body>
+
+    {{{ yield }}}
+
+    <script src="{{ path '/js/manifest.js' }}"></script>
+    <script src="{{ path '/js/vendor.js' }}"></script>
+    <script src="{{ path '/js/site.js' }}"></script>
+
+</body>
+</html>

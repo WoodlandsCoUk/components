@@ -1,0 +1,27 @@
+.header {
+    @apply fixed inset-x-0 z-40 flex flex justify-between items-center p-6 h-24 text-white bg-brand-red;
+
+    @screen sm {
+        //
+    }
+
+    &__logo {
+        @apply font-display text-4xl text-center -mb-1;
+
+        a {
+            &:hover,
+            &:focus,
+            &:active {
+                @apply text-brand-red-dark;
+            }
+        }
+    }
+
+    &__navigation {
+        @apply order-first;
+    }
+
+    &__search {
+        @apply order-last bg-brand-red-dark h-8 w-8;
+    }
+}
