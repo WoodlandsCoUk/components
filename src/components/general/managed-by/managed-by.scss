@@ -1,0 +1,23 @@
+.managed-by {
+    @apply p-6 max-w-sm mx-auto text-center;
+
+    &__title {
+        @apply mb-3 text-brand-green uppercase text-xs tracking-widest font-bold;
+
+        strong {
+            @apply block normal-case font-normal text-base;
+        }
+    }
+
+    &__avatar {
+        @apply block mx-auto rounded-full w-24 h-24 overflow-hidden;
+    }
+
+    &__contact {
+        @apply mt-4 pt-6 border-t border-gray;
+
+        a {
+            @apply underline text-brand-red-dark;
+        }
+    }
+}
