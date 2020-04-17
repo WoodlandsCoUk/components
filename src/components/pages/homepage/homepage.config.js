@@ -8,6 +8,9 @@ module.exports = {
       navigation: {
         active: 'page-homepage'
       }
+    },
+    blog: {
+      title: 'Blogs, videos & guides'
     }
   }
 }

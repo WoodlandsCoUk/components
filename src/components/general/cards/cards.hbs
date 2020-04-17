@@ -1,0 +1,19 @@
+<div class="{{modifier _self.baseHandle card.modifiers}}">
+  <div class="card__media">
+    <img src="{{ card.media }}" />
+  </div>
+  <div class="card__body">
+    <h3 class="card__title">{{ card.title }}</h3>
+    <div class="card__content">
+      {{ card.text }}
+    </div>
+    {{#if card.category}}
+    <p class="card__category">{{ card.category }}</p>
+    {{/if}}
+  </div>
+  {{#if card.banner}}
+  <div class="card__banner">
+    {{ card.banner }}
+  </div>
+  {{/if}}
+</div>

@@ -31,40 +31,40 @@
 }
 
 .colour__section--red {
-    .colour__item {
+    .colour__item > div {
         @apply bg-brand-red;
     }
-    .colour__item--dark {
+    .colour__item--dark > div {
         @apply bg-brand-red-dark;
     }
 }
 
 .colour__section--green {
-    .colour__item {
+    .colour__item > div {
         @apply bg-brand-green;
     }
-    .colour__item--dark {
+    .colour__item--dark > div {
         @apply bg-brand-green-dark;
     }
 }
 
 .colour__section--yellow {
-    .colour__item {
+    .colour__item > div {
         @apply bg-brand-yellow;
     }
-    .colour__item--light {
+    .colour__item--light > div {
         @apply bg-brand-yellow-light;
     }
 }
 
 .colour__section--gray {
-    .colour__item {
+    .colour__item > div {
         @apply bg-gray;
     }
-    .colour__item--dark {
+    .colour__item--dark > div {
         @apply bg-gray-dark;
     }
-    .colour__item--light {
+    .colour__item--light > div {
         @apply bg-gray-light;
     }
 }

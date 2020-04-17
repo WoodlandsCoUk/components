@@ -1,0 +1,12 @@
+<div class="listing listing--gray listing--grid">
+  <div class="inner">
+    <h2 class="listing__title">{{ title }}</h2>
+    <ul>
+      {{#each cards }}
+        <li>
+            {{ render '@card' this merge=true }}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

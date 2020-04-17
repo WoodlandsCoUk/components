@@ -27,7 +27,7 @@ $variants: (
     }
 
     &--small {
-        @apply text-sm;
+        @apply text-sm normal-case;
     }
 
     &:hover,

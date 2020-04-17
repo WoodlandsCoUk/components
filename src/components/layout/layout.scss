@@ -2,13 +2,22 @@
 @import "footer/footer";
 @import "navigation/navigation";
 @import "search/search";
+@import "listing";
 
 body {
     @apply bg-background text-text font-normal text-base;
 }
 
+.inner {
+    @apply p-6;
+
+    &.contained {
+        @apply mx-auto max-w-xl;
+    }
+}
+
 main {
-    @apply relative mx-auto p-6 pt-32 max-w-screen-xl;
+    @apply relative mx-auto pt-24 max-w-screen-xl;
 
     &.narrow {
         @apply max-w-screen-md;

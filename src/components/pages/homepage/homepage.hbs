@@ -1,7 +1,9 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    Homepage
+    {{ render '@components-cards' }}
+    {{ render '@components-buttons' }}
+    {{ render '@components-cards' blog merge=true }}
 </main>
 
 {{ render '@layout-footer' }}

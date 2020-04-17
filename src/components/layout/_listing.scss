@@ -1,0 +1,46 @@
+.listing {
+    @apply relative;
+
+    ul {
+        //
+    }
+
+    li {
+        @apply mb-4;
+    }
+
+    &__title {
+        @apply text-brand-green font-bold text-3xl pb-8 text-center;
+
+        &--small {
+            @apply text-sm uppercase;
+        }
+    }
+
+    &--gray {
+        @apply bg-gray-light;
+    }
+
+    &--yellow {
+        @apply bg-brand-yellow-light;
+    }
+
+    &--grid {
+        ul {
+            @apply grid grid-cols-1 gap-4;
+
+            @screen md {
+                @apply grid-cols-2;
+            }
+            @screen lg {
+                @apply grid-cols-3;
+            }
+        }
+
+        li {
+            > * {
+                @apply h-full;
+            }
+        }
+    }
+}

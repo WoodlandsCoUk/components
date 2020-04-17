@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ['serif'],
-      body: ['sans-serif']
+      display: ['FreightNeo Pro Bold', 'serif'],
+      body: ['Sofia Pro', 'sans-serif']
     },
     colors: {
       transparent: 'transparent',

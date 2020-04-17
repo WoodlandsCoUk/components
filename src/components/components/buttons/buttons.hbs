@@ -1,0 +1,12 @@
+<div class="listing listing--yellow">
+  <div class="inner contained">
+    <h2 class="listing__title listing__title--small">{{ title }}</h2>
+    <ul>
+      {{#each buttons }}
+        <li>
+            {{ render '@button' this merge=true }}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

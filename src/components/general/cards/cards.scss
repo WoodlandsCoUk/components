@@ -1,0 +1,33 @@
+.card {
+    @apply flex flex-col relative rounded-md overflow-hidden border border-gray bg-white mx-auto max-w-md;
+
+    &__media {
+        @apply relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+
+        > * {
+            @apply absolute top-0 right-0 w-full h-full;
+        }
+    }
+
+    &__body {
+        @apply flex flex-col h-full p-5;
+    }
+
+    &__title {
+        @apply mb-2 text-brand-red-dark font-bold;
+    }
+
+    &__content {
+        @apply text-sm;
+    }
+
+    &__category {
+        @apply mt-2 uppercase text-brand-green font-bold text-sm tracking-wide;
+    }
+
+    &__banner {
+        @apply absolute top-0 right-0 bg-white rounded-bl-md px-4 py-3 uppercase text-brand-green font-bold text-sm tracking-wide;;
+    }
+}
