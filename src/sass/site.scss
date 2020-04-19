@@ -3,11 +3,17 @@
 // Site Configuration.
 @import "config";
 
-// General UI Components.
-@import "../components/general/general";
+// DNA of the components.
+@import "../components/dna/dna";
 
-// Layout Components.
-@import "../components/layout/layout";
+// Utilities.
+@import "../components/utilities/utilities";
 
-//  Typography Components.
-@import "../components/typography/typography";
+// Blocks.
+@import "../components/blocks/blocks";
+
+// Components.
+@import "../components/components/components";
+
+// Global Components.
+@import "../components/global/global";

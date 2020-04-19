@@ -1,2 +1,2 @@
-require('../components/layout/search/search')
-require('../components/layout/navigation/navigation')
+require('../components/global/search/search')
+require('../components/global/navigation/navigation')

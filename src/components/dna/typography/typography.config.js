@@ -1,6 +1,6 @@
 module.exports = {
   order: 2,
-  title: 'Text',
+  title: 'Typography',
   handle: 'typography-text',
   status: 'wip',
   default: 'default',

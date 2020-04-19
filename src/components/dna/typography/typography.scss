@@ -3,5 +3,5 @@
 .typography {
     @apply max-w-screen-md mx-auto;
 
-    @include meta.load-css('typography');
+    @include meta.load-css('text');
 }
