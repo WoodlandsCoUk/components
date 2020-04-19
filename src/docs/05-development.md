@@ -1,7 +1,7 @@
 ---
-order: 4
+order: 5
 title: Development
-status: ready
+status: draft
 ---
 ## Running the project
 
@@ -20,7 +20,7 @@ The [Webpack](https://webpack.js.org) configuration applies plugins and can be f
 Assets can be compiled for development or production. They can be *watched* for hot reloading
 while developing. Below are the commands you should use;
 
-```cli
+```
 npm run dev
 npm run production
 npm run watch

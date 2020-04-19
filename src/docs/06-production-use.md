@@ -1,7 +1,7 @@
 ---
-order: 5
+order: 6
 title: Production Use
-status: ready
+status: draft
 ---
 To use the **assets** within your Laravel or Lumen application, you should
 require it as a dependency in your `package.json`.
@@ -10,7 +10,7 @@ require it as a dependency in your `package.json`.
 "dependencies": {
     "woodlands-co-uk-components":
         "git+https://github.com/woodlands.co.uk/components.git"
-},
+}
 ```
 
 After the dependency is installed, the compiled production assets are ready to be
