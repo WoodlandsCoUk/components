@@ -3,11 +3,5 @@
 
     <button type="button" class="header__search js--search"></button>
 
-    <button class="hamburger hamburger--squeeze header__navigation js--navigation" type="button">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
+    {{ render '@layout-navigation' navigation merge=true }}
 </header>
-
-{{ render '@layout-navigation' navigation merge=true }}

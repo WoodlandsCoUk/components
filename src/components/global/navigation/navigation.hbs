@@ -1,8 +1,15 @@
-<nav class="navigation">
-    <ul>
-        {{#each navigation.items}}
-            <li class="{{#ifeq ../active @key}}active{{/ifeq}}"><a href="{{@key}}">{{ this }}</a></li>
-        {{/each}}
-    </ul>
+<div class="navigation">
+    <nav class="navigation__list">
+        <ul>
+            {{#each navigation.items}}
+                <li class="navigation__item {{#ifeq ../active @key}}navigation__item--active{{/ifeq}}"><a href="{{@key}}">{{ this }}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
 
-</nav>
+    <button class="hamburger hamburger--squeeze navigation__button js--navigation" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</div>
