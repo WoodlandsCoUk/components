@@ -11,6 +11,11 @@ module.exports = {
     },
     blog: {
       title: 'Blogs, videos & guides'
+    },
+    search: {
+      search: {
+        modifiers: ['alt']
+      }
     }
   }
 }

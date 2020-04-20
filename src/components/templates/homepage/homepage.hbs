@@ -5,6 +5,10 @@
         {{ render '@block--hero' hero }}
     {{/ @section }}
 
+    {{#> @section modifiers='bg-yellow,narrow' }}
+        {{ render '@block--search' search merge=true }}
+    {{/ @section }}
+
     {{#> @section }}
         {{ render '@components--cards' }}
     {{/ @section }}

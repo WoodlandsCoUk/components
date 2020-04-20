@@ -12,8 +12,29 @@ module.exports = {
     button: {
       button: {
         text: 'Search woods for sale',
-        modifiers: ['red']
+        modifiers: ['yellow']
       }
     }
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'Default'
+    },
+    {
+      name: 'alt',
+      label: 'Alternative',
+      context: {
+        search: {
+          modifiers: ['alt']
+        },
+        button: {
+          button: {
+            text: 'Search woods for sale',
+            modifiers: ['green']
+          }
+        }
+      }
+    }
+  ]
 }

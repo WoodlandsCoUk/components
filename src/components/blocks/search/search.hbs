@@ -1,7 +1,7 @@
-<form action="" method="GET" class="form search">
+<form action="" method="GET" class="form {{modifier 'search' search.modifiers}}">
     <div class="form__field">
         <label for="search__search">{{ search.label }}</label>
         <input type="text" id="search__search" name="q" placeholder="{{ search.placeholder }}" />
     </div>
-    <button type="submit" class="button button--yellow">Search woods for sale</button>
+    {{ render '@button' button merge=true }}
 </form>

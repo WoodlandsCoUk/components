@@ -2,7 +2,7 @@
     @apply pb-16 pt-8 text-center bg-brand-red-dark;
 
     label {
-        @apply block w-full text-3xl text-brand-yellow pb-12;
+        @apply block w-full text-3xl text-brand-yellow pb-12 font-bold;
     }
 
     input {
@@ -10,6 +10,20 @@
 
         &::placeholder {
             @apply italic text-brand-red-dark;
+        }
+    }
+
+    &--alt {
+        @apply bg-brand-yellow-light pb-8;
+
+        label {
+            @apply text-brand-red-dark hidden;
+        }
+
+        input {
+            &::placeholder {
+                @apply italic text-brand-green-dark;
+            }
         }
     }
 }
