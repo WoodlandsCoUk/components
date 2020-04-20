@@ -16,7 +16,7 @@ module.exports = {
   order: 10,
   title: 'Button Listing',
   label: 'Button Listing',
-  handle: 'components-buttons',
+  handle: 'components--buttons',
   status: 'wip',
   default: 'default',
   context: {

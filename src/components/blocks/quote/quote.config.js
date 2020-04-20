@@ -3,7 +3,7 @@ const faker = require('faker')
 module.exports = {
   order: 4,
   title: 'Quotes',
-  handle: 'typography-quote',
+  handle: 'block--quote',
   status: 'wip',
   default: 'default',
   context: {

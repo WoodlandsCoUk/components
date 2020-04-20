@@ -1,0 +1,11 @@
+<div class="{{modifier 'gallery' gallery.modifiers}}">
+    <div class="inner">
+      <ul class="gallery__list">
+        {{#each gallery }}
+          <li class="gallery__item">
+              {{ render '@media' this merge=true }}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+</div>

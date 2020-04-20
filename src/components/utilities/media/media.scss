@@ -1,0 +1,33 @@
+.media {
+    @apply relative;
+
+    &__content {
+        @apply w-full;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+
+        > * {
+            @apply absolute top-0 right-0 w-full h-full;
+        }
+    }
+
+    &--image {
+        //
+    }
+
+    &--video {
+        //
+    }
+
+    &--wide {
+        .media__content {
+            padding-bottom: 33.33%;
+        }
+    }
+
+    &--square {
+        .media__content {
+            padding-bottom: 100%;
+        }
+    }
+}

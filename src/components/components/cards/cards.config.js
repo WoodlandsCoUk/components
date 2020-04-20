@@ -19,7 +19,7 @@ module.exports = {
   order: 10,
   title: 'Cards Listing',
   label: 'Cards Listing',
-  handle: 'components-cards',
+  handle: 'components--cards',
   status: 'wip',
   default: 'default',
   context: {

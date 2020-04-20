@@ -3,7 +3,7 @@ const faker = require('faker')
 module.exports = {
   order: 10,
   title: 'Managed By',
-  handle: 'managed-by',
+  handle: 'block--managed-by',
   status: 'wip',
   default: 'default',
   context: {

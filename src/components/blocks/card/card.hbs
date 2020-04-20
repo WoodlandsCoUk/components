@@ -1,7 +1,5 @@
-<div class="{{modifier _self.baseHandle card.modifiers}}">
-  <div class="card__media">
-    <iframe src="{{ card.video }}"></iframe>
-  </div>
+<div class="{{modifier 'card' quote.modifiers}}">
+  {{ render '@media' card.media merge=true}}
   <div class="card__body">
     <h3 class="card__title">{{ card.title }}</h3>
     <div class="card__content">

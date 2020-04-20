@@ -4,7 +4,7 @@ module.exports = {
   order: 10,
   title: 'Cards',
   label: 'Cards',
-  handle: 'card',
+  handle: 'block--card',
   status: 'wip',
   default: 'default',
   context: {
