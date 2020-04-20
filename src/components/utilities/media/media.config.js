@@ -1,3 +1,5 @@
+const faker = require('faker')
+
 const make = 4
 const items = []
 
@@ -13,7 +15,7 @@ module.exports = {
   default: 'default',
   context: {
     media: {
-      src: 'http://placehold.it/450x300/333'
+      src: faker.image.imageUrl(400, 225, 'nature', true)
     }
   },
   variants: [

@@ -9,8 +9,10 @@ for (let i = 0; i < make; i++) {
       title: 'Default Card',
       text: faker.lorem.paragraph(),
       category: faker.address.county(),
-      media: 'http://placehold.it/450x300/333', // faker.image.abstract(),
-      banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number())
+      media: {
+        src: faker.image.imageUrl(400, 225, 'nature', true)
+      },
+      banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3)
     }
   })
 }

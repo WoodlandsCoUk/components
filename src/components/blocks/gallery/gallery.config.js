@@ -1,3 +1,5 @@
+const faker = require('faker')
+
 const make = 4
 const items = []
 const squareItems = []
@@ -5,7 +7,7 @@ const squareItems = []
 for (let i = 0; i < make; i++) {
   items.push({
     media: {
-      src: 'http://placehold.it/450x300/333' // faker.image.abstract(),
+      src: faker.image.imageUrl(400, 225, 'nature', true)
     }
   })
 }
@@ -13,7 +15,7 @@ for (let i = 0; i < make; i++) {
 for (let i = 0; i < make; i++) {
   squareItems.push({
     media: {
-      src: 'http://placehold.it/400x400/333', // faker.image.abstract(),
+      src: faker.image.imageUrl(400, 225, 'nature', true),
       modifiers: ['square']
     }
   })

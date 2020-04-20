@@ -16,6 +16,12 @@ module.exports = {
       search: {
         modifiers: ['alt']
       }
+    },
+    instagram: {
+      button: {
+        text: 'Follow us on Instagram',
+        modifiers: ['green']
+      }
     }
   }
 }

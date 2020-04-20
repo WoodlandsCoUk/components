@@ -12,7 +12,9 @@ module.exports = {
       title: 'Default Card',
       text: faker.lorem.paragraph(),
       category: faker.address.county(),
-      media: 'http://placehold.it/450x300/333' // faker.image.abstract(),
+      media: {
+        src: faker.image.imageUrl(400, 225, 'nature', true)
+      }
     }
   },
   variants: [
@@ -28,7 +30,7 @@ module.exports = {
           title: 'Card with Banner',
           text: faker.lorem.paragraph(),
           category: faker.address.county(),
-          banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number())
+          banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3)
         }
       }
     },

@@ -8,14 +8,14 @@ $backgrounds: (
 );
 
 .section {
-    @apply relative bg-gray py-6 px-3;
+    @apply relative bg-gray py-12 px-3;
 
     &__inner {
         @apply mx-auto max-w-screen-xl;
     }
 
     &__title {
-        @apply text-center mt-3 mb-6 text-3xl font-bold;
+        @apply text-center mt-3 mb-6 text-3xl font-bold text-brand-green-dark;
 
         &--small {
             @apply text-sm uppercase;
@@ -37,6 +37,10 @@ $backgrounds: (
     @each $prefix, $colors in $backgrounds {
         &--bg-#{$prefix} {
             @apply bg-#{$colors};
+
+            & + .section--bg-#{$prefix} {
+                @apply pt-0 -mt-6;
+            }
         }
     }
 }

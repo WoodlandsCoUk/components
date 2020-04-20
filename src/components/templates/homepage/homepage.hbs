@@ -24,6 +24,14 @@
     {{#> @section modifiers='narrow' }}
         {{ render '@block--quote' }}
     {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow' }}
+        {{ render '@block--gallery--square' instagram merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow' }}
+        {{ render '@button' instagram instagram=true }}
+    {{/ @section }}
 </main>
 
 {{ render '@layout-footer' }}
