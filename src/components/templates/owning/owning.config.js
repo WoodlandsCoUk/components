@@ -8,6 +8,9 @@ module.exports = {
       navigation: {
         active: 'page-owning'
       }
+    },
+    hero: {
+      text: 'Find out how to become a woodland owner.'
     }
   }
 }

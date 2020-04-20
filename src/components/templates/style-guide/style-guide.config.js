@@ -3,5 +3,9 @@ module.exports = {
   title: 'Style Guide',
   handle: 'page-style-guide',
   status: 'prototype',
-  context: {}
+  context: {
+    hero: {
+      text: 'Woodlands.co.uk Style Guide.'
+    }
+  }
 }

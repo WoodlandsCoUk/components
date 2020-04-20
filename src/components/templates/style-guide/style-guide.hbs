@@ -1,7 +1,14 @@
 {{ render '@layout-header' header merge=true }}
 
 <main class="narrow">
-    {{ render '@typography-text' }}
+    {{#> @section modifiers='bg-red' }}
+        {{ render '@block--hero' hero }}
+    {{/ @section }}
+
+    {{#> @section }}
+        {{ render '@typography-text' }}
+    {{/ @section }}
+
 </main>
 
 {{ render '@layout-footer' }}

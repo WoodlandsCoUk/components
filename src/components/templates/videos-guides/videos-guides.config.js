@@ -1,6 +1,7 @@
 module.exports = {
   order: 4,
   title: 'Videos & Guides',
+  label: 'Videos & Guides',
   handle: 'page-videos-guides',
   status: 'prototype',
   context: {
@@ -8,6 +9,9 @@ module.exports = {
       navigation: {
         active: 'page-videos-guides'
       }
+    },
+    hero: {
+      text: 'Videos & Guides'
     }
   }
 }

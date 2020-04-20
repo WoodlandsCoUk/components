@@ -8,6 +8,9 @@ module.exports = {
       navigation: {
         active: 'page-about'
       }
+    },
+    hero: {
+      text: 'Find out more information and how to get in touch.'
     }
   }
 }

@@ -1,7 +1,13 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    Videos &#38; Guides
+    {{#> @section modifiers='bg-red' }}
+        {{ render '@block--hero' hero }}
+    {{/ @section }}
+
+    {{#> @section modifiers='narrow' }}
+        {{ render '@block--quote' }}
+    {{/ @section }}
 </main>
 
 {{ render '@layout-footer' }}

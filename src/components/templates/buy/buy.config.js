@@ -8,6 +8,9 @@ module.exports = {
       navigation: {
         active: 'page-buy'
       }
+    },
+    hero: {
+      text: 'Information about buying a woodland.'
     }
   }
 }
