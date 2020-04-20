@@ -10,7 +10,15 @@ $backgrounds: (
     @apply relative bg-gray py-6 px-3;
 
     &__inner {
-        @apply mx-auto max-w-screen-lg;
+        @apply mx-auto max-w-screen-xl;
+    }
+
+    &__title {
+        @apply text-center mt-3 mb-6 text-3xl font-bold;
+
+        &--small {
+            @apply text-sm uppercase;
+        }
     }
 
     &--narrow {

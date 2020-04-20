@@ -1,10 +1,7 @@
-<div class="{{modifier 'listing' listing.modifiers}}">
-  <h2 class="listing__title">{{ title }}</h2>
-  <ul>
-    {{#each cards }}
-      <li>
-          {{ render '@block--card' this merge=true }}
-      </li>
-    {{/each}}
-  </ul>
-</div>
+<h2 class="section__title">{{ title }}</h2>
+
+{{#> @grid }}
+  {{#each cards }}
+    {{ render '@block--card' this merge=true }}
+  {{/each}}
+{{/ @grid }}

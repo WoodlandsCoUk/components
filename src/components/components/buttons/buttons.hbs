@@ -1,10 +1,9 @@
-<div class="{{modifier 'listing' listing.modifiers}}">
-  <h2 class="listing__title listing__title--small">{{ title }}</h2>
-  <ul class="list list--unstyled list--spaced">
-    {{#each buttons }}
-      <li>
-          {{ render '@button' this merge=true }}
-      </li>
-    {{/each}}
-  </ul>
-</div>
+<h2 class="section__title section__title--small">{{ title }}</h2>
+
+<ul class="list list--unstyled list--spaced">
+  {{#each buttons }}
+    <li>
+        {{ render '@button' this merge=true }}
+    </li>
+  {{/each}}
+</ul>
