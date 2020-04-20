@@ -1,7 +1,7 @@
 const faker = require('faker')
 
 module.exports = {
-  order: 13,
+  order: 22,
   title: 'Call To Action',
   label: 'Call To Action',
   handle: 'block--cta',

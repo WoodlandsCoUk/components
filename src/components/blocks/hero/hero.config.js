@@ -1,5 +1,5 @@
 module.exports = {
-  order: 12,
+  order: 20,
   title: 'Hero',
   handle: 'block--hero',
   status: 'wip',
