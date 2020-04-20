@@ -4,22 +4,37 @@ $variants: (
     'red': (
         'text': 'white',
         'bg': 'brand-red-dark',
-        'border': 'brand-red-dark'
+        'border': 'brand-red-dark',
+        'hover': (
+            'text': 'white',
+            'bg': 'brand-red',
+            'border': 'brand-red',
+        )
     ),
     'green': (
         'text': 'white',
         'bg': 'brand-green-dark',
-        'border': 'brand-green-dark'
+        'border': 'brand-green-dark',
+        'hover': (
+            'text': 'brand-green-dark',
+            'bg': 'white',
+            'border': 'brand-green-dark',
+        )
     ),
     'yellow': (
         'text': 'brand-red-dark',
         'bg': 'brand-yellow',
-        'border': 'brand-yellow'
+        'border': 'brand-yellow',
+        'hover': (
+            'text': 'brand-red-dark',
+            'bg': 'brand-yellow-light',
+            'border': 'brand-yellow',
+        )
     ),
 );
 
 .button {
-    @apply flex justify-center w-full rounded-md px-5 py-4 uppercase text-sm font-medium tracking-widest;
+    @apply flex justify-center w-full rounded-md px-5 py-4 uppercase text-sm font-bold tracking-widest;
     @apply bg-white text-brand-red-dark border border-brand-red-dark;
 
     &--inline {
@@ -33,7 +48,7 @@ $variants: (
     &:hover,
     &:focus,
     &:active {
-        // @apply border-brand-red text-brand-red;
+        @apply border-brand-red text-brand-red;
     }
 
     &:focus {
@@ -44,6 +59,7 @@ $variants: (
         $text: map.get($colors, 'text');
         $bg: map.get($colors, 'bg');
         $border: map.get($colors, 'border');
+        $hover: map.get($colors, 'hover');
 
         &--#{$prefix} {
             @apply text-#{$text} bg-#{$bg} border-#{$border};
@@ -51,7 +67,11 @@ $variants: (
             &:hover,
             &:focus,
             &:active {
-                // @apply text-#{$text} bg-#{$bg};
+                $text: map.get($hover, 'text');
+                $bg: map.get($hover, 'bg');
+                $border: map.get($hover, 'border');
+
+                @apply text-#{$text} bg-#{$bg} border-#{$border};
             }
         }
     }
