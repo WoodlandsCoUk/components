@@ -1,14 +1,6 @@
-// body {
-//     @apply bg-background text-text font-normal text-base;
-// }
-
-// .inner {
-//     @apply p-6;
-
-//     &.contained {
-//         @apply mx-auto max-w-xl;
-//     }
-// }
+body {
+    @apply bg-background text-text font-normal text-base;
+}
 
 main {
     @apply relative pt-24;
