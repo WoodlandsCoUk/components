@@ -29,8 +29,8 @@
     <div class="item__section">
         <div class="item__item">
             <p>Unordered List</p>
-            <div class="typography">
-                <ul>
+            <div>
+                <ul class="list">
                     {{#each list }}
                     <li>{{ this }}</li>
                     {{/each}}
@@ -39,8 +39,8 @@
         </div>
         <div class="item__item">
             <p>Ordered List</p>
-            <div class="typography">
-                <ol>
+            <div>
+                <ul class="list list--ordred">
                     {{#each list }}
                     <li>{{ this }}</li>
                     {{/each}}
@@ -49,8 +49,8 @@
         </div>
         <div class="item__item">
             <p>Unstyled List</p>
-            <div class="typography">
-                <ul class="unstyled">
+            <div>
+                <ul class="list list--unstyled">
                     {{#each list }}
                     <li>{{ this }}</li>
                     {{/each}}

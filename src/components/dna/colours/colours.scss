@@ -6,7 +6,7 @@
     }
 
     &__item {
-        @apply flex flex-col-reverse align-top;
+        @apply flex flex-col-reverse justify-end;
 
         > div {
             @apply w-full h-16;
