@@ -1,24 +1,6 @@
 .heading {
-    @apply p-6;
-
-    &__title {
-        @apply text-xl -mb-2 pb-2 border-b border-gray;
-    }
-
     &__item {
         @apply flex flex-col-reverse justify-end;
-
-        > *:first-child {
-            @apply mt-2;
-        }
-
-        > ul {
-            @apply list-none p-0;
-
-            li {
-                @apply m-0;
-            }
-        }
 
         > div {
             @apply ml-0;

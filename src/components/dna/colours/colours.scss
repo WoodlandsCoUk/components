@@ -1,31 +1,7 @@
 .colour {
-    @apply p-6;
-
-    &__title {
-        @apply text-xl -mb-2 pb-2 border-b border-gray;
-    }
-
     &__item {
-        @apply flex flex-col-reverse justify-end;
-
         > div {
             @apply w-full h-16;
-        }
-
-        h4 {
-            @apply mt-2;
-        }
-    }
-
-    > div {
-        @apply grid grid-cols-1 gap-4;
-
-        @screen md {
-            @apply grid-cols-2;
-        }
-
-        @screen lg {
-            @apply grid-cols-4;
         }
     }
 }
