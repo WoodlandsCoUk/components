@@ -1,16 +1,21 @@
-{{ render '@layout-search' }}
+
+{{#> @section modifiers='bg-red,narrow' }}
+    {{ render '@block--search' }}
+{{/ @section }}
 
 <footer class="footer">
-    {{ render '@social' }}
+    <div class="footer__inner">
+        {{ render '@social' }}
 
-    <p class="footer__org">{{ footer.org }}</p>
+        <p class="footer__org">{{ footer.org }}</p>
 
-    <p class="footer__copyright">Copyright © {{ footer.year }}</p>
+        <p class="footer__copyright">Copyright © {{ footer.year }}</p>
 
-    <p class="footer__text">{{ footer.text }}</p>
+        <p class="footer__text">{{ footer.text }}</p>
 
-    <ul class="footer__navigation">
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-    </ul>
+        <ul class="footer__navigation">
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </div>
 </footer>

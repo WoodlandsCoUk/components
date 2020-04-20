@@ -1,10 +1,21 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    {{ render '@components--cards' }}
-    {{ render '@components--buttons' }}
-    {{ render '@components--cards' blog merge=true }}
-    {{ render '@block--quote' }}
+    {{#> @section }}
+        {{ render '@components--cards' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow,narrow' }}
+        {{ render '@components--buttons' }}
+    {{/ @section }}
+
+    {{#> @section }}
+        {{ render '@components--cards' blog merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='narrow' }}
+        {{ render '@block--quote' }}
+    {{/ @section }}
 </main>
 
 {{ render '@layout-footer' }}

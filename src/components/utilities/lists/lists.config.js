@@ -6,7 +6,6 @@ for (let i = 1; i < make + 1; i++) {
 }
 
 module.exports = {
-  order: 3,
   title: 'Lists',
   label: 'Lists',
   handle: 'list',

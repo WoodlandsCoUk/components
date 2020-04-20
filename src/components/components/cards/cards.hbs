@@ -1,12 +1,10 @@
 <div class="{{modifier 'listing' listing.modifiers}}">
-  <div class="inner">
-    <h2 class="listing__title">{{ title }}</h2>
-    <ul>
-      {{#each cards }}
-        <li>
-            {{ render '@block--card' this merge=true }}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
+  <h2 class="listing__title">{{ title }}</h2>
+  <ul>
+    {{#each cards }}
+      <li>
+          {{ render '@block--card' this merge=true }}
+      </li>
+    {{/each}}
+  </ul>
 </div>

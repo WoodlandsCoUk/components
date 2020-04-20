@@ -1,19 +1,15 @@
-body {
-    @apply bg-background text-text font-normal text-base;
-}
+// body {
+//     @apply bg-background text-text font-normal text-base;
+// }
 
-.inner {
-    @apply p-6;
+// .inner {
+//     @apply p-6;
 
-    &.contained {
-        @apply mx-auto max-w-xl;
-    }
-}
+//     &.contained {
+//         @apply mx-auto max-w-xl;
+//     }
+// }
 
 main {
-    @apply relative mx-auto pt-24 max-w-screen-xl;
-
-    &.narrow {
-        @apply max-w-screen-md;
-    }
+    @apply relative pt-24;
 }

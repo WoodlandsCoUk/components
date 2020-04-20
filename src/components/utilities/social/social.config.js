@@ -3,7 +3,6 @@ const youtube = require('simple-icons/icons/youtube')
 const instagram = require('simple-icons/icons/instagram')
 
 module.exports = {
-  order: 2,
   title: 'Social Media Icons',
   label: 'Social Media',
   handle: 'social',

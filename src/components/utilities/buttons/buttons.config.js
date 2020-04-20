@@ -1,5 +1,4 @@
 module.exports = {
-  order: 1,
   title: 'Buttons',
   label: 'Buttons',
   handle: 'button',

@@ -7,6 +7,10 @@ module.exports = {
     uppercase: (str) => str.toUpperCase(),
     json: (json) => JSON.stringify(json),
     modifier: (prefix, modifiers) => {
+      if (typeof modifiers === 'string' || modifiers instanceof String) {
+        modifiers = modifiers.split(',')
+      }
+
       return (modifiers || []).map((modifier) => {
         return `${prefix}--${modifier}`
       }).concat([prefix]).map((e, i, arr) => i === 0 ? arr[arr.length - 1] : arr[i - 1]).join(' ')

@@ -12,4 +12,10 @@
     li {
         @apply m-0;
     }
+
+    &--spaced {
+        li {
+            @apply my-4;
+        }
+    }
 }

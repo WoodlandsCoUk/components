@@ -1,7 +1,7 @@
 module.exports = {
   order: 4,
   title: 'Search',
-  handle: 'layout-search',
+  handle: 'block--search',
   status: 'ready',
   default: 'default',
   context: {
