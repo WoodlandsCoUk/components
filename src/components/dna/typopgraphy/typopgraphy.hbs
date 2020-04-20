@@ -1,0 +1,61 @@
+<div class="item">
+    <h2 class="item__title">Fonts</h2>
+    <div class="item__section item__section--wide">
+        <div class="item__item item__item--display">
+            <ul>
+                <li><strong>Font</strong>: <code>FreightNeo Pro Bold</code></li>
+                <li><strong>Resource</strong>: <a href="https://fonts.adobe.com/fonts/freight-neo">Adobe Fonts</a></li>
+            </ul>
+            <div>
+                <h1>Display Font</h1>
+                <p>{{ text }}</p>
+            </div>
+        </div>
+        <div class="item__item item__item--body">
+            <ul>
+                <li><strong>Font</strong>: <code>Sofia Pro</code></li>
+                <li><strong>Resource</strong>: <a href="https://fonts.adobe.com/fonts/sofia">Adobe Fonts</a></li>
+            </ul>
+            <div>
+                <h1>Body Font</h1>
+                <p>{{ text }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="item">
+    <h2 class="item__title">Lists</h2>
+    <div class="item__section">
+        <div class="item__item">
+            <p>Unordered List</p>
+            <div class="typography">
+                <ul>
+                    {{#each list }}
+                    <li>{{ this }}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="item__item">
+            <p>Ordered List</p>
+            <div class="typography">
+                <ol>
+                    {{#each list }}
+                    <li>{{ this }}</li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+        <div class="item__item">
+            <p>Unstyled List</p>
+            <div class="typography">
+                <ul class="unstyled">
+                    {{#each list }}
+                    <li>{{ this }}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,11 +2,11 @@
     @apply p-6;
 
     &__title {
-        @apply text-xl mb-2;
+        @apply text-xl -mb-2 pb-2 border-b border-gray;
     }
 
     &__item {
-        @apply flex flex-col-reverse;
+        @apply flex flex-col-reverse align-top;
 
         > div {
             @apply w-full h-16;

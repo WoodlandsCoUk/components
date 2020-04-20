@@ -4,4 +4,9 @@
     @apply max-w-screen-md mx-auto;
 
     @include meta.load-css('text');
+
+    ul.unstyled,
+    ol.unstyled {
+        @apply list-none pl-0;
+    }
 }
