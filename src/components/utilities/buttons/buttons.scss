@@ -34,8 +34,12 @@ $variants: (
 );
 
 .button {
-    @apply flex justify-center w-full rounded-md px-5 py-4 uppercase text-sm font-bold tracking-widest;
+    @apply flex justify-center w-full rounded-md px-5 py-4 my-6 uppercase text-sm font-bold tracking-widest;
     @apply bg-white text-brand-red-dark border border-brand-red-dark;
+
+    &:last-child {
+        @apply mb-0;
+    }
 
     &--inline {
         @apply w-auto;

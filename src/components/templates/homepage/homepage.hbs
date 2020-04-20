@@ -10,11 +10,12 @@
     {{/ @section }}
 
     {{#> @section }}
-        {{ render '@components--cards' }}
+        {{ render '@components--cards' woods merge=true }}
+        {{ render '@button' woods merge=true }}
     {{/ @section }}
 
     {{#> @section modifiers='bg-yellow,narrow' }}
-        {{ render '@components--buttons' }}
+        {{ render '@components--buttons' topics merge=true }}
     {{/ @section }}
 
     {{#> @section }}
@@ -27,9 +28,6 @@
 
     {{#> @section modifiers='bg-yellow' }}
         {{ render '@block--gallery--square' instagram merge=true }}
-    {{/ @section }}
-
-    {{#> @section modifiers='bg-yellow' }}
         {{ render '@button' instagram merge=true }}
     {{/ @section }}
 </main>

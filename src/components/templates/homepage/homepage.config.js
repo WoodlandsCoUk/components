@@ -9,13 +9,23 @@ module.exports = {
         active: 'page-homepage'
       }
     },
-    blog: {
-      title: 'Blogs, videos & guides'
-    },
     search: {
       search: {
         modifiers: ['alt']
       }
+    },
+    woods: {
+      title: 'New woods for sale',
+      button: {
+        text: 'See all woods for sale',
+        modifiers: ['green']
+      }
+    },
+    topics: {
+      title: 'Popular topics'
+    },
+    blog: {
+      title: 'Blogs, videos & guides'
     },
     instagram: {
       button: {

@@ -25,7 +25,7 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    title: 'New woods for sale',
+    title: 'General card listing',
     cards: items,
     listing: {
       modifiers: ['grid', 'gray']

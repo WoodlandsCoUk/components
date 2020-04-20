@@ -11,6 +11,14 @@
         }
     }
 
+    + * {
+        @apply mt-6;
+    }
+
+    .grid & {
+        @apply mt-0;
+    }
+
     &__body {
         @apply flex flex-col h-full p-5;
     }

@@ -9,8 +9,12 @@ module.exports = {
         active: 'page-buy'
       }
     },
-    hero: {
-      text: 'Information about buying a woodland.'
+    woods: {
+      title: 'More woods for sale',
+      button: {
+        text: 'See all woods for sale',
+        modifiers: ['green']
+      }
     }
   }
 }

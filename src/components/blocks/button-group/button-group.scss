@@ -1,0 +1,7 @@
+.button-group {
+    @apply flex justify-between;
+
+    .button {
+        @apply m-0;
+    }
+}
