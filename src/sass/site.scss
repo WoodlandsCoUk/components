@@ -3,17 +3,14 @@
 // Site Configuration.
 @import "config";
 
-// DNA of the components.
-@import "../components/dna/dna";
-
 // Utilities.
-@import "../components/utilities/utilities";
+@import "../components/utilities/**/*.scss";
 
 // Blocks.
-@import "../components/blocks/blocks";
+@import "../components/blocks/**/*.scss";
 
 // Components.
-@import "../components/components/components";
+@import "../components/components/**/*.scss";
 
 // Global Components.
-@import "../components/global/global";
+@import "../components/global/**/*.scss";
