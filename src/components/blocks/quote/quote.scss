@@ -1,8 +1,14 @@
+$quotePadding: 30px;
+
 .quote {
-    @apply p-6 bg-gray-light text-brand-red-dark font-bold text-center;
+    @apply p-6 bg-gray text-brand-red-dark font-bold text-center bg-no-repeat;
+    padding-bottom: 152px + $quotePadding;
+    background-image: url(../images/quote-bg.png);
+    background-position: 50% calc(100% - #{$quotePadding});
+    background-size: auto 152px;
 
     &__content {
-        @apply font-display leading-none tracking-wide text-2xl;
+        @apply font-display leading-none tracking-wide text-2xl not-italic;
 
         @screen md {
             @apply text-3xl;
@@ -10,7 +16,7 @@
     }
 
     &__by {
-        @apply uppercase text-xs tracking-widest pt-10 mt-10 border-t border-gray;
+        @apply font-body uppercase text-xs tracking-widest pt-10 mt-10 border-t border-gray-dark;
 
         cite {
             @apply not-italic;

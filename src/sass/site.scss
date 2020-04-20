@@ -4,13 +4,13 @@
 @import "config";
 
 // Utilities.
-@import "../components/utilities/**/*.scss";
+@import "../components/utilities/**/[!_]*.scss";
 
 // Blocks.
-@import "../components/blocks/**/*.scss";
+@import "../components/blocks/**/[!_]*.scss";
 
 // Components.
-@import "../components/components/**/*.scss";
+@import "../components/components/**/[!_]*.scss";
 
 // Global Components.
-@import "../components/global/**/*.scss";
+@import "../components/global/**/[!_]*.scss";
