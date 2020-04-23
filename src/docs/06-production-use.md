@@ -9,7 +9,7 @@ require it as a dependency in your `package.json`.
 ```js
 "dependencies": {
     "woodlands-co-uk-components":
-        "git+https://github.com/woodlands.co.uk/components.git"
+        "git+https://github.com/WoodlandsCoUk/components.git"
 }
 ```
 
