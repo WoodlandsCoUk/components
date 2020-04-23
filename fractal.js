@@ -38,6 +38,10 @@ fractal.components.set('ext', '.hbs')
 fractal.components.set('default.context', {
   'site-name': packageJson.title
 })
+fractal.components.set('default.display', {
+  'max-width': '480px',
+  'min-width': '420px'
+})
 
 /* Documentation */
 fractal.docs.set('path', paths.docs)
