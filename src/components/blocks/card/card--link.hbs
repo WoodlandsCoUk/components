@@ -1,0 +1,19 @@
+<div class="{{modifier 'card' quote.modifiers}}">
+  <a href="{{ card.link }}" class="card__link">
+    {{ render '@media' card merge=true}}
+    <div class="card__body">
+      <h3 class="card__title">{{ card.title }}</h3>
+      <div class="card__content">
+        {{ card.text }}
+      </div>
+      {{#if card.category}}
+      <p class="card__category">{{ card.category }}</p>
+      {{/if}}
+    </div>
+    {{#if card.banner}}
+    <div class="card__banner">
+      {{ card.banner }}
+    </div>
+    {{/if}}
+  </a>
+</div>

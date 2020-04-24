@@ -44,6 +44,17 @@ module.exports = {
           video: 'http://www.youtube.com/embed/dP15zlyra3c?html5=1'
         }
       }
+    },
+    {
+      name: 'link',
+      label: 'With Link',
+      context: {
+        card: {
+          title: 'Card with Link',
+          text: faker.lorem.paragraph(),
+          link: 'https://www.woodlands.co.uk'
+        }
+      }
     }
   ]
 }
