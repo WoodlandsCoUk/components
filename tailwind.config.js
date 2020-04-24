@@ -31,7 +31,7 @@ module.exports = {
       },
       'brand-green': {
         default: '#02532f',
-        dark: '#02532f'
+        dark: '#032415'
       },
       'brand-yellow': {
         default: '#fccb6e',

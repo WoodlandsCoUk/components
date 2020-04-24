@@ -1,3 +1,4 @@
+const path = require('path')
 const globImporter = require('node-sass-glob-importer')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 
@@ -38,6 +39,9 @@ module.exports = {
     })
   ],
   resolve: {
-    alias: {}
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      helpers: path.resolve(__dirname, 'src/js/helpers/')
+    }
   }
 }

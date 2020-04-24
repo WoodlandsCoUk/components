@@ -1,5 +1,22 @@
 const faker = require('faker')
 
+const items = []
+const accordionTitles = [
+  'Trees',
+  'Wildlife',
+  'Access',
+  'Footpaths',
+  'Features',
+  'Acitivites'
+]
+
+for (let i = 0; i < accordionTitles.length; i++) {
+  items.push({
+    title: accordionTitles[i],
+    text: faker.lorem.paragraph()
+  })
+}
+
 module.exports = {
   order: 10,
   title: 'Wood',
@@ -48,6 +65,10 @@ module.exports = {
           modifiers: ['small', 'inline']
         }
       }
+    },
+    accordion: {
+      title: 'Summary',
+      items
     }
   }
 }

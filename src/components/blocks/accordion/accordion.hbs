@@ -1,0 +1,13 @@
+<div class="accordion">
+  <h3 class="accordion__title">{{ title }}</h3>
+  {{#each items }}
+  <div class="accordion__item">
+    <h2 class="accordion__item__title" tabindex="0">{{ this.title }}</h2>
+    <div class="accordion__item__content">
+      <div>
+        <p>{{ this.text }}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

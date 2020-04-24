@@ -25,6 +25,8 @@ mix.sass('src/sass/site.scss', 'css/site.css')
     ]
   })
 
-mix.js('src/js/site.js', 'js').extract([])
+mix.js('src/js/site.js', 'js').extract([
+  'accordion-js'
+])
 
 mix.copyDirectory('src/assets/', 'public')

@@ -1,0 +1,58 @@
+.accordion {
+    @apply relative py-6;
+
+    &__title {
+        @apply text-brand-red-dark text-xl pb-3 font-bold border-b border-gray;
+    }
+
+    &__item {
+        @apply relative border-b border-gray;
+
+        &__title {
+            @apply relative text-brand-green text-sm font-bold cursor-pointer py-3 outline-none;
+
+            &::after {
+                @apply absolute right-0 text-center w-5 text-lg;
+                top: 50%;
+                transform: translate(0, -50%);
+                content: '+';
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply text-brand-green-dark;
+            }
+        }
+
+        &__content {
+            @apply relative overflow-hidden;
+
+            transition-property: all;
+            transition-timing-function: ease;
+
+            > div {
+                @apply pb-5;
+            }
+        }
+
+        &.js-enabled {
+            > .accordion__item__content {
+                visibility: hidden;
+            }
+        }
+
+        &.is-active {
+            > .accordion__item__title {
+                @apply text-brand-green-dark;
+
+                &::after {
+                    content: '–';
+                }
+            }
+            > .accordion__item__content {
+                visibility: visible;
+            }
+        }
+    }
+}
