@@ -11,7 +11,7 @@ principle, which is described as;
 > creating and maintaining robust design systems, allowing you to roll out higher quality,
 more consistent UIs faster than ever before.
 
-![Atoms, Molecules, Organisms](/atomic.png)
+![Atoms, Molecules, Organisms](atomic.png)
 
 Atomic Design is broken down in to the following concepts;
 
