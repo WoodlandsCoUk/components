@@ -1,0 +1,22 @@
+{{ render '@layout-header' header merge=true }}
+
+<main>
+    {{#> @section modifiers='bg-white,narrow' }}
+        {{ render '@components--wood' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-white' }}
+        {{ render '@block--managed-by' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow,narrow' }}
+        {{ render '@block--cta' cta merge=true }}
+    {{/ @section }}
+
+    {{#> @section }}
+        {{ render '@components--cards' woods merge=true }}
+        {{ render '@button' woods merge=true }}
+    {{/ @section }}
+</main>
+
+{{ render '@layout-footer' }}
