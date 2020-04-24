@@ -109,43 +109,14 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-d287ded1f99f94fadb63bc4061d58470-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--html" data-role="tab">
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
             <a href="#browser-d287ded1f99f94fadb63bc4061d58470-panel-html">HTML</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-d287ded1f99f94fadb63bc4061d58470-panel-view">View</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-d287ded1f99f94fadb63bc4061d58470-panel-info">Info</a>
         </li>
         
         
     </ul>
 </div>
 
-
-    
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-d287ded1f99f94fadb63bc4061d58470-panel-notes">
-    <div class="Prose Prose--condensed">
-        
-        <h2 id="navigation">Navigation</h2>
-<p>Primary navigation.</p>
-
-        
-    </div>
-</div>
 
     
     
@@ -170,74 +141,6 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
-</div>
-
-    
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-d287ded1f99f94fadb63bc4061d58470-panel-view">
-    <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navigation__list"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-            </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> navigation.items}}</span><span class="xml">
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navigation__item </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name">ifeq</span> ../active @key}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">navigation__item--active</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name">ifeq</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{@key}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ this }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hamburger hamburger--squeeze navigation__button js--navigation"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hamburger-box"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hamburger-inner"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
-    </code>
-</div>
-
-    
-    <div class="Browser-panel" data-role="tab-panel" id="browser-d287ded1f99f94fadb63bc4061d58470-panel-info">
-    <ul class="Meta">
-        <li class="Meta-item">
-            <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@layout-navigation</span>
-        </li>
-        
-        
-        
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Preview:</strong>
-            <span class="Meta-value">
-                <ul>
-                    <li><a data-no-pjax href="../preview/layout-navigation.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                    <li><a data-no-pjax href="../render/layout-navigation.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                </ul>
-            </span>
-        </li>
-        <li class="Meta-item">
-            <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/global/navigation/navigation.hbs</span>
-        </li>
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="layout-header.html">@<span>layout-header</span></a>
-            
-            </span>
-        </li>
-        
-    </ul>
 </div>
 
     
@@ -1392,6 +1295,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="block--accordion.html" data-pjax>
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-block--card">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Cards</span>
@@ -1455,6 +1382,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="block--card--video.html" data-pjax>
                 <span>With Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="block--card--link.html" data-pjax>
+                <span>With Link</span>
                 
 
 <div class="Status Status--unlabelled">

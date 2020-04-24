@@ -109,43 +109,14 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-baea5f2306b8b7af012be41294739629-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--html" data-role="tab">
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
             <a href="#browser-baea5f2306b8b7af012be41294739629-panel-html">HTML</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-baea5f2306b8b7af012be41294739629-panel-view">View</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-baea5f2306b8b7af012be41294739629-panel-info">Info</a>
         </li>
         
         
     </ul>
 </div>
 
-
-    
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-baea5f2306b8b7af012be41294739629-panel-notes">
-    <div class="Prose Prose--condensed">
-        
-        <h2 id="search">Search</h2>
-<p>Search form.</p>
-
-        
-    </div>
-</div>
 
     
     
@@ -164,81 +135,6 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></pre>
         
     </code>
-</div>
-
-    
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-baea5f2306b8b7af012be41294739629-panel-view">
-    <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"GET"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form </span></span></span><span class="hljs-template-variable">{{modifier 'search' search.modifiers}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"search__search"</span>&gt;</span></span><span class="hljs-template-variable">{{ search.label }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search__search"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"q"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ search.placeholder }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    </span><span class="hljs-template-variable">{{ render '<a href="button.html">@button</a>' button merge=true }}</span><span class="xml">
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></pre>
-    </code>
-</div>
-
-    
-    <div class="Browser-panel" data-role="tab-panel" id="browser-baea5f2306b8b7af012be41294739629-panel-info">
-    <ul class="Meta">
-        <li class="Meta-item">
-            <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@block--search--alt</span>
-        </li>
-        
-        
-        
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="block--search--default.html">
-                    <span>Default</span>
-                </a>, 
-            
-                <a href="">
-                    <span>Alternative</span>
-                </a>
-            
-            </span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Preview:</strong>
-            <span class="Meta-value">
-                <ul>
-                    <li><a data-no-pjax href="../preview/block--search--alt.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                    <li><a data-no-pjax href="../render/block--search--alt.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                </ul>
-            </span>
-        </li>
-        <li class="Meta-item">
-            <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/blocks/search/search.hbs</span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="button.html">@<span>button</span></a>
-            
-            </span>
-        </li class="Meta-item">
-        
-        
-    </ul>
 </div>
 
     
@@ -1393,6 +1289,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="block--accordion.html" data-pjax>
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-block--card">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Cards</span>
@@ -1456,6 +1376,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="block--card--video.html" data-pjax>
                 <span>With Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="block--card--link.html" data-pjax>
+                <span>With Link</span>
                 
 
 <div class="Status Status--unlabelled">
