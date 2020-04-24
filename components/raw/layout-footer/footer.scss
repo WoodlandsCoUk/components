@@ -1,0 +1,37 @@
+.footer {
+    @apply py-16 px-6 text-center bg-brand-red text-white;
+
+    &__inner {
+        //
+    }
+
+    &__org {
+        @apply font-display text-4xl text-center leading-none py-6 my-6 border-t border-b border-gray-light;
+    }
+
+    &__copyright {
+        //
+    }
+
+    &__text {
+        //
+    }
+
+    &__navigation {
+        @apply flex justify-center;
+
+        li {
+            @apply mx-2;
+        }
+
+        a {
+            @apply underline;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply no-underline;
+            }
+        }
+    }
+}

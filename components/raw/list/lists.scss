@@ -1,0 +1,21 @@
+.list {
+    @apply list-disc;
+
+    &--ordered {
+        @apply list-decimal;
+    }
+
+    &--unstyled {
+        @apply list-none pl-0;
+    }
+
+    li {
+        @apply m-0;
+    }
+
+    &--spaced {
+        li {
+            @apply my-4;
+        }
+    }
+}

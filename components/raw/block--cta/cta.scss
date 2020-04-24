@@ -1,0 +1,11 @@
+.cta {
+    @apply p-6 text-center;
+
+    &__title {
+        @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6 pb-6 border-b border-gray-dark;
+    }
+
+    &__text {
+        @apply text-brand-red-dark mb-6 uppercase text-sm font-bold tracking-widest;
+    }
+}

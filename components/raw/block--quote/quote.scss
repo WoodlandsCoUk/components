@@ -1,0 +1,29 @@
+$quotePadding: 30px;
+
+.quote {
+    @apply p-6 text-brand-red-dark font-bold text-center bg-no-repeat;
+    padding-bottom: $quotePadding;
+
+    &__content {
+        @apply font-display leading-none tracking-wide text-2xl not-italic;
+
+        @screen md {
+            @apply text-3xl;
+        }
+    }
+
+    &__by {
+        @apply font-body uppercase text-xs tracking-widest pt-10 mt-10 border-t border-gray-dark;
+
+        cite {
+            @apply not-italic;
+        }
+    }
+
+    &--with-image {
+        padding-bottom: 160px + $quotePadding;
+        background-image: url(../images/quote-bg.png);
+        background-position: 50% calc(100% - #{$quotePadding});
+        background-size: auto 152px;
+    }
+}

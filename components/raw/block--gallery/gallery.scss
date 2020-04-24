@@ -1,0 +1,17 @@
+.gallery {
+    &__list {
+        @apply grid gap-4 grid-cols-2;
+
+        + .button {
+            @apply mt-4;
+        }
+
+        @screen md {
+            @apply grid-cols-4;
+        }
+
+        @screen xl {
+            @apply grid-cols-4;
+        }
+    }
+}

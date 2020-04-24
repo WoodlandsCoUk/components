@@ -1,0 +1,46 @@
+$backgrounds: (
+    'transparent': 'transparent',
+    'white': 'white',
+    'gray': 'gray',
+    'red': 'brand-red-dark',
+    'green': 'brand-green-dark',
+    'yellow': 'brand-yellow-light',
+);
+
+.section {
+    @apply relative bg-gray py-12 px-3;
+
+    &__inner {
+        @apply mx-auto max-w-screen-xl;
+    }
+
+    &__title {
+        @apply text-center mt-3 mb-6 text-3xl font-bold text-brand-green-dark;
+
+        &--small {
+            @apply text-sm uppercase;
+        }
+    }
+
+    &--narrow {
+        .section__inner {
+            @apply max-w-md;
+        }
+    }
+
+    &--full {
+        .section__inner {
+            @apply max-w-none;
+        }
+    }
+
+    @each $prefix, $colors in $backgrounds {
+        &--bg-#{$prefix} {
+            @apply bg-#{$colors};
+
+            & + .section--bg-#{$prefix} {
+                @apply pt-0 -mt-6;
+            }
+        }
+    }
+}
