@@ -8,13 +8,13 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    wood: {
-      text: faker.lorem.paragraphs(5)
-    },
-    more: {
+    'read-more': {
+      text: faker.lorem.paragraphs(6),
       button: {
-        text: 'Read more',
-        modifiers: ['small']
+        button: {
+          text: 'Read more',
+          modifiers: ['small']
+        }
       }
     },
     visit: {

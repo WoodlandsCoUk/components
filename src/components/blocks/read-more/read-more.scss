@@ -1,0 +1,17 @@
+.read-more {
+    @apply relative;
+
+    &__content {
+        @apply overflow-hidden;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    &--visible {
+        .read-more__content {
+            @apply block;
+        }
+    }
+}

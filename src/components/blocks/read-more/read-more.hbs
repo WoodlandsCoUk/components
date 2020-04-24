@@ -1,0 +1,9 @@
+<div class="read-more" data-show="{{ button.button.text }} " data-hide="{{ button.button.hide }}">
+  <div class="read-more__content">
+      <p>{{ text }}</p>
+  </div>
+
+  <div class="read-more__toggle">
+    {{ render '@button' button merge=true }}
+  </div>
+</div>

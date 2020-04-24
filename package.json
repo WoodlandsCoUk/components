@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@frctl/fractal": "^1.2.1",
+    "accordion-js": "^2.8.0",
     "alpinejs": "^2.3.0",
     "cross-env": "^7.0.2",
     "deepmerge": "^4.2.2",

@@ -1,10 +1,8 @@
-{{ render '@block--card' }}
+{{!-- {{ render '@block--card' }} --}}
+{{ render '@media' }}
 
-<div class="js--truncate">
-    <p>{{ wood.text }}</p>
-</div>
+{{ render '@block--read-more' read-more merge=true }}
 
-{{ render '@button' more merge=true }}
 {{ render '@button' visit merge=true }}
 {{ render '@button' pdf merge=true }}
 
