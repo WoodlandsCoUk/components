@@ -11,16 +11,16 @@ module.exports = {
   context: {
     icons: [
       {
-        ...facebook,
-        url: 'https://www.facebook.com'
+        ...instagram,
+        url: 'https://instagram.com'
       },
       {
         ...youtube,
         url: 'https://youtube.com'
       },
       {
-        ...instagram,
-        url: 'https://instagram.com'
+        ...facebook,
+        url: 'https://www.facebook.com'
       }
     ]
   },
