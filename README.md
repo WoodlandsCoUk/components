@@ -1,5 +1,7 @@
 # Woodlands.co.uk Component Library
 
+![Woodlands.co.uk](src/assets/images/logo.svg)
+
 Web components for Woodlands.co.uk built using [Fractal](https://fractal.build).
 
 ---
@@ -57,7 +59,6 @@ npm run deploy
 
 The component library should be included in your production development project using `npm` by
 including the following in your `package.json`;
-
 
 ```js
 "dependencies": {
