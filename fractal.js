@@ -19,7 +19,7 @@ const theme = require('@frctl/mandelbrot')({
   styles: ['default'],
   lang: 'en-gb',
   nav: ['docs', 'components'],
-  panels: ['html'], // ['notes', 'html', 'view', 'info'],
+  panels: ['notes', 'html', 'view', 'info'],
   favicon: '/favicon.ico'
 })
 
