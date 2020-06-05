@@ -38,6 +38,24 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      name: 'subscribe--alt',
+      label: 'Subscribe (Alt)',
+      context: {
+        form: {
+          label: 'Hear about new woodlands first',
+          sub: 'Get emailed as soon as new woodlands go on the market',
+          placeholder: 'Enter email address…',
+          modifiers: ['alt']
+        },
+        button: {
+          button: {
+            text: 'Sign up to mailing list',
+            modifiers: ['green', 'green--dark']
+          }
+        }
+      }
     }
   ]
 }
