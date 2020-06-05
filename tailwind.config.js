@@ -31,10 +31,11 @@ module.exports = {
       },
       'brand-green': {
         default: '#02532f',
-        dark: '#032415'
+        dark: '#0b3824',
+        light: '#007a43'
       },
       'brand-yellow': {
-        default: '#fccb6e',
+        default: '#f2eadc',
         light: '#faf5ed'
       }
     },

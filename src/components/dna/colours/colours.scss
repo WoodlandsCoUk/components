@@ -22,6 +22,9 @@
     .colour__item--dark > div {
         @apply bg-brand-green-dark;
     }
+    .colour__item--light > div {
+        @apply bg-brand-green-light;
+    }
 }
 
 .colour__section--yellow {
