@@ -1,9 +1,9 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    {{#> @section modifiers='bg-yellow,short' }}
+    {{!-- {{#> @section modifiers='bg-yellow,short' }}
         {{ render '@block--hero' hero }}
-    {{/ @section }}
+    {{/ @section }} --}}
 
     {{#> @section }}
         {{ render '@components--cards' woods merge=true }}
@@ -11,14 +11,22 @@
     {{/ @section }}
 
     {{#> @section modifiers='bg-yellow,narrow' }}
-        {{ render '@components--buttons' topics merge=true }}
+        Hear about new woodlands first
     {{/ @section }}
 
-    {{#> @section modifiers='bg-white' }}
+    {{#> @section }}
+        Buying and owning a woodland
+    {{/ @section }}
+
+    <hr />
+
+    {{#> @section }}
         {{ render '@components--cards' blog merge=true }}
     {{/ @section }}
 
-    {{#> @section modifiers='bg-white' }}
+    <hr />
+
+    {{#> @section }}
         {{ render '@block--gallery--square' instagram merge=true }}
         {{ render '@button' instagram merge=true }}
     {{/ @section }}

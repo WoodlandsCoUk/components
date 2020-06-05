@@ -34,7 +34,7 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      label: 'Default',
+      label: 'Default'
     },
     {
       name: 'square',

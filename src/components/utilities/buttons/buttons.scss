@@ -57,7 +57,9 @@ $variants: (
     }
 
     &--inline {
-        @apply w-auto mx-auto;
+        @screen sm {
+            @apply w-auto mx-auto;
+        }
     }
 
     &--small {
