@@ -11,7 +11,7 @@ module.exports = {
   order: 2,
   title: 'Typography',
   handle: 'dna-typography',
-  status: 'wip',
+  status: 'ready',
   default: 'default',
   context: {
     text: faker.lorem.paragraph(),

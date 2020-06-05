@@ -1,3 +1,3 @@
-## Colours
+## Heading
 
-The colours used throughout the website.
+Heading styles; sizes and fonts.
