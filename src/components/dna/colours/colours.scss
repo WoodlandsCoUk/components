@@ -34,6 +34,9 @@
     .colour__item--light > div {
         @apply bg-brand-yellow-light;
     }
+    .colour__item--dark > div {
+        @apply bg-brand-yellow-dark;
+    }
 }
 
 .colour__section--gray {
