@@ -13,11 +13,11 @@ $variants: (
     ),
     'green': (
         'text': 'white',
-        'bg': 'brand-green',
-        'border': 'brand-green',
+        'bg': 'brand-green-light',
+        'border': 'brand-green-light',
         'hover': (
-            'text': 'brand-green-dark',
-            'bg': 'white',
+            'text': 'white',
+            'bg': 'brand-green-dark',
             'border': 'brand-green-dark',
         )
     ),

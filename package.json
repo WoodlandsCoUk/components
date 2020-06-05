@@ -58,8 +58,7 @@
   },
   "lint-staged": {
     "*.(vue|js)": [
-      "npm run lint:js",
-      "git add ."
+      "npm run lint:js"
     ]
   },
   "husky": {

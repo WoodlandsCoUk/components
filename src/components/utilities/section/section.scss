@@ -3,7 +3,7 @@ $backgrounds: (
     'white': 'white',
     'gray': 'gray',
     'red': 'brand-red-dark',
-    'green': 'brand-green-dark',
+    'green': 'brand-green',
     'yellow': 'brand-yellow',
 );
 
@@ -43,7 +43,7 @@ $backgrounds: (
             @apply bg-#{$colors};
 
             & + .section--bg-#{$prefix} {
-                @apply pt-0 -mt-6;
+                @apply pt-0 -mt-3;
             }
         }
     }

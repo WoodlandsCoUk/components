@@ -1,0 +1,33 @@
+.form--cta {
+    @apply py-8 text-center bg-brand-green;
+
+    .form__title {
+        @apply block w-full max-w-sm text-3xl text-center mx-auto leading-none text-white pb-6 font-bold font-display;
+    }
+
+    .form__subtitle {
+        @apply block w-full max-w-sm text-base text-center mx-auto pb-6 -mt-2 text-brand-yellow-dark font-bold uppercase;
+    }
+
+    input {
+        @apply block w-full mb-6 rounded-md px-5 py-4 text-center text-brand-green-dark;
+
+        &::placeholder {
+            @apply italic text-brand-green-dark;
+        }
+    }
+
+    &--alt {
+        @apply bg-brand-yellow-light pb-8;
+
+        label {
+            @apply text-brand-red-dark hidden;
+        }
+
+        input {
+            &::placeholder {
+                @apply italic text-brand-green-dark;
+            }
+        }
+    }
+}
