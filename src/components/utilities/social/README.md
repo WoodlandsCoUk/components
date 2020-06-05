@@ -1,3 +1,3 @@
-## Buttons
+## Social Media
 
-Readme about buttons.
+Icons for social media, including variant sizes; small, medium and large.

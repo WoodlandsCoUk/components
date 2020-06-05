@@ -1,3 +1,3 @@
 ## Managed By
 
-Managed by widget.
+Block includes a person’s name, avatar, telephone and email address.

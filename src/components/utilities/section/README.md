@@ -1,3 +1,3 @@
-## Blocks
+## Sections
 
-Different colours blocks and wide/narrow versions.
+Different colours sections and wide/narrow versions.

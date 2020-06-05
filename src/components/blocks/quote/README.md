@@ -1,3 +1,3 @@
 ## Quotes
 
-Example blockquote.
+Quote styles, including optional citation and links.
