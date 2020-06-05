@@ -8,10 +8,43 @@ module.exports = {
   default: 'default',
   context: {
     quote: {
-      text: faker.lorem.paragraph(),
-      cite: faker.name.findName(),
-      company: faker.name.jobTitle(),
-      modifiers: ['with-image']
+      text: faker.lorem.paragraph()
     }
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'Simple'
+    },
+    {
+      name: 'full',
+      label: 'Full',
+      context: {
+        quote: {
+          cite: faker.name.findName(),
+          company: faker.name.jobTitle(),
+          modifiers: ['with-image']
+        }
+      }
+    },
+    {
+      name: 'with-cite',
+      label: 'With Citation',
+      context: {
+        quote: {
+          cite: faker.name.findName(),
+          company: faker.name.jobTitle()
+        }
+      }
+    },
+    {
+      name: 'with-image',
+      label: 'With Image',
+      context: {
+        quote: {
+          modifiers: ['with-image']
+        }
+      }
+    }
+  ]
 }

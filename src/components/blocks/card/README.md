@@ -1,3 +1,3 @@
-## Buttons
+## Cards
 
-Button styles.
+Various cards styles.
