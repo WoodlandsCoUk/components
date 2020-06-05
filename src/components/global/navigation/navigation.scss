@@ -1,8 +1,11 @@
-$hamburger-hover-opacity: 0.5;
 $hamburger-layer-width: 32px;
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
-$hamburger-layer-color: theme('colors.brand-red.dark');
+$hamburger-layer-height: 5px;
+$hamburger-layer-spacing: 6px;
+$hamburger-layer-border-radius: 0;
+$hamburger-layer-color: theme('colors.brand-yellow.default');
+$hamburger-hover-opacity: 0.8;
 $hamburger-types: (
     spin,
     squeeze
@@ -14,10 +17,10 @@ $animationDelay: 150ms;
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 
 .navigation {
-    @apply flex flex-col bg-brand-red;
+    @apply flex flex-col bg-brand-green-dark;
 
     &__list {
-        @apply fixed inset-0 z-30 flex flex-col justify-center items-center bg-brand-red px-6 py-8 overflow-hidden;
+        @apply fixed inset-0 z-30 flex flex-col justify-center items-center bg-brand-green-dark px-6 py-8 overflow-hidden;
         @apply origin-top duration-300 ease-in-out;
 
         transform: translateY(-100%);
