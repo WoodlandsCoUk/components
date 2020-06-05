@@ -36,7 +36,8 @@ fractal.components.set('default.preview', '@preview')
 fractal.components.set('default.status', 'wip')
 fractal.components.set('ext', '.hbs')
 fractal.components.set('default.context', {
-  'site-name': packageJson.title
+  'site-name': packageJson.title,
+  navigation: require('./src/data/navigation.js')
 })
 fractal.components.set('default.display', {
   // 'max-width': '480px',

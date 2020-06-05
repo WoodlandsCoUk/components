@@ -1,8 +1,12 @@
 <div class="navigation">
     <nav class="navigation__list">
         <ul>
-            {{#each navigation.items}}
-                <li class="navigation__item {{#ifeq ../active @key}}navigation__item--active{{/ifeq}}"><a href="{{@key}}">{{ this }}</a></li>
+            {{#each navigation}}
+                {{#if this.main}}
+                <li class="navigation__item {{#ifeq ../active this.link}}navigation__item--active{{/ifeq}}">
+                    <a href="{{ this.link }}">{{ this.text }}</a>
+                </li>
+                {{/if}}
             {{/each}}
         </ul>
     </nav>

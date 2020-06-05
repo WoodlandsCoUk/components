@@ -39,6 +39,9 @@ module.exports = {
       }
 
       return options.inverse(this)
+    },
+    navigationText: (item) => {
+      return item.textAlt || item.text
     }
   }
 }

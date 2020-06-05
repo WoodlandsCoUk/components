@@ -4,15 +4,5 @@ module.exports = {
   handle: 'layout-navigation',
   status: 'ready',
   default: 'default',
-  context: {
-    navigation: {
-      items: {
-        // 'page-homepage': 'Home',
-        'page-buy': 'Buy',
-        'page-owning': 'Owning a Wood',
-        'page-videos-guides': 'Videos & Guides',
-        'page-about': 'About Us'
-      }
-    }
-  }
+  context: {}
 }

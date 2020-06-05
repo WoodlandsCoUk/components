@@ -49,10 +49,6 @@ $animationDelay: 150ms;
             @apply text-base mx-2;
         }
 
-        @screen lg {
-            @apply text-xl;
-        }
-
         > a {
             @apply py-2 text-brand-yellow font-bold;
 
@@ -91,6 +87,19 @@ $animationDelay: 150ms;
         &__item {
             @apply opacity-100;
             transition-property: none;
+
+            &::before {
+                @apply inline-block border-l border-brand-green-light h-4 mr-4;
+                content: "";
+            }
+
+            &:first-child::before {
+                @apply hidden;
+            }
+
+            > a {
+                @apply text-white font-normal uppercase;
+            }
         }
 
         &__button {

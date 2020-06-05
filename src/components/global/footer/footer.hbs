@@ -6,9 +6,9 @@
             <ul>
             {{#each navigation}}
                 <li class="footer__navigation__section">
-                    <a href="#">{{ @key }}</a>
+                    <a href="{{ this.link }}">{{navigationText this }}</a>
                 </li>
-                {{#each this}}
+                {{#each this.navigation}}
                 <li><a href="#">{{ this }}</a></li>
                 {{/each}}
             {{/each}}
