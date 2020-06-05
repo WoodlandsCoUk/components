@@ -1,12 +1,8 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    {{#> @section modifiers='bg-red' }}
+    {{#> @section modifiers='bg-yellow,short' }}
         {{ render '@block--hero' hero }}
-    {{/ @section }}
-
-    {{#> @section modifiers='narrow' }}
-        {{ render '@block--quote' }}
     {{/ @section }}
 </main>
 

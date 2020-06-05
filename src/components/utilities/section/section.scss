@@ -4,7 +4,7 @@ $backgrounds: (
     'gray': 'gray',
     'red': 'brand-red-dark',
     'green': 'brand-green-dark',
-    'yellow': 'brand-yellow-light',
+    'yellow': 'brand-yellow',
 );
 
 .section {
@@ -26,6 +26,10 @@ $backgrounds: (
         .section__inner {
             @apply max-w-md;
         }
+    }
+
+    &--short {
+        @apply py-0;
     }
 
     &--full {
