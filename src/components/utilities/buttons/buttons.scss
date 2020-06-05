@@ -20,6 +20,11 @@ $variants: (
         'text': 'white',
         'bg': 'brand-green-light',
         'border': 'brand-green-light',
+        'dark': (
+            'text': 'white',
+            'bg': 'brand-green',
+            'border': 'brand-green',
+        ),
         'outline': (
             'text': 'brand-green',
             'bg': 'white',
@@ -80,28 +85,43 @@ $variants: (
         $text: map.get($colors, 'text');
         $bg: map.get($colors, 'bg');
         $border: map.get($colors, 'border');
-        $hover: map.get($colors, 'hover');
         $outline: map.get($colors, 'outline');
+        $dark: map.get($colors, 'dark');
+        $hover: map.get($colors, 'hover');
 
         &--#{$prefix} {
             @apply text-#{$text} bg-#{$bg} border-#{$border};
 
-            &--outline {
-                $text: map.get($outline, 'text');
-                $bg: map.get($outline, 'bg');
-                $border: map.get($outline, 'border');
+            @if $outline {
+                &--outline {
+                    $text: map.get($outline, 'text');
+                    $bg: map.get($outline, 'bg');
+                    $border: map.get($outline, 'border');
 
-                @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    @apply text-#{$text} bg-#{$bg} border-#{$border};
+                }
             }
 
-            &:hover,
-            &:focus,
-            &:active {
-                $text: map.get($hover, 'text');
-                $bg: map.get($hover, 'bg');
-                $border: map.get($hover, 'border');
+            @if $dark {
+                &--dark {
+                    $text: map.get($dark, 'text');
+                    $bg: map.get($dark, 'bg');
+                    $border: map.get($dark, 'border');
 
-                @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    @apply text-#{$text} bg-#{$bg} border-#{$border};
+                }
+            }
+
+            @if $hover {
+                &:hover,
+                &:focus,
+                &:active {
+                    $text: map.get($hover, 'text');
+                    $bg: map.get($hover, 'bg');
+                    $border: map.get($hover, 'border');
+
+                    @apply text-#{$text} bg-#{$bg} border-#{$border};
+                }
             }
         }
     }

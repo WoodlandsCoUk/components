@@ -45,6 +45,16 @@ module.exports = {
       }
     },
     {
+      name: 'green--dark',
+      label: 'Green (Dark)',
+      context: {
+        button: {
+          text: 'Dark Green Button',
+          modifiers: ['green-dark']
+        }
+      }
+    },
+    {
       name: 'green--outline',
       label: 'Green (Outline)',
       context: {
