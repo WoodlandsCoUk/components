@@ -5,6 +5,11 @@ $variants: (
         'text': 'white',
         'bg': 'brand-red-dark',
         'border': 'brand-red-dark',
+        'outline': (
+            'text': 'brand-red',
+            'bg': 'white',
+            'border': 'brand-red',
+        ),
         'hover': (
             'text': 'white',
             'bg': 'brand-red',
@@ -15,6 +20,11 @@ $variants: (
         'text': 'white',
         'bg': 'brand-green-light',
         'border': 'brand-green-light',
+        'outline': (
+            'text': 'brand-green',
+            'bg': 'white',
+            'border': 'brand-green-dark',
+        ),
         'hover': (
             'text': 'white',
             'bg': 'brand-green-dark',
@@ -25,6 +35,11 @@ $variants: (
         'text': 'brand-red-dark',
         'bg': 'brand-yellow',
         'border': 'brand-yellow',
+        'outline': (
+            'text': 'brand-yellow-dark',
+            'bg': 'white',
+            'border': 'brand-yellow-dark',
+        ),
         'hover': (
             'text': 'brand-red-dark',
             'bg': 'brand-yellow-light',
@@ -42,7 +57,7 @@ $variants: (
     }
 
     &--inline {
-        @apply w-auto;
+        @apply w-auto mx-auto;
     }
 
     &--small {
@@ -64,9 +79,18 @@ $variants: (
         $bg: map.get($colors, 'bg');
         $border: map.get($colors, 'border');
         $hover: map.get($colors, 'hover');
+        $outline: map.get($colors, 'outline');
 
         &--#{$prefix} {
             @apply text-#{$text} bg-#{$bg} border-#{$border};
+
+            &--outline {
+                $text: map.get($outline, 'text');
+                $bg: map.get($outline, 'bg');
+                $border: map.get($outline, 'border');
+
+                @apply text-#{$text} bg-#{$bg} border-#{$border};
+            }
 
             &:hover,
             &:focus,

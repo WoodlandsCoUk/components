@@ -25,6 +25,16 @@ module.exports = {
       }
     },
     {
+      name: 'red--outline',
+      label: 'Red (Outline)',
+      context: {
+        button: {
+          text: 'Red Button',
+          modifiers: ['red', 'red--outline']
+        }
+      }
+    },
+    {
       name: 'green',
       label: 'Green',
       context: {
@@ -35,12 +45,32 @@ module.exports = {
       }
     },
     {
+      name: 'green--outline',
+      label: 'Green (Outline)',
+      context: {
+        button: {
+          text: 'Green Button',
+          modifiers: ['green', 'green--outline']
+        }
+      }
+    },
+    {
       name: 'yellow',
       label: 'Yellow',
       context: {
         button: {
           text: 'Yellow Button',
           modifiers: ['yellow']
+        }
+      }
+    },
+    {
+      name: 'yellow--outline',
+      label: 'Yellow (Outline)',
+      context: {
+        button: {
+          text: 'Yellow Button',
+          modifiers: ['yellow', 'yellow--outline']
         }
       }
     },
