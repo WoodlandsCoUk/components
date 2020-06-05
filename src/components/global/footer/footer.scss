@@ -2,7 +2,7 @@
     @apply py-16 px-6 text-center bg-brand-green-dark text-white;
 
     &__inner {
-        //
+        @apply mx-auto max-w-screen-xl;
     }
 
     &__org {
@@ -13,6 +13,38 @@
         background-image: url(../images/logo.svg);
     }
 
+    &__navigation {
+        @apply pb-12 mb-12 border-b border-brand-green text-lg;
+        @apply hidden;
+
+        @screen md {
+            @apply block;
+        }
+
+        ul {
+            column-count: 3;
+            column-gap: 4rem;
+
+            @screen lg {
+                column-count: 4;
+            }
+
+            > li {
+                @apply block pb-2 text-left whitespace-no-wrap;
+
+                a {
+                    @apply block;
+                }
+            }
+        }
+
+        &__section {
+            > a {
+                @apply text-brand-yellow-dark font-bold;
+            }
+        }
+    }
+
     &__copyright {
         //
     }
@@ -21,7 +53,7 @@
         //
     }
 
-    &__navigation {
+    &__links {
         @apply flex justify-center text-center;
 
         li {

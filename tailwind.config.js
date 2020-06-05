@@ -36,6 +36,7 @@ module.exports = {
       },
       'brand-yellow': {
         default: '#f2eadc',
+        dark: '#f4d196',
         light: '#faf5ed'
       }
     },

@@ -39,7 +39,7 @@ fractal.components.set('default.context', {
   'site-name': packageJson.title
 })
 fractal.components.set('default.display', {
-  'max-width': '480px',
+  // 'max-width': '480px',
   'min-width': '420px'
 })
 
