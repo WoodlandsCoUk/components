@@ -3,6 +3,9 @@
     {{ render '@media' card merge=true}}
     <div class="card__body">
       <h3 class="card__title">{{ card.title }}</h3>
+      {{#if card.location}}
+      <p class="card__location">{{ card.location }}</p>
+      {{/if}}
       <div class="card__content">
         {{ card.text }}
       </div>

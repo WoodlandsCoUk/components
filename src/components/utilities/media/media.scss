@@ -2,12 +2,13 @@
     @apply relative;
 
     &__content {
-        @apply w-full;
+        @apply relative overflow-hidden w-full;
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
 
         > * {
             @apply absolute top-0 right-0 w-full h-full;
+            @apply transition-all duration-300 ease-in-out;
         }
     }
 

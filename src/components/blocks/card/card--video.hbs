@@ -1,15 +1,10 @@
 <div class="{{modifier 'card' quote.modifiers}}">
-  <div class="card__media">
-    <iframe src="{{ card.video }}"></iframe>
-  </div>
+  {{ render '@media--video' card merge=true}}
   <div class="card__body">
     <h3 class="card__title">{{ card.title }}</h3>
     <div class="card__content">
       {{ card.text }}
     </div>
-    {{#if card.category}}
-    <p class="card__category">{{ card.category }}</p>
-    {{/if}}
   </div>
   {{#if card.banner}}
   <div class="card__banner">
