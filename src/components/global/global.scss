@@ -5,3 +5,11 @@ body {
 main {
     @apply relative pt-24;
 }
+
+hr {
+    @apply hidden;
+
+    @screen md {
+        @apply block border-t border-gray-dark mx-auto max-w-screen-xl;
+    }
+}

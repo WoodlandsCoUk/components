@@ -12,7 +12,8 @@ module.exports = {
       title: 'Default Card',
       text: faker.lorem.paragraph(),
       media: {
-        src: faker.image.imageUrl(400, 225, 'nature', true)
+        src: faker.image.imageUrl(400, 225, 'nature', true),
+        modifiers: []
       }
     }
   },
@@ -63,7 +64,11 @@ module.exports = {
       context: {
         card: {
           title: 'Woodland Card',
-          text: 'About 5 ½ acres',
+          text: faker.random.arrayElement([
+            'About 5 ½ acres',
+            'Almost 4 acres',
+            'About 3 ¼ acres'
+          ]),
           link: 'page-wood',
           location: [
             `NR. ${faker.address.streetName()}`,

@@ -15,7 +15,8 @@ module.exports = {
   default: 'default',
   context: {
     media: {
-      src: faker.image.imageUrl(400, 225, 'nature', true)
+      src: faker.image.imageUrl(400, 225, 'nature', true),
+      modifiers: []
     }
   },
   variants: [

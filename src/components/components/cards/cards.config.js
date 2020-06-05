@@ -8,12 +8,12 @@ for (let i = 0; i < make; i++) {
     card: {
       title: faker.lorem.sentence(),
       text: faker.lorem.paragraph(),
-      category: faker.address.county(),
       link: 'page-wood',
       media: {
-        src: faker.image.imageUrl(400, 225, 'nature', true)
+        src: faker.image.imageUrl(400, 225, 'nature', true),
+        modifiers: []
       },
-      banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+      banner: 'Banner',
       modifiers: ['link']
     }
   })
