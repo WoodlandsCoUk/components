@@ -1,13 +1,14 @@
 const faker = require('faker')
 
-const make = 4
+const make = 6
 const items = []
 const squareItems = []
 
 for (let i = 0; i < make; i++) {
   items.push({
     media: {
-      src: faker.image.imageUrl(400, 225, 'nature', true)
+      src: faker.image.imageUrl(400, 225, 'nature', true),
+      modifiers: []
     }
   })
 }
@@ -33,7 +34,7 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      label: 'Default'
+      label: 'Default',
     },
     {
       name: 'square',
