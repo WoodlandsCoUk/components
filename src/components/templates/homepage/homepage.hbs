@@ -15,7 +15,15 @@
     {{/ @section }}
 
     {{#> @section }}
-        Buying and owning a woodland
+        <h2 class="section__title">{{ buy.title }}</h2>
+        <div class="section__column__wrapper section__column__wrapper--2">
+            <div class="section__column">
+                {{ render '@block--card--video' buy merge=true }}
+            </div>
+            <div class="section__column">
+                {{ render '@components--buttons' topics merge=true }}
+            </div>
+        </div>
     {{/ @section }}
 
     <hr />

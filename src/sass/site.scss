@@ -14,3 +14,7 @@
 
 // Global Components.
 @import "../components/global/**/[!_]*.scss";
+
+.u {
+  @import "utilities.scss";
+}

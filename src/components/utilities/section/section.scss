@@ -18,7 +18,11 @@ $backgrounds: (
         @apply text-center mt-3 mb-6 text-2xl text-brand-red;
 
         &--small {
-            @apply text-sm uppercase;
+            @apply text-sm uppercase font-bold;
+        }
+
+        &--alt {
+            @apply text-brand-green-dark;
         }
     }
 
@@ -35,6 +39,22 @@ $backgrounds: (
     &--full {
         .section__inner {
             @apply max-w-none;
+        }
+    }
+
+    &__column__wrapper {
+        @apply grid gap-16;
+
+        &--2 {
+            @apply grid-cols-2;
+        }
+
+        &--3 {
+            @apply grid-cols-4;
+        }
+
+        &--4 {
+            @apply grid-cols-3;
         }
     }
 

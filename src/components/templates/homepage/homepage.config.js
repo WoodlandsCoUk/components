@@ -51,6 +51,12 @@ module.exports = {
         modifiers: ['inline', 'green', 'green--outline']
       }
     },
+    buy: {
+      title: 'Buying and owning a woodland',
+      card: {
+        title: 'Why buy a woodland?'
+      }
+    },
     topics: {
       title: 'Popular topics'
     },

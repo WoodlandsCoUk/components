@@ -62,6 +62,8 @@ $variants: (
     }
 
     &--inline {
+        @apply px-12;
+
         @screen sm {
             @apply w-auto mx-auto;
         }
