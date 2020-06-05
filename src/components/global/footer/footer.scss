@@ -1,12 +1,16 @@
 .footer {
-    @apply py-16 px-6 text-center bg-brand-red text-white;
+    @apply py-16 px-6 text-center bg-brand-green-dark text-white;
 
     &__inner {
         //
     }
 
     &__org {
-        @apply font-display text-4xl text-center leading-none py-6 my-6 border-t border-b border-gray-light;
+        @apply overflow-hidden block w-full bg-auto bg-no-repeat bg-center my-6;
+
+        height: 50px;
+        text-indent: 100%;
+        background-image: url(../images/logo.svg);
     }
 
     &__copyright {
@@ -18,10 +22,19 @@
     }
 
     &__navigation {
-        @apply flex justify-center;
+        @apply flex justify-center text-center;
 
         li {
-            @apply mx-2;
+            @apply relative mx-2;
+
+            &:before {
+                @apply -ml-1 mr-3;
+                content: '•';
+            }
+
+            &:first-child:before {
+                content: "";
+            }
         }
 
         a {
@@ -33,5 +46,9 @@
                 @apply no-underline;
             }
         }
+    }
+
+    .listing--social {
+        @apply pb-12 mb-12 border-b border-brand-green;
     }
 }

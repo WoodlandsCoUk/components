@@ -9,6 +9,9 @@ module.exports = {
       org: 'Woodlands.co.uk',
       text: 'Woodland Investment Management Ltd',
       year: new Date().getFullYear()
+    },
+    social: {
+      modifiers: ['medium']
     }
   }
 }
