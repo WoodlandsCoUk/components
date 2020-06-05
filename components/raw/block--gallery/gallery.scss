@@ -6,12 +6,12 @@
             @apply mt-4;
         }
 
-        @screen md {
-            @apply grid-cols-4;
+        @screen sm {
+            @apply grid-cols-3;
         }
 
-        @screen xl {
-            @apply grid-cols-4;
+        @screen md {
+            @apply grid-cols-6;
         }
     }
 }

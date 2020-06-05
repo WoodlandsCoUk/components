@@ -1,12 +1,12 @@
 .hero {
-    @apply bg-brand-red-dark flex items-center justify-center text-center;
-    min-height: 300px;
+    @apply bg-brand-yellow flex items-center justify-center text-center;
+    min-height: 200px;
 
     @screen md {
         @apply mt-0;
     }
 
     > h1 {
-        @apply font-body text-4xl leading-none text-brand-yellow font-bold;
+        @apply font-display text-4xl leading-none text-brand-green-dark font-bold;
     }
 }

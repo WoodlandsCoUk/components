@@ -3,19 +3,19 @@ $backgrounds: (
     'white': 'white',
     'gray': 'gray',
     'red': 'brand-red-dark',
-    'green': 'brand-green-dark',
-    'yellow': 'brand-yellow-light',
+    'green': 'brand-green',
+    'yellow': 'brand-yellow',
 );
 
 .section {
-    @apply relative bg-gray py-12 px-3;
+    @apply relative bg-white py-12 px-3;
 
     &__inner {
         @apply mx-auto max-w-screen-xl;
     }
 
     &__title {
-        @apply text-center mt-3 mb-6 text-3xl font-bold text-brand-green-dark;
+        @apply text-center mt-3 mb-6 text-2xl text-brand-red;
 
         &--small {
             @apply text-sm uppercase;
@@ -26,6 +26,10 @@ $backgrounds: (
         .section__inner {
             @apply max-w-md;
         }
+    }
+
+    &--short {
+        @apply py-0;
     }
 
     &--full {
@@ -39,7 +43,7 @@ $backgrounds: (
             @apply bg-#{$colors};
 
             & + .section--bg-#{$prefix} {
-                @apply pt-0 -mt-6;
+                @apply pt-0 -mt-3;
             }
         }
     }

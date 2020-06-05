@@ -58,21 +58,6 @@ selector.forEach(function (block) {
 
 /***/ }),
 
-/***/ "./src/components/blocks/search/search.js":
-/*!************************************************!*\
-  !*** ./src/components/blocks/search/search.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.querySelectorAll('.js--search').forEach(function (item) {
-  item.addEventListener('click', function () {
-    console.log('search');
-  });
-});
-
-/***/ }),
-
 /***/ "./src/components/global/navigation/navigation.js":
 /*!********************************************************!*\
   !*** ./src/components/global/navigation/navigation.js ***!
@@ -139,8 +124,7 @@ module.exports = function (element) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! components/blocks/search/search */ "./src/components/blocks/search/search.js");
-
+// require('components/blocks/search/search')
 __webpack_require__(/*! components/blocks/accordion/accordion */ "./src/components/blocks/accordion/accordion.js");
 
 __webpack_require__(/*! components/blocks/read-more/read-more */ "./src/components/blocks/read-more/read-more.js");
