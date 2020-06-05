@@ -1,11 +1,11 @@
-$quotePadding: 30px;
+$quotePadding: 40px;
 
 .quote {
-    @apply p-6 text-brand-red-dark font-bold text-center bg-no-repeat;
+    @apply flex flex-col p-6 text-brand-red-dark font-bold text-center bg-no-repeat bg-brand-yellow;
     padding-bottom: $quotePadding;
 
     &__content {
-        @apply font-display leading-none tracking-wide text-2xl not-italic;
+        @apply font-display leading-none tracking-wide text-3xl italic;
 
         @screen md {
             @apply text-3xl;
@@ -13,17 +13,24 @@ $quotePadding: 30px;
     }
 
     &__by {
-        @apply font-body uppercase text-xs tracking-widest pt-10 mt-10 border-t border-gray-dark;
+        @apply font-body uppercase text-sm tracking-widest text-brand-green m-6 order-first;
 
         cite {
             @apply not-italic;
         }
     }
 
-    &--with-image {
-        padding-bottom: 160px + $quotePadding;
-        background-image: url(../images/quote-bg.png);
-        background-position: 50% calc(100% - #{$quotePadding});
-        background-size: auto 152px;
+    &__link {
+        @apply mb-0 mt-4;
+
+        a {
+            @apply text-brand-green underline;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply no-underline;
+            }
+        }
     }
 }

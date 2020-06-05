@@ -17,17 +17,6 @@ module.exports = {
       label: 'Simple'
     },
     {
-      name: 'full',
-      label: 'Full',
-      context: {
-        quote: {
-          cite: faker.name.findName(),
-          company: faker.name.jobTitle(),
-          modifiers: ['with-image']
-        }
-      }
-    },
-    {
       name: 'with-cite',
       label: 'With Citation',
       context: {
@@ -38,11 +27,28 @@ module.exports = {
       }
     },
     {
-      name: 'with-image',
-      label: 'With Image',
+      name: 'with-link',
+      label: 'With Link',
       context: {
         quote: {
-          modifiers: ['with-image']
+          link: {
+            href: '#',
+            text: 'Read blog post'
+          }
+        }
+      }
+    },
+    {
+      name: 'full',
+      label: 'Full',
+      context: {
+        quote: {
+          cite: faker.name.findName(),
+          company: faker.name.jobTitle(),
+          link: {
+            href: '#',
+            text: 'Read blog post'
+          }
         }
       }
     }

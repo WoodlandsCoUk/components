@@ -9,4 +9,9 @@
         </cite>
     </div>
     {{/if}}
+    {{#if quote.link}}
+    <p class="quote__link">
+        <a href="{{ quote.link.href }}">{{ quote.link.text }}</a>
+    </p>
+    {{/if}}
 </blockquote>

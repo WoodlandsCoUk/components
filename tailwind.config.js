@@ -27,7 +27,7 @@ module.exports = {
 
       'brand-red': {
         default: '#c30028',
-        dark: '#640a0a'
+        dark: '#982c2c'
       },
       'brand-green': {
         default: '#02532f',
