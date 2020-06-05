@@ -5,8 +5,24 @@
         {{ render '@block--hero' hero }}
     {{/ @section }}
 
-    {{#> @section }}
+    {{#> @section modifiers='bg-white' }}
         {{ render '@typography-text' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow' }}
+        {{ render '@block--quote' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow' }}
+        {{ render '@block--quote--full' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
 
 </main>

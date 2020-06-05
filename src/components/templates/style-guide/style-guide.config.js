@@ -5,7 +5,7 @@ module.exports = {
   status: 'prototype',
   context: {
     hero: {
-      text: 'Woodlands.co.uk Style Guide.'
+      text: 'Style Guide.'
     }
   }
 }

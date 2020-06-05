@@ -5,10 +5,6 @@
         {{ render '@block--hero' hero }}
     {{/ @section }}
 
-    {{#> @section modifiers='bg-yellow,narrow' }}
-        {{ render '@block--search' search merge=true }}
-    {{/ @section }}
-
     {{#> @section }}
         {{ render '@components--cards' woods merge=true }}
         {{ render '@button' woods merge=true }}
@@ -18,17 +14,21 @@
         {{ render '@components--buttons' topics merge=true }}
     {{/ @section }}
 
-    {{#> @section }}
+    {{#> @section modifiers='bg-white' }}
         {{ render '@components--cards' blog merge=true }}
     {{/ @section }}
 
-    {{#> @section modifiers='narrow' }}
-        {{ render '@block--quote' }}
+    {{#> @section modifiers='bg-white' }}
+        {{ render '@block--gallery--square' instagram merge=true }}
+        {{ render '@button' instagram merge=true }}
     {{/ @section }}
 
     {{#> @section modifiers='bg-yellow' }}
-        {{ render '@block--gallery--square' instagram merge=true }}
-        {{ render '@button' instagram merge=true }}
+        {{ render '@block--quote--full' }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
 </main>
 
