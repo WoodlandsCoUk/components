@@ -45,6 +45,7 @@ module.exports = {
       items: [
         woodland.location,
         woodland.text,
+        '2.6 miles away'
       ]
     },
     woodland: {

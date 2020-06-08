@@ -3,7 +3,7 @@
     min-height: 133px;
 
     &__item {
-        @apply inline-block text-2xl text-brand-green;
+        @apply inline-block text-xl text-brand-green;
 
         &::before {
             @apply inline-block mr-3 ml-2 -mt-1 text-xs align-middle;
