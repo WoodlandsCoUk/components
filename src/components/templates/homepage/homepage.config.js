@@ -1,9 +1,12 @@
 const faker = require('faker')
 
-const make = 6
+const itemCount = 6
 const items = []
 
-for (let i = 0; i < make; i++) {
+const topicCount = 7
+const topics = []
+
+for (let i = 0; i < itemCount; i++) {
   items.push({
     card: {
       title: faker.lorem.sentence(),
@@ -24,6 +27,13 @@ for (let i = 0; i < make; i++) {
       banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
       modifiers: ['woodland']
     }
+  })
+}
+
+for (let i = 0; i < topicCount; i++) {
+  topics.push({
+    text: faker.lorem.sentence(),
+    link: '#'
   })
 }
 
@@ -58,7 +68,8 @@ module.exports = {
       }
     },
     topics: {
-      title: 'Popular topics'
+      title: 'Popular topics',
+      list: topics
     },
     blog: {
       title: 'Blogs, videos & guides'

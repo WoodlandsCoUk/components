@@ -1,9 +1,9 @@
 const faker = require('faker')
 
-const make = 6
+const itemCount = 6
 const items = []
 
-for (let i = 0; i < make; i++) {
+for (let i = 0; i < itemCount; i++) {
   items.push({
     title: `Accordion #${i + 1}`,
     text: faker.lorem.paragraph()

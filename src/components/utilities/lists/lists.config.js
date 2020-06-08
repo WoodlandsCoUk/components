@@ -1,7 +1,7 @@
-const make = 4
+const itemCount = 4
 const items = []
 
-for (let i = 1; i < make + 1; i++) {
+for (let i = 1; i < itemCount + 1; i++) {
   items.push(`List Item #${i}`)
 }
 

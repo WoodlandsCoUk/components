@@ -50,6 +50,6 @@ module.exports = {
         list: buttons,
         modifiers: ['buttons']
       }
-    },
+    }
   ]
 }

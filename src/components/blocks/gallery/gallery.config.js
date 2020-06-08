@@ -1,10 +1,10 @@
 const faker = require('faker')
 
-const make = 6
+const itemCount = 6
 const items = []
 const squareItems = []
 
-for (let i = 0; i < make; i++) {
+for (let i = 0; i < itemCount; i++) {
   items.push({
     media: {
       src: faker.image.imageUrl(400, 225, 'nature', true),
@@ -13,7 +13,7 @@ for (let i = 0; i < make; i++) {
   })
 }
 
-for (let i = 0; i < make; i++) {
+for (let i = 0; i < itemCount; i++) {
   squareItems.push({
     media: {
       src: faker.image.imageUrl(400, 225, 'nature', true),

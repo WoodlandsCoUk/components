@@ -16,14 +16,16 @@
 
     {{#> @section }}
         <h2 class="section__title">{{ buy.title }}</h2>
-        <div class="section__column__wrapper section__column__wrapper--2">
-            <div class="section__column">
+
+        {{#> @grid modifiers="2,spaced,divider" }}
+            <div class="grid__item">
                 {{ render '@block--card--video' buy merge=true }}
             </div>
-            <div class="section__column">
-                {{ render '@components--buttons' topics merge=true }}
+            <div class="grid__item">
+                {{ render '@components--list--link' topics merge=true }}
             </div>
-        </div>
+        {{/ @grid }}
+
     {{/ @section }}
 
     <hr />

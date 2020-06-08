@@ -10,4 +10,52 @@
             @apply grid-cols-3;
         }
     }
+
+    &--spaced {
+        .grid__inner {
+            @apply gap-16;
+        }
+    }
+
+    &--divider {
+        .grid__inner {
+
+        }
+    }
+
+    &--2 {
+        .grid__inner {
+            @screen md {
+                @apply grid-cols-2;
+            }
+
+            @screen lg {
+                @apply grid-cols-2;
+            }
+        }
+    }
+
+    &--3 {
+        .grid__inner {
+            @screen md {
+                @apply grid-cols-3;
+            }
+
+            @screen lg {
+                @apply grid-cols-3;
+            }
+        }
+    }
+
+    &--4 {
+        .grid__inner {
+            @screen md {
+                @apply grid-cols-2;
+            }
+
+            @screen lg {
+                @apply grid-cols-4;
+            }
+        }
+    }
 }
