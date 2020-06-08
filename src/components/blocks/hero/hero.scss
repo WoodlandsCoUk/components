@@ -8,5 +8,13 @@
 
     > h1 {
         @apply font-display text-4xl leading-none text-brand-green-dark font-bold;
+
+        span {
+            &::before {
+                @apply mr-2 text-xl align-middle;
+
+                content: '•';
+            }
+        }
     }
 }
