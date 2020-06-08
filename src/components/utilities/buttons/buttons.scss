@@ -111,6 +111,16 @@ $variants: (
                     $border: map.get($dark, 'border');
 
                     @apply text-#{$text} bg-#{$bg} border-#{$border};
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        $text: map.get($hover, 'text');
+                        $bg: map.get($hover, 'bg');
+                        $border: map.get($hover, 'border');
+
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
                 }
             }
 
