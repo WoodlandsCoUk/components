@@ -19,7 +19,7 @@ module.exports = {
       label: 'Woodland',
       context: {
         text: faker.lorem.words(3),
-        extra: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+        extra: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3)
       }
     }
   ]
