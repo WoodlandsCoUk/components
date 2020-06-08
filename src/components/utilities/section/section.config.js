@@ -30,6 +30,13 @@ module.exports = {
       context: {
         modifiers: ['full']
       }
+    },
+    {
+      name: 'shadow',
+      label: 'With Shadow',
+      context: {
+        modifiers: ['shadow']
+      }
     }
   ]
 }

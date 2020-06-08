@@ -36,6 +36,10 @@ $backgrounds: (
         }
     }
 
+    &--shadow {
+        @apply shadow-md mb-5;
+    }
+
     @each $prefix, $colors in $backgrounds {
         &--bg-#{$prefix} {
             @apply bg-#{$colors};
