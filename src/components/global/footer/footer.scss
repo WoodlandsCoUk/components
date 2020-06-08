@@ -33,7 +33,13 @@
                 @apply block pb-2 text-left whitespace-no-wrap;
 
                 a {
-                    @apply block;
+                    @apply block no-underline;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        @apply underline;
+                    }
                 }
             }
         }

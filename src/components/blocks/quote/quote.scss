@@ -24,13 +24,7 @@ $quotePadding: 40px;
         @apply mb-0 mt-4;
 
         a {
-            @apply text-brand-green underline;
-
-            &:hover,
-            &:focus,
-            &:active {
-                @apply no-underline;
-            }
+            @apply text-brand-green;
         }
     }
 }

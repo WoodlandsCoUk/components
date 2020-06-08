@@ -13,3 +13,13 @@ hr {
         @apply block border-t border-gray-dark mx-auto max-w-screen-xl;
     }
 }
+
+a {
+    @apply underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @apply no-underline;
+    }
+}
