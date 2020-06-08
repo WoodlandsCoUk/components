@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <title>{{ _target.title }} | Component Library</title>
 
+    <script>
+        document.getElementsByTagName('html')[0].className += ' js';
+    </script>
+
     <link media="all" rel="stylesheet" href="{{ path '/css/site.css' }}" />
 </head>
 <body>
