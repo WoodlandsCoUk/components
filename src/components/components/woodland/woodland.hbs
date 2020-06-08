@@ -1,12 +1,23 @@
-{{ render '@media' }}
+{{#> @grid modifiers="2/3,spaced,divider" }}
+    <div class="grid__item">
+        {{ render '@media' }}
 
-<br />
+        <br />
 
-{{ render '@block--read-more' read-more merge=true }}
+        {{ render '@block--read-more' read-more merge=true }}
 
-{{ render '@button' visit merge=true }}
-{{ render '@button' pdf merge=true }}
+        <br />
 
-{{ render '@block--button-group' this }}
+        {{ render '@block--button-group' this }}
 
-{{ render '@block--accordion' accordion }}
+        {{ render '@block--accordion' accordion }}
+    </div>
+    <div class="grid__item">
+        <p class="lede">{{ lede }}</p>
+
+        {{ render '@button' visit merge=true }}
+        {{ render '@button' pdf merge=true }}
+
+        {{ render '@block--managed-by' }}
+    </div>
+{{/ @grid }}

@@ -37,6 +37,6 @@ module.exports = {
       context: {
         modifiers: ['2/3']
       }
-    },
+    }
   ]
 }

@@ -13,17 +13,17 @@
         {{ render '@components--woodland' }}
     {{/ @section }}
 
-    {{#> @section modifiers='bg-white' }}
-        {{ render '@block--managed-by' }}
-    {{/ @section }}
-
-    {{#> @section }}
+    {{!-- {{#> @section }}
         {{ render '@block--cta' cta merge=true }}
-    {{/ @section }}
+    {{/ @section }} --}}
 
-    {{#> @section }}
+    {{#> @section modifiers="bg-gray" }}
         {{ render '@components--cards' woodland merge=true }}
         {{ render '@button' woodland merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
 </main>
 

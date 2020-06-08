@@ -49,10 +49,10 @@ module.exports = {
       ]
     },
     woodland: {
-      title: 'More woods for sale',
+      title: 'Other woodlands for sale',
       cards: items,
       button: {
-        text: 'See all woods for sale',
+        text: 'See more woodlands for sale',
         modifiers: ['inline', 'green', 'green--outline']
       }
     }

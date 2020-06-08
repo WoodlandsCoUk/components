@@ -25,6 +25,7 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
+    lede: faker.lorem.paragraph(3),
     'read-more': {
       text: faker.lorem.paragraphs(6),
       button: {
@@ -43,7 +44,7 @@ module.exports = {
     pdf: {
       button: {
         text: 'Download PDF Details',
-        modifiers: ['green']
+        modifiers: ['green--dark']
       }
     },
     buttons: {
