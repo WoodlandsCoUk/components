@@ -54,7 +54,7 @@ module.exports = {
         modifiers: ['alt']
       }
     },
-    woods: {
+    woodlands: {
       title: 'New woodlands for sale',
       cards: items,
       button: {

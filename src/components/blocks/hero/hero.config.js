@@ -7,7 +7,7 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    text: 'Woods for sale for conservation and enjoyment.'
+    text: 'Woodlands for sale for conservation and enjoyment.'
   },
   variants: [
     {
