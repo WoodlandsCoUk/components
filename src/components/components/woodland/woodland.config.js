@@ -1,6 +1,9 @@
 const faker = require('faker')
 
 const items = []
+const tabs = []
+const buttons = []
+
 const accordionTitles = [
   'Trees',
   'Wildlife',
@@ -10,10 +13,30 @@ const accordionTitles = [
   'Acitivites'
 ]
 
+const buttonTitles = [
+  'Description',
+  'Maps',
+  'Directions'
+]
+
 for (let i = 0; i < accordionTitles.length; i++) {
   items.push({
     title: accordionTitles[i],
     text: faker.lorem.paragraph()
+  })
+}
+
+for (let i = 0; i < buttonTitles.length; i++) {
+  buttons.push({
+    uuid: i,
+    text: buttonTitles[i],
+    modifiers: ['small', 'inline', 'green', 'green--outline']
+  })
+
+  tabs.push({
+    uuid: i,
+    title: buttonTitles[i],
+    text: buttonTitles[i] // render '@block--accordion'
   })
 }
 
@@ -46,6 +69,10 @@ module.exports = {
         text: 'Download PDF Details',
         modifiers: ['green--dark']
       }
+    },
+    tab: {
+      tabs,
+      nav: buttons
     },
     buttons: {
       description: {
