@@ -2,7 +2,7 @@
   <a href="{{ card.link }}" class="card__link">
     {{ render '@media' card merge=true}}
     <div class="card__body">
-      <h3 class="card__title">{{ card.title }}</h3>
+      <h3 class="card__title">{{ titlecase card.title }}</h3>
       {{#if card.location}}
       <p class="card__location">{{ card.location }}</p>
       {{/if}}

@@ -1,7 +1,7 @@
 <div class="{{modifier 'card' quote.modifiers}}">
   {{ render '@media--video' card merge=true}}
   <div class="card__body">
-    <h3 class="card__title">{{ card.title }}</h3>
+    <h3 class="card__title">{{ titlecase card.title }}</h3>
     <div class="card__content">
       {{ card.text }}
     </div>
