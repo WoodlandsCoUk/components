@@ -3,9 +3,6 @@ const faker = require('faker')
 const itemCount = 6
 const items = []
 
-const topicCount = 7
-const topics = []
-
 for (let i = 0; i < itemCount; i++) {
   items.push({
     card: {
@@ -31,54 +28,20 @@ for (let i = 0; i < itemCount; i++) {
   })
 }
 
-for (let i = 0; i < topicCount; i++) {
-  topics.push({
-    text: faker.lorem.sentence(),
-    link: '#'
-  })
-}
-
 module.exports = {
-  order: 1,
-  title: 'Homepage',
-  handle: 'page-homepage',
+  order: 10,
+  title: 'Woodland Detail',
+  label: 'Woodland Detail',
+  handle: 'page-woodland',
   status: 'prototype',
   context: {
-    header: {
-      navigation: {
-        active: 'page-homepage'
-      }
-    },
-    search: {
-      search: {
-        modifiers: ['alt']
-      }
-    },
-    woods: {
-      title: 'New woodlands for sale',
+    header: {},
+    woodland: {
+      title: 'More woods for sale',
       cards: items,
       button: {
-        text: 'See all woodlands for sale',
+        text: 'See all woods for sale',
         modifiers: ['inline', 'green', 'green--outline']
-      }
-    },
-    buy: {
-      title: 'Buying and owning a woodland',
-      card: {
-        title: 'Why buy a woodland?'
-      }
-    },
-    topics: {
-      title: 'Popular topics',
-      list: topics
-    },
-    blog: {
-      title: 'Blogs, videos & guides'
-    },
-    instagram: {
-      button: {
-        text: 'Follow us on Instagram',
-        modifiers: ['green', 'green--outline', 'inline']
       }
     }
   }

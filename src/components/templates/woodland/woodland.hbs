@@ -1,21 +1,21 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    {{#> @section modifiers='bg-white,narrow' }}
-        {{ render '@components--wood' }}
+    {{#> @section modifiers='bg-white' }}
+        {{ render '@components--woodland' }}
     {{/ @section }}
 
     {{#> @section modifiers='bg-white' }}
         {{ render '@block--managed-by' }}
     {{/ @section }}
 
-    {{#> @section modifiers='bg-yellow,narrow' }}
+    {{#> @section }}
         {{ render '@block--cta' cta merge=true }}
     {{/ @section }}
 
     {{#> @section }}
-        {{ render '@components--cards' woods merge=true }}
-        {{ render '@button' woods merge=true }}
+        {{ render '@components--cards' woodland merge=true }}
+        {{ render '@button' woodland merge=true }}
     {{/ @section }}
 </main>
 

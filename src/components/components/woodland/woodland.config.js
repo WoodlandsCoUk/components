@@ -19,9 +19,9 @@ for (let i = 0; i < accordionTitles.length; i++) {
 
 module.exports = {
   order: 10,
-  title: 'Wood',
-  label: 'Wood',
-  handle: 'components--wood',
+  title: 'Woodland',
+  label: 'Woodland',
+  handle: 'components--woodland',
   status: 'wip',
   default: 'default',
   context: {

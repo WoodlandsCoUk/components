@@ -8,12 +8,13 @@ for (let i = 0; i < itemCount; i++) {
     card: {
       title: faker.lorem.sentence(),
       text: faker.lorem.paragraph(),
-      link: 'page-wood',
+      link: '',
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: []
       },
       banner: 'Banner',
+      location: '',
       modifiers: ['link']
     }
   })
@@ -30,7 +31,7 @@ module.exports = {
     title: 'General card listing',
     cards: items,
     listing: {
-      modifiers: ['grid', 'gray']
+      modifiers: ['grid']
     }
   }
 }

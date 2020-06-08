@@ -30,6 +30,8 @@
     }
 
     &__link {
+        @apply no-underline;
+
         &:hover,
         &:focus,
         &:active {
