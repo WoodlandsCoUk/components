@@ -1,6 +1,6 @@
 const faker = require('faker')
 
-const itemCount = 5
+const itemCount = 3
 const items = []
 
 for (let i = 0; i < itemCount; i++) {

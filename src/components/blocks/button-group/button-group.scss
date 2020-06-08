@@ -1,7 +1,17 @@
 .button-group {
-    @apply flex justify-between -mx-1;
+    @apply flex justify-between mx-1 rounded-md overflow-hidden;
 
     .button {
-        @apply m-0 mx-1 flex-grow;
+        @apply m-0 max-w-none flex-grow rounded-none;
+        margin-left: -1px;
+
+        &:first-child {
+            @apply rounded-l-md;
+            margin-left: 0;
+        }
+
+        &:last-child {
+            @apply rounded-r-md;
+        }
     }
 }

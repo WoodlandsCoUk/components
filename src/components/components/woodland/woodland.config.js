@@ -51,19 +51,19 @@ module.exports = {
       description: {
         button: {
           text: 'Description',
-          modifiers: ['small', 'inline']
+          modifiers: ['small', 'inline', 'green', 'green--outline']
         }
       },
       maps: {
         button: {
           text: 'Maps',
-          modifiers: ['small', 'inline']
+          modifiers: ['small', 'inline', 'green', 'green--outline']
         }
       },
       directions: {
         button: {
           text: 'Directions',
-          modifiers: ['small', 'inline']
+          modifiers: ['small', 'inline', 'green', 'green--outline']
         }
       }
     },
