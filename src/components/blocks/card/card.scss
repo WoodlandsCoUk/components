@@ -1,5 +1,5 @@
 .card {
-    @apply flex flex-col relative rounded-md overflow-hidden border border-gray bg-white mx-auto w-full;
+    @apply flex flex-col relative rounded-md overflow-hidden border border-gray bg-white mx-auto w-full shadow-md;
 
     + * {
         @apply mt-6;
