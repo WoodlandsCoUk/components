@@ -41,7 +41,11 @@ module.exports = {
         light: '#faf5ed'
       }
     },
-    extend: {}
+    extend: {
+      gridTemplateColumns: {
+        '2/3': 'auto minmax(25%, 30%)'
+      }
+    }
   },
   variants: {
     opacity: ['responsive', 'hover']

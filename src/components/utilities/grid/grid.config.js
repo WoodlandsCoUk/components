@@ -30,6 +30,13 @@ module.exports = {
       context: {
         modifiers: ['4']
       }
-    }
+    },
+    {
+      name: 'two-thirds-column',
+      label: 'Two Thirds Column',
+      context: {
+        modifiers: ['2/3']
+      }
+    },
   ]
 }
