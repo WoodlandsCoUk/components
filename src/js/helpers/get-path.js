@@ -10,7 +10,7 @@ const getPath = (element) => {
   const path = getPath(element.parentNode)
 
   if (element.className) {
-    return path + ' ' + element.tagName.toLowerCase() + '.' + [...element.classList].join('.')
+    return path + ' ' + element.tagName.toLowerCase() + '.' + [...element.classList].join('.').replace(/\//g, '\\/')
   }
 
   return path + ' ' + element.tagName.toLowerCase()
