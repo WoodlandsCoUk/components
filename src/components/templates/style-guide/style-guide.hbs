@@ -1,6 +1,6 @@
 {{ render '@layout-header' header merge=true }}
 
-<main class="narrow">
+<main>
     {{#> @section modifiers='bg-yellow,short' }}
         {{ render '@block--hero' hero }}
     {{/ @section }}
@@ -24,7 +24,6 @@
     {{#> @section modifiers='bg-green' }}
         {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
-
 </main>
 
 {{ render '@layout-footer' }}

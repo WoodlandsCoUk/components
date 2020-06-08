@@ -11,17 +11,24 @@ module.exports = {
       label: 'Default'
     },
     {
-      name: 'narrow',
-      label: 'Narrow',
+      name: 'two-column',
+      label: 'Two Column',
       context: {
-        modifiers: ['narrow']
+        modifiers: ['2']
       }
     },
     {
-      name: 'full',
-      label: 'Full Width',
+      name: 'three-column',
+      label: 'Three Column',
       context: {
-        modifiers: ['full']
+        modifiers: ['3']
+      }
+    },
+    {
+      name: 'four-column',
+      label: 'Four Column',
+      context: {
+        modifiers: ['4']
       }
     }
   ]

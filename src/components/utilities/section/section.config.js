@@ -25,13 +25,6 @@ module.exports = {
       }
     },
     {
-      name: 'narrow',
-      label: 'Narrow',
-      context: {
-        modifiers: ['narrow']
-      }
-    },
-    {
       name: 'full',
       label: 'Full Width',
       context: {

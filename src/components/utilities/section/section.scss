@@ -26,12 +26,6 @@ $backgrounds: (
         }
     }
 
-    &--narrow {
-        .section__inner {
-            @apply max-w-md;
-        }
-    }
-
     &--short {
         @apply py-0;
     }
