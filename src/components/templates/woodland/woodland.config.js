@@ -1,12 +1,12 @@
 const faker = require('faker')
 
-const itemCount = 6
+const itemCount = 7
 const items = []
 
 for (let i = 0; i < itemCount; i++) {
   items.push({
     card: {
-      title: faker.lorem.sentence(),
+      title: faker.lorem.words(3),
       text: faker.random.arrayElement([
         'About 5 ½ acres',
         'Almost 4 acres',
@@ -28,6 +28,8 @@ for (let i = 0; i < itemCount; i++) {
   })
 }
 
+const woodland = items.pop().card
+
 module.exports = {
   order: 10,
   title: 'Woodland Detail',
@@ -35,7 +37,16 @@ module.exports = {
   handle: 'page-woodland',
   status: 'prototype',
   context: {
-    header: {},
+    hero: {
+      text: woodland.title,
+      extra: woodland.banner
+    },
+    intro: {
+      items: [
+        woodland.location,
+        woodland.text,
+      ]
+    },
     woodland: {
       title: 'More woods for sale',
       cards: items,

@@ -1,6 +1,14 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@block--hero--woodland' hero }}
+    {{/ @section }}
+
+    {{#> @section modifiers='shadow,short' }}
+        {{ render '@block--intro' intro }}
+    {{/ @section }}
+
     {{#> @section modifiers='bg-white' }}
         {{ render '@components--woodland' }}
     {{/ @section }}
