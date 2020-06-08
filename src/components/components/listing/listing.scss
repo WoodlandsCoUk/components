@@ -1,0 +1,29 @@
+.listing {
+  @apply relative pl-0 list-none;
+
+  &__item {
+    @apply py-3 border-b border-gray;
+
+    &:first-child {
+      @apply -mt-3;
+    }
+  }
+
+  &--linked {
+    @apply -ml-3;
+
+    .listing__item {
+      @apply py-0 border-0;
+
+      > a {
+        @apply block py-3 pl-3 border-b border-gray;
+
+        &:hover,
+        &:focus,
+        &:active {
+          @apply bg-gray-light;
+        }
+      }
+    }
+  }
+}

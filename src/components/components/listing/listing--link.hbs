@@ -1,0 +1,9 @@
+<h2 class="section__title section__title--small section__title--alt u-text-left">{{ title }}</h2>
+
+<ul class="{{modifier 'listing' modifiers}}">
+  {{#each list }}
+    <li class="listing__item">
+        <a href="{{ link }}">{{ text }}</a>
+    </li>
+  {{/each}}
+</ul>
