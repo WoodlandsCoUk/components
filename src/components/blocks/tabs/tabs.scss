@@ -1,0 +1,31 @@
+.tab {
+    @apply relative;
+
+    &__navigation {
+        @apply mb-3;
+
+        .tab--active {
+            @apply bg-brand-green-dark text-white;
+        }
+    }
+
+    &__item {
+        @apply relative mb-3 pb-3 border-b border-gray;
+
+        html.js & {
+            @apply mb-0 pb-0 border-none hidden;
+
+            &.tab--active {
+                @apply block;
+            }
+        }
+    }
+
+    &__item__title {
+        @apply mb-1 text-brand-green-dark font-bold;
+
+        html.js & {
+            @apply hidden;
+        }
+    }
+}

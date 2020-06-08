@@ -1,0 +1,18 @@
+<div class="{{modifier 'tab' modifiers}}" data-tab="{{ tab.uuid }}">
+  <div class="tab__navigation button-group">
+    {{#each tab.nav }}
+        <button class="{{modifier 'button' modifiers}}" data-tab-for={{ uuid }}>
+          {{ text }}
+        </button>
+    {{/each}}
+  </div>
+
+  <div class="tab__items">
+    {{#each tab.tabs }}
+        <div class="tab__item" data-tab-item="{{ uuid }}">
+            <h3 class="tab__item__title">{{ title }}</h3>
+            {{ text }}
+        </div>
+    {{/each}}
+  </div>
+</div>
