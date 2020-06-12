@@ -58,6 +58,50 @@ selector.forEach(function (block) {
 
 /***/ }),
 
+/***/ "./src/components/blocks/tabs/tabs.js":
+/*!********************************************!*\
+  !*** ./src/components/blocks/tabs/tabs.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var tabs = document.querySelectorAll('.tab[data-tab]');
+var classes = {
+  active: 'tab--active'
+};
+tabs.forEach(function (tab) {
+  var nav = tab.querySelector('.tab__navigation');
+  var navItems = nav.querySelectorAll('[data-tab-for]');
+  var content = tab.querySelector('.tab__items');
+  var items = content.querySelectorAll('[data-tab-item]');
+  navItems.forEach(function (item, i) {
+    item.addEventListener('click', function (event) {
+      item.classList.add(classes.active);
+      Array.from(items).filter(function (i) {
+        return i.dataset.tabItem === item.dataset.tabFor;
+      }).forEach(function (i) {
+        i.classList.add(classes.active);
+      });
+      Array.from(navItems).filter(function (i) {
+        return i.dataset.tabFor !== item.dataset.tabFor;
+      }).forEach(function (i) {
+        i.classList.remove(classes.active);
+      });
+      Array.from(items).filter(function (i) {
+        return i.dataset.tabItem !== item.dataset.tabFor;
+      }).forEach(function (i) {
+        i.classList.remove(classes.active);
+      });
+    });
+
+    if (i === 0) {
+      item.click();
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/components/global/navigation/navigation.js":
 /*!********************************************************!*\
   !*** ./src/components/global/navigation/navigation.js ***!
@@ -105,7 +149,7 @@ var getPath = function getPath(element) {
   var path = getPath(element.parentNode);
 
   if (element.className) {
-    return path + ' ' + element.tagName.toLowerCase() + '.' + _toConsumableArray(element.classList).join('.');
+    return path + ' ' + element.tagName.toLowerCase() + '.' + _toConsumableArray(element.classList).join('.').replace(/\//g, '\\/');
   }
 
   return path + ' ' + element.tagName.toLowerCase();
@@ -126,6 +170,8 @@ module.exports = function (element) {
 
 // require('components/blocks/search/search')
 __webpack_require__(/*! components/blocks/accordion/accordion */ "./src/components/blocks/accordion/accordion.js");
+
+__webpack_require__(/*! components/blocks/tabs/tabs */ "./src/components/blocks/tabs/tabs.js");
 
 __webpack_require__(/*! components/blocks/read-more/read-more */ "./src/components/blocks/read-more/read-more.js");
 

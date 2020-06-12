@@ -6,20 +6,26 @@
     <meta charset="utf-8" />
     <title>Call to Action Form: Subscribe | Component Library</title>
 
+    <script>
+        document.getElementsByTagName('html')[0].className += ' js';
+    </script>
+
     <link media="all" rel="stylesheet" href="../../css/site.css" />
 </head>
 <body>
 
     <form action="" method="GET" class="form form--cta">
-    <div class="form__field">
-        <label for="form__cta__field" class="form__title">Subscribe to email updates</label>
-        <label for="form__cta__field" class="form__subtitle">Get an email when new woods come on to the market</label>
+    <label for="form__cta__field" class="form__title">Subscribe to email updates</label>
+
+    <label for="form__cta__field" class="form__subtitle">Get an email when new woods come on to the market</label>
+
+    <div class="form__cta__group">
         <input type="text" id="form__cta__field" name="field" placeholder="Enter email address…" />
-    </div>
-    <button class="button button--green">
+        <button class="button button--green">
   Sign up to mailing list
 </button>
 
+    </div>
 </form>
 
 

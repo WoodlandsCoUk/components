@@ -1,23 +1,35 @@
 .managed-by {
-    @apply text-center;
+    @apply relative py-3;
+
+    &__person {
+        @apply flex flex-row-reverse content-around items-center -mb-2;
+    }
 
     &__title {
-        @apply mb-3 text-brand-green uppercase text-xs tracking-widest font-bold;
+        @apply mr-auto text-brand-green-light uppercase text-base tracking-widest font-normal;
 
         strong {
-            @apply block normal-case font-normal text-base;
+            @apply block normal-case text-brand-green font-normal text-base;
         }
     }
 
     &__avatar {
-        @apply block mx-auto rounded-full w-24 h-24 overflow-hidden;
+        @apply mr-5 ml-0 w-24 h-24 overflow-hidden;
+
+        > img {
+            @apply block rounded-full w-24 h-24;
+        }
     }
 
     &__contact {
-        @apply mt-4 pt-6 border-t border-gray;
+        @apply mt-4 pt-3 border-t border-gray text-lg text-brand-red;
+
+        &:first-of-type {
+            @apply border-t-0;
+        }
 
         a {
-            @apply underline text-brand-red-dark;
+            @apply text-current;
         }
     }
 }

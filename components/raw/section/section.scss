@@ -18,13 +18,11 @@ $backgrounds: (
         @apply text-center mt-3 mb-6 text-2xl text-brand-red;
 
         &--small {
-            @apply text-sm uppercase;
+            @apply text-sm uppercase font-bold;
         }
-    }
 
-    &--narrow {
-        .section__inner {
-            @apply max-w-md;
+        &--alt {
+            @apply text-brand-green-light;
         }
     }
 
@@ -36,6 +34,10 @@ $backgrounds: (
         .section__inner {
             @apply max-w-none;
         }
+    }
+
+    &--shadow {
+        @apply shadow-md mb-5;
     }
 
     @each $prefix, $colors in $backgrounds {

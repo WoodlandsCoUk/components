@@ -1,5 +1,5 @@
 .list {
-    @apply list-disc;
+    @apply list-disc pl-6;
 
     &--ordered {
         @apply list-decimal;

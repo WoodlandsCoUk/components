@@ -50,7 +50,7 @@ $animationDelay: 150ms;
         }
 
         > a {
-            @apply py-2 text-brand-yellow font-bold;
+            @apply py-2 text-brand-yellow font-bold no-underline;
 
             &:hover,
             &:focus,
