@@ -14,7 +14,7 @@ module.exports = {
     text: faker.lorem.paragraphs(5),
     trigger: {
       text,
-      hide,
+      hide
     },
     button: {
       button: {
