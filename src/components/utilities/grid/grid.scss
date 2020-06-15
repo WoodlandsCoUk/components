@@ -11,6 +11,10 @@
         }
     }
 
+    &__item {
+        @apply relative;
+    }
+
     &--spaced {
         .grid__inner {
             @apply gap-16;
@@ -64,6 +68,12 @@
             @screen lg {
                 @apply grid-cols-4;
             }
+        }
+    }
+
+    &--woodland {
+        .u-sticky {
+            top: 8rem;
         }
     }
 }

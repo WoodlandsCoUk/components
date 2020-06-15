@@ -1,4 +1,4 @@
-{{#> @grid modifiers="2/3,spaced,divider" }}
+{{#> @grid modifiers="2/3,spaced,divider,woodland" }}
     <div class="grid__item">
         {{ render '@media' }}
 
@@ -13,11 +13,13 @@
         {{ render '@block--accordion' accordion }}
     </div>
     <div class="grid__item">
-        <p class="lede">{{ lede }}</p>
+        <div class="u-sticky">
+            <p class="lede">{{ lede }}</p>
 
-        {{ render '@button' visit merge=true }}
-        {{ render '@button' pdf merge=true }}
+            {{ render '@button' visit merge=true }}
+            {{ render '@button' pdf merge=true }}
 
-        {{ render '@block--managed-by' }}
+            {{ render '@block--managed-by' }}
+        </div>
     </div>
 {{/ @grid }}
