@@ -29,7 +29,7 @@ module.exports = {
       button: {
         button: {
           text: 'Call to Action',
-          modifiers: ['red']
+          modifiers: ['red', 'inline']
         }
       }
     }
@@ -45,7 +45,7 @@ module.exports = {
       context: {
         cta: {
           title: 'Call to Action Listing',
-          // button: false,
+          button: false,
           items
         }
       }
@@ -57,7 +57,8 @@ module.exports = {
         cta: {
           title: faker.lorem.words(4),
           text: faker.lorem.paragraph(),
-          extra: faker.lorem.sentences(2)
+          extra: faker.lorem.sentences(2),
+          button: false
         }
       }
     }
