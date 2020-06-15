@@ -17,7 +17,7 @@ for (let i = 0; i < itemCount; i++) {
   tabs.push({
     uuid,
     title,
-    text: faker.lorem.sentences(5)
+    content: faker.lorem.sentences(5)
   })
 }
 

@@ -13,11 +13,20 @@ const accordionTitles = [
   'Acitivites'
 ]
 
-const buttonTitles = [
-  'Description',
-  'Maps',
-  'Directions'
-]
+const tabSections = {
+  description: {
+    title: 'Description',
+    content: 'Description'
+  },
+  maps: {
+    title: 'Maps',
+    content: 'Maps'
+  },
+  directions: {
+    title: 'Directions',
+    content: 'Directions'
+  }
+}
 
 for (let i = 0; i < accordionTitles.length; i++) {
   items.push({
@@ -26,17 +35,17 @@ for (let i = 0; i < accordionTitles.length; i++) {
   })
 }
 
-for (let i = 0; i < buttonTitles.length; i++) {
+for (let [key, button] of Object.entries(tabSections)) {
   buttons.push({
-    uuid: i,
-    text: buttonTitles[i],
+    uuid: key,
+    text: button.title,
     modifiers: ['small', 'inline', 'green', 'green--outline']
   })
 
   tabs.push({
-    uuid: i,
-    title: buttonTitles[i],
-    text: buttonTitles[i] // render '@block--accordion'
+    uuid: key,
+    title: button.title,
+    content: button.content
   })
 }
 
@@ -73,6 +82,15 @@ module.exports = {
     tab: {
       tabs,
       nav: buttons
+    },
+    description: {
+      content: tabSections.description.content
+    },
+    maps: {
+      content: tabSections.maps.content
+    },
+    directions: {
+      content: tabSections.directions.content
     },
     buttons: {
       description: {

@@ -9,9 +9,9 @@
 
   <div class="tab__items">
     {{#each tab.tabs }}
-        <div class="tab__item" data-tab-item="{{ uuid }}">
+        <div class="tab__item tab__item--{{ uuid }}" data-tab-item="{{ uuid }}">
             <h3 class="tab__item__title">{{ title }}</h3>
-            {{ text }}
+            {{ content }}
         </div>
     {{/each}}
   </div>
