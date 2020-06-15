@@ -31,16 +31,16 @@
 
             > li {
                 @apply block pb-2 text-left whitespace-no-wrap;
+            }
+        }
 
-                a {
-                    @apply block no-underline;
+        a {
+            @apply block no-underline text-white;
 
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        @apply underline;
-                    }
-                }
+            &:hover,
+            &:focus,
+            &:active {
+                @apply underline;
             }
         }
 
@@ -76,7 +76,7 @@
         }
 
         a {
-            @apply underline;
+            @apply underline text-white;
 
             &:hover,
             &:focus,

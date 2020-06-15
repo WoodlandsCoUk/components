@@ -40,7 +40,7 @@ selector.forEach(function (item) {
 
 var selector = document.querySelectorAll('.read-more[data-show][data-hide]');
 selector.forEach(function (block) {
-  var toggle = block.querySelector('.read-more__toggle button');
+  var toggle = block.querySelector('.read-more__toggle > button, .read-more__toggle > a');
   var showText = block.dataset.show;
   var hideText = block.dataset.hide;
   toggle.addEventListener('click', function (event) {

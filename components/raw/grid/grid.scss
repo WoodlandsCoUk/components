@@ -1,6 +1,6 @@
 .grid {
     &__inner {
-        @apply grid grid-cols-1 gap-8;
+        @apply relative grid grid-cols-1 gap-8;
 
         @screen md {
             @apply grid-cols-2;
@@ -11,6 +11,10 @@
         }
     }
 
+    &__item {
+        @apply relative;
+    }
+
     &--spaced {
         .grid__inner {
             @apply gap-16;
@@ -18,8 +22,21 @@
     }
 
     &--divider {
-        .grid__inner {
+        .grid__item {
+            @apply relative;
 
+            &::before {
+                @apply absolute top-0 left-0 block border-0 border-gray h-full -ml-8;
+                content: "";
+
+                @screen md {
+                    @apply border-l;
+                }
+            }
+
+            &:first-child::before {
+                @apply hidden;
+            }
         }
     }
 
@@ -64,6 +81,12 @@
             @screen lg {
                 @apply grid-cols-4;
             }
+        }
+    }
+
+    &--woodland {
+        .u-sticky {
+            top: 8rem;
         }
     }
 }

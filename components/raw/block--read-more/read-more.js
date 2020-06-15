@@ -1,7 +1,7 @@
 const selector = document.querySelectorAll('.read-more[data-show][data-hide]')
 
 selector.forEach((block) => {
-  const toggle = block.querySelector('.read-more__toggle button')
+  const toggle = block.querySelector('.read-more__toggle > button, .read-more__toggle > a')
   const showText = block.dataset.show
   const hideText = block.dataset.hide
 

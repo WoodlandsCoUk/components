@@ -4,8 +4,12 @@
     &__navigation {
         @apply mb-3;
 
+        .button {
+            @apply min-w-0 truncate;
+        }
+
         .tab--active {
-            @apply bg-brand-green-dark text-white;
+            @apply bg-brand-green text-white;
         }
     }
 
