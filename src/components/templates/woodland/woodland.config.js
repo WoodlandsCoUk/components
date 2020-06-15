@@ -62,20 +62,32 @@ module.exports = {
         button: false,
         items: [
           {
-            title: 'Member of the small woodland owners’ group',
-            icon: 'tick'
+            title: 'Member of the <a href="#">small woodland owners’</a> group',
+            icon: {
+              icon: 'tick',
+              modifiers: ['medium', 'yellow-dark']
+            }
           },
           {
-            title: 'Membership of the royal forestry society',
-            icon: 'tick'
+            title: 'Membership of the <a href="#">royal forestry society</a>',
+            icon: {
+              icon: 'tick',
+              modifiers: ['medium', 'yellow-dark']
+            }
           },
           {
-            title: '£300 for a woodland course of your choice',
-            icon: 'tick'
+            title: '£300 for a woodland <a href="#">course of your choice</a>',
+            icon: {
+              icon: 'tick',
+              modifiers: ['medium', 'yellow-dark']
+            }
           },
           {
-            title: 'Free copies of two woodland books',
-            icon: 'tick'
+            title: 'Free copies of <a href="#">two woodland books</a>',
+            icon: {
+              icon: 'tick',
+              modifiers: ['medium', 'yellow-dark']
+            }
           }
         ]
       }

@@ -5,7 +5,7 @@ module.exports = {
   default: 'default',
   context: {
     icon: {
-      icon: 'x'
+      icon: 'tick'
     }
   },
   variants: [

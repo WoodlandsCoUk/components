@@ -8,7 +8,10 @@ for (let i = 0; i < itemCount; i++) {
 
   items.push({
     title: title,
-    icon: 'tick'
+    icon: {
+      icon: 'tick',
+      modifiers: ['medium', 'yellow-dark']
+    }
   })
 }
 
@@ -34,7 +37,7 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      label: 'Default',
+      label: 'Default'
     },
     {
       name: 'listing',

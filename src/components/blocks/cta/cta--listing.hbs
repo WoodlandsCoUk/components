@@ -3,9 +3,8 @@
   <div class="cta__items">
     {{#each cta.items }}
         <div class="cta__item">
-            <h3 class="cta__item__title">{{ title }}</h3>
-            {{!-- {{ content }} --}}
-            {{ render '@icon' icon merge=true }}
+            <h3 class="cta__item__title">{{{ title }}}</h3>
+            {{ render '@icon' this merge=true }}
         </div>
     {{/each}}
   </div>
