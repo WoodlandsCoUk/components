@@ -14,8 +14,9 @@ hr {
     }
 }
 
-a {
-    @apply underline;
+a,
+.link {
+    @apply underline text-brand-red;
 
     &:hover,
     &:focus,

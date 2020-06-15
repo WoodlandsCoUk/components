@@ -1,9 +1,13 @@
-<div class="read-more" data-show="{{ button.button.text }} " data-hide="{{ button.button.hide }}">
+<div class="read-more" data-show="{{ trigger.text }} " data-hide="{{ trigger.hide }}">
   <div class="read-more__content">
       <p>{{ text }}</p>
   </div>
 
   <div class="read-more__toggle">
-    {{ render '@button' button merge=true }}
+    {{#if button}}
+      {{ render '@button' button merge=true }}
+    {{else}}
+      <button class="link">{{ trigger.text }}</button>
+    {{/if}}
   </div>
 </div>

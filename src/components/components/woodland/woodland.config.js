@@ -60,12 +60,7 @@ module.exports = {
     lede: faker.lorem.paragraph(3),
     'read-more': {
       text: faker.lorem.paragraphs(6),
-      button: {
-        button: {
-          text: 'Read more',
-          modifiers: ['small']
-        }
-      }
+      button: false
     },
     visit: {
       button: {

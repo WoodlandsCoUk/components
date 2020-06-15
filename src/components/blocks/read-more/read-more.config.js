@@ -1,5 +1,8 @@
 const faker = require('faker')
 
+const text = 'Read more'
+const hide = 'Read less'
+
 module.exports = {
   order: 10,
   title: 'Read More',
@@ -9,10 +12,13 @@ module.exports = {
   default: 'default',
   context: {
     text: faker.lorem.paragraphs(5),
+    trigger: {
+      text,
+      hide,
+    },
     button: {
       button: {
-        text: 'Read more',
-        hide: 'Read less',
+        text,
         modifiers: ['small']
       }
     }
