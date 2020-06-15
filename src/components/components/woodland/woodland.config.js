@@ -35,7 +35,7 @@ for (let i = 0; i < accordionTitles.length; i++) {
   })
 }
 
-for (let [key, button] of Object.entries(tabSections)) {
+for (const [key, button] of Object.entries(tabSections)) {
   buttons.push({
     uuid: key,
     text: button.title,

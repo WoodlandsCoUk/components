@@ -1,0 +1,15 @@
+<div class="{{modifier 'cta' cta.modifiers}}">
+  <h2 class="cta__title">{{ cta.title }}</h2>
+  <div class="cta__items">
+    {{#each cta.items }}
+        <div class="cta__item">
+            <h3 class="cta__item__title">{{ title }}</h3>
+            {{!-- {{ content }} --}}
+            {{ render '@icon' icon merge=true }}
+        </div>
+    {{/each}}
+  </div>
+  {{#if cta.button}}
+    {{ render '@button' cta.button merge=true }}
+  {{/if}}
+</div>

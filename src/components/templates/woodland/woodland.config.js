@@ -55,6 +55,30 @@ module.exports = {
         text: 'See more woodlands for sale',
         modifiers: ['inline', 'green', 'green--outline']
       }
+    },
+    cta: {
+      cta: {
+        title: 'How we support our buyers',
+        button: false,
+        items: [
+          {
+            title: 'Member of the small woodland owners’ group',
+            icon: 'tick'
+          },
+          {
+            title: 'Membership of the royal forestry society',
+            icon: 'tick'
+          },
+          {
+            title: '£300 for a woodland course of your choice',
+            icon: 'tick'
+          },
+          {
+            title: 'Free copies of two woodland books',
+            icon: 'tick'
+          }
+        ]
+      }
     }
   }
 }

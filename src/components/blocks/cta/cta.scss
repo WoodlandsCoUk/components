@@ -2,10 +2,29 @@
     @apply p-6 text-center;
 
     &__title {
-        @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6 pb-6 border-b border-gray-dark;
+        @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6;
     }
 
     &__text {
         @apply text-brand-red-dark mb-6 uppercase text-sm font-bold tracking-widest;
+    }
+
+    &__items {
+        @apply flex flex-wrap items-start content-between;
+    }
+
+    &__item {
+        @apply flex flex-col-reverse w-48 mb-3 mx-auto px-4;
+
+        @screen md {
+            @apply w-1/2;
+        }
+        @screen lg {
+            @apply w-1/4;
+        }
+
+        &__title {
+            @apply text-xs text-brand-green font-bold uppercase;
+        }
     }
 }
