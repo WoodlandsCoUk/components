@@ -5,12 +5,16 @@
         @apply text-center;
     }
 
+    hr {
+        @apply my-4;
+    }
+
     &__title {
         @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6;
     }
 
     &__text {
-        @apply text-brand-red-dark mb-6 uppercase text-sm font-bold tracking-widest;
+        @apply my-8 text-base tracking-widest;
     }
 
     &__items {

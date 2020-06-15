@@ -11,5 +11,18 @@ module.exports = {
     avatar: faker.image.avatar(),
     telephone: faker.phone.phoneNumber(),
     email: faker.internet.exampleEmail()
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'Default'
+    },
+    {
+      name: 'manager',
+      label: 'Manager',
+      context: {
+        modifiers: ['manager']
+      }
+    },
+  ]
 }

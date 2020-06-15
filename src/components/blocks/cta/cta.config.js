@@ -49,6 +49,17 @@ module.exports = {
           items
         }
       }
+    },
+    {
+      name: 'need-help',
+      label: 'Help',
+      context: {
+        cta: {
+          title: faker.lorem.words(4),
+          text: faker.lorem.paragraph(),
+          extra: faker.lorem.sentences(2),
+        }
+      }
     }
   ]
 }

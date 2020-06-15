@@ -1,5 +1,5 @@
 .managed-by {
-    @apply relative py-3;
+    @apply relative py-3 text-left;
 
     &__person {
         @apply flex flex-row-reverse content-around items-center -mb-2;
@@ -31,5 +31,21 @@
         a {
             @apply text-current;
         }
+    }
+
+    &__manager {
+        @apply relative;
+
+        .managed-by__title {
+            @apply text-brand-red;
+        }
+
+        .managed-by__contact {
+            @apply m-0 p-0 text-brand-green border-0;
+        }
+    }
+
+    &--manager {
+        @apply flex items-center max-w-md mx-auto;
     }
 }
