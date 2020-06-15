@@ -1,9 +1,9 @@
 a {
-    @apply text-brand-red font-light;
+    @apply underline text-brand-red font-light;
 
     &:hover,
     &:focus {
-        @apply underline;
+        @apply no-underline;
 
         code {
             @apply bg-gray-light;

@@ -57,7 +57,7 @@ module.exports = {
         cta: {
           title: faker.lorem.words(4),
           text: faker.lorem.paragraph(),
-          extra: faker.lorem.sentences(2),
+          extra: faker.lorem.sentences(2)
         }
       }
     }
