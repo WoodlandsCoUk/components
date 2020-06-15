@@ -9,6 +9,10 @@
         @apply my-4;
     }
 
+    a {
+        @apply text-current;
+    }
+
     &__title {
         @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6;
     }
