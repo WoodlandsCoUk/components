@@ -18,13 +18,13 @@ $gap: 24;
     }
 
     &--spaced {
-        .grid__inner {
+        > .grid__inner {
             @apply col-gap-24;
         }
     }
 
     &--divider {
-        .grid__item {
+        > .grid__inner > .grid__item {
             @apply relative;
 
             &::before {
