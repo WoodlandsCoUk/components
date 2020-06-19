@@ -1,3 +1,9 @@
+{{#if button.link}}
+<a href="{{ button.link }}" class="{{modifier _self.baseHandle button.modifiers}}">
+  <span>{{ button.text }}</span>
+</a>
+{{else}}
 <button class="{{modifier _self.baseHandle button.modifiers}}">
-  {{ button.text }}
+  <span>{{ button.text }}</span>
 </button>
+{{/if}}

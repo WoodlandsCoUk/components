@@ -54,18 +54,24 @@ $variants: (
 );
 
 .button {
-    @apply flex justify-center w-full rounded-md px-5 py-4 my-6 uppercase text-sm font-bold tracking-widest;
-    @apply bg-white text-brand-red-dark border border-brand-red-dark;
+    @apply relative flex w-full my-6 justify-center text-center appearance-none no-underline uppercase text-sm;
 
     &:last-child {
         @apply mb-0;
     }
 
-    &--inline {
-        @apply px-12;
+    > span {
+        @apply flex items-center justify-center w-full rounded-md px-5 py-4 font-bold tracking-widest;
+        @apply border bg-white text-brand-red-dark border-brand-red-dark;
+    }
 
-        @screen sm {
-            @apply w-auto mx-auto;
+    &--inline {
+        > span {
+            @apply px-12;
+
+            @screen sm {
+                @apply w-auto mx-auto;
+            }
         }
     }
 
@@ -92,7 +98,9 @@ $variants: (
         $hover: map.get($colors, 'hover');
 
         &--#{$prefix} {
-            @apply text-#{$text} bg-#{$bg} border-#{$border};
+            > span {
+                @apply text-#{$text} bg-#{$bg} border-#{$border};
+            }
 
             @if $outline {
                 &--outline {
@@ -100,7 +108,9 @@ $variants: (
                     $bg: map.get($outline, 'bg');
                     $border: map.get($outline, 'border');
 
-                    @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    > span {
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
                 }
             }
 
@@ -110,7 +120,9 @@ $variants: (
                     $bg: map.get($dark, 'bg');
                     $border: map.get($dark, 'border');
 
-                    @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    > span {
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
 
                     &:hover,
                     &:focus,
@@ -119,7 +131,9 @@ $variants: (
                         $bg: map.get($hover, 'bg');
                         $border: map.get($hover, 'border');
 
-                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                        > span {
+                            @apply text-#{$text} bg-#{$bg} border-#{$border};
+                        }
                     }
                 }
             }
@@ -132,7 +146,9 @@ $variants: (
                     $bg: map.get($hover, 'bg');
                     $border: map.get($hover, 'border');
 
-                    @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    > span {
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
                 }
             }
         }

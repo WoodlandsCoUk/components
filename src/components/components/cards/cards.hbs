@@ -1,4 +1,6 @@
-<h2 class="section__title">{{ title }}</h2>
+{{#if title}}
+  <h2 class="section__title">{{ title }}</h2>
+{{/if}}
 
 {{#> @grid }}
   {{#each cards }}

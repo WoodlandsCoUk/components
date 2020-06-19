@@ -13,6 +13,7 @@ module.exports = {
     button: {
       button: {
         text: 'Search woodlands for sale',
+        link: null,
         modifiers: ['green']
       }
     }
@@ -34,6 +35,7 @@ module.exports = {
         button: {
           button: {
             text: 'Sign up to mailing list',
+            link: null,
             modifiers: ['green']
           }
         }
@@ -52,6 +54,7 @@ module.exports = {
         button: {
           button: {
             text: 'Sign up to mailing list',
+            link: null,
             modifiers: ['green', 'green--dark']
           }
         }

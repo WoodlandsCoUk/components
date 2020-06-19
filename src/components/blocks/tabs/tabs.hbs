@@ -2,7 +2,7 @@
   <div class="tab__navigation button-group">
     {{#each tab.nav }}
         <button class="{{modifier 'button' modifiers}}" data-tab-for={{ uuid }}>
-          {{ text }}
+          <span>{{ text }}</span>
         </button>
     {{/each}}
   </div>

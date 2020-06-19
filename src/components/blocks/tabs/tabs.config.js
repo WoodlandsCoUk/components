@@ -1,6 +1,6 @@
 const faker = require('faker')
 
-const itemCount = 3
+const itemCount = 4
 const buttons = []
 const tabs = []
 

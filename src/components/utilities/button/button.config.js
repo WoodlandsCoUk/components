@@ -6,7 +6,8 @@ module.exports = {
   default: 'default',
   context: {
     button: {
-      text: 'Default Button'
+      text: 'Default Button',
+      link: null
     }
   },
   variants: [
@@ -20,6 +21,7 @@ module.exports = {
       context: {
         button: {
           text: 'Red Button',
+          link: null,
           modifiers: ['red']
         }
       }
@@ -30,6 +32,7 @@ module.exports = {
       context: {
         button: {
           text: 'Red Button',
+          link: null,
           modifiers: ['red', 'red--outline']
         }
       }
@@ -40,6 +43,7 @@ module.exports = {
       context: {
         button: {
           text: 'Green Button',
+          link: null,
           modifiers: ['green']
         }
       }
@@ -50,6 +54,7 @@ module.exports = {
       context: {
         button: {
           text: 'Dark Green Button',
+          link: null,
           modifiers: ['green-dark']
         }
       }
@@ -60,6 +65,7 @@ module.exports = {
       context: {
         button: {
           text: 'Green Button',
+          link: null,
           modifiers: ['green', 'green--outline']
         }
       }
@@ -70,6 +76,7 @@ module.exports = {
       context: {
         button: {
           text: 'Yellow Button',
+          link: null,
           modifiers: ['yellow']
         }
       }
@@ -80,6 +87,7 @@ module.exports = {
       context: {
         button: {
           text: 'Yellow Button',
+          link: null,
           modifiers: ['yellow', 'yellow--outline']
         }
       }
@@ -90,6 +98,7 @@ module.exports = {
       context: {
         button: {
           text: 'Inline Button',
+          link: null,
           modifiers: ['inline']
         }
       }
@@ -100,6 +109,7 @@ module.exports = {
       context: {
         button: {
           text: 'Inline Button',
+          link: null,
           modifiers: ['inline', 'red']
         }
       }
@@ -110,6 +120,7 @@ module.exports = {
       context: {
         button: {
           text: 'Inline Button',
+          link: null,
           modifiers: ['inline', 'green']
         }
       }
@@ -120,6 +131,7 @@ module.exports = {
       context: {
         button: {
           text: 'Inline Button',
+          link: null,
           modifiers: ['inline', 'yellow']
         }
       }

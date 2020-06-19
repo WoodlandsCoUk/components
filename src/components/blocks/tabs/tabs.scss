@@ -9,12 +9,18 @@
         }
 
         .tab--active {
-            @apply bg-brand-green text-white;
+            > span {
+                @apply bg-brand-green text-white;
+            }
         }
     }
 
     &__item {
-        @apply relative mb-3 pb-3 border-b border-gray;
+        @apply relative mb-3;
+
+        > span {
+            @apply pb-3;
+        }
 
         html.js & {
             @apply mb-0 pb-0 border-none hidden;
