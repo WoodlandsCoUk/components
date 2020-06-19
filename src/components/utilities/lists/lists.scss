@@ -18,4 +18,10 @@
             @apply my-4;
         }
     }
+
+    &--inline {
+        li {
+            @apply inline-block;
+        }
+    }
 }
