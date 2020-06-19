@@ -27,7 +27,10 @@ module.exports = {
       text: faker.lorem.paragraphs(5)
     },
     comments: {
-      title: 'Discussion'
+      title: 'Discussion',
+      form: {
+        title: 'Leave a comment'
+      }
     },
     related: {
       title: 'Related articles'
