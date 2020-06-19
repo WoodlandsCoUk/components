@@ -9,6 +9,12 @@
                 <hr class="mt-4 mb-8" />
 
                 {{ render '@components--blog-comments' comments merge=true }}
+
+                <hr class="mt-8 mb-8" />
+
+                <h2 class="section__title text-left">{{ comments.form.title }}</h2>
+
+                {{ render '@block--blog-comment-form' }}
             </div>
             <div class="grid__item">
                 <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div>

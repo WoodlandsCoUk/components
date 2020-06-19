@@ -1,0 +1,32 @@
+.form--blog-comment {
+    @apply relative;
+
+    .form__field {
+        @apply mb-4;
+    }
+
+    .form__label {
+        @apply block text-xl pb-1 text-brand-green-dark;
+
+        &.hidden {
+            @apply hidden;
+        }
+
+        small {
+            @apply text-xs;
+        }
+    }
+
+    .form-input,
+    .form-textarea {
+        @apply w-full;
+    }
+
+    .button {
+        @apply mt-0;
+
+        > span {
+            @apply ml-0;
+        }
+    }
+}

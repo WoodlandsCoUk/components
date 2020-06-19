@@ -1,11 +1,11 @@
 <form action="" method="GET" class="form {{modifier 'form--cta' form.modifiers}}">
-    <label for="form__cta__field" class="form__title">{{ form.label }}</label>
+    <label for="form__cta__field" class="form__label form__title">{{ form.label }}</label>
 
     {{#if form.sub }}
     <label for="form__cta__field" class="form__subtitle">{{ form.sub }}</label>
     {{/if}}
 
-    <div class="form__cta__group">
+    <div class="form__group">
         <input type="text" id="form__cta__field" name="field" placeholder="{{ form.placeholder }}" />
         {{ render '@button' button merge=true }}
     </div>
