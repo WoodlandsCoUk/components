@@ -1,0 +1,18 @@
+{{ render '@layout-header' header merge=true }}
+
+<main>
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@block--hero' hero }}
+    {{/ @section }}
+
+    {{#> @section }}
+        {{ render '@components--cards' blog merge=true }}
+        {{ render '@button' blog merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form' }}
+    {{/ @section }}
+</main>
+
+{{ render '@layout-footer' }}

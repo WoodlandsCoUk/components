@@ -1,0 +1,17 @@
+.blog-post {
+    &__title {
+        @apply text-brand-red text-xl font-bold mb-6 leading-tight;
+    }
+
+    &__content.typography {
+        @apply mx-0 mb-6 w-auto max-w-none;
+    }
+
+    &__date {
+        //
+    }
+
+    &__tag {
+        //
+    }
+}

@@ -10,7 +10,7 @@
   }
 
   &--linked {
-    @apply -ml-3;
+    @apply -ml-3 mb-6;
 
     .listing__item {
       @apply py-0 border-0;

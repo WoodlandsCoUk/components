@@ -1,0 +1,24 @@
+{{ render '@layout-header' header merge=true }}
+
+<main>
+    {{#> @section }}
+        {{#> @grid modifiers="2/3,spaced,divider" }}
+            <div class="grid__item">
+                {{ render '@components--blog-post' post merge=true }}
+            </div>
+            <div class="grid__item">
+                {{ render '@components--list--link' related merge=true }}
+
+                {{ render '@block--card' card merge=true }}
+
+                {{ render '@components--list--link' topics merge=true }}
+            </div>
+        {{/ @grid }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form' }}
+    {{/ @section }}
+</main>
+
+{{ render '@layout-footer' }}
