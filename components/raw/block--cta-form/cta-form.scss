@@ -14,7 +14,7 @@
         @apply text-base -mt-2 text-brand-yellow-dark font-bold uppercase;
     }
 
-    .form__cta__group {
+    .form__group {
         @apply mx-auto;
 
         input {
@@ -54,7 +54,7 @@
             @apply text-brand-green-dark;
         }
 
-        .form__cta__group {
+        .form__group {
             @apply ml-0;
 
             input {
