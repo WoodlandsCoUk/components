@@ -1,5 +1,9 @@
 module.exports = {
-  purge: false,
+  purge: [
+    './src/components/**/*.html',
+    './src/components/**/*.hbs',
+    './src/components/**/*.js'
+  ],
   theme: {
     fontFamily: {
       display: ['FreightNeo Pro Bold', 'FreightNeoProBold-Regular', 'serif'],

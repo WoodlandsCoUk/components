@@ -1,3 +1,4 @@
+// Tailwind base.
 @import "tailwindcss/base";
 
 // Site Configuration.
@@ -21,3 +22,6 @@
 .u {
   @import "utilities.scss";
 }
+
+// Tailwind utilities.
+@import "tailwindcss/utilities";
