@@ -10,18 +10,22 @@
   }
 
   &--linked {
-    @apply -ml-3 mb-6;
+    @apply mb-6;
+
+    .section__title + & {
+      @apply -mt-6;
+    }
 
     .listing__item {
       @apply py-0 border-0;
 
       > a {
-        @apply block py-3 pl-3 border-b border-gray;
+        @apply block py-3 border-b text-lg border-gray text-brand-green-dark;
 
         &:hover,
         &:focus,
         &:active {
-          @apply bg-gray-light;
+          //
         }
       }
     }

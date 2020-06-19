@@ -7,10 +7,14 @@
                 {{ render '@components--blog-post' post merge=true }}
             </div>
             <div class="grid__item">
+                <div class="h-64 mb-6 rounded-md bg-brand-yellow"></div>
+
+                <h2 class="section__title section__title--small">{{ related.title }}</h2>
                 {{ render '@components--list--link' related merge=true }}
 
-                {{ render '@block--card' card merge=true }}
+                <div class="h-64 mb-6 rounded-md bg-brand-yellow"></div>
 
+                <h2 class="section__title section__title--small">{{ topics.title }}</h2>
                 {{ render '@components--list--link' topics merge=true }}
 
                 {{ render '@block--tags' tags merge=true }}
