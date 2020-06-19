@@ -66,12 +66,14 @@
             @apply relative mx-2;
 
             &:before {
-                @apply -ml-1 mr-3;
-                content: '•';
+                @apply inline-block align-middle -mt-1 -ml-1 mr-3 rounded-full bg-white;
+                content: '';
+                height: $dotSize;
+                width: $dotSize;
             }
 
             &:first-child:before {
-                content: "";
+                @apply hidden;
             }
         }
 

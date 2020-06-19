@@ -2,16 +2,25 @@
     @apply flex justify-between mx-1 rounded-md overflow-hidden;
 
     .button {
-        @apply m-0 max-w-none flex-grow rounded-none;
+        @apply m-0 max-w-none flex-grow;
         margin-left: -1px;
 
+        > span {
+            @apply w-full m-0 rounded-none;
+        }
+
         &:first-child {
-            @apply rounded-l-md;
             margin-left: 0;
+
+            > span {
+                @apply rounded-l-md;
+            }
         }
 
         &:last-child {
-            @apply rounded-r-md;
+            > span {
+                @apply rounded-r-md;
+            }
         }
     }
 }

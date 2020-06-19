@@ -31,6 +31,19 @@ selector.forEach(function (item) {
 
 /***/ }),
 
+/***/ "./src/components/blocks/hero/hero.js":
+/*!********************************************!*\
+  !*** ./src/components/blocks/hero/hero.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.querySelectorAll('.hero[data-src]').forEach(function (hero) {
+  hero.style.backgroundImage = "url(".concat(hero.dataset.src, ")");
+});
+
+/***/ }),
+
 /***/ "./src/components/blocks/read-more/read-more.js":
 /*!******************************************************!*\
   !*** ./src/components/blocks/read-more/read-more.js ***!
@@ -40,7 +53,7 @@ selector.forEach(function (item) {
 
 var selector = document.querySelectorAll('.read-more[data-show][data-hide]');
 selector.forEach(function (block) {
-  var toggle = block.querySelector('.read-more__toggle > button, .read-more__toggle > a');
+  var toggle = block.querySelector('.read-more__toggle > button span, .read-more__toggle > a span');
   var showText = block.dataset.show;
   var hideText = block.dataset.hide;
   toggle.addEventListener('click', function (event) {
@@ -170,6 +183,8 @@ module.exports = function (element) {
 
 // require('components/blocks/search/search')
 __webpack_require__(/*! components/blocks/accordion/accordion */ "./src/components/blocks/accordion/accordion.js");
+
+__webpack_require__(/*! components/blocks/hero/hero */ "./src/components/blocks/hero/hero.js");
 
 __webpack_require__(/*! components/blocks/tabs/tabs */ "./src/components/blocks/tabs/tabs.js");
 

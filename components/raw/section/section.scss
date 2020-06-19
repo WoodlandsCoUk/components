@@ -12,13 +12,25 @@ $backgrounds: (
 
     &__inner {
         @apply mx-auto max-w-screen-xl;
+
+        .section {
+            @apply px-0;
+        }
     }
 
     &__title {
         @apply text-center mt-3 mb-6 text-2xl text-brand-red;
 
+        &--upper {
+            @apply uppercase;
+        }
+
+        &--medium {
+            @apply text-base font-bold uppercase text-left;
+        }
+
         &--small {
-            @apply text-sm uppercase font-bold;
+            @apply text-sm font-bold uppercase text-left;
         }
 
         &--alt {
