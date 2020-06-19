@@ -7,12 +7,22 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    text: 'Woodlands for sale for conservation and enjoyment.'
+    text: faker.lorem.words(4),
+    src: null
   },
   variants: [
     {
       name: 'default',
       label: 'Default'
+    },
+    {
+      name: 'with-image',
+      label: 'With Image',
+      context: {
+        text: faker.lorem.words(4),
+        src: faker.image.imageUrl(800, 300, 'nature', true),
+        modifiers: ['with-image']
+      }
     },
     {
       name: 'woodland',

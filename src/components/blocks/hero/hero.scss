@@ -1,5 +1,5 @@
 .hero {
-    @apply bg-brand-yellow flex items-center justify-center text-center;
+    @apply relative bg-brand-yellow flex items-center justify-center text-center;
     min-height: 200px;
 
     @screen md {
@@ -15,6 +15,16 @@
 
                 content: '•';
             }
+        }
+    }
+
+    &--with-image {
+        @apply relative bg-center bg-no-repeat bg-cover;
+
+        > h1 {
+            @apply inline-block px-5 pt-5 pb-3 text-white;
+
+            background: rgba(#333, 0.9);
         }
     }
 }

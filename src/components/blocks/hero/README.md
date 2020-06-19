@@ -1,3 +1,3 @@
 ## Hero
 
-Introduction hero block.
+Introduction hero block, including option with background image.
