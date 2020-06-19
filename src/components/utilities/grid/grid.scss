@@ -1,3 +1,5 @@
+$gap: 24;
+
 .grid {
     &__inner {
         @apply relative grid grid-cols-1 gap-8;
@@ -17,7 +19,7 @@
 
     &--spaced {
         .grid__inner {
-            @apply gap-16;
+            @apply col-gap-24;
         }
     }
 
@@ -26,7 +28,7 @@
             @apply relative;
 
             &::before {
-                @apply absolute top-0 left-0 block border-0 border-gray h-full -ml-8;
+                @apply absolute top-0 left-0 block border-0 border-gray h-full -ml-12;
                 content: "";
 
                 @screen md {
