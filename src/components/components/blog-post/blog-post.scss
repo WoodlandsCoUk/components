@@ -7,6 +7,24 @@
         @apply mx-0 mb-6 w-auto max-w-none;
     }
 
+    &__meta {
+        @apply pb-6 uppercase text-brand-green-light;
+
+        > * {
+            @apply inline-block;
+
+            &:before {
+                @apply mr-2 ml-1;
+                content: "~";
+            }
+
+            &:first-child:before {
+                @apply m-0;
+                content: "";
+            }
+        }
+    }
+
     &__date {
         //
     }

@@ -1,5 +1,21 @@
 const faker = require('faker')
 
+const itemCount = 10
+const tags = []
+const topics = []
+
+for (let i = 0; i < itemCount; i++) {
+  tags.push({
+    text: faker.lorem.word(),
+    link: '#'
+  })
+
+  topics.push({
+    text: faker.lorem.words(3),
+    link: '#'
+  })
+}
+
 module.exports = {
   order: 21,
   title: 'Blog Post',
@@ -14,10 +30,12 @@ module.exports = {
       title: 'Related articles'
     },
     topics: {
-      title: 'Topics'
+      title: 'Topics',
+      list: topics
     },
     tags: {
-      title: 'tags'
+      title: 'Tags',
+      tags
     }
   }
 }

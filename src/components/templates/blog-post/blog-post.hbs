@@ -9,15 +9,15 @@
             <div class="grid__item">
                 <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div>
 
-                <h2 class="section__title section__title--medium">{{ related.title }}</h2>
+                <h2 class="section__title section__title--medium">{{ titlecase related.title }}</h2>
                 {{ render '@components--list--link' related merge=true }}
 
                 <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div>
 
-                <h2 class="section__title section__title--medium">{{ topics.title }}</h2>
+                <h2 class="section__title section__title--medium">{{ titlecase topics.title }}</h2>
                 {{ render '@components--list--link' topics merge=true }}
 
-                <h2 class="section__title section__title--medium mb-3">{{ tags.title }}</h2>
+                <h2 class="section__title section__title--medium mb-3">{{ titlecase tags.title }}</h2>
                 {{ render '@block--tags' tags merge=true }}
             </div>
         {{/ @grid }}

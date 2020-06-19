@@ -1,12 +1,12 @@
 <div class="{{modifier 'blog-post' modifiers}}">
-  <h1 class="blog-post__title">{{ title }}</h1>
+  <h1 class="blog-post__title">{{ titlecase title }}</h1>
 
   <div class="blog-post__content typography">
     {{{markdown text }}}
   </div>
 
   <div class="blog-post__meta">
-    <p class="blog-post__tag">Posted in: {{ tag }}</p>
-    <p class="blog-post__date">{{ date }}</p>
+    <p>Posted in: <span class="topic">{{ titlecase topic }}</span></p>
+    <p class="blog-post__date">on <span>{{ date }}</span></p>
   </div>
 </div>

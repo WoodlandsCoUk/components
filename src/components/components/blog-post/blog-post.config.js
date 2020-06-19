@@ -11,7 +11,7 @@ module.exports = {
     title: faker.lorem.words(5),
     text: faker.lorem.paragraphs(10),
     date: new Date(),
-    tag: 'Tag x',
+    topic: faker.lorem.word(),
     tags: ['Tag 1', 'Tag B']
   }
 }
