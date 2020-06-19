@@ -5,6 +5,10 @@
         {{#> @grid modifiers="2/3,spaced,divider" }}
             <div class="grid__item">
                 {{ render '@components--blog-post' post merge=true }}
+
+                <hr class="mt-4 mb-8" />
+
+                {{ render '@components--blog-comments' comments merge=true }}
             </div>
             <div class="grid__item">
                 <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div>

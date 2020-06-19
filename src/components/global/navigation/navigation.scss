@@ -90,7 +90,7 @@ $animationDelay: 150ms;
 
             &::before {
                 @apply inline-block border-l border-brand-green-light h-4 mr-4;
-                content: "";
+                content: '';
             }
 
             &:first-child::before {

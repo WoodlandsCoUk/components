@@ -1,4 +1,6 @@
 .blog-post {
+    @apply relative;
+
     &__title {
         @apply text-brand-red text-xl font-bold mb-6 leading-tight;
     }
@@ -15,12 +17,12 @@
 
             &:before {
                 @apply mr-2 ml-1;
-                content: "~";
+                content: '~';
             }
 
             &:first-child:before {
                 @apply m-0;
-                content: "";
+                content: '';
             }
         }
     }

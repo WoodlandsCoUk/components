@@ -12,6 +12,10 @@ $backgrounds: (
 
     &__inner {
         @apply mx-auto max-w-screen-xl;
+
+        .section {
+            @apply px-0;
+        }
     }
 
     &__title {
