@@ -50,6 +50,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
     "push-dir": "^0.4.1",
