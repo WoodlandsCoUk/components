@@ -1,5 +1,7 @@
 <header class="header">
-    <h1 class="header__logo"><a href="{{ header.link }}">{{ header.text }}</a></h1>
+    <div class="header__inner">
+        <h1 class="header__logo"><a href="{{ header.link }}">{{ header.text }}</a></h1>
 
-    {{ render '@layout-navigation' navigation merge=true }}
+        {{ render '@layout-navigation' navigation merge=true }}
+    </div>
 </header>

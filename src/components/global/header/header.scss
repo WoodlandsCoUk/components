@@ -1,5 +1,9 @@
 .header {
-    @apply fixed inset-x-0 z-40 flex justify-between items-center p-6 pl-3 text-white bg-brand-green-dark;
+    @apply fixed inset-x-0 z-40 p-6 pl-3 text-white bg-brand-green-dark;
+
+    &__inner {
+        @apply mx-auto max-w-screen-xl flex justify-between items-center;
+    }
 
     &__logo {
         @apply relative z-40 font-display text-4xl text-center m-0 overflow-hidden;
