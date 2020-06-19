@@ -1,10 +1,12 @@
 const faker = require('faker')
+const markdown = require('marked')
 
 module.exports = {
   helpers: {
     titlecase: (str) => str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()),
     lowercase: (str) => str.toLowerCase(),
     uppercase: (str) => str.toUpperCase(),
+    markdown: (str) => markdown(str),
     json: (json) => JSON.stringify(json),
     modifier: (prefix, modifiers) => {
       if (typeof modifiers === 'string' || modifiers instanceof String) {
