@@ -1,4 +1,5 @@
 module.exports = {
+  collated: true,
   title: 'Buttons',
   label: 'Buttons',
   handle: 'button',

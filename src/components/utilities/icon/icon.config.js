@@ -1,4 +1,5 @@
 module.exports = {
+  collated: true,
   title: 'Icon',
   handle: 'icon',
   status: 'wip',
