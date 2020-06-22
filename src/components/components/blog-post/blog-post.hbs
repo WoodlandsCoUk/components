@@ -1,5 +1,6 @@
 <div class="{{modifier 'blog-post' modifiers}}">
   <h1 class="blog-post__title">{{ titlecase title }}</h1>
+  <p class="blog-post__by">By <span>{{ name }}</span></p>
 
   <div class="blog-post__content typography">
     {{{markdown text }}}
@@ -7,6 +8,6 @@
 
   <div class="blog-post__meta">
     <p>Posted in: <span class="topic">{{ titlecase topic }}</span></p>
-    <p class="blog-post__date">On <span>{{ date }}</span></p>
+    <p class="blog-post__date">On: <span>{{ date }}</span></p>
   </div>
 </div>

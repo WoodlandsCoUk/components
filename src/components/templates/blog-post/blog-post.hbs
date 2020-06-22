@@ -18,7 +18,6 @@
             </div>
 
             <div class="grid__item">
-                {{!-- <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div> --}}
                 {{ render '@block--cta-form--subscribe--blog' }}
 
                 <h2 class="section__title section__title--medium">{{ titlecase related.title }}</h2>
@@ -35,8 +34,13 @@
         {{/ @grid }}
     {{/ @section }}
 
+    {{#> @section modifiers='bg-gray' }}
+        {{ render '@components--cards' blog merge=true }}
+        {{ render '@button' blog merge=true }}
+    {{/ @section }}
+
     {{#> @section modifiers='bg-green' }}
-        {{ render '@block--cta-form' }}
+        {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
 </main>
 

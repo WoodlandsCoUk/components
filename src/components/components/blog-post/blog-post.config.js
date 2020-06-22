@@ -9,6 +9,7 @@ module.exports = {
   default: 'default',
   context: {
     title: faker.lorem.words(5),
+    name: faker.name.firstName(),
     text: faker.lorem.paragraphs(10),
     date: new Date(),
     topic: faker.lorem.word(),
