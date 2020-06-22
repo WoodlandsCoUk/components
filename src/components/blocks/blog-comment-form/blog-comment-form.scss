@@ -9,8 +9,8 @@
         @apply block text-xl pb-1 text-brand-green-dark;
 
         @screen md {
-            &.hidden {
-                @apply hidden;
+            &[for="form__comment__comment"] {
+                @apply sr-only;
             }
         }
 
