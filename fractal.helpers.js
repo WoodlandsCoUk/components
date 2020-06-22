@@ -16,7 +16,7 @@ module.exports = {
       if (typeof modifiers === 'string' || modifiers instanceof String) {
         modifiers = modifiers.split(',')
       }
-      if (typeof modifiers === 'object') {
+      if (!Array.isArray(modifiers)) {
         modifiers = null
       }
 
