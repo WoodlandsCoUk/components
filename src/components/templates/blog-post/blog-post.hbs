@@ -1,6 +1,6 @@
 {{ render '@layout-header' header merge=true }}
 
-<main>
+<main class="page--blog-single">
     {{#> @section }}
         {{#> @grid modifiers="2/3,spaced,divider" }}
             <div class="grid__item">
@@ -16,8 +16,9 @@
 
                 {{ render '@block--blog-comment-form' }}
             </div>
+
             <div class="grid__item">
-                <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div>
+                {{ render '@block--cta-form--subscribe--blog' }}
 
                 <h2 class="section__title section__title--medium">{{ titlecase related.title }}</h2>
                 {{ render '@components--list--link' related merge=true }}
@@ -33,8 +34,13 @@
         {{/ @grid }}
     {{/ @section }}
 
+    {{#> @section modifiers='bg-gray' }}
+        {{ render '@components--cards' blog merge=true }}
+        {{ render '@button' blog merge=true }}
+    {{/ @section }}
+
     {{#> @section modifiers='bg-green' }}
-        {{ render '@block--cta-form' }}
+        {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
 </main>
 

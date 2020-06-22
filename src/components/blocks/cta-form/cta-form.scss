@@ -19,10 +19,10 @@
 
         input {
             @apply block w-full mb-6 rounded-md px-5 py-4 text-center text-brand-green-dark;
+        }
 
-            &::placeholder {
-                @apply italic text-brand-green-dark;
-            }
+        ::placeholder {
+            @apply italic text-brand-green-dark;
         }
 
         @screen md {
@@ -58,8 +58,34 @@
             @apply ml-0;
 
             input {
-                &::placeholder {
-                    @apply italic text-brand-green-dark;
+                @apply text-left;
+            }
+
+            ::placeholder {
+                @apply text-left italic text-brand-green-dark;
+            }
+        }
+    }
+
+    &--blog {
+        .form__title {
+            @apply py-4 text-3xl font-normal;
+        }
+
+        .form__subtitle {
+            @apply normal-case text-brand-green;
+        }
+    }
+
+    &--box {
+        @apply p-6 mb-6 rounded-md;
+
+        .form__group {
+            @screen lg {
+                @apply block;
+
+                input {
+                    @apply mr-0 mb-3;
                 }
             }
         }

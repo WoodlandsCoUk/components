@@ -49,6 +49,10 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         '2/3': 'auto minmax(25%, 30%)'
+      },
+      screens: {
+        md: '800px',
+        dark: { raw: '(prefers-color-scheme: dark)' }
       }
     }
   },

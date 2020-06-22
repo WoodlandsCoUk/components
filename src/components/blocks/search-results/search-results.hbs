@@ -1,0 +1,11 @@
+<div class="{{modifier 'search-results' button.modifiers}}">
+    <p>
+        <span class="search-results__count">{{ count }}</span>
+        <span class="search-results__type">{{ titlecase type }}</span>
+        found for sale in
+        <span class="search-results__location">{{ location }}</span>.
+    </p>
+
+    {{ render '@block--button-group' this merge=true }}
+
+</div>

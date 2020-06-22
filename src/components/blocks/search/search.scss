@@ -1,0 +1,75 @@
+.form--search {
+    @apply relative flex flex-wrap;
+
+    label {
+        @apply sr-only text-brand-green;
+    }
+
+    .form__field {
+        @apply flex w-full mb-4;
+
+        input,
+        select {
+            @apply w-full py-4 border-brand-green text-brand-green;
+        }
+
+        ::placeholder {
+            @apply text-brand-green;
+        }
+
+        &--checkbox {
+            @apply items-center justify-center w-auto mb-0 mr-4;
+
+            label {
+                @apply not-sr-only pr-2 text-lg;
+            }
+
+            input {
+                @apply w-6 h-6 p-0;
+            }
+        }
+    }
+
+    .button {
+        @apply my-0 w-auto flex-grow;
+
+        > * {
+            @apply w-full;
+        }
+    }
+
+    @screen sm {
+        @apply flex;
+
+        .form__field {
+            @apply w-1/2;
+
+            &:first-child input {
+                @apply mr-4;
+            }
+
+            &--checkbox {
+                @apply w-auto;
+
+                input {
+                    @apply mr-0;
+                }
+            }
+        }
+    }
+
+    @screen md {
+        .form__field {
+            @apply mb-0 w-auto flex-grow;
+
+            &--checkbox {
+                @apply ml-4 flex-grow-0;
+            }
+        }
+
+        .button {
+            @apply flex-grow;
+            max-width: 200px;
+        }
+    }
+}

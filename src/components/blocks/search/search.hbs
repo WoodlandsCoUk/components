@@ -1,0 +1,22 @@
+<form action="" method="post" class="form {{modifier 'form--search' modifiers}}">
+    <div class="form__field">
+        <label for="form__search_location" class="form__label">Location</label>
+        <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+    </div>
+
+    <div class="form__field">
+        <label for="form__search_type" class="form__label">Type</label>
+        <select class="form-select" id="form__search_type" name="type">
+          {{#each options }}
+          <option value="{{lowercase this }}">{{ this }}</option>
+          {{/each}}
+        </select>
+    </div>
+
+    <div class="form__field form__field--checkbox">
+        <label for="form__search_sold" class="form__label">Show Sold</label>
+        <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    </div>
+
+    {{ render '@button' button merge=true }}
+</form>

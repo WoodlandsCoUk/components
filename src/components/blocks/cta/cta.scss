@@ -9,10 +9,6 @@
         @apply my-4;
     }
 
-    a {
-        @apply text-current;
-    }
-
     &__title {
         @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6;
     }
@@ -42,6 +38,18 @@
             @screen md {
                 @apply mx-auto mt-4;
             }
+        }
+    }
+
+    &--help {
+        @apply text-center bg-brand-yellow bg-no-repeat;
+
+        padding-top: 80px;
+        background-image: url(../images/question-mark.png);
+        background-position: 50% -25px;
+
+        .cta__inner {
+            @apply max-w-xl mx-auto;
         }
     }
 }

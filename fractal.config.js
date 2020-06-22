@@ -18,7 +18,7 @@ const theme = require('@frctl/mandelbrot')({
   skin: 'black',
   styles: ['default'],
   lang: 'en-gb',
-  nav: ['docs', 'components'],
+  nav: ['search', 'docs', 'components', 'information'],
   panels: ['notes', 'html', 'view', 'info'],
   favicon: '/favicon.ico'
 })
@@ -37,7 +37,8 @@ fractal.components.set('default.status', 'wip')
 fractal.components.set('ext', '.hbs')
 fractal.components.set('default.context', {
   'site-name': packageJson.title,
-  navigation: require('./src/data/navigation.js')
+  navigation: require('./src/data/navigation.js'),
+  drawings: require('./src/data/drawings.js')
 })
 fractal.components.set('default.display', {
   // 'max-width': '480px',
@@ -74,3 +75,5 @@ faker.image.imageUrl = function (width, height, category, randomize, https) {
 
   return url
 }
+
+module.exports = fractal

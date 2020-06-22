@@ -1,8 +1,27 @@
 const faker = require('faker')
 
+const blogCount = 3
 const itemCount = 10
 const tags = []
 const topics = []
+const items = []
+
+for (let i = 0; i < blogCount; i++) {
+  items.push({
+    card: {
+      title: faker.lorem.sentence(),
+      text: faker.lorem.paragraph(),
+      link: '',
+      media: {
+        src: faker.image.imageUrl(400, 225, 'nature', true),
+        modifiers: []
+      },
+      banner: 'Blog',
+      location: '',
+      modifiers: ['link']
+    }
+  })
+}
 
 for (let i = 0; i < itemCount; i++) {
   tags.push({
@@ -42,6 +61,14 @@ module.exports = {
     tags: {
       title: 'Tags',
       tags
+    },
+    blog: {
+      title: 'More from inside the woodlands',
+      cards: items,
+      button: {
+        text: 'More from inside the woodlands',
+        modifiers: ['inline', 'green', 'green--outline']
+      }
     }
   }
 }
