@@ -16,6 +16,9 @@ module.exports = {
       if (typeof modifiers === 'string' || modifiers instanceof String) {
         modifiers = modifiers.split(',')
       }
+      if (typeof modifiers === 'object') {
+        modifiers = null
+      }
 
       return (modifiers || []).map((modifier) => {
         return `${prefix}--${modifier}`
