@@ -1,1 +1,7 @@
-//
+.listing--comments {
+    @apply -mx-3;
+
+    @screen lg {
+        @apply mx-0;
+    }
+}

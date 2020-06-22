@@ -2,11 +2,15 @@
     @apply relative;
 
     &__title {
-        @apply text-brand-red text-xl font-bold mb-6 leading-tight;
+        @apply text-brand-red text-xl font-bold mb-3 leading-tight;
+    }
+
+    &__by {
+        @apply text-brand-green-light text-lg;
     }
 
     &__content.typography {
-        @apply mx-0 mb-6 w-auto max-w-none;
+        @apply mx-0 my-6 pt-6 w-auto max-w-none border-t border-gray;
     }
 
     &__meta {

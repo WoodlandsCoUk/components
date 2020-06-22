@@ -1,29 +1,75 @@
-.search {
-    @apply pb-16 pt-8 text-center bg-brand-red-dark;
+.form--search {
+    @apply relative flex flex-wrap;
 
     label {
-        @apply block w-full text-3xl text-brand-yellow pb-12 font-bold;
+        @apply sr-only text-brand-green;
     }
 
-    input {
-        @apply block w-full mb-6 rounded-md px-5 py-4 text-center text-brand-red-dark;
+    .form__field {
+        @apply flex w-full mb-4;
 
-        &::placeholder {
-            @apply italic text-brand-red-dark;
-        }
-    }
-
-    &--alt {
-        @apply bg-brand-yellow-light pb-8;
-
-        label {
-            @apply text-brand-red-dark hidden;
+        input,
+        select {
+            @apply w-full py-4 border-brand-green text-brand-green;
         }
 
-        input {
-            &::placeholder {
-                @apply italic text-brand-green-dark;
+        ::placeholder {
+            @apply text-brand-green;
+        }
+
+        &--checkbox {
+            @apply items-center justify-center w-auto mb-0 mr-4;
+
+            label {
+                @apply not-sr-only pr-2 text-lg;
             }
+
+            input {
+                @apply w-6 h-6 p-0;
+            }
+        }
+    }
+
+    .button {
+        @apply my-0 w-auto flex-grow;
+
+        > * {
+            @apply w-full;
+        }
+    }
+
+    @screen sm {
+        @apply flex;
+
+        .form__field {
+            @apply w-1/2;
+
+            &:first-child input {
+                @apply mr-4;
+            }
+
+            &--checkbox {
+                @apply w-auto;
+
+                input {
+                    @apply mr-0;
+                }
+            }
+        }
+    }
+
+    @screen md {
+        .form__field {
+            @apply mb-0 w-auto flex-grow;
+
+            &--checkbox {
+                @apply ml-4 flex-grow-0;
+            }
+        }
+
+        .button {
+            @apply flex-grow;
+            max-width: 200px;
         }
     }
 }

@@ -1,0 +1,23 @@
+.search-results {
+    @apply text-xl text-brand-green mb-12 font-bold text-center;
+
+    > p {
+        @apply mb-4;
+    }
+
+    &__count {
+        //
+    }
+
+    &__type {
+        //
+    }
+
+    &__location {
+        //
+    }
+
+    .button-group {
+        //
+    }
+}

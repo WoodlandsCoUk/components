@@ -42,6 +42,10 @@ $backgrounds: (
         @apply py-0;
     }
 
+    &--inset {
+        @apply px-0;
+    }
+
     &--full {
         .section__inner {
             @apply max-w-none;

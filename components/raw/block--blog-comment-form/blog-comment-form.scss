@@ -8,8 +8,10 @@
     .form__label {
         @apply block text-xl pb-1 text-brand-green-dark;
 
-        &.hidden {
-            @apply hidden;
+        @screen md {
+            &[for="form__comment__comment"] {
+                @apply sr-only;
+            }
         }
 
         small {
@@ -20,6 +22,11 @@
     .form-input,
     .form-textarea {
         @apply w-full;
+    }
+
+    .form-textarea {
+        min-height: 200px;
+        max-height: 600px;
     }
 
     .button {
