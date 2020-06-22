@@ -5,8 +5,17 @@
         {{ render '@block--hero' hero }}
     {{/ @section }}
 
+    {{#> @section }}
+        {{ render '@components--cards' woodlands merge=true }}
+        {{ render '@button' woodlands merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@block--cta--need-help' }}
+    {{/ @section }}
+
     {{#> @section modifiers='bg-green' }}
-        {{ render '@block--cta-form' }}
+        {{ render '@block--cta-form--subscribe' }}
     {{/ @section }}
 </main>
 
