@@ -1,12 +1,12 @@
 .icon {
-    @apply inline-flex items-center justify-center rounded-full p-3 leading-none;
+    @apply inline-flex items-center justify-center rounded-full leading-none w-10 h-10 p-3;
 
     &--medium {
-        @apply p-6;
+        @apply w-16 h-16;
     }
 
     &--large {
-        @apply p-10;
+        @apply w-20 h-20;
     }
 
     &--yellow {

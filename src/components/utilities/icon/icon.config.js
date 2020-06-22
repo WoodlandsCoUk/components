@@ -6,7 +6,8 @@ module.exports = {
   default: 'default',
   context: {
     icon: {
-      icon: 'tick'
+      icon: 'tick',
+      modifiers: ['yellow']
     }
   },
   variants: [
@@ -19,7 +20,7 @@ module.exports = {
       label: 'Medium',
       context: {
         icon: {
-          modifiers: ['medium']
+          modifiers: ['medium', 'yellow']
         }
       }
     },
@@ -28,7 +29,7 @@ module.exports = {
       label: 'Large',
       context: {
         icon: {
-          modifiers: ['large']
+          modifiers: ['large', 'yellow']
         }
       }
     }

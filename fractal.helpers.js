@@ -1,3 +1,4 @@
+const path = require('path')
 const faker = require('faker')
 const markdown = require('marked')
 
@@ -8,6 +9,9 @@ module.exports = {
     uppercase: (str) => str.toUpperCase(),
     markdown: (str) => markdown(str),
     json: (json) => JSON.stringify(json),
+    icon: (icon, options, ext = 'png', directory = 'icons') => {
+      return path.join('/', directory, `${icon}.${ext}`)
+    },
     modifier: (prefix, modifiers) => {
       if (typeof modifiers === 'string' || modifiers instanceof String) {
         modifiers = modifiers.split(',')
