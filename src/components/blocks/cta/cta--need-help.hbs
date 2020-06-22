@@ -9,7 +9,7 @@
 
     <hr />
 
-    <p class="cta__text cta__text--extra">{{ cta.extra }}</p>
+    <p class="cta__text cta__text--extra">{{{ cta.extra }}}</p>
 
     {{#if cta.button}}
       {{ render '@button' cta.button merge=true }}
