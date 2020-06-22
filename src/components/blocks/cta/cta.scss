@@ -44,4 +44,16 @@
             }
         }
     }
+
+    &--help {
+        @apply text-center bg-brand-yellow bg-no-repeat;
+
+        padding-top: 80px;
+        background-image: url(../images/question-mark.png);
+        background-position: 50% -25px;
+
+        .cta__inner {
+            @apply max-w-lg mx-auto;
+        }
+    }
 }

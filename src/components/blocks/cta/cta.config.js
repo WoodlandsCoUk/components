@@ -58,7 +58,8 @@ module.exports = {
           title: faker.lorem.words(4),
           text: faker.lorem.paragraph(),
           extra: faker.lorem.sentences(2),
-          button: false
+          button: false,
+          modifiers: ['help']
         }
       }
     }
