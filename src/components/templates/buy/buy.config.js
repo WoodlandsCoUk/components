@@ -28,6 +28,23 @@ for (let i = 0; i < itemCount; i++) {
   })
 }
 
+const count = 28
+
+const buttons = [
+  {
+    button: {
+      text: 'List View',
+      modifiers: ['small', 'green', 'green--outline']
+    }
+  },
+  {
+    button: {
+      text: 'Map View',
+      modifiers: ['small', 'green', 'green--outline']
+    }
+  }
+]
+
 module.exports = {
   order: 2,
   title: 'Buy',
@@ -48,6 +65,17 @@ module.exports = {
       button: {
         text: 'See more woodlands for sale',
         modifiers: ['inline', 'green', 'green--outline']
+      },
+      count,
+      type: 'Woodlands',
+      location: 'South Wales and Herefordshire',
+      buttons
+    },
+    help: {
+      cta: {
+        title: 'Can’t find what you’re looking for?',
+        text: 'We have other woods, some much larger, which will be available soon. Contact the manager for this region for more details.',
+        extra: 'Or visit <a href="http://forests.co.uk" rel="nofollow">forests.co.uk</a> for other woodlands for sale'
       }
     }
   }
