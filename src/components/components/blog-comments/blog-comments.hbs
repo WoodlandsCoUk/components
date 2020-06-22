@@ -1,7 +1,9 @@
 <div class="{{modifier 'section' modifiers}}">
   <h2 class="section__title text-left">{{ title }}</h2>
 
+  <div class="listing listing--comments">
   {{#each comments }}
       {{ render '@block--blog-comment' this merge=true }}
   {{/each}}
+  </div>
 </div>

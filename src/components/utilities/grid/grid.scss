@@ -43,7 +43,7 @@ $gap: 24;
     }
 
     &--2 {
-        .grid__inner {
+        > .grid__inner {
             @screen md {
                 @apply grid-cols-2;
             }
@@ -55,7 +55,7 @@ $gap: 24;
     }
 
     &--2\/3 {
-        .grid__inner {
+        > .grid__inner {
             @screen lg {
                 @apply grid-cols-2/3;
             }
@@ -63,7 +63,7 @@ $gap: 24;
     }
 
     &--3 {
-        .grid__inner {
+        > .grid__inner {
             @screen md {
                 @apply grid-cols-3;
             }
@@ -75,7 +75,7 @@ $gap: 24;
     }
 
     &--4 {
-        .grid__inner {
+        > .grid__inner {
             @screen md {
                 @apply grid-cols-2;
             }
@@ -92,3 +92,24 @@ $gap: 24;
         }
     }
 }
+
+
+// Page specific grid tweaks.
+.page--blog-single {
+    .grid--2\/3 {
+        > .grid__inner {
+            @screen md {
+                @apply grid-cols-1;
+            }
+
+            @screen lg {
+                @apply grid-cols-2/3;
+            }
+
+            .grid__item:first-child {
+                @apply mb-6;
+            }
+        }
+    }
+}
+// end of page specific grid tweaks.

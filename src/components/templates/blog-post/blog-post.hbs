@@ -1,6 +1,6 @@
 {{ render '@layout-header' header merge=true }}
 
-<main>
+<main class="page--blog-single">
     {{#> @section }}
         {{#> @grid modifiers="2/3,spaced,divider" }}
             <div class="grid__item">
@@ -16,6 +16,7 @@
 
                 {{ render '@block--blog-comment-form' }}
             </div>
+
             <div class="grid__item">
                 <div class="h-64 mb-8 rounded-md bg-brand-yellow"></div>
 
