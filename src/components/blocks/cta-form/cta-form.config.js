@@ -59,6 +59,25 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      name: 'subscribe--blog',
+      label: 'Subscribe to Blog',
+      context: {
+        form: {
+          label: 'Subscribe to our blog',
+          sub: 'We’ll email you with every new article',
+          placeholder: 'Enter email address…',
+          modifiers: ['alt', 'blog', 'box']
+        },
+        button: {
+          button: {
+            text: 'Subscribe',
+            link: null,
+            modifiers: ['green', 'green--dark']
+          }
+        }
+      }
     }
   ]
 }
