@@ -1,0 +1,10 @@
+.grid--woodland,
+.section--woodland {
+    .sticky {
+        top: 8rem;
+    }
+
+    .gallery + .tab {
+        @apply mt-6;
+    }
+}

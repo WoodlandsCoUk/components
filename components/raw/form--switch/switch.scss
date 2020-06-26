@@ -1,0 +1,88 @@
+.form__field.form__field--switch {
+    @apply flex items-center;
+
+    label {
+        @apply flex items-center w-auto mr-auto cursor-pointer;
+
+        > span {
+            @apply pl-2;
+        }
+
+        > i {
+            @apply relative block h-8 w-16 text-transparent select-none rounded-lg bg-gray-dark;
+
+            border-radius: theme('height.8');
+
+            &::after {
+                @apply block absolute h-6 w-6 bg-white rounded-full;
+                @apply transition-transform duration-300;
+                content: '';
+
+                top: 4px;
+                left: 4px;
+                transition: 0.3s;
+            }
+        }
+
+        &:active {
+            > i::after {
+                @apply w-8;
+            }
+        }
+    }
+
+    input {
+        @apply sr-only;
+
+        &:checked + label > i {
+            @apply bg-brand-green-light;
+
+            &::after {
+                left: calc(100% - 4px);
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    &--reverse {
+        label {
+            @apply flex-row-reverse;
+
+            > span {
+                @apply pl-0 pr-2;
+            }
+        }
+    }
+
+    &--standalone {
+        label > span {
+            @apply sr-only;
+        }
+    }
+
+    &--large {
+        label {
+            > i {
+                @apply h-10 w-20;
+
+                border-radius: theme('height.10');
+
+                &::after {
+                    @apply h-8 w-8;
+                }
+            }
+
+            &:active {
+                > i::after {
+                    @apply w-12;
+                }
+            }
+        }
+    }
+
+    &--red {
+        input:checked + label > i {
+            @apply bg-brand-red;
+        }
+    }
+}
