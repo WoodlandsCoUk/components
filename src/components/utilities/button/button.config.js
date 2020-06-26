@@ -28,11 +28,22 @@ module.exports = {
       }
     },
     {
+      name: 'red--dark',
+      label: 'Red (Dark)',
+      context: {
+        button: {
+          text: 'Dark Red Button',
+          link: null,
+          modifiers: ['red--dark']
+        }
+      }
+    },
+    {
       name: 'red--outline',
       label: 'Red (Outline)',
       context: {
         button: {
-          text: 'Red Button',
+          text: 'Red Outlined Button',
           link: null,
           modifiers: ['red', 'red--outline']
         }
@@ -56,7 +67,7 @@ module.exports = {
         button: {
           text: 'Dark Green Button',
           link: null,
-          modifiers: ['green-dark']
+          modifiers: ['green--dark']
         }
       }
     },
@@ -65,7 +76,7 @@ module.exports = {
       label: 'Green (Outline)',
       context: {
         button: {
-          text: 'Green Button',
+          text: 'Green Outlined Button',
           link: null,
           modifiers: ['green', 'green--outline']
         }
@@ -87,7 +98,7 @@ module.exports = {
       label: 'Yellow (Outline)',
       context: {
         button: {
-          text: 'Yellow Button',
+          text: 'Yellow Outlined Button',
           link: null,
           modifiers: ['yellow', 'yellow--outline']
         }
@@ -98,7 +109,7 @@ module.exports = {
       label: 'Inline (Default)',
       context: {
         button: {
-          text: 'Inline Button',
+          text: 'Default Inline Button',
           link: null,
           modifiers: ['inline']
         }
@@ -109,9 +120,9 @@ module.exports = {
       label: 'Inline (Red)',
       context: {
         button: {
-          text: 'Inline Button',
+          text: 'Dark Red Inline Button',
           link: null,
-          modifiers: ['inline', 'red']
+          modifiers: ['inline', 'red--dark']
         }
       }
     },
@@ -120,7 +131,7 @@ module.exports = {
       label: 'Inline (Green)',
       context: {
         button: {
-          text: 'Inline Button',
+          text: 'Green Inline Button',
           link: null,
           modifiers: ['inline', 'green']
         }
@@ -131,7 +142,7 @@ module.exports = {
       label: 'Inline (Yellow)',
       context: {
         button: {
-          text: 'Inline Button',
+          text: 'Yellow Inline Button',
           link: null,
           modifiers: ['inline', 'yellow']
         }

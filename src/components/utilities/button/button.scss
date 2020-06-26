@@ -3,8 +3,13 @@
 $variants: (
     'red': (
         'text': 'white',
-        'bg': 'brand-red-dark',
-        'border': 'brand-red-dark',
+        'bg': 'brand-red',
+        'border': 'brand-red',
+        'dark': (
+            'text': 'white',
+            'bg': 'brand-red-dark',
+            'border': 'brand-red-dark',
+        ),
         'outline': (
             'text': 'brand-red',
             'bg': 'white',
@@ -12,8 +17,8 @@ $variants: (
         ),
         'hover': (
             'text': 'white',
-            'bg': 'brand-red',
-            'border': 'brand-red',
+            'bg': 'brand-red-dark',
+            'border': 'brand-red-dark',
         )
     ),
     'green': (
