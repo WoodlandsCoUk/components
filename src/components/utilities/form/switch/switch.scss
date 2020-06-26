@@ -1,0 +1,57 @@
+.form__field.form__field--switch {
+    @apply flex items-center;
+
+    label {
+        @apply mr-auto;
+
+        > span {
+            @apply relative block h-12 w-24 text-transparent select-none rounded-lg bg-gray-dark;
+
+            text-indent: -150%;
+            clip: rect(0 0 0 0);
+
+            border-radius: 2.5rem;
+
+            &::after {
+                @apply block absolute cursor-pointer h-10 w-10 bg-white rounded-full;
+                @apply transition-transform duration-300;
+                content: '';
+
+                top: 4px;
+                left: 4px;
+                transition: 0.3s;
+            }
+        }
+
+        &:active {
+            > span::after {
+                @apply w-16;
+            }
+        }
+    }
+
+    input {
+        @apply sr-only mr-auto;
+
+        &:checked + label > span {
+            @apply bg-brand-green-light;
+
+            &::after {
+                left: calc(100% - 4px);
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    &--reverse {
+        @apply flex-row-reverse;
+
+        label {
+            // @apply pl-0 pr-2;
+        }
+
+        input {
+            // @apply mr-auto;
+        }
+    }
+}

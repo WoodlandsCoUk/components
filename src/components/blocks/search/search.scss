@@ -1,16 +1,16 @@
 .form--search {
-    @apply relative flex flex-wrap;
+    @apply relative flex flex-wrap max-w-none;
 
     label {
         @apply sr-only text-brand-green;
     }
 
     .form__field {
-        @apply flex w-full mb-4;
+        @apply flex w-full mb-4 mt-0;
 
         input,
         select {
-            @apply w-full py-4 border-brand-green text-brand-green;
+            @apply w-full py-4 border-brand-green text-brand-green max-w-none;
         }
 
         ::placeholder {
@@ -18,10 +18,10 @@
         }
 
         &--checkbox {
-            @apply items-center justify-center w-auto mb-0 mr-4;
+            @apply justify-center w-auto mb-0 mr-4;
 
             label {
-                @apply not-sr-only pr-2 text-lg;
+                @apply not-sr-only pr-2;
             }
 
             input {
