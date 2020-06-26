@@ -19,6 +19,16 @@
         }
     }
 
+    &__item {
+        @apply relative overflow-hidden;
+    }
+
+    &__description {
+        @apply absolute bottom-0 inset-x-0 m-0 px-2 py-4 text-center;
+
+        background-color: rgba(#fff, 0.5);
+    }
+
     &__thumbnails {
         @apply grid gap-4 grid-cols-2;
 
@@ -36,6 +46,66 @@
     }
 
     &--carousel {
-        @apply max-w-3xl;
+        @apply max-w-4xl;
+
+        .gallery__thumbnails {
+            .gallery__item {
+                @apply rounded;
+            }
+        }
+
+        .tns-outer {
+            @apply relative mb-4;
+
+            &:hover {
+                .tns-controls {
+                    @apply visible;
+                }
+            }
+        }
+
+        .tns-inner {
+            @apply relative;
+
+            .gallery__list {
+                @apply mb-0;
+            }
+        }
+
+        .tns-nav {
+            @apply absolute top-0 inset-x-0 text-center z-10 pointer-events-none;
+
+            > button {
+                @apply inline-block overflow-hidden h-3 w-3 mx-1 rounded-full bg-white indent-full pointer-events-auto;
+
+                background-color: rgba(#fff, 0.5);
+
+                &.tns-nav-active {
+                    @apply bg-white;
+                }
+            }
+        }
+
+        .tns-controls {
+            @apply invisible absolute inset-0 flex items-center justify-between z-10 pointer-events-none;
+
+            > button {
+                @apply block overflow-hidden h-10 w-10 rounded-full bg-white indent-full pointer-events-auto mx-3;
+
+                background-color: rgba(#fff, 0.9);
+
+                &[disabled] {
+                    @apply invisible;
+                }
+            }
+
+            > [data-controls="prev"] {
+                //
+            }
+
+            > [data-controls="next"] {
+                //
+            }
+        }
     }
 }

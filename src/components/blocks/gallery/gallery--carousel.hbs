@@ -1,15 +1,16 @@
 <div class="{{modifier 'gallery' modifiers}}">
     <ul class="gallery__list">
       {{#each gallery }}
-        <li class="gallery__item">
-            {{ render '@media' this merge=true }}
+        <li class="gallery__item" data-src="{{ gallery.media.src }}">
+            {{ render '@media' gallery merge=true }}
+            <p class="gallery__description">{{ text }}</p>
         </li>
       {{/each}}
     </ul>
     <ul class="gallery__thumbnails">
       {{#each gallery }}
         <li class="gallery__item">
-            <a href="{{ media.src }}">{{ render '@media' this merge=true }}</a>
+            <a href="{{ gallery.media.src }}">{{ render '@media' thumbnail merge=true }}</a>
         </li>
       {{/each}}
     </ul>
