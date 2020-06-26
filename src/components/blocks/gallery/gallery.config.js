@@ -1,3 +1,5 @@
+const fs = require('fs')
+const path = require('path')
 const faker = require('faker')
 
 const carouselCount = 10
@@ -42,6 +44,8 @@ for (let i = 0; i < carouselCount; i++) {
   })
 }
 
+template = fs.readFileSync(path.resolve(__dirname, 'photoswipe.html'), 'utf8')
+
 module.exports = {
   order: 5,
   title: 'Gallery',
@@ -49,7 +53,8 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    gallery: items
+    gallery: items,
+    template
   },
   variants: [
     {

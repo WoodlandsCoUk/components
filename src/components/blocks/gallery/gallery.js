@@ -1,8 +1,12 @@
 import { tns } from 'tiny-slider/src/tiny-slider'
+import PhotoSwipe from 'photoswipe'
+import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
 
 const carousels = document.querySelectorAll('.gallery--carousel')
+const template = document.querySelector('#photoswipe')
+let pswp
 
-const config = {
+const carouselConfig = {
   axis: 'horizontal',
   items: 1,
   slideBy: 'page',
@@ -18,6 +22,15 @@ const config = {
   rewind: false
 }
 
+const photoSwipeConfig = {
+  index: 0
+}
+
+if ('content' in document.createElement('template') && template) {
+  document.body.append(template.content.cloneNode(true))
+  pswp = document.querySelector('.pswp')
+}
+
 carousels.forEach((carousel) => {
   const listContainer = carousel.querySelector('.gallery__list')
   const listImages = listContainer.querySelectorAll('[data-src]')
@@ -25,7 +38,7 @@ carousels.forEach((carousel) => {
   const thumbnails = thumbnailContainer.querySelectorAll('a')
 
   const slider = tns({
-    ...config,
+    ...carouselConfig,
     container: listContainer
   })
 
@@ -46,4 +59,15 @@ carousels.forEach((carousel) => {
       // const { src } = image.dataset
     })
   })
+
+  if (pswp && PhotoSwipe) {
+    const items = []
+
+    const gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, {
+      ...photoSwipeConfig
+    })
+
+    console.log('PhotoSwipe gallery', gallery, photoSwipeConfig, items)
+    gallery.init()
+  }
 })

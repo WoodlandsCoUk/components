@@ -1,4 +1,7 @@
 @import "tiny-slider/src/tiny-slider";
+@import "photoswipe/src/css/main";
+@import "photoswipe/src/css/default-skin/default-skin";
+
 
 .gallery {
     @apply relative;
@@ -46,6 +49,8 @@
     }
 
     &--carousel {
+        @apply max-w-4xl;
+
         .gallery__thumbnails {
             @apply hidden;
 
