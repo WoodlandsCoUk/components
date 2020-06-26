@@ -6,10 +6,9 @@
     }
 
     &__org {
-        @apply overflow-hidden block w-full bg-auto bg-no-repeat bg-center my-6;
+        @apply overflow-hidden block w-full bg-auto bg-no-repeat bg-center my-6 indent-full;
 
         height: 50px;
-        text-indent: 100%;
         background-image: url(../images/logo.svg);
     }
 
