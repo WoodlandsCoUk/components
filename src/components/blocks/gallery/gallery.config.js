@@ -42,6 +42,14 @@ module.exports = {
       context: {
         gallery: squareItems
       }
+    },
+    {
+      name: 'carousel',
+      label: 'Carousel',
+      context: {
+        gallery: items,
+        modifiers: ['carousel']
+      }
     }
   ]
 }

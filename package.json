@@ -45,6 +45,7 @@
     "stylelint-scss": "^3.17.2",
     "stylelint-webpack-plugin": "^1.2.1",
     "tailwindcss": "^1.4.6",
+    "tiny-slider": "^2.9.2",
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {

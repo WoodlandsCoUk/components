@@ -1,5 +1,25 @@
+@import "tiny-slider/src/tiny-slider";
+
 .gallery {
+    @apply relative;
+
     &__list {
+        @apply mb-4;
+
+        > .gallery__item {
+            @apply hidden;
+
+            &:first-child {
+                @apply block;
+            }
+
+            &.tns-item {
+                @apply inline-block;
+            }
+        }
+    }
+
+    &__thumbnails {
         @apply grid gap-4 grid-cols-2;
 
         + .button {
@@ -13,5 +33,9 @@
         @screen md {
             @apply grid-cols-6;
         }
+    }
+
+    &--carousel {
+        @apply max-w-3xl;
     }
 }

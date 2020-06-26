@@ -26,7 +26,8 @@ mix.sass('src/sass/site.scss', 'css/site.css')
   })
 
 mix.js('src/js/site.js', 'js').extract([
-  'accordion-js'
+  'accordion-js',
+  'tiny-slider'
 ])
 
 mix.copyDirectory('src/assets/', 'public')
