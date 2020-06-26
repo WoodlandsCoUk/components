@@ -2,18 +2,19 @@
     @apply flex items-center;
 
     label {
-        @apply mr-auto;
+        @apply flex items-center w-auto mr-auto cursor-pointer;
 
         > span {
-            @apply relative block h-12 w-24 text-transparent select-none rounded-lg bg-gray-dark;
+            @apply pl-2;
+        }
 
-            text-indent: -150%;
-            clip: rect(0 0 0 0);
+        > i {
+            @apply relative block h-8 w-16 text-transparent select-none rounded-lg bg-gray-dark;
 
-            border-radius: 2.5rem;
+            border-radius: theme('height.8');
 
             &::after {
-                @apply block absolute cursor-pointer h-10 w-10 bg-white rounded-full;
+                @apply block absolute h-6 w-6 bg-white rounded-full;
                 @apply transition-transform duration-300;
                 content: '';
 
@@ -24,16 +25,16 @@
         }
 
         &:active {
-            > span::after {
-                @apply w-16;
+            > i::after {
+                @apply w-8;
             }
         }
     }
 
     input {
-        @apply sr-only mr-auto;
+        @apply sr-only;
 
-        &:checked + label > span {
+        &:checked + label > i {
             @apply bg-brand-green-light;
 
             &::after {
@@ -44,14 +45,44 @@
     }
 
     &--reverse {
-        @apply flex-row-reverse;
-
         label {
-            // @apply pl-0 pr-2;
-        }
+            @apply flex-row-reverse;
 
-        input {
-            // @apply mr-auto;
+            > span {
+                @apply pl-0 pr-2;
+            }
+        }
+    }
+
+    &--standalone {
+        label > span {
+            @apply sr-only;
+        }
+    }
+
+    &--large {
+        label {
+            > i {
+                @apply h-10 w-20;
+
+                border-radius: theme('height.10');
+
+                &::after {
+                    @apply h-8 w-8;
+                }
+            }
+
+            &:active {
+                > i::after {
+                    @apply w-12;
+                }
+            }
+        }
+    }
+
+    &--red {
+        input:checked + label > i {
+            @apply bg-brand-red;
         }
     }
 }

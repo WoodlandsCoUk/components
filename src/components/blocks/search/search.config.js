@@ -43,7 +43,8 @@ module.exports = {
       sold: {
         id: 'form__search_sold',
         name: 'sold',
-        label: 'Show Sold'
+        label: 'Show Sold',
+        modifiers: ['reverse']
       }
     }
   }
