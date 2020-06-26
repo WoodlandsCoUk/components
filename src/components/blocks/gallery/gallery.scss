@@ -47,6 +47,12 @@
 
     &--carousel {
         .gallery__thumbnails {
+            @apply hidden;
+
+            @screen sm {
+                @apply grid;
+            }
+
             .gallery__item {
                 @apply rounded;
             }
