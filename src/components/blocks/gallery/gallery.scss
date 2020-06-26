@@ -46,8 +46,6 @@
     }
 
     &--carousel {
-        @apply max-w-4xl;
-
         .gallery__thumbnails {
             .gallery__item {
                 @apply rounded;

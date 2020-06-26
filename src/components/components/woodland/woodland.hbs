@@ -1,16 +1,7 @@
 {{#> @grid modifiers="2/3,spaced,divider,woodland" }}
     <div class="grid__item">
-        {{ render '@media' }}
-
-        <br />
-
-        {{ render '@block--read-more' read-more merge=true }}
-
-        <br />
-
+        {{ render '@block--gallery--carousel' }}
         {{ render '@block--tabs' this }}
-
-        {{!-- {{ render '@block--accordion' accordion }} --}}
     </div>
     <div class="grid__item">
         <div class="sticky">
