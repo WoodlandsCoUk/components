@@ -1,0 +1,8 @@
+<ul class="form__field {{modifier 'form__field--radio' modifiers}}">
+    {{#each radios}}
+    <li>
+        <input type="radio" class="form-radio" id="{{ id }}" name="{{ ../name }}" />
+        <label for="{{ id }}" class="form__label"><span>{{ titlecase label }}</span></label>
+    </li>
+    {{/each}}
+</ul>

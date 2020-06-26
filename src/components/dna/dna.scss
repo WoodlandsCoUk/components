@@ -33,6 +33,12 @@
         }
     }
 
+    &--full {
+        > div {
+            @apply block;
+        }
+    }
+
     code {
         @apply px-1 bg-gray-light;
         font-size: 0.875em;

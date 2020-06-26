@@ -26,7 +26,11 @@ a,
 // end of general.
 
 // Forms
+form {
+    @apply max-w-2xl;
+}
+
 ::placeholder {
-  @apply italic;
+    @apply italic;
 }
 // end of forms

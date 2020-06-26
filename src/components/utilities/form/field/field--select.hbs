@@ -1,0 +1,8 @@
+<div class="{{modifier 'form__field' modifiers}}">
+    <label for="{{ id }}" class="form__label"><span>{{ titlecase label }}</span></label>
+    <select class="form-select" id="{{ id }}" name="{{ name }}">
+        {{#each options}}
+        <option value="{{ value }}">{{ titlecase text }}</option>
+        {{/each}}
+    </select>
+</div>

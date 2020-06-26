@@ -46,6 +46,14 @@ module.exports = {
         light: '#faf5ed'
       }
     },
+    textIndent: (theme, { negative }) => ({
+      ...theme('spacing'),
+      full: '100%',
+      ...negative({
+        ...theme('spacing'),
+        full: '100%'
+      })
+    }),
     extend: {
       gridTemplateColumns: {
         '2/3': 'auto minmax(25%, 30%)'
@@ -60,6 +68,7 @@ module.exports = {
     opacity: ['responsive', 'hover']
   },
   plugins: [
-    require('@tailwindcss/custom-forms')
+    require('@tailwindcss/custom-forms'),
+    require('tailwindcss-text-indent')()
   ]
 }

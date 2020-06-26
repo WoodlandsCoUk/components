@@ -1,8 +1,10 @@
 const faker = require('faker')
 
+const carouselCount = 10
 const itemCount = 6
 const items = []
 const squareItems = []
+const carousel = []
 
 for (let i = 0; i < itemCount; i++) {
   items.push({
@@ -18,6 +20,24 @@ for (let i = 0; i < itemCount; i++) {
     media: {
       src: faker.image.imageUrl(400, 225, 'nature', true),
       modifiers: ['square']
+    }
+  })
+}
+
+for (let i = 0; i < carouselCount; i++) {
+  carousel.push({
+    text: faker.lorem.sentence(),
+    gallery: {
+      media: {
+        src: faker.image.imageUrl(1156, 650, 'nature', true),
+        modifiers: []
+      }
+    },
+    thumbnail: {
+      media: {
+        src: faker.image.imageUrl(400, 225, 'nature', true),
+        modifiers: []
+      }
     }
   })
 }
@@ -41,6 +61,14 @@ module.exports = {
       label: 'Square',
       context: {
         gallery: squareItems
+      }
+    },
+    {
+      name: 'carousel',
+      label: 'Carousel',
+      context: {
+        gallery: carousel,
+        modifiers: ['carousel']
       }
     }
   ]

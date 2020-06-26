@@ -1,0 +1,19 @@
+<div class="item item--full">
+    <h2 class="item__title">Search</h2>
+    <div class="item__section item__section--wide">
+        {{ render '@block--search' }}
+    </div>
+</div>
+
+<div class="item item--full">
+    <h2 class="item__title">Contact</h2>
+    <div class="item__section item__section--wide">
+        <form action="/contact" method="post" class="form {{modifier 'form--contact'}}">
+            {{ render '@form--field' contact.name merge=true }}
+            {{ render '@form--field' contact.email merge=true }}
+            {{ render '@form--field--select' contact.why merge=true }}
+            {{ render '@button--green' contact.button merge=true }}
+        </form>
+    </div>
+</div>
+

@@ -9,10 +9,9 @@
         @apply relative z-40 font-display text-4xl text-center m-0 overflow-hidden;
 
         a {
-            @apply block bg-auto bg-no-repeat bg-center;
+            @apply block bg-auto bg-no-repeat bg-center indent-full;
 
             width: 300px;
-            text-indent: 100%;
             background-image: url(../images/logo.svg);
 
             &:hover,
