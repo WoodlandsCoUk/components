@@ -1,8 +1,3 @@
-@import "tiny-slider/src/tiny-slider";
-@import "photoswipe/src/css/main";
-@import "photoswipe/src/css/default-skin/default-skin";
-
-
 .gallery {
     @apply relative;
 
@@ -45,76 +40,6 @@
 
         @screen md {
             @apply grid-cols-6;
-        }
-    }
-
-    &--carousel {
-        @apply max-w-4xl;
-
-        .gallery__thumbnails {
-            @apply hidden;
-
-            @screen sm {
-                @apply grid;
-            }
-
-            .gallery__item {
-                @apply rounded;
-            }
-        }
-
-        .tns-outer {
-            @apply relative mb-4;
-
-            &:hover {
-                .tns-controls {
-                    @apply visible;
-                }
-            }
-        }
-
-        .tns-inner {
-            @apply relative;
-
-            .gallery__list {
-                @apply mb-0;
-            }
-        }
-
-        .tns-nav {
-            @apply absolute top-0 inset-x-0 text-center z-10 pointer-events-none;
-
-            > button {
-                @apply inline-block overflow-hidden h-3 w-3 mx-1 rounded-full bg-white indent-full pointer-events-auto;
-
-                background-color: rgba(#fff, 0.5);
-
-                &.tns-nav-active {
-                    @apply bg-white;
-                }
-            }
-        }
-
-        .tns-controls {
-            @apply invisible absolute inset-0 flex items-center justify-between z-10 pointer-events-none;
-
-            > button {
-                @apply block overflow-hidden h-10 w-10 rounded-full bg-white indent-full pointer-events-auto mx-3;
-
-                background-color: rgba(#fff, 0.9);
-
-                &[disabled] {
-                    @apply invisible;
-                }
-            }
-
-            > [data-controls="prev"] {
-                //
-            }
-
-            > [data-controls="next"] {
-                //
-            }
         }
     }
 }
