@@ -7,10 +7,24 @@
         <div class="sticky">
             <p class="lede">{{ lede }}</p>
 
-            {{ render '@button' visit merge=true }}
+            <button class="button button--green" data-modal-open="modal-{{ modal.uuid }}">
+                <span>Visit this woodland</span>
+            </button>
+
             {{ render '@button' pdf merge=true }}
 
             {{ render '@block--managed-by' }}
         </div>
     </div>
 {{/ @grid }}
+
+{{#> @block--modal modifiers="small" title=modal.title uuid=modal.uuid }}
+<div class="modal__content text-center">
+    <p>{{ modal.intro }}</p>
+
+    {{ render '@button' modal.pdf merge=true }}
+    {{ render '@button' modal.print merge=true }}
+
+    <p>{{ modal.extra }}</p>
+</div>
+{{/ @block--modal }}

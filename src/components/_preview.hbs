@@ -14,6 +14,10 @@
 
     {{{ yield }}}
 
+    {{#ifeq _target.baseHandle 'block--modal' }}
+        <button class="button button--green button--inline" data-modal-open="modal-{{ ../_target.context.uuid }}">Open Modal Dialog</button>
+    {{/ifeq }}
+
     <script src="{{ path '/js/manifest.js' }}"></script>
     <script src="{{ path '/js/vendor.js' }}"></script>
     <script src="{{ path '/js/site.js' }}"></script>

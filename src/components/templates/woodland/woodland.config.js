@@ -49,6 +49,11 @@ module.exports = {
       ]
     },
     woodland: {
+      modal: {
+        title: `Visit ${woodland.title}`
+      }
+    },
+    woodlands: {
       title: 'Other woodlands for sale',
       cards: items,
       button: {
