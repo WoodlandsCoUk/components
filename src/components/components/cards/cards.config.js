@@ -14,7 +14,7 @@ for (let i = 0; i < itemCount; i++) {
         modifiers: []
       },
       banner: 'Banner',
-      location: '',
+      meta: '',
       modifiers: ['link']
     }
   })

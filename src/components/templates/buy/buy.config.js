@@ -13,7 +13,7 @@ for (let i = 0; i < itemCount; i++) {
         'About 3 ¼ acres'
       ]),
       link: 'page-woodland',
-      location: [
+      meta: [
         `NR. ${faker.address.streetName()}`,
         faker.address.city(),
         faker.address.county()

@@ -17,12 +17,12 @@
         @apply mb-2 text-brand-green-light font-bold text-lg;
     }
 
-    &__content {
-        @apply text-sm;
+    &__meta {
+        @apply mb-1 -mt-1 uppercase text-brand-red font-bold text-sm tracking-wide;
     }
 
-    &__location {
-        @apply mb-1 -mt-1 uppercase text-brand-red font-bold text-sm tracking-wide;
+    &__content {
+        @apply text-base text-text;
     }
 
     &__banner {
@@ -38,6 +38,7 @@
             .card__title {
                 @apply text-brand-green underline;
             }
+
             .media > .media__content > * {
                 transform: scale(1.1);
             }

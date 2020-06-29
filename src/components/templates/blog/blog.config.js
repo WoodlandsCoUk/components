@@ -8,14 +8,13 @@ for (let i = 0; i < itemCount; i++) {
     card: {
       title: faker.lorem.sentence(),
       text: faker.lorem.paragraph(),
-      link: '',
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: []
       },
       banner: 'Blog',
-      location: '',
-      modifiers: ['link']
+      meta: '',
+      modifiers: ['blog']
     }
   })
 }

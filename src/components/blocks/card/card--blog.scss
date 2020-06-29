@@ -1,0 +1,19 @@
+.card--blog {
+    .card__title {
+        @apply text-brand-red;
+    }
+
+    .card__meta {
+        @apply text-brand-green-light normal-case text-base;
+    }
+
+    .card__link {
+        &:hover,
+        &:focus,
+        &:active {
+            .card__title {
+                @apply text-brand-red-dark;
+            }
+        }
+    }
+}

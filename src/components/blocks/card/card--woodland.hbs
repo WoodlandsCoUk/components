@@ -1,10 +1,10 @@
-<div class="{{modifier 'card' quote.modifiers}}">
+<div class="{{modifier 'card' card.modifiers}}">
   <a href="{{ card.link }}" class="card__link">
     {{ render '@media' card merge=true}}
     <div class="card__body">
       <h3 class="card__title">{{ titlecase card.title }}</h3>
-      {{#if card.location}}
-      <p class="card__location">{{ card.location }}</p>
+      {{#if card.meta}}
+      <p class="card__meta">{{ card.meta }}</p>
       {{/if}}
       <div class="card__content">
         {{ card.text }}
