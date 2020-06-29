@@ -52,6 +52,7 @@ module.exports = {
       title: null,
       cards: items,
       blog: true,
+      modifiers: ['single'],
       button: {
         text: 'See more blog posts',
         link: '#more-blog-posts',

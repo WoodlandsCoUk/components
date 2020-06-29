@@ -42,6 +42,9 @@ module.exports = {
 
       return `${day} ${month} ${year}`
     },
+    navigationText: (item) => {
+      return item.textAlt || item.text
+    },
     ifeq: (a, b, options) => {
       if (a === b) {
         return options.fn(this)
@@ -49,8 +52,8 @@ module.exports = {
 
       return options.inverse(this)
     },
-    navigationText: (item) => {
-      return item.textAlt || item.text
+    ternary: (statement, isTrue, isFalse) => {
+      return statement ? isTrue : isFalse
     }
   }
 }

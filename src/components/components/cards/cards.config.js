@@ -35,5 +35,19 @@ module.exports = {
     listing: {
       modifiers: ['grid']
     }
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'General'
+    },
+    {
+      name: 'single',
+      label: 'Single',
+      context: {
+        title: 'Single column card listing',
+        modifiers: ['single']
+      }
+    }
+  ]
 }

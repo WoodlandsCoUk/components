@@ -2,7 +2,7 @@
   <h2 class="section__title">{{ title }}</h2>
 {{/if}}
 
-{{#> @grid }}
+{{#> @grid modifiers=modifiers }}
   {{#each cards }}
   {{#if ../woodlands }}
     {{ render '@block--card--woodland' this merge=true }}
