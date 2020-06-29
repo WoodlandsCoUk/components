@@ -1,10 +1,11 @@
 
 
 <header class="header">
-    <div class="header__inner">
-        <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
+    <div class="header__container">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
 
-        <div class="navigation">
+            <div class="navigation">
     <nav class="navigation__list">
         <ul>
                 <li class="navigation__item ">
@@ -19,6 +20,7 @@
                 <li class="navigation__item ">
                     <a href="page-about">About us</a>
                 </li>
+            <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
         </ul>
     </nav>
 
@@ -29,7 +31,41 @@
     </button>
 </div>
 
+        </div>
     </div>
+
+    <form action="/search" method="post" class="form form--search form--search--alt">
+    <div class="form__inner">
+        <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+        <div class="form__field">
+    <label for="form__search_type" class="form__label"><span>Type</span></label>
+    <select class="form-select" id="form__search_type" name="type">
+        <option value="woodland">Woodland</option>
+        <option value="mixed deciduous">Mixed Deciduous</option>
+        <option value="coniferous">Coniferous</option>
+        <option value="coppice">Coppice</option>
+        <option value="ancient woodland">Ancient Woodland</option>
+    </select>
+</div>
+
+
+        <div class="form__field form__field--switch form__field--switch--reverse">
+    <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
+</div>
+
+
+        <button class="button button--red button--inline">
+  <span>Search</span>
+</button>
+
+    </div>
+</form>
+
 </header>
 
 
@@ -41,137 +77,131 @@
 
 <section class="grid">
     <div class="grid__inner">
-      <div class="card">
+    <div class="card card--woodland">
   <a href="page-woodland" class="card__link">
     <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?74888" />
+        <img src="http://placeimg.com/400/225/nature?33465" />
     </div>
 </div>
 
     <div class="card__body">
-      <h3 class="card__title">Suscipit Mollitia Cum Vero Sed Molestias Neque.</h3>
-      <p class="card__location">NR. Kenny Spur, South Brandoburgh, Berkshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £17,701
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?78769" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Enim Consequatur Facilis Deleniti Explicabo Voluptatem Dolorum.</h3>
-      <p class="card__location">NR. Cartwright Station, Carlottamouth, Bedfordshire</p>
-      <div class="card__content">
-        About 3 ¼ acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £78,243
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?73965" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Sunt In Voluptatem Voluptatem Quam Veritatis Itaque Pariatur.</h3>
-      <p class="card__location">NR. Joy Curve, Morarport, Cambridgeshire</p>
+      <h3 class="card__title">Fugiat Est Distinctio.</h3>
+      <p class="card__meta">NR. Ebert Views, Port Sydniburgh, Avon</p>
       <div class="card__content">
         About 5 ½ acres
       </div>
     </div>
     <div class="card__banner">
-      £66,558
+      £48,717
     </div>
   </a>
 </div>
 
-
-      <div class="card">
+    <div class="card card--woodland">
   <a href="page-woodland" class="card__link">
     <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?50213" />
+        <img src="http://placeimg.com/400/225/nature?37569" />
     </div>
 </div>
 
     <div class="card__body">
-      <h3 class="card__title">Aut Quaerat Explicabo Sunt Ex Tenetur.</h3>
-      <p class="card__location">NR. Jeramy Tunnel, Pacochaport, Berkshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £70,701
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?29837" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Dolor Suscipit Sit Est Et Aspernatur Corporis.</h3>
-      <p class="card__location">NR. Syble View, North Danniemouth, Borders</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £42,724
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?10737" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Quisquam Voluptatem Repellendus.</h3>
-      <p class="card__location">NR. Bernier Crossroad, West Chandler, Borders</p>
+      <h3 class="card__title">Totam Totam Quia Eos Dignissimos.</h3>
+      <p class="card__meta">NR. Ariel Pike, Jarrellmouth, Buckinghamshire</p>
       <div class="card__content">
         About 5 ½ acres
       </div>
     </div>
     <div class="card__banner">
-      £12,810
+      £97,603
     </div>
   </a>
 </div>
 
+    <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?95599" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Provident Aut Deserunt Commodi Hic.</h3>
+      <p class="card__meta">NR. Heller Tunnel, New Herminiamouth, Borders</p>
+      <div class="card__content">
+        About 5 ½ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £48,962
+    </div>
+  </a>
+</div>
+
+    <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?77857" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Nihil Molestiae Veritatis Totam Unde In Quos Molestiae Accusamus Nisi.</h3>
+      <p class="card__meta">NR. Bonnie Oval, New Adonis, Avon</p>
+      <div class="card__content">
+        Almost 4 acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £43,022
+    </div>
+  </a>
+</div>
+
+    <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?47076" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Asperiores Accusamus Eius Non Tenetur.</h3>
+      <p class="card__meta">NR. Vita Ramp, Armstrongmouth, Cambridgeshire</p>
+      <div class="card__content">
+        About 5 ½ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £47,442
+    </div>
+  </a>
+</div>
+
+    <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?72437" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Veritatis Dicta Nostrum Ea Officiis.</h3>
+      <p class="card__meta">NR. Cornelius Mews, East Kailee, Buckinghamshire</p>
+      <div class="card__content">
+        Almost 4 acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £85,202
+    </div>
+  </a>
+</div>
 
     </div>
 </section>
@@ -219,7 +249,7 @@
   <div class="card__body">
     <h3 class="card__title">Why Buy A Woodland?</h3>
     <div class="card__content">
-      Nemo pariatur et sed et. Et ea voluptatibus eos vel deserunt repellendus libero. Doloribus nihil modi quo autem rerum enim tempora est. Laudantium suscipit quod nobis quos.
+      Dolores repellat consequatur molestiae velit. Quo odio nobis voluptas vitae. Non deleniti quia voluptas quod. Voluptatem dicta eum consectetur accusantium doloremque odit sit esse fugit. Minima qui architecto.
     </div>
   </div>
 </div>
@@ -229,25 +259,25 @@
                 <h2 class="section__title section__title--medium section__title--alt">Popular topics</h2>
                 <ul class="listing listing--linked">
     <li class="listing__item">
-        <a href="#">Recusandae Temporibus Non Molestiae.</a>
+        <a href="#">Eligendi Saepe Nam Qui Ducimus Blanditiis Quis Officiis Labore.</a>
     </li>
     <li class="listing__item">
-        <a href="#">Qui Molestiae Optio Aut Omnis Ut Iste Error.</a>
+        <a href="#">Amet Natus Enim Molestiae Amet Est Eum.</a>
     </li>
     <li class="listing__item">
-        <a href="#">Est Rem Pariatur Sed In.</a>
+        <a href="#">Et Dolores Minima.</a>
     </li>
     <li class="listing__item">
-        <a href="#">Velit Illum Tempora Dignissimos.</a>
+        <a href="#">Ut Aliquid Facere.</a>
     </li>
     <li class="listing__item">
-        <a href="#">Sed Est Mollitia.</a>
+        <a href="#">Odit Eos Aut Omnis Voluptates Provident Dolorem Et Saepe.</a>
     </li>
     <li class="listing__item">
-        <a href="#">Reiciendis Est Est Dolores Perferendis Sunt Vel Ipsum Omnis.</a>
+        <a href="#">Laborum Nesciunt Enim.</a>
     </li>
     <li class="listing__item">
-        <a href="#">Blanditiis Voluptas Earum Laboriosam Beatae.</a>
+        <a href="#">Eum Quia Ipsa Illum Quis Dolor Facere Et Deleniti Voluptatum.</a>
     </li>
 </ul>
 
@@ -266,115 +296,133 @@
 
 <section class="grid">
     <div class="grid__inner">
-    <div class="card">
-  <div class="media">
+      <div class="card">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?25983" />
+        <img src="http://placeimg.com/400/225/nature?26238" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Quia Eos Consequatur Consectetur Suscipit Ea Dolores.</h3>
-    <div class="card__content">
-      Quisquam quisquam molestias ut voluptas sit vero. Veniam iusto enim asperiores sed. Inventore quibusdam perferendis quasi fugiat. Et earum veritatis culpa.
+    <div class="card__body">
+      <h3 class="card__title">Aut Minus Expedita</h3>
+      <div class="card__content">
+        Rerum commodi deleniti omnis assumenda quia. Eligendi est nihil explicabo officiis. Nihil dolorem dolorum. Quia magni sit sapiente facilis quos ut. Possimus possimus reiciendis.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Banner
-  </div>
+    <div class="card__banner">
+      Video
+    </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+
+        <div class="card">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?42640" />
+        <img src="http://placeimg.com/400/225/nature?51493" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Porro Nostrum Et Dignissimos Nostrum Nam Delectus Voluptate Ut Eligendi.</h3>
-    <div class="card__content">
-      Odit doloremque quis vel suscipit adipisci. Amet delectus autem ullam assumenda. Officiis velit voluptates dicta quia doloremque. Inventore et sunt ratione. Ea vero consectetur nihil a nemo dolores. Dolor vel non dolorum assumenda rerum rerum et consequatur.
+    <div class="card__body">
+      <h3 class="card__title">Omnis Distinctio Et</h3>
+      <div class="card__content">
+        Aperiam voluptatem quisquam ex at qui quia sed. Earum alias eveniet et dolores iste. Molestias a quaerat. Ratione voluptatum possimus excepturi ratione autem et fugiat ut.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Banner
-  </div>
+    <div class="card__banner">
+      Video
+    </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+
+        <div class="card">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?67615" />
+        <img src="http://placeimg.com/400/225/nature?41627" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Veritatis Hic Aspernatur.</h3>
-    <div class="card__content">
-      Iure dolor omnis non sunt nesciunt molestiae non excepturi. Minima aspernatur quo assumenda omnis error ut rerum. Qui pariatur autem. Quis numquam tempora eos quibusdam nihil sit necessitatibus error omnis.
+    <div class="card__body">
+      <h3 class="card__title">Inventore Qui Sit</h3>
+      <div class="card__content">
+        Reprehenderit ea nulla est laborum illo laborum quis. Aut ipsum earum. Explicabo voluptatum rem et voluptas ratione minus et similique sed. Cumque qui incidunt deserunt ut aliquam alias. Molestiae reiciendis temporibus non.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Banner
-  </div>
+    <div class="card__banner">
+      Video
+    </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+
+        <div class="card">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?80731" />
+        <img src="http://placeimg.com/400/225/nature?79460" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Molestiae Et Ad Qui Fugit Nisi Accusantium Labore.</h3>
-    <div class="card__content">
-      Dolorem id quos. Voluptas doloribus voluptatem. Sed sint voluptatem consequuntur nisi qui. Sit nam atque sed corrupti commodi. Sit architecto et reprehenderit blanditiis odit quam quidem impedit. Omnis rerum rerum expedita nam dolor aperiam.
+    <div class="card__body">
+      <h3 class="card__title">Perspiciatis Quia Nihil</h3>
+      <div class="card__content">
+        Rerum et sit aut est alias non nisi ad. Voluptatem laboriosam minima autem dignissimos. Consequatur non minima quos facere. Pariatur animi expedita voluptatem voluptas sit. Architecto enim itaque aliquam labore ut illo sit iste. Aut sed dolorem sint.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Banner
-  </div>
+    <div class="card__banner">
+      Guide
+    </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+
+        <div class="card">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?86933" />
+        <img src="http://placeimg.com/400/225/nature?61096" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Perferendis Vel Quis Est Itaque Voluptatem.</h3>
-    <div class="card__content">
-      Libero commodi est expedita incidunt. Rerum qui dolor porro atque voluptatem tempore. Ad est sit ea. Cum dolore hic eligendi rem ullam expedita sunt et. Ullam omnis incidunt omnis provident libero aut impedit.
+    <div class="card__body">
+      <h3 class="card__title">Adipisci Alias Quod</h3>
+      <div class="card__content">
+        Consequatur adipisci ex ducimus. Cupiditate reprehenderit omnis adipisci quia dolore accusantium. Reprehenderit omnis quae et reprehenderit expedita est culpa vel. Consequuntur sunt sapiente accusamus aliquid illo impedit est dolor. Et aut quos dolorem.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Banner
-  </div>
+    <div class="card__banner">
+      Blog
+    </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+
+        <div class="card">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?17015" />
+        <img src="http://placeimg.com/400/225/nature?89878" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">At Quis Omnis Enim.</h3>
-    <div class="card__content">
-      Recusandae qui quis. Fugiat est suscipit. Corrupti totam maiores et maxime dolorum voluptate et. Illo saepe beatae iure autem praesentium dignissimos.
+    <div class="card__body">
+      <h3 class="card__title">Voluptatem Ipsam Eius</h3>
+      <div class="card__content">
+        Dolor placeat laudantium. Quas error suscipit dolorem sit sed dolor sint libero consequuntur. Dolorem sit nihil. Recusandae cumque ratione. Dolorem nemo voluptatem rem dolores aliquam repellat quia.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Banner
-  </div>
+    <div class="card__banner">
+      Blog
+    </div>
+  </a>
 </div>
 
-    </div>
+
+      </div>
 </section>
 
     </div>
@@ -389,7 +437,7 @@
         <li class="gallery__item">
             <div class="media media--square">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?47945" />
+        <img src="http://placeimg.com/400/225/nature?95587" />
     </div>
 </div>
 
@@ -397,7 +445,7 @@
         <li class="gallery__item">
             <div class="media media--square">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?92333" />
+        <img src="http://placeimg.com/400/225/nature?35348" />
     </div>
 </div>
 
@@ -405,7 +453,7 @@
         <li class="gallery__item">
             <div class="media media--square">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?78956" />
+        <img src="http://placeimg.com/400/225/nature?23291" />
     </div>
 </div>
 
@@ -413,7 +461,7 @@
         <li class="gallery__item">
             <div class="media media--square">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?25094" />
+        <img src="http://placeimg.com/400/225/nature?73181" />
     </div>
 </div>
 
@@ -421,7 +469,7 @@
         <li class="gallery__item">
             <div class="media media--square">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?20852" />
+        <img src="http://placeimg.com/400/225/nature?86560" />
     </div>
 </div>
 
@@ -429,7 +477,7 @@
         <li class="gallery__item">
             <div class="media media--square">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?60544" />
+        <img src="http://placeimg.com/400/225/nature?59492" />
     </div>
 </div>
 
@@ -448,11 +496,11 @@
     <div class="section__inner">
         <blockquote class="quote">
     <div class="quote__content">
-        <p>“Nisi adipisci vitae nostrum sit quis autem earum est eum. Molestiae sed earum maxime autem voluptatem expedita dolorem. Ipsa et enim adipisci eveniet. Voluptatum et architecto eveniet. Odit dolores et et sed quia qui et omnis. Voluptas qui harum occaecati dolores.”</p>
+        <p>“Doloribus dolor quia voluptatibus et et. Voluptatem soluta quia voluptatem rerum eaque est nam ab. Nemo qui id quod perspiciatis. Quibusdam dignissimos quia non ab repellat voluptatum cum. Nisi sit laudantium sequi dignissimos quam eligendi et facere. Molestias ea numquam adipisci et et dicta maiores temporibus.”</p>
     </div>
     <div class="quote__by">
         <cite>
-            Kadin Barton, Central Infrastructure Facilitator
+            Deshawn Larson, Lead Communications Liaison
         </cite>
     </div>
     <p class="quote__link">

@@ -1,10 +1,11 @@
 
 
 <header class="header">
-    <div class="header__inner">
-        <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
+    <div class="header__container">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
 
-        <div class="navigation">
+            <div class="navigation">
     <nav class="navigation__list">
         <ul>
                 <li class="navigation__item ">
@@ -19,6 +20,7 @@
                 <li class="navigation__item ">
                     <a href="page-about">About us</a>
                 </li>
+            <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
         </ul>
     </nav>
 
@@ -29,7 +31,41 @@
     </button>
 </div>
 
+        </div>
     </div>
+
+    <form action="/search" method="post" class="form form--search form--search--alt">
+    <div class="form__inner">
+        <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+        <div class="form__field">
+    <label for="form__search_type" class="form__label"><span>Type</span></label>
+    <select class="form-select" id="form__search_type" name="type">
+        <option value="woodland">Woodland</option>
+        <option value="mixed deciduous">Mixed Deciduous</option>
+        <option value="coniferous">Coniferous</option>
+        <option value="coppice">Coppice</option>
+        <option value="ancient woodland">Ancient Woodland</option>
+    </select>
+</div>
+
+
+        <div class="form__field form__field--switch form__field--switch--reverse">
+    <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
+</div>
+
+
+        <button class="button button--red button--inline">
+  <span>Search</span>
+</button>
+
+    </div>
+</form>
+
 </header>
 
 
@@ -192,7 +228,7 @@
         <div class="cta">
   <h2 class="cta__title">Call to Action</h2>
   <div class="cta__text">
-    Maxime impedit fugit fuga ut ipsa aut. Ullam provident illo a. Optio hic reprehenderit repudiandae qui possimus aut et ut. Accusantium a adipisci voluptatem.
+    Voluptatem dolores quia ea ut. Praesentium accusamus nisi dolorem distinctio quis non reiciendis vitae. Laborum ea atque ullam quas est temporibus dolores nobis perspiciatis. Sapiente sint amet mollitia. Modi neque magnam.
   </div>
   <button class="button button--red button--inline">
   <span>Call to Action</span>
@@ -207,11 +243,11 @@
     <div class="section__inner">
         <div class="read-more" data-show="Read more " data-hide="Read less">
   <div class="read-more__content">
-      <p>Minima nulla ut iusto. Commodi ducimus dolorem cupiditate perferendis non non. Porro facere exercitationem qui et.
- Tempore placeat nulla voluptas qui omnis qui voluptatem. Non reprehenderit enim fuga nisi dolores maxime ut voluptatem minima. Modi modi cupiditate suscipit sint voluptate velit voluptas amet eos. Ullam dolorem molestias.
- Accusamus fugiat et rerum deserunt delectus aut quasi temporibus. Quam praesentium est aliquam in earum maxime delectus. Perferendis in aut neque ducimus quod adipisci tempora dolor. Consequatur voluptatem amet ut sed voluptates assumenda voluptatem. Quia tempore esse at sint voluptate officia. Sit odio porro consequuntur vero.
- Illum minima quaerat et fugit qui sunt et tenetur. Et unde quibusdam excepturi et omnis numquam minus est. Cum quam expedita odio reiciendis.
- Nulla aut eius quos error suscipit et sit. Ex non nobis doloribus. Officia omnis repellat sed. Et consequatur dolorum sequi voluptates magni voluptatibus mollitia dignissimos quo. Ipsa cum eos consequatur molestias aliquam alias quis necessitatibus officiis. Sed possimus tenetur omnis.</p>
+      <p>Quis qui eum ut nobis aliquam quis modi. Provident sit vero. Dignissimos voluptates ipsum ut. Saepe numquam sunt itaque ut ad debitis. Aut itaque voluptate aperiam et officiis quasi fugit iusto.
+ Est consequatur sunt. Soluta praesentium aut. Totam sunt aut deserunt placeat in omnis perspiciatis. Repudiandae hic est expedita ullam. Aut ullam qui sequi.
+ Illum doloremque est est hic qui consequatur exercitationem distinctio. Doloremque ullam provident similique corrupti accusamus cum amet quis. Amet nam dolorum dolorem. Dolores quam incidunt sed inventore. Voluptatem impedit voluptas adipisci.
+ Est sit quia voluptatem nobis. Aut libero et. Dolor enim aut nihil molestias vel consequatur qui saepe. Laudantium commodi qui consequatur dolor aspernatur nulla praesentium pariatur.
+ Corrupti veniam fugit suscipit eum exercitationem. Molestiae fuga mollitia. Molestiae accusantium iste amet eos at.</p>
   </div>
 
   <div class="read-more__toggle">
@@ -266,38 +302,38 @@
 
 <section class="section section--bg-white">
     <div class="section__inner">
-        <div class="tab" data-tab="dbc16cc0-146e-4186-bf9e-c9844340da97">
+        <div class="tab" data-tab="07c566f3-6d37-4328-9166-9af4a6fb81f7">
   <div class="tab__navigation button-group">
-        <button class="button button--small button--green button--green--outline" data-tab-for=fe1e51f1-5326-4b83-b6db-744a4e941d0d>
-          <span>consequatur rem id</span>
+        <button class="button button--small button--green button--green--outline" data-tab-for=ea2c6f3c-5074-433b-a1f7-6829557af36e>
+          <span>excepturi laboriosam ut</span>
         </button>
-        <button class="button button--small button--green button--green--outline" data-tab-for=4bfd98e7-c6d3-4adf-b7a5-4f09ccae4d46>
-          <span>recusandae adipisci rerum</span>
+        <button class="button button--small button--green button--green--outline" data-tab-for=7d67670c-4c91-49c3-937f-2a7717616aa4>
+          <span>reprehenderit voluptatibus dolorem</span>
         </button>
-        <button class="button button--small button--green button--green--outline" data-tab-for=e42155b6-ce0d-4a7e-b100-b545eb34da6e>
-          <span>atque facere quia</span>
+        <button class="button button--small button--green button--green--outline" data-tab-for=f5a280c8-4cf8-4836-8f97-0620b5bca80e>
+          <span>sit non ea</span>
         </button>
-        <button class="button button--small button--green button--green--outline" data-tab-for=37540016-675d-455e-8b76-77606a9029da>
-          <span>in eligendi id</span>
+        <button class="button button--small button--green button--green--outline" data-tab-for=d815642a-66d8-4da8-9ff5-3c0fabde6ff1>
+          <span>aut in corrupti</span>
         </button>
   </div>
 
   <div class="tab__items">
-        <div class="tab__item tab__item--fe1e51f1-5326-4b83-b6db-744a4e941d0d" data-tab-item="fe1e51f1-5326-4b83-b6db-744a4e941d0d">
-            <h3 class="tab__item__title">consequatur rem id</h3>
-            Quisquam totam enim iure. Et exercitationem amet quidem numquam rerum et aut repudiandae accusamus. Consectetur accusantium culpa qui. Dolores qui inventore eius repellendus. Eveniet quos beatae.
+        <div class="tab__item tab__item--ea2c6f3c-5074-433b-a1f7-6829557af36e" data-tab-item="ea2c6f3c-5074-433b-a1f7-6829557af36e">
+            <h3 class="tab__item__title">excepturi laboriosam ut</h3>
+            Blanditiis inventore velit consequatur rerum. Eum voluptatem eum qui officia nam est a sint. Qui id similique aut rerum libero. Expedita libero eligendi consequatur dolor labore modi aperiam et est. Tenetur aut voluptas doloribus.
         </div>
-        <div class="tab__item tab__item--4bfd98e7-c6d3-4adf-b7a5-4f09ccae4d46" data-tab-item="4bfd98e7-c6d3-4adf-b7a5-4f09ccae4d46">
-            <h3 class="tab__item__title">recusandae adipisci rerum</h3>
-            Autem omnis ipsum sed eligendi natus nesciunt incidunt consectetur fugit. Ex odit a quae sit aspernatur provident quae beatae. Magni inventore et error voluptatibus expedita neque. Minus esse vero consequatur est eum. Quae animi sapiente nobis molestias sint quidem.
+        <div class="tab__item tab__item--7d67670c-4c91-49c3-937f-2a7717616aa4" data-tab-item="7d67670c-4c91-49c3-937f-2a7717616aa4">
+            <h3 class="tab__item__title">reprehenderit voluptatibus dolorem</h3>
+            Sit incidunt quidem. Ab ipsum rerum et iusto exercitationem veniam consequatur modi veniam. Porro sunt non sequi sunt rem dicta unde ea. Beatae aut quis voluptatem ut dicta repellat natus reiciendis. Sint magnam quaerat omnis aliquid autem explicabo.
         </div>
-        <div class="tab__item tab__item--e42155b6-ce0d-4a7e-b100-b545eb34da6e" data-tab-item="e42155b6-ce0d-4a7e-b100-b545eb34da6e">
-            <h3 class="tab__item__title">atque facere quia</h3>
-            Qui ut architecto assumenda. Dolorem veritatis consequatur quis quaerat. Cupiditate odit et est tenetur molestiae nobis. Incidunt dolores accusantium est aperiam doloribus totam aut consequatur. Corrupti autem officiis ex autem est aliquid magni voluptatibus ad.
+        <div class="tab__item tab__item--f5a280c8-4cf8-4836-8f97-0620b5bca80e" data-tab-item="f5a280c8-4cf8-4836-8f97-0620b5bca80e">
+            <h3 class="tab__item__title">sit non ea</h3>
+            Maiores eligendi unde debitis praesentium odio in et reprehenderit vero. Consequatur porro quasi modi nobis ad. Quo ipsa optio a occaecati facilis pariatur vero ea. Voluptatem laboriosam laboriosam et facilis tempore doloribus. Quaerat atque veritatis sequi inventore vitae sed officia.
         </div>
-        <div class="tab__item tab__item--37540016-675d-455e-8b76-77606a9029da" data-tab-item="37540016-675d-455e-8b76-77606a9029da">
-            <h3 class="tab__item__title">in eligendi id</h3>
-            Iste consectetur eos soluta. Aspernatur aut omnis. Laboriosam similique exercitationem aspernatur voluptatum et quaerat qui magnam. Sint est tempore est illum voluptates officiis. Qui aut in perferendis dolor et et accusantium.
+        <div class="tab__item tab__item--d815642a-66d8-4da8-9ff5-3c0fabde6ff1" data-tab-item="d815642a-66d8-4da8-9ff5-3c0fabde6ff1">
+            <h3 class="tab__item__title">aut in corrupti</h3>
+            Labore doloribus est et ut hic est. Ut ut incidunt numquam enim. Ipsam eveniet deserunt et vel est quae quia ut. Repellat aut ipsa asperiores commodi soluta sunt accusantium. Quia vitae ut a qui quisquam ullam non.
         </div>
   </div>
 </div>
@@ -316,12 +352,12 @@
 
     <div class="managed-by managed-by--manager">
   <div class="managed-by__avatar">
-    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/caspergrl/128.jpg" />
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/boxmodel/128.jpg" />
   </div>
   <div class="managed-by__manager">
     <h3 class="managed-by__title">Regional Managers</h3>
-    <p class="managed-by__contact">Dewayne Murazik</p>
-    <p class="managed-by__contact"><a href="tel:996.170.0219 x591">996.170.0219 x591</a></p>
+    <p class="managed-by__contact">Mrs. Ellie Grady</p>
+    <p class="managed-by__contact"><a href="tel:308.379.8718">308.379.8718</a></p>
   </div>
 </div>
 
@@ -344,7 +380,7 @@
     <h2 class="accordion__item__title" tabindex="0">Accordion #1</h2>
     <div class="accordion__item__content">
       <div>
-        <p>Saepe sequi ut tempore cumque maiores. Voluptatum minima consequuntur eum ut. Consequatur voluptas praesentium. Rem libero qui labore cupiditate minus est non debitis.</p>
+        <p>Vero praesentium ea. Enim error ullam. Sequi quo voluptas praesentium sit rerum omnis occaecati sit.</p>
       </div>
     </div>
   </div>
@@ -352,7 +388,7 @@
     <h2 class="accordion__item__title" tabindex="0">Accordion #2</h2>
     <div class="accordion__item__content">
       <div>
-        <p>Repudiandae omnis omnis at nobis similique consequuntur vitae possimus. Repudiandae nemo voluptatibus eos et. Odio incidunt iste non sed cupiditate. Quam earum suscipit error facere soluta.</p>
+        <p>In voluptatum totam facilis non similique quia sit qui molestiae. Quasi voluptas possimus sit commodi quo iusto laudantium qui. Facilis adipisci aut mollitia velit. A consequuntur reprehenderit iure iure voluptas nisi consequatur. Quam ipsam et omnis. Et nihil eos iste quibusdam.</p>
       </div>
     </div>
   </div>
@@ -360,7 +396,7 @@
     <h2 class="accordion__item__title" tabindex="0">Accordion #3</h2>
     <div class="accordion__item__content">
       <div>
-        <p>Odit voluptas doloremque pariatur tenetur quia vitae voluptas libero. Possimus enim fugit est. Nihil nesciunt consequatur et nostrum consequatur distinctio in sequi consectetur. Quis nam qui.</p>
+        <p>Dolorum voluptatem ab et dolorem facere in iste laudantium odit. Labore ut enim consequatur eum et aut rerum. Nemo hic asperiores commodi nihil quis esse. Deleniti odio distinctio quasi ea et. Et iste vel iure dolorem eum enim amet a est. Tenetur ut voluptatibus.</p>
       </div>
     </div>
   </div>
@@ -368,7 +404,7 @@
     <h2 class="accordion__item__title" tabindex="0">Accordion #4</h2>
     <div class="accordion__item__content">
       <div>
-        <p>Dicta tenetur doloremque placeat facilis. Reprehenderit ut repellat. Architecto ea suscipit rerum et aperiam nostrum quo quasi accusamus. Eveniet voluptatum qui et itaque nam vel. Autem assumenda est. Enim omnis dignissimos quo quo et voluptas iste id.</p>
+        <p>Et odit repellat qui porro non. Quia laborum tempora animi. Voluptatem minima exercitationem iure. Praesentium et modi voluptatem sed. Quod qui aut incidunt nemo qui eos.</p>
       </div>
     </div>
   </div>
@@ -376,7 +412,7 @@
     <h2 class="accordion__item__title" tabindex="0">Accordion #5</h2>
     <div class="accordion__item__content">
       <div>
-        <p>Quia quae voluptatem. Iste voluptatum ex. Atque repudiandae commodi occaecati repellat. Nihil asperiores consequatur rerum deleniti. Eum ut consequuntur amet commodi sequi a.</p>
+        <p>Officiis beatae tempore veritatis aut dolorem. Reprehenderit quam quidem. Inventore dolores nemo omnis voluptatem voluptatem suscipit. Corrupti modi debitis quod ullam quia. Possimus minus dicta quia totam blanditiis. Veritatis dicta quia blanditiis ut.</p>
       </div>
     </div>
   </div>
@@ -384,7 +420,7 @@
     <h2 class="accordion__item__title" tabindex="0">Accordion #6</h2>
     <div class="accordion__item__content">
       <div>
-        <p>Sit qui nesciunt. Recusandae quae dolorem autem sed dignissimos facilis in. Cumque facere quis. Qui ducimus corrupti ab non temporibus. Rerum ratione hic aspernatur occaecati ex. Vero voluptas minima voluptatem libero autem.</p>
+        <p>Voluptas quia deleniti exercitationem est voluptate. Aperiam accusamus quas autem vitae in optio. Doloribus quaerat dolorem odio minus. Modi aperiam est nihil et rem aut. Quae molestiae accusantium recusandae quis distinctio nostrum vel minus.</p>
       </div>
     </div>
   </div>
@@ -397,7 +433,7 @@
     <div class="section__inner">
         <blockquote class="quote">
     <div class="quote__content">
-        <p>“Nisi adipisci vitae nostrum sit quis autem earum est eum. Molestiae sed earum maxime autem voluptatem expedita dolorem. Ipsa et enim adipisci eveniet. Voluptatum et architecto eveniet. Odit dolores et et sed quia qui et omnis. Voluptas qui harum occaecati dolores.”</p>
+        <p>“Doloribus dolor quia voluptatibus et et. Voluptatem soluta quia voluptatem rerum eaque est nam ab. Nemo qui id quod perspiciatis. Quibusdam dignissimos quia non ab repellat voluptatum cum. Nisi sit laudantium sequi dignissimos quam eligendi et facere. Molestias ea numquam adipisci et et dicta maiores temporibus.”</p>
     </div>
 </blockquote>
 
@@ -426,11 +462,11 @@
     <div class="section__inner">
         <blockquote class="quote">
     <div class="quote__content">
-        <p>“Nisi adipisci vitae nostrum sit quis autem earum est eum. Molestiae sed earum maxime autem voluptatem expedita dolorem. Ipsa et enim adipisci eveniet. Voluptatum et architecto eveniet. Odit dolores et et sed quia qui et omnis. Voluptas qui harum occaecati dolores.”</p>
+        <p>“Doloribus dolor quia voluptatibus et et. Voluptatem soluta quia voluptatem rerum eaque est nam ab. Nemo qui id quod perspiciatis. Quibusdam dignissimos quia non ab repellat voluptatum cum. Nisi sit laudantium sequi dignissimos quam eligendi et facere. Molestias ea numquam adipisci et et dicta maiores temporibus.”</p>
     </div>
     <div class="quote__by">
         <cite>
-            Kadin Barton, Central Infrastructure Facilitator
+            Deshawn Larson, Lead Communications Liaison
         </cite>
     </div>
     <p class="quote__link">

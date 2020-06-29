@@ -1,5 +1,9 @@
 .header {
-    @apply fixed inset-x-0 z-40 p-6 pl-3 text-white bg-brand-green-dark;
+    @apply fixed inset-x-0 z-40 text-white bg-brand-green-dark;
+
+    &__container {
+        @apply relative z-20 bg-brand-green-dark py-6 pl-3 pr-5;
+    }
 
     &__inner {
         @apply mx-auto max-w-screen-xl flex justify-between items-center;
@@ -22,17 +26,21 @@
         }
     }
 
-    &__search {
-        @apply relative z-40 order-last bg-brand-red-dark h-8 w-8;
-    }
-
     @screen md {
         &__logo {
             @apply w-auto;
         }
+    }
 
-        &__search {
-            @apply hidden;
+    .form--search {
+        @apply absolute z-10 inset-x-0 py-8 px-4;
+        @apply transition-transform ease-in-out duration-300;
+
+        top: 100%;
+        transform: translateY(-100%);
+
+        &.is-shown {
+            transform: translateY(0);
         }
     }
 }

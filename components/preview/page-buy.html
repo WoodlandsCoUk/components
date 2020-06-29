@@ -15,10 +15,11 @@
 <body>
 
     <header class="header">
-    <div class="header__inner">
-        <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
+    <div class="header__container">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
 
-        <div class="navigation">
+            <div class="navigation">
     <nav class="navigation__list">
         <ul>
                 <li class="navigation__item navigation__item--active">
@@ -33,6 +34,7 @@
                 <li class="navigation__item ">
                     <a href="page-about">About us</a>
                 </li>
+            <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
         </ul>
     </nav>
 
@@ -43,7 +45,41 @@
     </button>
 </div>
 
+        </div>
     </div>
+
+    <form action="/search" method="post" class="form form--search form--search--alt">
+    <div class="form__inner">
+        <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+        <div class="form__field">
+    <label for="form__search_type" class="form__label"><span>Type</span></label>
+    <select class="form-select" id="form__search_type" name="type">
+        <option value="woodland">Woodland</option>
+        <option value="mixed deciduous">Mixed Deciduous</option>
+        <option value="coniferous">Coniferous</option>
+        <option value="coppice">Coppice</option>
+        <option value="ancient woodland">Ancient Woodland</option>
+    </select>
+</div>
+
+
+        <div class="form__field form__field--switch form__field--switch--reverse">
+    <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
+</div>
+
+
+        <button class="button button--red button--inline">
+  <span>Search</span>
+</button>
+
+    </div>
+</form>
+
 </header>
 
 
@@ -60,12 +96,13 @@
 <section class="section section--shadow">
     <div class="section__inner">
         <form action="/search" method="post" class="form form--search">
-    <div class="form__field">
+    <div class="form__inner">
+        <div class="form__field">
     <label for="form__search_location" class="form__label"><span>Location</span></label>
     <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
 </div>
 
-    <div class="form__field">
+        <div class="form__field">
     <label for="form__search_type" class="form__label"><span>Type</span></label>
     <select class="form-select" id="form__search_type" name="type">
         <option value="woodland">Woodland</option>
@@ -77,16 +114,17 @@
 </div>
 
 
-    <div class="form__field form__field--switch form__field--switch--reverse">
+        <div class="form__field form__field--switch form__field--switch--reverse">
     <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
     <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
 </div>
 
 
-    <button class="button button--green button--inline">
+        <button class="button button--green button--inline">
   <span>Search</span>
 </button>
 
+    </div>
 </form>
 
     </div>
@@ -119,139 +157,139 @@
         
 <section class="grid">
     <div class="grid__inner">
-      <div class="card">
+      <div class="card card--woodland">
   <a href="page-woodland" class="card__link">
     <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?4138" />
+        <img src="http://placeimg.com/400/225/nature?82539" />
     </div>
 </div>
 
     <div class="card__body">
-      <h3 class="card__title">Incidunt Non Nobis Alias Eos Qui Deserunt Pariatur Deleniti Nisi.</h3>
-      <p class="card__location">NR. Hane Parkway, New Brainfort, Buckinghamshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £44,021
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?8843" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Nihil Laborum Et Rerum Repudiandae Necessitatibus Nostrum.</h3>
-      <p class="card__location">NR. Nikolas Ports, North Ayana, Bedfordshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £16,801
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?77679" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Dignissimos Tempore Eos Ab.</h3>
-      <p class="card__location">NR. Dominique Canyon, New Diontown, Borders</p>
-      <div class="card__content">
-        About 5 ½ acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £59,424
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?40525" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Consequatur Est Expedita Quaerat Minima Et Aut A Dolor Quis.</h3>
-      <p class="card__location">NR. Runolfsdottir Streets, Keeblerstad, Buckinghamshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £79,905
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?88275" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Voluptas At Voluptates Quas Iste Maxime Distinctio Aut.</h3>
-      <p class="card__location">NR. Buckridge Drive, New Vivienport, Bedfordshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £96,508
-    </div>
-  </a>
-</div>
-
-
-      <div class="card">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?57074" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Consequuntur Repudiandae Praesentium Et Modi Aut Voluptates Rerum Quia.</h3>
-      <p class="card__location">NR. Abshire Spur, Ornfurt, Cambridgeshire</p>
+      <h3 class="card__title">Voluptatum Voluptates Repellendus Molestiae Dignissimos Dolorum.</h3>
+      <p class="card__meta">NR. Hane Burg, West Merlin, Avon</p>
       <div class="card__content">
         About 3 ¼ acres
       </div>
     </div>
     <div class="card__banner">
-      £77,361
+      £5,170
     </div>
   </a>
 </div>
 
 
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?77847" />
     </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Provident Voluptas Quia Maiores Accusamus Nostrum Eos Eum.</h3>
+      <p class="card__meta">NR. Powlowski Ford, East Vernice, Avon</p>
+      <div class="card__content">
+        About 3 ¼ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £66,539
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?17717" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Voluptates Recusandae Quis Vel Eum Distinctio Sint Autem.</h3>
+      <p class="card__meta">NR. Tyler Lodge, Agustinaside, Bedfordshire</p>
+      <div class="card__content">
+        About 5 ½ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £70,304
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?89586" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Alias Atque Voluptate.</h3>
+      <p class="card__meta">NR. Swaniawski Square, South Albertobury, Bedfordshire</p>
+      <div class="card__content">
+        About 3 ¼ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £48,777
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?84602" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Accusamus Velit In Voluptas Nobis Dolor Consequatur.</h3>
+      <p class="card__meta">NR. Kaci Rapids, East Alan, Bedfordshire</p>
+      <div class="card__content">
+        Almost 4 acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £47,338
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?71992" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Labore Minus Dolorum Debitis.</h3>
+      <p class="card__meta">NR. Leola Drive, East Shyannefort, Buckinghamshire</p>
+      <div class="card__content">
+        About 3 ¼ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £71,307
+    </div>
+  </a>
+</div>
+
+
+      </div>
 </section>
 
         <button class="button button--inline button--green button--green--outline">
@@ -272,12 +310,12 @@
 
     <div class="managed-by managed-by--manager">
   <div class="managed-by__avatar">
-    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/caspergrl/128.jpg" />
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/boxmodel/128.jpg" />
   </div>
   <div class="managed-by__manager">
     <h3 class="managed-by__title">Regional Managers</h3>
-    <p class="managed-by__contact">Dewayne Murazik</p>
-    <p class="managed-by__contact"><a href="tel:996.170.0219 x591">996.170.0219 x591</a></p>
+    <p class="managed-by__contact">Mrs. Ellie Grady</p>
+    <p class="managed-by__contact"><a href="tel:308.379.8718">308.379.8718</a></p>
   </div>
 </div>
 
@@ -394,6 +432,7 @@
         </ul>
     </div>
 </footer>
+
 
 
 

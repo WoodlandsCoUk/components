@@ -42,6 +42,18 @@ $gap: 24;
         }
     }
 
+    &--single {
+        .grid__inner {
+            @screen md {
+                @apply grid-cols-1;
+            }
+
+            @screen lg {
+                @apply grid-cols-1;
+            }
+        }
+    }
+
     &--2 {
         > .grid__inner {
             @screen md {

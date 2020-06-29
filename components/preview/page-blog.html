@@ -15,10 +15,11 @@
 <body>
 
     <header class="header">
-    <div class="header__inner">
-        <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
+    <div class="header__container">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
 
-        <div class="navigation">
+            <div class="navigation">
     <nav class="navigation__list">
         <ul>
                 <li class="navigation__item ">
@@ -33,6 +34,7 @@
                 <li class="navigation__item ">
                     <a href="page-about">About us</a>
                 </li>
+            <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
         </ul>
     </nav>
 
@@ -43,7 +45,41 @@
     </button>
 </div>
 
+        </div>
     </div>
+
+    <form action="/search" method="post" class="form form--search form--search--alt">
+    <div class="form__inner">
+        <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+        <div class="form__field">
+    <label for="form__search_type" class="form__label"><span>Type</span></label>
+    <select class="form-select" id="form__search_type" name="type">
+        <option value="woodland">Woodland</option>
+        <option value="mixed deciduous">Mixed Deciduous</option>
+        <option value="coniferous">Coniferous</option>
+        <option value="coppice">Coppice</option>
+        <option value="ancient woodland">Ancient Woodland</option>
+    </select>
+</div>
+
+
+        <div class="form__field form__field--switch form__field--switch--reverse">
+    <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
+</div>
+
+
+        <button class="button button--red button--inline">
+  <span>Search</span>
+</button>
+
+    </div>
+</form>
+
 </header>
 
 
@@ -59,232 +95,207 @@
 
 <section class="section">
     <div class="section__inner">
-        
-<section class="grid">
+<section class="grid grid--2/3 grid--spaced grid--divider">
     <div class="grid__inner">
-    <div class="card">
-  <div class="media">
+            <div class="grid__item">
+                
+<section class="grid grid--single">
+    <div class="grid__inner">
+    <div class="card card--blog">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?44051" />
+        <img src="http://placeimg.com/400/225/nature?44783" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Ut Ad Vel Dolores Doloribus Distinctio Qui Placeat Temporibus.</h3>
-    <div class="card__content">
-      Quia voluptatem dolores ipsam corrupti. Non assumenda veniam. Enim temporibus aliquid qui. Et impedit voluptates ut autem voluptatem enim incidunt eaque beatae. Et quia accusamus corporis vero incidunt et magnam sed dolor.
+    <div class="card__body">
+      <h3 class="card__title">Labore Nihil Voluptas</h3>
+      <p class="card__meta">by Adrian, 19th July 2019, 62520 comments</p>
+      <div class="card__content">
+        Itaque voluptas tenetur rerum fuga voluptatem. Eaque quae eos delectus amet id. Reiciendis itaque vel ut nemo libero. Velit quia exercitationem commodi est ea. Provident qui aut reiciendis quasi eos ut. Fugiat ipsum dolorum tempore dolore enim illo ut assumenda mollitia. Cupiditate consequuntur aut. Cupiditate ut voluptates aspernatur cum autem fugit. Suscipit nihil architecto ex porro. Nisi praesentium unde non.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+    <div class="card card--blog">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?47177" />
+        <img src="http://placeimg.com/400/225/nature?45119" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Eligendi Velit Aut A Ullam Nemo Voluptatem Nobis Quia Est.</h3>
-    <div class="card__content">
-      Iusto nihil sit eum autem dolor. Laudantium consequuntur ut molestiae fuga laboriosam laborum deleniti neque. Quia et facere ducimus rerum. Aut corporis perspiciatis. Repudiandae est aut et.
+    <div class="card__body">
+      <h3 class="card__title">Porro Odit Ea</h3>
+      <p class="card__meta">by Kassandra, 4th July 2019, 46382 comments</p>
+      <div class="card__content">
+        Reprehenderit possimus ullam totam rerum id aut quibusdam. Nihil voluptatum assumenda quod consequatur eius aut tenetur. Consequatur reiciendis culpa quisquam minima. Sint nemo qui ab quos fuga eius blanditiis at. Blanditiis recusandae maxime corrupti assumenda quasi. Sapiente ex aspernatur. Nulla repudiandae est occaecati enim rerum nobis ipsum. Sint non omnis qui. Dicta consequatur rerum aut ut qui cum. Autem maiores quis ea maxime.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+    <div class="card card--blog">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?39617" />
+        <img src="http://placeimg.com/400/225/nature?67458" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Praesentium Numquam Totam At Debitis Commodi Voluptas Quo Quo Impedit.</h3>
-    <div class="card__content">
-      Enim velit minus deserunt qui nihil. Ut perspiciatis neque vel sed. Exercitationem ut adipisci qui vel voluptas asperiores.
+    <div class="card__body">
+      <h3 class="card__title">Quisquam Laudantium Sit</h3>
+      <p class="card__meta">by Skye, 17th August 2019, 33836 comments</p>
+      <div class="card__content">
+        Sint amet quod voluptatem facilis. Placeat perferendis aut autem quasi ut ea vero nobis. Accusamus at doloribus incidunt qui nobis. Iusto qui aperiam aut velit labore a earum. Minima praesentium assumenda cum sit excepturi dolor. Assumenda id rem est sapiente quo. Fugit facilis eligendi et voluptatem accusamus et. Quo laboriosam culpa sed. Eos dicta ipsam. Ut ea quisquam sed quia.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+    <div class="card card--blog">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?70100" />
+        <img src="http://placeimg.com/400/225/nature?8305" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Veniam Provident Eum Aut Ad Aspernatur Perspiciatis Sit Incidunt Nihil.</h3>
-    <div class="card__content">
-      Rerum tenetur consectetur. Sed ut odit dolorem quis quis quis quia. Et iure autem quis quam.
+    <div class="card__body">
+      <h3 class="card__title">Molestias Quae Sed</h3>
+      <p class="card__meta">by Katharina, 16th September 2019, 91504 comments</p>
+      <div class="card__content">
+        Nihil iste ratione aut quas praesentium omnis illum. Inventore iure et quod accusamus eius rerum. Eaque iusto saepe cum ea consequatur vel. Nobis iusto ipsa libero et et hic molestiae et esse. Iste animi aut. Dolor repellat voluptas voluptatibus sit quasi rerum. Sunt aut voluptate vero fuga non eveniet ipsam autem expedita. Autem dolorem similique et. Error rerum voluptatem nesciunt placeat. Vitae dolorum sit rerum pariatur eos modi iusto sed minima.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+    <div class="card card--blog">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?93365" />
+        <img src="http://placeimg.com/400/225/nature?86622" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Qui Nulla Reiciendis Distinctio Asperiores.</h3>
-    <div class="card__content">
-      Officia id quos. Et quas ea. Sit velit doloribus debitis harum suscipit dolores. Illo optio expedita eos amet minima perspiciatis modi.
+    <div class="card__body">
+      <h3 class="card__title">Eveniet Nostrum Pariatur</h3>
+      <p class="card__meta">by Jaclyn, 6th June 2020, 94158 comments</p>
+      <div class="card__content">
+        Minus corrupti odit dignissimos omnis unde earum est ducimus. Repellat voluptas facere vel veniam laboriosam assumenda. Unde sunt quaerat consequatur dolore quis omnis. Consequatur quia dignissimos. Qui quae ea. Iste in natus. Enim ratione sint ut ipsam quos eius. Vel sunt ipsam. Qui consectetur voluptate. Praesentium ut culpa doloremque quos.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
+  </a>
 </div>
 
-    <div class="card">
-  <div class="media">
+    <div class="card card--blog">
+  <a href="page-blog-post" class="card__link">
+    <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?46522" />
+        <img src="http://placeimg.com/400/225/nature?77738" />
     </div>
 </div>
 
-  <div class="card__body">
-    <h3 class="card__title">Vero Officiis Provident A Aut Ad Cumque Ea.</h3>
-    <div class="card__content">
-      Illo eligendi omnis neque et. Placeat eligendi eaque dolor eos. Ipsum voluptate et consequatur aut quo est quaerat est.
+    <div class="card__body">
+      <h3 class="card__title">Voluptatibus Aspernatur Quia</h3>
+      <p class="card__meta">by Jamal, 20th June 2020, 50548 comments</p>
+      <div class="card__content">
+        Error eius aperiam sunt nisi nulla. Assumenda corrupti voluptatem. Dolor soluta numquam ea velit qui. Ut ea iste est officia. Eos et sed reprehenderit et perspiciatis ipsum ut. Dolorem voluptate tempora dolore sit. Eaque repellat non deserunt cupiditate iusto non est. Ipsum eaque consequatur odio velit ut nulla. Tempore nesciunt ipsum sit dolor dolor molestiae et dicta quia. Est earum minima deserunt impedit adipisci illo beatae.
+      </div>
     </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
-</div>
-
-    <div class="card">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?91298" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Possimus Quasi Nesciunt Provident Amet Et Est Ut Sint Consequatur.</h3>
-    <div class="card__content">
-      Modi est magni et ea repellendus est. Consequatur cum debitis. Quis distinctio velit qui modi impedit deserunt voluptas et.
-    </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
-</div>
-
-    <div class="card">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?21312" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Ut Alias Omnis Omnis.</h3>
-    <div class="card__content">
-      Dolores aliquid rem perspiciatis aspernatur ea repellendus voluptate odio. Facilis perspiciatis adipisci optio quia sed laudantium quod. Velit quos et officiis enim. Quia cumque nulla. Sit minus dolore quaerat amet a. Voluptas impedit iusto tenetur alias.
-    </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
-</div>
-
-    <div class="card">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?19088" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Totam Et Neque Expedita Suscipit Dignissimos Ullam Asperiores.</h3>
-    <div class="card__content">
-      Cupiditate placeat vitae. Voluptatem et quas nostrum quam doloribus totam. Sed doloribus ipsam quis voluptatem officiis magnam. Harum placeat maxime quidem voluptatem voluptatibus velit. Quis dolores suscipit eligendi. Aut praesentium aperiam quia ex voluptatibus asperiores iusto qui earum.
-    </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
-</div>
-
-    <div class="card">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?84060" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Expedita In Quos.</h3>
-    <div class="card__content">
-      Et dignissimos quos itaque minima aliquid officia adipisci iure omnis. Laborum nesciunt illo. Et nisi debitis fugiat.
-    </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
-</div>
-
-    <div class="card">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?81583" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Maxime Est Totam Voluptas Maiores Suscipit.</h3>
-    <div class="card__content">
-      Enim sit sit dolor et possimus. Ut ipsam voluptatem voluptas sint delectus nostrum commodi. Consequatur necessitatibus excepturi ad. Enim ratione numquam omnis ea culpa explicabo sunt est error.
-    </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
-</div>
-
-    <div class="card">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?15095" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Soluta Dolorem Eos Culpa Consequatur Occaecati Praesentium Quis Excepturi Iste.</h3>
-    <div class="card__content">
-      Quae excepturi est minima quo. Magnam est dolorem ut qui repudiandae ex deserunt quod. Deserunt quasi eos provident a.
-    </div>
-  </div>
-  <div class="card__banner">
-    Blog
-  </div>
+  </a>
 </div>
 
     </div>
 </section>
 
-        <a href="#more-blog-posts" class="button button--inline button--green button--green--outline">
+                <a href="#more-blog-posts" class="button button--inline button--green button--green--outline">
   <span>See more blog posts</span>
 </a>
 
+            </div>
+
+            <div class="grid__item">
+                <h2 class="section__title section__title--medium">Topics</h2>
+                <ul class="listing listing--linked">
+    <li class="listing__item">
+        <a href="#">Sed Veniam Accusamus</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Delectus Mollitia Enim</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Totam Unde Deleniti</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Molestias Molestiae Similique</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Eius Ipsum Ut</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Et Sit Ducimus</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Totam Est Nulla</a>
+    </li>
+    <li class="listing__item">
+        <a href="#">Aliquam Vel Quod</a>
+    </li>
+</ul>
+
+
+                <form action="" method="GET" class="form form--cta form--cta--alt form--cta--blog form--cta--box">
+    <label for="form__cta__field" class="form__label form__title">Subscribe to our blog</label>
+
+    <label for="form__cta__field" class="form__subtitle">We’ll email you with every new article</label>
+
+    <div class="form__group">
+        <input type="text" id="form__cta__field" name="field" placeholder="Enter email address…" />
+        <button class="button button--green button--green--dark">
+  <span>Subscribe</span>
+</button>
+
+    </div>
+</form>
+
+
+                <h2 class="section__title section__title--medium mb-3">Tags</h2>
+                <ul class="tags">
+    <li><a href="#" class="tag">Natus</a>
+</li>
+    <li><a href="#" class="tag">Non</a>
+</li>
+    <li><a href="#" class="tag">Alias</a>
+</li>
+    <li><a href="#" class="tag">Sint</a>
+</li>
+    <li><a href="#" class="tag">Officia</a>
+</li>
+    <li><a href="#" class="tag">Quis</a>
+</li>
+    <li><a href="#" class="tag">Iusto</a>
+</li>
+    <li><a href="#" class="tag">Ut</a>
+</li>
+    <li><a href="#" class="tag">Ut</a>
+</li>
+    <li><a href="#" class="tag">Illum</a>
+</li>
+    <li><a href="#" class="tag">Molestias</a>
+</li>
+    <li><a href="#" class="tag">Perspiciatis</a>
+</li>
+</ul>
+
+
+                <div class="h-64 mt-8 rounded-md bg-brand-yellow"></div>
+            </div>
+    </div>
+</section>
     </div>
 </section>
 
@@ -389,6 +400,7 @@
         </ul>
     </div>
 </footer>
+
 
 
 
