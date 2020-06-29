@@ -19,13 +19,6 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    button: {
-      button: {
-        text: 'Search',
-        link: null,
-        modifiers: ['green', 'inline']
-      }
-    },
     fields: {
       location: {
         id: 'form__search_location',
@@ -46,6 +39,33 @@ module.exports = {
         label: 'Show Sold',
         modifiers: ['reverse']
       }
+    },
+    button: {
+      button: {
+        text: 'Search',
+        link: null,
+        modifiers: ['green', 'inline']
+      }
     }
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'Default'
+    },
+    {
+      name: 'alt',
+      label: 'Alternative',
+      context: {
+        button: {
+          button: {
+            text: 'Search',
+            link: null,
+            modifiers: ['red', 'inline']
+          }
+        },
+        modifiers: ['alt']
+      }
+    }
+  ]
 }

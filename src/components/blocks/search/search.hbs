@@ -1,8 +1,10 @@
 <form action="/search" method="post" class="form {{modifier 'form--search' modifiers}}">
-    {{ render '@form--field' fields.location merge=true }}
-    {{ render '@form--field--select' fields.type merge=true }}
+    <div class="form__inner">
+        {{ render '@form--field' fields.location merge=true }}
+        {{ render '@form--field--select' fields.type merge=true }}
 
-    {{ render '@form--switch' fields.sold merge=true }}
+        {{ render '@form--switch' fields.sold merge=true }}
 
-    {{ render '@button' button merge=true }}
+        {{ render '@button' button merge=true }}
+    </div>
 </form>

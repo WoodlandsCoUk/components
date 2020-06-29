@@ -10,7 +10,7 @@
 
         input,
         select {
-            @apply w-full py-4 border-brand-green text-brand-green max-w-none;
+            @apply w-full py-4 rounded-lg border-brand-green text-brand-green max-w-none;
         }
 
         ::placeholder {
@@ -71,6 +71,14 @@
         .button {
             @apply flex-grow;
             max-width: 200px;
+        }
+    }
+
+    &--alt {
+        @apply bg-brand-green;
+
+        label {
+            @apply text-white;
         }
     }
 }

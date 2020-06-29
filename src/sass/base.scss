@@ -28,6 +28,10 @@ a,
 // Forms
 form {
     @apply max-w-2xl;
+
+    .form__inner {
+        @apply w-full mx-auto max-w-screen-xl flex justify-between items-center;
+    }
 }
 
 ::placeholder {

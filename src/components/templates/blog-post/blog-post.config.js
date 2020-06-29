@@ -48,7 +48,7 @@ module.exports = {
         faker.name.firstName(),
         helpers.date(faker.date.recent(), 'd/m/Y'),
         `${faker.random.number()} comments`
-      ].join(', '),
+      ].join(', ')
     },
     comments: {
       title: 'Discussion',
