@@ -12,12 +12,21 @@
     .gallery__thumbnails {
         @apply hidden;
 
-        @screen sm {
-            @apply grid;
-        }
-
         .gallery__item {
             @apply rounded;
+        }
+
+        @screen sm {
+            @apply grid;
+            @apply grid-cols-4;
+        }
+
+        @screen md {
+            @apply grid-cols-3;
+        }
+
+        @screen lg {
+            @apply grid-cols-6;
         }
     }
 
