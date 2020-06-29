@@ -1,0 +1,45 @@
+.modal {
+    @apply hidden;
+
+    &__container {
+        @apply fixed inset-0 bg-black w-screen h-screen flex items-center justify-center;
+
+        background: rgba(#000, 0.5);
+    }
+
+    &__item {
+        @apply bg-white rounded-md max-w-3xl max-h-screen overflow-x-hidden overflow-y-auto;
+
+        min-width: 400px;
+    }
+
+    &__header {
+        @apply relative pt-2 my-4 mx-6;
+
+        [data-micromodal-close] {
+            @apply absolute top-0 right-0;
+        }
+    }
+
+    &__title {
+        @apply text-brand-red text-base font-bold uppercase text-center;
+    }
+
+    &__content {
+        @apply mb-6 px-6;
+    }
+
+    &__footer {
+        @apply p-6 bg-gray-light border-t border-gray-dark;
+    }
+
+    &--is-open {
+        @apply block;
+    }
+
+    &--small {
+        .modal__item {
+            @apply max-w-lg;
+        }
+    }
+}
