@@ -86,8 +86,9 @@ module.exports = {
       context: {
         card: {
           title: 'Blog Card',
-          text: faker.lorem.paragraphs(2),
+          text: faker.lorem.paragraph(),
           link: 'page-blog-post',
+          banner: '',
           meta: [
             faker.name.firstName(),
             helpers.date(faker.date.recent(), 'd/m/Y'),

@@ -1,5 +1,5 @@
 .form--cta {
-    @apply py-8 text-center bg-brand-green;
+    @apply py-8 text-center bg-brand-green max-w-none;
 
     .form__title,
     .form__subtitle {

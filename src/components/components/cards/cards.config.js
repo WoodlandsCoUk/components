@@ -30,6 +30,8 @@ module.exports = {
   context: {
     title: 'General card listing',
     cards: items,
+    woodlands: false,
+    blog: false,
     listing: {
       modifiers: ['grid']
     }
