@@ -1,6 +1,9 @@
 const faker = require('faker')
+const { helpers } = require('../../../../fractal.helpers')
 
-const itemCount = 12
+const itemCount = 6
+const tagCount = 12
+const topicCount = 8
 const items = []
 const tags = []
 const topics = []
@@ -8,25 +11,33 @@ const topics = []
 for (let i = 0; i < itemCount; i++) {
   items.push({
     card: {
-      title: faker.lorem.sentence(),
-      text: faker.lorem.paragraph(),
+      title: faker.lorem.words(3),
+      text: faker.lorem.sentences(10),
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: []
       },
       banner: 'Blog',
-      meta: '',
+      meta: [
+        faker.name.firstName(),
+        helpers.date(faker.date.recent(), 'd/m/Y'),
+        `${faker.random.number()} comments`
+      ].join(', '),
       modifiers: ['blog']
     }
   })
+}
 
-  tags.push({
-    text: faker.lorem.word(),
-    link: '#'
-  })
-
+for (let i = 0; i < topicCount; i++) {
   topics.push({
     text: faker.lorem.words(3),
+    link: '#'
+  })
+}
+
+for (let i = 0; i < tagCount; i++) {
+  tags.push({
+    text: faker.lorem.word(),
     link: '#'
   })
 }

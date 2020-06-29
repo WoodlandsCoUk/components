@@ -1,4 +1,5 @@
 const faker = require('faker')
+const { helpers } = require('../../../../fractal.helpers')
 
 const blogCount = 3
 const itemCount = 10
@@ -42,7 +43,12 @@ module.exports = {
   context: {
     post: {
       title: '20 20 vision for 2020 – is even 20% tree coverage enough?',
-      text: faker.lorem.paragraphs(5)
+      text: faker.lorem.paragraphs(5),
+      meta: [
+        faker.name.firstName(),
+        helpers.date(faker.date.recent(), 'd/m/Y'),
+        `${faker.random.number()} comments`
+      ].join(', '),
     },
     comments: {
       title: 'Discussion',

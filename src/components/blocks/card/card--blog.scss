@@ -1,4 +1,6 @@
 .card--blog {
+    @apply max-w-5xl;
+
     .card__title {
         @apply text-brand-red;
     }
@@ -8,6 +10,37 @@
     }
 
     .card__link {
+        @apply block;
+
+        > * {
+            @apply w-full;
+        }
+
+        @screen sm {
+            @apply flex;
+
+            > * {
+                width: 50%;
+                min-height: 125px;
+            }
+        }
+
+        @screen md {
+            @apply block;
+
+            > * {
+                @apply w-full;
+            }
+        }
+
+        @screen lg {
+            @apply flex;
+
+            > * {
+                width: 50%;
+            }
+        }
+
         &:hover,
         &:focus,
         &:active {
@@ -15,5 +48,12 @@
                 @apply text-brand-red-dark;
             }
         }
+    }
+
+    .card__content {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
