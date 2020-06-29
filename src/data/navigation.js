@@ -19,6 +19,7 @@ module.exports = [
         ]
       },
       {
+        main: true,
         text: 'Buying a wood',
         link: 'page-buy',
         navigation: [
@@ -41,6 +42,7 @@ module.exports = [
         ]
       },
       {
+        main: true,
         text: 'Sell your wood',
         link: 'page-sell',
         navigation: [
