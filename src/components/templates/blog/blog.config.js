@@ -2,6 +2,8 @@ const faker = require('faker')
 
 const itemCount = 12
 const items = []
+const tags = []
+const topics = []
 
 for (let i = 0; i < itemCount; i++) {
   items.push({
@@ -17,6 +19,16 @@ for (let i = 0; i < itemCount; i++) {
       modifiers: ['blog']
     }
   })
+
+  tags.push({
+    text: faker.lorem.word(),
+    link: '#'
+  })
+
+  topics.push({
+    text: faker.lorem.words(3),
+    link: '#'
+  })
 }
 
 module.exports = {
@@ -28,9 +40,18 @@ module.exports = {
     hero: {
       text: 'Blog'
     },
+    topics: {
+      title: 'Topics',
+      list: topics
+    },
+    tags: {
+      title: 'Tags',
+      tags
+    },
     blog: {
       title: null,
       cards: items,
+      blog: true,
       button: {
         text: 'See more blog posts',
         link: '#more-blog-posts',
