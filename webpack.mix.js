@@ -32,3 +32,4 @@ mix.js('src/js/site.js', 'js').extract([
 ])
 
 mix.copyDirectory('src/assets/', 'public')
+mix.copy('node_modules/photoswipe/dist/default-skin/', 'public/css/')

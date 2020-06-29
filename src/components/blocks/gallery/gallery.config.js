@@ -27,11 +27,16 @@ for (let i = 0; i < itemCount; i++) {
 }
 
 for (let i = 0; i < carouselCount; i++) {
+  const width = 1156
+  const height = 650
+
   carousel.push({
     text: faker.lorem.sentence(),
     gallery: {
       media: {
-        src: faker.image.imageUrl(1156, 650, 'nature', true),
+        src: faker.image.imageUrl(width, height, 'nature', true),
+        width,
+        height,
         modifiers: []
       }
     },
@@ -44,7 +49,7 @@ for (let i = 0; i < carouselCount; i++) {
   })
 }
 
-template = fs.readFileSync(path.resolve(__dirname, 'photoswipe.html'), 'utf8')
+const template = fs.readFileSync(path.resolve(__dirname, 'photoswipe.html'), 'utf8')
 
 module.exports = {
   order: 5,

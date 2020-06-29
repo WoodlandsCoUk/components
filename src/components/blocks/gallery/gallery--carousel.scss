@@ -3,7 +3,11 @@
 @import "photoswipe/src/css/default-skin/default-skin";
 
 .gallery--carousel {
-    @apply max-w-4xl;
+    @apply relative;
+
+    .gallery__list {
+        @apply cursor-zoom;
+    }
 
     .gallery__thumbnails {
         @apply hidden;

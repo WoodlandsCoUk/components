@@ -61,6 +61,9 @@ module.exports = {
       screens: {
         md: '800px',
         dark: { raw: '(prefers-color-scheme: dark)' }
+      },
+      cursor: {
+        zoom: 'zoom-in'
       }
     }
   },
