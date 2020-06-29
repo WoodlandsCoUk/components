@@ -1,3 +1,3 @@
 ## Icons
 
-Pick an icon using xxx.
+A basic icon utility.
