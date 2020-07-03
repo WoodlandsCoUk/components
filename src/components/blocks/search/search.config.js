@@ -66,6 +66,20 @@ module.exports = {
         },
         modifiers: ['alt']
       }
+    },
+    {
+      name: 'simple',
+      label: 'Simple',
+      context: {
+        button: {
+          button: {
+            text: 'Search',
+            link: null,
+            modifiers: ['red', 'inline']
+          }
+        },
+        modifiers: ['simple']
+      }
     }
   ]
 }

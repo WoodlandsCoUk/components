@@ -1,0 +1,6 @@
+<form action="/search" method="post" class="form {{modifier 'form--search' modifiers}}">
+    <div class="form__inner">
+        {{ render '@form--field' fields.location merge=true }}
+        {{ render '@button' button merge=true }}
+    </div>
+</form>

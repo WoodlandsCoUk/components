@@ -81,4 +81,30 @@
             @apply text-white;
         }
     }
+
+    &--simple {
+        @apply bg-brand-green;
+
+        .form__field {
+            @apply m-0 w-full;
+
+            .form-input {
+                @apply rounded-r-none border-0 m-0;
+            }
+
+            @screen sm {
+                &:first-child .form-input {
+                    @apply mr-0;
+                }
+            }
+        }
+
+        .button {
+            margin-left: -1px;
+
+            > span {
+                @apply rounded-l-none px-3 border-2 border-transparent;
+            }
+        }
+    }
 }
