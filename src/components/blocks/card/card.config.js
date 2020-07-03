@@ -35,6 +35,18 @@ module.exports = {
       }
     },
     {
+      name: 'banner-sold',
+      label: 'With Sold Banner',
+      context: {
+        card: {
+          title: 'Card with Sold Banner',
+          text: faker.lorem.paragraph(),
+          banner: 'Sold',
+          modifiers: ['sold']
+        }
+      }
+    },
+    {
       name: 'video',
       label: 'With Video',
       context: {
