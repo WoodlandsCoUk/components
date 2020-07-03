@@ -1,3 +1,3 @@
-## Search
+## Call to Action Forms
 
-Search form.
+Different types of forms which include email subscription, blog subscription and basic search call to action.
