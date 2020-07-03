@@ -43,7 +43,7 @@ module.exports = {
     },
     intro: {
       items: [
-        woodland.location,
+        woodland.meta,
         woodland.text,
         '2.6 miles away'
       ]
