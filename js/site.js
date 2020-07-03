@@ -485,16 +485,20 @@ selector.forEach(function (item) {
 
 /***/ }),
 
-/***/ "./src/components/blocks/gallery/gallery.js":
-/*!**************************************************!*\
-  !*** ./src/components/blocks/gallery/gallery.js ***!
-  \**************************************************/
+/***/ "./src/components/blocks/gallery/gallery--carousel.js":
+/*!************************************************************!*\
+  !*** ./src/components/blocks/gallery/gallery--carousel.js ***!
+  \************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
+/* harmony import */ var photoswipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! photoswipe */ "./node_modules/photoswipe/dist/photoswipe.js");
+/* harmony import */ var photoswipe__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(photoswipe__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! photoswipe/dist/photoswipe-ui-default */ "./node_modules/photoswipe/dist/photoswipe-ui-default.js");
+/* harmony import */ var photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_2__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -502,8 +506,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
+
+
 var carousels = document.querySelectorAll('.gallery--carousel');
-var config = {
+var template = document.querySelector('#photoswipe');
+var pswp;
+var carouselConfig = {
   axis: 'horizontal',
   items: 1,
   slideBy: 'page',
@@ -514,28 +522,91 @@ var config = {
   navPosition: 'bottom',
   mouseDrag: true,
   arrowKeys: true,
+  loop: true,
   autoplay: false,
-  loop: false,
   rewind: false
 };
+var photoSwipeConfig = {
+  index: 0,
+  spacing: 0.1,
+  maxSpreadZoom: 2,
+  showHideOpacity: true,
+  loop: true,
+  pinchToClose: true,
+  closeOnScroll: true,
+  escKey: true,
+  arrowKeys: true,
+  focus: true,
+  modal: true,
+  history: false
+}; // Create the HTML from the <template>.
+
+if ('content' in document.createElement('template') && template) {
+  document.body.append(template.content.cloneNode(true));
+  pswp = document.querySelector('.pswp');
+}
+
+var gallery = function gallery(carousel, index) {
+  var images = carousel.querySelectorAll('[data-src]'); // Map the images to build the gallery items.
+
+  var items = Array.from(images).map(function (item) {
+    var _item$dataset = item.dataset,
+        src = _item$dataset.src,
+        height = _item$dataset.height,
+        width = _item$dataset.width;
+    var description = item.querySelector('.gallery__description');
+    var title = description ? description.innerText : '';
+    return {
+      w: width,
+      h: height,
+      src: src,
+      title: title
+    };
+  }); // Enable PhotoSwipe if we have PSWP template, the library and any items.
+
+  if (pswp && photoswipe__WEBPACK_IMPORTED_MODULE_1___default.a && items.length) {
+    var _gallery = new photoswipe__WEBPACK_IMPORTED_MODULE_1___default.a(pswp, photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_2___default.a, items, _objectSpread({}, photoSwipeConfig, {
+      index: index,
+      getThumbBoundsFn: function getThumbBoundsFn(index) {
+        var thumbnail = images.item(index);
+        var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+        var rect = thumbnail.getBoundingClientRect();
+        return {
+          x: rect.left,
+          y: rect.top + pageYScroll,
+          w: rect.width
+        };
+      }
+    }));
+
+    _gallery.init();
+  }
+}; // Setup each of the carousel galleries.
+
+
 carousels.forEach(function (carousel) {
   var listContainer = carousel.querySelector('.gallery__list');
   var listImages = listContainer.querySelectorAll('[data-src]');
   var thumbnailContainer = carousel.querySelector('.gallery__thumbnails');
-  var thumbnails = thumbnailContainer.querySelectorAll('a');
-  var slider = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])(_objectSpread({}, config, {
+  var thumbnails = thumbnailContainer.querySelectorAll('a'); // Setup the slider.
+
+  var slider = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])(_objectSpread({}, carouselConfig, {
     container: listContainer
-  }));
+  })); // Manual navigation for slider using the thumbnails.
+
   thumbnails.forEach(function (thumbnail) {
     thumbnail.addEventListener('click', function (event) {
       event.preventDefault();
       var index = Array.from(thumbnails).indexOf(thumbnail);
       slider.goTo(index);
     });
-  });
+  }); // Clicking of the main images opens the gallery.
+
   listImages.forEach(function (image) {
     image.addEventListener('click', function (event) {
-      event.preventDefault(); // const { src } = image.dataset
+      event.preventDefault();
+      var index = Array.from(listImages).indexOf(image);
+      gallery(carousel, index);
     });
   });
 });
@@ -659,13 +730,14 @@ tabs.forEach(function (tab) {
 /***/ (function(module, exports) {
 
 var header = document.querySelector('.header');
-var navigationSearch = header.querySelector('.form--search');
+var navigationSearch = header.querySelector('.form--search:not(.form--search--simple)');
 var navigationSearchToggle = header.querySelector('.js--navigation-search');
 
 if (navigationSearch && navigationSearchToggle) {
   navigationSearchToggle.addEventListener('click', function (event) {
     event.preventDefault();
     navigationSearch.classList.toggle('is-shown');
+    navigationSearch.querySelector('input').focus();
   });
 }
 
@@ -739,11 +811,13 @@ module.exports = function (element) {
 
 __webpack_require__(/*! components/blocks/accordion/accordion */ "./src/components/blocks/accordion/accordion.js");
 
-__webpack_require__(/*! components/blocks/gallery/gallery */ "./src/components/blocks/gallery/gallery.js");
-
 __webpack_require__(/*! components/blocks/hero/hero */ "./src/components/blocks/hero/hero.js");
 
 __webpack_require__(/*! components/blocks/modal/modal */ "./src/components/blocks/modal/modal.js");
+
+__webpack_require__(/*! components/blocks/tabs/tabs */ "./src/components/blocks/tabs/tabs.js");
+
+__webpack_require__(/*! components/blocks/gallery/gallery--carousel */ "./src/components/blocks/gallery/gallery--carousel.js");
 
 __webpack_require__(/*! components/blocks/read-more/read-more */ "./src/components/blocks/read-more/read-more.js");
 

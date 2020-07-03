@@ -29,6 +29,12 @@
         @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white font-bold text-sm tracking-wide;
     }
 
+    &--sold {
+        .card__banner {
+            @apply bg-white text-brand-red text-base;
+        }
+    }
+
     &__link {
         @apply no-underline;
 

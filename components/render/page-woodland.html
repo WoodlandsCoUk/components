@@ -7,6 +7,21 @@
 
             <div class="navigation">
     <nav class="navigation__list">
+        <form action="/search" method="post" class="form form--search form--search--simple">
+    <div class="form__inner">
+        <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+        <button class="button button--red button--inline">
+  <span>Search</span>
+</button>
+
+    </div>
+</form>
+
+
         <ul>
                 <li class="navigation__item ">
                     <a href="page-buy">Buy</a>
@@ -73,7 +88,7 @@
 <section class="section section--bg-yellow section--short">
     <div class="section__inner">
         <div class="hero">
-  <h1>Quia Laudantium Perspiciatis <span class="hero__extra">£12,422</span></h1>
+  <h1>Sequi Sint Est <span class="hero__extra">£22,108</span></h1>
 </div>
 
     </div>
@@ -83,8 +98,8 @@
     <div class="section__inner">
         <div class="intro">
   <ul class="list list--unstyled">
-    <li class="intro__item"></li>
-    <li class="intro__item">About 5 ½ acres</li>
+    <li class="intro__item">NR. Aiden Well, Port Emmetstad, Buckinghamshire</li>
+    <li class="intro__item">About 3 ¼ acres</li>
     <li class="intro__item">2.6 miles away</li>
   </ul>
 </div>
@@ -97,176 +112,232 @@
         <section class="grid grid--2/3 grid--spaced grid--divider grid--woodland">
     <div class="grid__inner">
     <div class="grid__item">
-        <div class="gallery gallery--carousel">
+        <template id="photoswipe">
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</template>
+
+<div class="gallery gallery--carousel">
     <ul class="gallery__list">
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?81274">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?40939" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?81274" />
+        <img src="http://placeimg.com/1156/650/nature?40939" />
     </div>
 </div>
 
-            <p class="gallery__description">Molestiae veniam placeat fuga quo omnis architecto reprehenderit.</p>
+            <p class="gallery__description">Fugit id adipisci vero omnis eius repellendus.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?15273">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?87783" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?15273" />
+        <img src="http://placeimg.com/1156/650/nature?87783" />
     </div>
 </div>
 
-            <p class="gallery__description">Labore aut eum.</p>
+            <p class="gallery__description">Accusamus iusto ut sunt.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?82789">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?30909" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?82789" />
+        <img src="http://placeimg.com/1156/650/nature?30909" />
     </div>
 </div>
 
-            <p class="gallery__description">Est cum sit hic odit.</p>
+            <p class="gallery__description">Illum dignissimos culpa eligendi quas repudiandae iste est voluptas.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?41632">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?50421" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?41632" />
+        <img src="http://placeimg.com/1156/650/nature?50421" />
     </div>
 </div>
 
-            <p class="gallery__description">Minima voluptatem vitae repellat voluptatem consectetur recusandae rem dignissimos.</p>
+            <p class="gallery__description">Saepe incidunt vero temporibus assumenda vero omnis.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?95543">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?834" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?95543" />
+        <img src="http://placeimg.com/1156/650/nature?834" />
     </div>
 </div>
 
-            <p class="gallery__description">Eum magnam sunt ipsum officiis sed quibusdam adipisci accusantium aut.</p>
+            <p class="gallery__description">Eos delectus tempore sit.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?14064">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?3173" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?14064" />
+        <img src="http://placeimg.com/1156/650/nature?3173" />
     </div>
 </div>
 
-            <p class="gallery__description">Esse debitis beatae autem id odit.</p>
+            <p class="gallery__description">Reiciendis saepe maxime aliquid ea mollitia sed delectus adipisci.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?48888">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?45400" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?48888" />
+        <img src="http://placeimg.com/1156/650/nature?45400" />
     </div>
 </div>
 
-            <p class="gallery__description">Et ullam dolor.</p>
+            <p class="gallery__description">Occaecati nesciunt iste optio quaerat.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?41927">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?98713" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?41927" />
+        <img src="http://placeimg.com/1156/650/nature?98713" />
     </div>
 </div>
 
-            <p class="gallery__description">Natus aut ut molestiae velit quo eveniet dicta.</p>
+            <p class="gallery__description">Necessitatibus esse quos est rem tempore aut.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?28591">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?69312" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?28591" />
+        <img src="http://placeimg.com/1156/650/nature?69312" />
     </div>
 </div>
 
-            <p class="gallery__description">Ullam itaque vitae blanditiis quo quaerat.</p>
+            <p class="gallery__description">Qui qui dicta voluptatem eum sed magni dolores odio.</p>
         </li>
-        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?69689">
+        <li class="gallery__item" data-src="http://placeimg.com/1156/650/nature?68541" data-width="1156" data-height="650">
             <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/1156/650/nature?69689" />
+        <img src="http://placeimg.com/1156/650/nature?68541" />
     </div>
 </div>
 
-            <p class="gallery__description">Placeat beatae possimus libero nisi omnis voluptas assumenda id.</p>
+            <p class="gallery__description">Aliquid molestias libero animi esse tenetur ut quia error perferendis.</p>
         </li>
     </ul>
     <ul class="gallery__thumbnails">
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?81274"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?40939"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?5093" />
+        <img src="http://placeimg.com/400/225/nature?3138" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?15273"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?87783"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?21612" />
+        <img src="http://placeimg.com/400/225/nature?7329" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?82789"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?30909"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?15199" />
+        <img src="http://placeimg.com/400/225/nature?94715" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?41632"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?50421"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?22919" />
+        <img src="http://placeimg.com/400/225/nature?97173" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?95543"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?834"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?61329" />
+        <img src="http://placeimg.com/400/225/nature?34661" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?14064"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?3173"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?64110" />
+        <img src="http://placeimg.com/400/225/nature?10800" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?48888"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?45400"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?13788" />
+        <img src="http://placeimg.com/400/225/nature?50289" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?41927"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?98713"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?6125" />
+        <img src="http://placeimg.com/400/225/nature?77557" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?28591"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?69312"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?24217" />
+        <img src="http://placeimg.com/400/225/nature?72574" />
     </div>
 </div>
 </a>
         </li>
         <li class="gallery__item">
-            <a href="http://placeimg.com/1156/650/nature?69689"><div class="media">
+            <a href="http://placeimg.com/1156/650/nature?68541"><div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?56081" />
+        <img src="http://placeimg.com/400/225/nature?53582" />
     </div>
 </div>
 </a>
@@ -306,9 +377,9 @@
     </div>
     <div class="grid__item">
         <div class="sticky">
-            <p class="lede">Deserunt optio facere quam tempora omnis impedit. Veniam molestias architecto placeat aperiam sit natus cupiditate eos similique. Commodi dolorem consequuntur dolores autem. Maiores possimus repellendus rerum voluptates inventore quia minima.</p>
+            <p class="lede">Deleniti ducimus consectetur est voluptate dignissimos. Nesciunt maxime enim tenetur sit commodi dolorum sed. Blanditiis optio id nostrum. Quas unde aperiam optio debitis sit id repudiandae enim.</p>
 
-            <button class="button button--green" data-modal-open="modal-1d9d8965-222b-46c9-88e9-d5d8f92bb513">
+            <button class="button button--green" data-modal-open="modal-a420f499-b0ee-49a0-b070-d2b472e25b39">
                 <span>Visit this woodland</span>
             </button>
 
@@ -320,14 +391,14 @@
             <div class="managed-by">
   <div class="managed-by__person">
     <h3 class="managed-by__title">
-      Managed by <strong>Mrs. Ellie Grady</strong>
+      Managed by <strong>Wilburn Schmeler</strong>
     </h3>
     <div class="managed-by__avatar">
-      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/boxmodel/128.jpg" />
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/m_kalibry/128.jpg" />
     </div>
   </div>
-  <p class="managed-by__contact">Telephone: <a href="tel:308.379.8718">308.379.8718</a></p>
-  <p class="managed-by__contact">Email: <a href="mailto:Loyce.Weimann@example.org">Loyce.Weimann@example.org</a></p>
+  <p class="managed-by__contact">Telephone: <a href="tel:785.838.9979 x7367">785.838.9979 x7367</a></p>
+  <p class="managed-by__contact">Email: <a href="mailto:Elijah.Bednar@example.org">Elijah.Bednar@example.org</a></p>
 </div>
 
         </div>
@@ -335,18 +406,18 @@
     </div>
 </section>
 
-<div class="modal modal--small" aria-hidden="true" id="modal-1d9d8965-222b-46c9-88e9-d5d8f92bb513">
-  <div class="modal__container" data-modal-close="modal-1d9d8965-222b-46c9-88e9-d5d8f92bb513">
-    <div class="modal__item" role="dialog" aria-modal="true" aria-labelledby="modal__title--1d9d8965-222b-46c9-88e9-d5d8f92bb513">
+<div class="modal modal--small" aria-hidden="true" id="modal-a420f499-b0ee-49a0-b070-d2b472e25b39">
+  <div class="modal__container" data-modal-close="modal-a420f499-b0ee-49a0-b070-d2b472e25b39">
+    <div class="modal__item" role="dialog" aria-modal="true" aria-labelledby="modal__title--a420f499-b0ee-49a0-b070-d2b472e25b39">
 
       <header class="modal__header">
-        <h2 class="modal__title" id="modal__title--1d9d8965-222b-46c9-88e9-d5d8f92bb513">Visit quia laudantium perspiciatis</h2>
-        <button type="button" data-modal-close="modal-1d9d8965-222b-46c9-88e9-d5d8f92bb513" aria-label="Close Modal">×</button>
+        <h2 class="modal__title" id="modal__title--a420f499-b0ee-49a0-b070-d2b472e25b39">Visit sequi sint est</h2>
+        <button type="button" data-modal-close="modal-a420f499-b0ee-49a0-b070-d2b472e25b39" aria-label="Close Modal">×</button>
       </header>
 
 <div class="modal__content text-center">
-    <p>Tenetur saepe harum est. Odio quas et minus maxime natus animi dolorem quae dolores. Nulla placeat iste eveniet sit maiores eum voluptas suscipit. Qui laudantium sed ut asperiores libero ut dolor ex ipsam. Numquam voluptatem sed sed error adipisci. Eos qui vero hic asperiores et.
- Doloribus odio dolor mollitia est id ad asperiores reprehenderit vitae. Magnam reprehenderit dolor consequatur excepturi quis labore. Maxime labore sit enim atque facilis sapiente. Dolorem perspiciatis temporibus rerum rem nostrum esse quia dolores. A error error omnis suscipit rerum nihil labore.</p>
+    <p>Voluptatum voluptatum voluptas suscipit illo dignissimos voluptate. Quod velit natus nemo occaecati aut perspiciatis optio. Ullam corrupti illo reiciendis dolor voluptate modi id reiciendis sequi.
+ Odio pariatur consequatur amet molestiae ducimus voluptatem quia sit repudiandae. Voluptatibus molestiae iure asperiores et. Quo ut totam est nihil quis rerum quia ut natus. Sunt omnis qui quae adipisci ea aut deleniti tempore.</p>
 
     <button class="button button--green">
   <span>Download PDF Details</span>
@@ -357,7 +428,7 @@
 </button>
 
 
-    <p>Fugit occaecati dolor repellendus error. Quisquam ea consequatur. Voluptas et vero qui sequi et quasi esse vero sit.</p>
+    <p>Quia quae aliquam voluptatem libero esse commodi. Rerum autem alias eveniet sunt perspiciatis ad. Est libero consequuntur molestias sequi voluptas aperiam assumenda.</p>
 </div>
 
 
@@ -417,63 +488,19 @@
   <a href="page-woodland" class="card__link">
     <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?18012" />
+        <img src="http://placeimg.com/400/225/nature?31318" />
     </div>
 </div>
 
     <div class="card__body">
-      <h3 class="card__title">Hic Illo Temporibus</h3>
-      <p class="card__meta">NR. Graham Forges, Lubowitztown, Berkshire</p>
-      <div class="card__content">
-        About 3 ¼ acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £52,666
-    </div>
-  </a>
-</div>
-
-
-        <div class="card card--woodland">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?94453" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Enim Iure Consequatur</h3>
-      <p class="card__meta">NR. Langosh Ridge, East Makaylaland, Cambridgeshire</p>
-      <div class="card__content">
-        About 3 ¼ acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £74,898
-    </div>
-  </a>
-</div>
-
-
-        <div class="card card--woodland">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?46394" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Libero Omnis Reprehenderit</h3>
-      <p class="card__meta">NR. Keagan Glens, Lake Heaventown, Cambridgeshire</p>
+      <h3 class="card__title">Et Error Facere</h3>
+      <p class="card__meta">NR. McLaughlin Green, Lake Erling, Avon</p>
       <div class="card__content">
         Almost 4 acres
       </div>
     </div>
     <div class="card__banner">
-      £61,615
+      £78,206
     </div>
   </a>
 </div>
@@ -483,19 +510,19 @@
   <a href="page-woodland" class="card__link">
     <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?7538" />
+        <img src="http://placeimg.com/400/225/nature?76432" />
     </div>
 </div>
 
     <div class="card__body">
-      <h3 class="card__title">Nisi Iusto Fugit</h3>
-      <p class="card__meta">NR. Casper Field, Amarashire, Borders</p>
+      <h3 class="card__title">Dolor Fugiat Eveniet</h3>
+      <p class="card__meta">NR. Kunde Radial, Jeraldton, Berkshire</p>
       <div class="card__content">
-        Almost 4 acres
+        About 5 ½ acres
       </div>
     </div>
     <div class="card__banner">
-      £30,909
+      £57,009
     </div>
   </a>
 </div>
@@ -505,41 +532,85 @@
   <a href="page-woodland" class="card__link">
     <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?71863" />
+        <img src="http://placeimg.com/400/225/nature?74532" />
     </div>
 </div>
 
     <div class="card__body">
-      <h3 class="card__title">Ipsa Velit Labore</h3>
-      <p class="card__meta">NR. Harvey Centers, East Constance, Berkshire</p>
-      <div class="card__content">
-        Almost 4 acres
-      </div>
-    </div>
-    <div class="card__banner">
-      £98,204
-    </div>
-  </a>
-</div>
-
-
-        <div class="card card--woodland">
-  <a href="page-woodland" class="card__link">
-    <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?12612" />
-    </div>
-</div>
-
-    <div class="card__body">
-      <h3 class="card__title">Suscipit Minus Magnam</h3>
-      <p class="card__meta">NR. Jerrod Plains, New Ameliamouth, Avon</p>
+      <h3 class="card__title">Explicabo Ducimus Rem</h3>
+      <p class="card__meta">NR. Towne Port, Port Marty, Cambridgeshire</p>
       <div class="card__content">
         About 3 ¼ acres
       </div>
     </div>
     <div class="card__banner">
-      £5,260
+      £11,386
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?71154" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Est Quia Ut</h3>
+      <p class="card__meta">NR. Mertz Plains, Ritchieport, Buckinghamshire</p>
+      <div class="card__content">
+        About 5 ½ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £6,408
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?15816" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Ut Ea Illo</h3>
+      <p class="card__meta">NR. Flavio Mountain, Walshfort, Buckinghamshire</p>
+      <div class="card__content">
+        About 3 ¼ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £53,058
+    </div>
+  </a>
+</div>
+
+
+        <div class="card card--woodland">
+  <a href="page-woodland" class="card__link">
+    <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?67186" />
+    </div>
+</div>
+
+    <div class="card__body">
+      <h3 class="card__title">Iure Rem Est</h3>
+      <p class="card__meta">NR. Zemlak Glen, New Patriciaport, Cambridgeshire</p>
+      <div class="card__content">
+        About 5 ½ acres
+      </div>
+    </div>
+    <div class="card__banner">
+      £22,514
     </div>
   </a>
 </div>

@@ -10,10 +10,10 @@
     }
 
     &__logo {
-        @apply relative z-40 font-display text-4xl text-center m-0 overflow-hidden;
+        @apply z-40 font-display text-4xl text-center m-0 overflow-hidden;
 
         a {
-            @apply block bg-auto bg-no-repeat bg-center indent-full;
+            @apply relative z-40 block bg-auto bg-no-repeat bg-center indent-full;
 
             width: 300px;
             background-image: url(../images/logo.svg);
@@ -24,6 +24,11 @@
                 @apply text-brand-red-dark;
             }
         }
+
+        &::after {
+            @apply absolute inset-0 z-30 bg-brand-green-dark;
+            content: "";
+        }
     }
 
     @screen md {
@@ -32,8 +37,16 @@
         }
     }
 
+    @screen lg {
+        &__logo {
+            &::after {
+                @apply hidden;
+            }
+        }
+    }
+
     .form--search {
-        @apply absolute z-10 inset-x-0 py-8 px-4;
+        @apply hidden absolute z-10 inset-x-0 py-8 px-4;
         @apply transition-transform ease-in-out duration-300;
 
         top: 100%;
@@ -41,6 +54,10 @@
 
         &.is-shown {
             transform: translateY(0);
+        }
+
+        @screen lg {
+            @apply block;
         }
     }
 }
