@@ -1,0 +1,11 @@
+<li class="navigation__item {{#ifeq @root/active link}}navigation__item--active{{/ifeq}}">
+    <a href="{{ link }}">{{ text }}</a>
+
+    {{#if navigation}}
+    <ul>
+        {{#each navigation}}
+            {{ render '@layout-navigation--item' (navigationContext this) }}
+        {{/each}}
+    </ul>
+    {{/if}}
+</li>

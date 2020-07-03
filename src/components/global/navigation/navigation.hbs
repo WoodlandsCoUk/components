@@ -2,16 +2,15 @@
     <nav class="navigation__list">
         {{ render '@block--search--simple' search merge=true }}
 
+        {{#if navigation}}
         <ul>
             {{#each navigation}}
-                {{#if this.main}}
-                <li class="navigation__item {{#ifeq ../active this.link}}navigation__item--active{{/ifeq}}">
-                    <a href="{{ this.link }}">{{ this.text }}</a>
-                </li>
-                {{/if}}
+                {{ render '@layout-navigation--item' (navigationContext this) }}
             {{/each}}
+
             <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
         </ul>
+        {{/if}}
     </nav>
 
     <button class="hamburger hamburger--squeeze navigation__button js--navigation" type="button">

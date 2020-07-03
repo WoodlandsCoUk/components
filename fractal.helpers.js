@@ -1,6 +1,7 @@
 const path = require('path')
 const faker = require('faker')
 const markdown = require('marked')
+const _ = require('lodash')
 
 module.exports = {
   helpers: {
@@ -42,8 +43,17 @@ module.exports = {
 
       return `${day} ${month} ${year}`
     },
-    navigationText: (item) => {
-      return item.textAlt || item.text
+    navigationContext: (context) => {
+      if (_.isObject(context)) {
+        return context
+      }
+
+      return {
+        main: true,
+        text: context,
+        link: '#',
+        navigation: null
+      }
     },
     ifeq: (a, b, options) => {
       if (a === b) {

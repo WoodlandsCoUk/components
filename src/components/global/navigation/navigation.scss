@@ -20,11 +20,11 @@ $animationDelay: 150ms;
     @apply flex flex-col bg-brand-green-dark;
 
     &__list {
-        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green overflow-hidden;
+        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green max-h-screen overflow-hidden;
         @apply origin-top duration-300 ease-in-out;
 
         padding-top: 102px;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
 
         body.navigation--shown & {
             transform: translateY(0);
@@ -82,7 +82,7 @@ $animationDelay: 150ms;
         @apply relative;
 
         &__list {
-            @apply relative p-0 bg-transparent;
+            @apply relative p-0 bg-transparent overflow-visible;
             transition-property: none;
             transform: translateY(0);
 
@@ -92,7 +92,7 @@ $animationDelay: 150ms;
         }
 
         &__item {
-            @apply flex items-center ml-2 mr-1 border-0;
+            @apply relative flex items-center ml-2 mr-1 border-0;
 
             &::before {
                 @apply inline-block border-l border-brand-green-light h-4 mr-3;
@@ -141,6 +141,27 @@ $animationDelay: 150ms;
                     }
                 }
             }
+
+            > ul {
+                @apply hidden absolute top-0 left-0 bg-brand-green w-screen;
+                top: 50px;
+
+                li {
+                    @apply block m-0;
+
+                    &::before {
+                        @apply hidden;
+                    }
+                }
+
+                a {
+                    @apply normal-case p-0 m-0 border-0;
+                }
+
+                ul {
+                    @apply relative top-0;
+                }
+            }
         }
 
         &__button {
@@ -152,5 +173,3 @@ $animationDelay: 150ms;
         }
     }
 }
-
-

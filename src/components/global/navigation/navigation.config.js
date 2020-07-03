@@ -2,7 +2,16 @@ module.exports = {
   order: 3,
   title: 'Navigation',
   handle: 'layout-navigation',
-  status: 'ready',
+  status: 'wip',
   default: 'default',
-  context: {}
+  context: {},
+  variants: [
+    {
+      name: 'default'
+    },
+    {
+      name: 'item',
+      hidden: true
+    }
+  ]
 }
