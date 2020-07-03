@@ -34,8 +34,12 @@
         @apply relative mb-4;
 
         &:hover {
-            .tns-controls {
-                @apply visible;
+            .tns-nav {
+                transform: translateY(0);
+            }
+
+            .tns-controls > [data-controls] {
+                transform: translateX(0);
             }
         }
     }
@@ -48,8 +52,23 @@
         }
     }
 
+    .tns-item {
+        .gallery__description {
+            @apply transition-transform ease-in-out duration-300 delay-500;
+            transform: translateY(105%);
+        }
+    }
+
+    .tns-slide-active {
+        .gallery__description {
+            transform: translateY(0);
+        }
+    }
+
     .tns-nav {
         @apply absolute top-0 inset-x-0 text-center z-10 pointer-events-none;
+        @apply transition-transform ease-in-out duration-300;
+        transform: translateY(-105%);
 
         > button {
             @apply inline-block overflow-hidden h-3 w-3 mx-1 rounded-full bg-white indent-full pointer-events-auto;
@@ -69,17 +88,16 @@
     }
 
     .tns-controls {
-        @apply invisible absolute inset-0 flex items-center justify-between z-10 pointer-events-none;
-        @apply visible;
+        @apply absolute inset-0 flex items-center justify-between z-10 pointer-events-none overflow-hidden;
 
         > button {
             @apply relative block overflow-hidden h-10 w-10 rounded-full bg-white indent-full pointer-events-auto mx-3;
+            @apply transition-transform ease-in-out duration-300;
 
             background-color: rgba(#fff, 0.9);
 
             &[disabled] {
                 @apply invisible;
-                @apply visible;
             }
 
             &::after {
@@ -105,6 +123,8 @@
         }
 
         > [data-controls="prev"] {
+            transform: translateX(-135%);
+
             &::after {
                 left: 50%;
                 margin-left: -4px;
@@ -113,6 +133,8 @@
         }
 
         > [data-controls="next"] {
+            transform: translateX(135%);
+
             &::after {
                 right: 50%;
                 margin-right: -4px;
