@@ -1,6 +1,38 @@
-document.querySelectorAll('.js--navigation').forEach((item) => {
-  item.addEventListener('click', () => {
-    document.body.classList.toggle('navigation--shown')
-    item.classList.toggle('is-active')
+const navigation = document.querySelector('.navigation')
+const listItems = navigation.querySelectorAll('li')
+const classes = {
+  toggle: 'is-active',
+  shown: 'navigation--shown',
+  active: 'navigation__item--is-active'
+}
+
+// Toggle the visibilty of the navigation.
+document.querySelectorAll('.js--navigation').forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle(classes.shown)
+    navigation.classList.toggle(classes.toggle)
+
+    // Reset the sub-navigations, making sure they're closed.
+    listItems.forEach((listItem) => {
+      listItem.classList.remove(classes.active)
+    })
+  })
+})
+
+// Bind click events for mobile navigation.
+listItems.forEach((listItem) => {
+  listItem.querySelector('a').addEventListener('click', (event) => {
+    const sub = listItem.querySelector('ul')
+    const isActive = listItem.classList.contains(classes.active)
+
+    if (sub) {
+      event.preventDefault()
+
+      if (isActive) {
+        listItem.classList.remove(classes.active)
+      } else {
+        listItem.classList.add(classes.active)
+      }
+    }
   })
 })

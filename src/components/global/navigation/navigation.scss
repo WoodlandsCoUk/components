@@ -16,11 +16,15 @@ $animationDelay: 150ms;
 
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 
+body.navigation--shown {
+    @apply overflow-hidden;
+}
+
 .navigation {
     @apply flex flex-col bg-brand-green-dark;
 
     &__list {
-        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green max-h-screen overflow-hidden;
+        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green max-h-screen overflow-auto;
         @apply origin-top duration-300 ease-in-out;
 
         padding-top: 102px;
@@ -32,8 +36,7 @@ $animationDelay: 150ms;
     }
 
     &__item {
-        @apply relative text-2xl;
-        @apply border-b border-brand-green-light;
+        @apply relative text-2xl border-b border-brand-green-light;
 
         > a {
             @apply relative block py-4 px-6 text-white font-normal no-underline;
@@ -42,8 +45,7 @@ $animationDelay: 150ms;
             transition-property: transform, opacity;
 
             &:hover,
-            &:focus,
-            &:active {
+            &:focus {
                 @apply text-brand-yellow bg-brand-green-dark;
             }
 
@@ -58,12 +60,52 @@ $animationDelay: 150ms;
             }
         }
 
+        > ul {
+            @apply hidden bg-brand-green-dark;
+
+            li {
+                @apply border-b-0 text-lg border-brand-green;
+            }
+
+            a {
+                @apply py-2;
+            }
+
+            > li {
+                @apply border-t;
+
+                ul {
+                    @apply pb-2 -mt-1;
+                }
+
+                li {
+                    @apply border-t-0;
+
+                    a {
+                        @apply py-1;
+                    }
+                }
+            }
+        }
+
         &--search {
             @apply hidden;
         }
 
         &--active > a {
             @apply text-brand-yellow-light;
+        }
+
+        &--is-active {
+            > a,
+            > a:focus,
+            > a:active {
+                @apply bg-brand-green-dark text-brand-yellow-dark;
+            }
+
+            > ul {
+                @apply block;
+            }
         }
     }
 
@@ -72,7 +114,7 @@ $animationDelay: 150ms;
     }
 
     .form--search {
-        @apply relative block top-0 transform-none border-b border-brand-green-light;
+        @apply sticky block top-0 transform-none border-b border-brand-green-light;
     }
 }
 
