@@ -74,6 +74,25 @@ module.exports = {
         modifiers: ['green--dark']
       }
     },
+    modal: {
+      uuid: faker.random.uuid(),
+      title: 'Visit Woodland',
+      intro: faker.lorem.paragraphs(2),
+      extra: faker.lorem.sentences(3),
+      modifiers: ['small'],
+      pdf: {
+        button: {
+          text: 'Download PDF Details',
+          modifiers: ['green']
+        }
+      },
+      print: {
+        button: {
+          text: 'Print PDF Details',
+          modifiers: ['green--dark']
+        }
+      }
+    },
     tab: {
       tabs,
       nav: buttons

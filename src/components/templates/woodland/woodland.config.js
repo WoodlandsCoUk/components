@@ -13,7 +13,7 @@ for (let i = 0; i < itemCount; i++) {
         'About 3 ¼ acres'
       ]),
       link: 'page-woodland',
-      location: [
+      meta: [
         `NR. ${faker.address.streetName()}`,
         faker.address.city(),
         faker.address.county()
@@ -43,12 +43,17 @@ module.exports = {
     },
     intro: {
       items: [
-        woodland.location,
+        woodland.meta,
         woodland.text,
         '2.6 miles away'
       ]
     },
     woodland: {
+      modal: {
+        title: `Visit ${woodland.title}`
+      }
+    },
+    woodlands: {
       title: 'Other woodlands for sale',
       cards: items,
       button: {

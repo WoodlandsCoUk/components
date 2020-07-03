@@ -4,16 +4,11 @@
     <div class="card__body">
       <h3 class="card__title">{{ titlecase card.title }}</h3>
       {{#if card.meta}}
-      <p class="card__meta">{{ card.meta }}</p>
+      <p class="card__meta">by {{ card.meta }}</p>
       {{/if}}
       <div class="card__content">
         {{ card.text }}
       </div>
     </div>
-    {{#if card.banner}}
-    <div class="card__banner">
-      {{ card.banner }}
-    </div>
-    {{/if}}
   </a>
 </div>

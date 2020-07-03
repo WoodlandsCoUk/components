@@ -6,8 +6,24 @@
     {{/ @section }}
 
     {{#> @section }}
-        {{ render '@components--cards' blog merge=true }}
-        {{ render '@button' blog merge=true }}
+        {{#> @grid modifiers="2/3,spaced,divider" }}
+            <div class="grid__item">
+                {{ render '@components--cards' blog merge=true }}
+                {{ render '@button' blog merge=true }}
+            </div>
+
+            <div class="grid__item">
+                <h2 class="section__title section__title--medium">{{ titlecase topics.title }}</h2>
+                {{ render '@components--list--link' topics merge=true }}
+
+                {{ render '@block--cta-form--subscribe--blog' }}
+
+                <h2 class="section__title section__title--medium mb-3">{{ titlecase tags.title }}</h2>
+                {{ render '@block--tags' tags merge=true }}
+
+                <div class="h-64 mt-8 rounded-md bg-brand-yellow"></div>
+            </div>
+        {{/ @grid }}
     {{/ @section }}
 
     {{#> @section modifiers='bg-green' }}

@@ -1,13 +1,14 @@
 const faker = require('faker')
 
 const itemCount = 6
-const items = []
+const woodlands = []
+const blog = []
 
 const topicCount = 7
 const topics = []
 
 for (let i = 0; i < itemCount; i++) {
-  items.push({
+  woodlands.push({
     card: {
       title: faker.lorem.sentence(),
       text: faker.random.arrayElement([
@@ -16,7 +17,7 @@ for (let i = 0; i < itemCount; i++) {
         'About 3 ¼ acres'
       ]),
       link: 'page-woodland',
-      location: [
+      meta: [
         `NR. ${faker.address.streetName()}`,
         faker.address.city(),
         faker.address.county()
@@ -26,7 +27,26 @@ for (let i = 0; i < itemCount; i++) {
         modifiers: []
       },
       banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
-      modifiers: ['woodland']
+      modifiers: ['woodland'],
+      woodland: true
+    }
+  })
+
+  blog.push({
+    card: {
+      title: faker.lorem.words(3),
+      text: faker.lorem.paragraph(),
+      link: 'page-blog-post',
+      banner: faker.random.arrayElement([
+        'Blog',
+        'Video',
+        'Guide'
+      ]),
+      media: {
+        src: faker.image.imageUrl(400, 225, 'nature', true),
+        modifiers: []
+      },
+      modifiers: []
     }
   })
 }
@@ -56,7 +76,8 @@ module.exports = {
     },
     woodlands: {
       title: 'New woodlands for sale',
-      cards: items,
+      cards: woodlands,
+      woodlands: true,
       button: {
         text: 'See all woodlands for sale',
         modifiers: ['inline', 'green', 'green--outline']
@@ -73,7 +94,8 @@ module.exports = {
       list: topics
     },
     blog: {
-      title: 'Blogs, videos & guides'
+      title: 'Blogs, videos & guides',
+      cards: blog
     },
     instagram: {
       button: {

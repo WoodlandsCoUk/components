@@ -21,7 +21,7 @@ module.exports = {
       },
 
       text: {
-        default: '#000'
+        default: '#414141'
       },
 
       gray: {

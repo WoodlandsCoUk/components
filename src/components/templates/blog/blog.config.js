@@ -1,22 +1,44 @@
 const faker = require('faker')
+const { helpers } = require('../../../../fractal.helpers')
 
-const itemCount = 12
+const itemCount = 6
+const tagCount = 12
+const topicCount = 8
 const items = []
+const tags = []
+const topics = []
 
 for (let i = 0; i < itemCount; i++) {
   items.push({
     card: {
-      title: faker.lorem.sentence(),
-      text: faker.lorem.paragraph(),
-      link: '',
+      title: faker.lorem.words(3),
+      text: faker.lorem.sentences(10),
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: []
       },
       banner: 'Blog',
-      location: '',
-      modifiers: ['link']
+      meta: [
+        faker.name.firstName(),
+        helpers.date(faker.date.recent(), 'd/m/Y'),
+        `${faker.random.number()} comments`
+      ].join(', '),
+      modifiers: ['blog']
     }
+  })
+}
+
+for (let i = 0; i < topicCount; i++) {
+  topics.push({
+    text: faker.lorem.words(3),
+    link: '#'
+  })
+}
+
+for (let i = 0; i < tagCount; i++) {
+  tags.push({
+    text: faker.lorem.word(),
+    link: '#'
   })
 }
 
@@ -29,9 +51,19 @@ module.exports = {
     hero: {
       text: 'Blog'
     },
+    topics: {
+      title: 'Topics',
+      list: topics
+    },
+    tags: {
+      title: 'Tags',
+      tags
+    },
     blog: {
       title: null,
       cards: items,
+      blog: true,
+      modifiers: ['single'],
       button: {
         text: 'See more blog posts',
         link: '#more-blog-posts',

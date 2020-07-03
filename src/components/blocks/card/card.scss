@@ -17,16 +17,22 @@
         @apply mb-2 text-brand-green-light font-bold text-lg;
     }
 
-    &__content {
-        @apply text-sm;
+    &__meta {
+        @apply mb-1 -mt-1 uppercase text-brand-red font-bold text-sm tracking-wide;
     }
 
-    &__location {
-        @apply mb-1 -mt-1 uppercase text-brand-red font-bold text-sm tracking-wide;
+    &__content {
+        @apply text-base text-text;
     }
 
     &__banner {
         @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white font-bold text-sm tracking-wide;
+    }
+
+    &--sold {
+        .card__banner {
+            @apply bg-white text-brand-red text-base;
+        }
     }
 
     &__link {
@@ -38,6 +44,7 @@
             .card__title {
                 @apply text-brand-green underline;
             }
+
             .media > .media__content > * {
                 transform: scale(1.1);
             }

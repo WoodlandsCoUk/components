@@ -10,7 +10,7 @@
     {{/ @section }}
 
     {{#> @section modifiers='bg-white' }}
-        {{ render '@components--woodland' }}
+        {{ render '@components--woodland' woodland merge=true }}
     {{/ @section }}
 
     {{#> @section modifiers='bg-yellow' }}
@@ -18,8 +18,8 @@
     {{/ @section }}
 
     {{#> @section modifiers="bg-gray" }}
-        {{ render '@components--cards' woodland merge=true }}
-        {{ render '@button' woodland merge=true }}
+        {{ render '@components--cards' woodlands merge=true }}
+        {{ render '@button' woodlands merge=true }}
     {{/ @section }}
 
     {{#> @section modifiers='bg-green' }}

@@ -14,7 +14,7 @@ for (let i = 0; i < itemCount; i++) {
         modifiers: []
       },
       banner: 'Banner',
-      location: '',
+      meta: '',
       modifiers: ['link']
     }
   })
@@ -30,8 +30,24 @@ module.exports = {
   context: {
     title: 'General card listing',
     cards: items,
+    woodlands: false,
+    blog: false,
     listing: {
       modifiers: ['grid']
     }
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'General'
+    },
+    {
+      name: 'single',
+      label: 'Single',
+      context: {
+        title: 'Single column card listing',
+        modifiers: ['single']
+      }
+    }
+  ]
 }

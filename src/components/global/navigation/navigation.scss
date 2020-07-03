@@ -20,9 +20,10 @@ $animationDelay: 150ms;
     @apply flex flex-col bg-brand-green-dark;
 
     &__list {
-        @apply fixed inset-0 z-30 flex flex-col justify-center items-center bg-brand-green-dark px-6 py-8 overflow-hidden;
+        @apply fixed inset-0 z-30 block bg-brand-green border-brand-green-dark overflow-hidden;
         @apply origin-top duration-300 ease-in-out;
 
+        border-top-width: 102px;
         transform: translateY(-100%);
 
         body.navigation--shown & {
@@ -31,32 +32,33 @@ $animationDelay: 150ms;
     }
 
     &__item {
-        @apply relative opacity-0 -translate-x-48 origin-top duration-300 ease-in-out text-4xl;
+        @apply relative opacity-0 -translate-x-48 origin-top duration-300 ease-in-out text-2xl;
+        @apply border-b border-brand-green-light;
 
-        transition-property: transform, opacity;
+        // transition-property: transform, opacity;
 
-        @for $i from 1 through $navigationCount {
-            &:nth-child(#{$i}) {
-                transition-delay: $i * $animationDelay;
-            }
-        }
+        // @for $i from 1 through $navigationCount {
+        //     &:nth-child(#{$i}) {
+        //         transition-delay: $i * $animationDelay;
+        //     }
+        // }
 
         body.navigation--shown & {
             @apply opacity-100 translate-x-0;
         }
 
-        @screen md {
-            @apply text-base mx-2;
-        }
-
         > a {
-            @apply py-2 text-brand-yellow font-bold no-underline;
+            @apply block py-4 px-6 text-white font-normal no-underline;
 
             &:hover,
             &:focus,
             &:active {
-                @apply text-brand-yellow-light;
+                @apply text-brand-yellow;
             }
+        }
+
+        &--search {
+            @apply hidden;
         }
 
         &--active > a {
@@ -68,6 +70,10 @@ $animationDelay: 150ms;
     &__button {
         @apply z-40 order-first;
     }
+
+    .form--search {
+        @apply relative block top-0 transform-none border-b border-brand-green-light;
+    }
 }
 
 @screen lg {
@@ -75,21 +81,21 @@ $animationDelay: 150ms;
         @apply relative;
 
         &__list {
-            @apply relative p-0;
+            @apply relative p-0 border-0 bg-transparent;
             transition-property: none;
             transform: translateY(0);
 
             > ul {
-                @apply flex flex-row justify-around w-full;
+                @apply flex flex-row justify-end items-center w-full;
             }
         }
 
         &__item {
-            @apply opacity-100;
+            @apply flex items-center opacity-100 ml-2 mr-1 border-0;
             transition-property: none;
 
             &::before {
-                @apply inline-block border-l border-brand-green-light h-4 mr-4;
+                @apply inline-block border-l border-brand-green-light h-4 mr-3;
                 content: '';
             }
 
@@ -97,12 +103,50 @@ $animationDelay: 150ms;
                 @apply hidden;
             }
 
+            @screen xl {
+                @apply mx-3;
+
+                &::before {
+                    @apply mr-6;
+                }
+            }
+
             > a {
-                @apply text-white font-normal uppercase;
+                @apply px-0 py-4 border-0 text-white text-base font-normal uppercase tracking-wide;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    @apply text-brand-yellow-dark;
+                }
+            }
+
+            &--search {
+                @apply flex mr-0;
+
+                > a {
+                    @apply text-brand-yellow-dark;
+
+                    &:hover,
+                    &:focus {
+                        @apply text-brand-yellow;
+                    }
+
+                    &::after {
+                        @apply inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top;
+                        content: "";
+                        margin-top: 3px;
+                        background-image: url(../icons/search.png);
+                    }
+                }
             }
         }
 
         &__button {
+            @apply hidden;
+        }
+
+        .form--search {
             @apply hidden;
         }
     }

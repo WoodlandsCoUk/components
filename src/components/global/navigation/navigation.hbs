@@ -1,5 +1,7 @@
 <div class="navigation">
     <nav class="navigation__list">
+        {{ render '@block--search--simple' search merge=true }}
+
         <ul>
             {{#each navigation}}
                 {{#if this.main}}
@@ -8,6 +10,7 @@
                 </li>
                 {{/if}}
             {{/each}}
+            <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
         </ul>
     </nav>
 

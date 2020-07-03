@@ -2,25 +2,54 @@ module.exports = [
   {
     main: true,
     text: 'Buy',
-    textAlt: 'Buying a wood',
     link: 'page-buy',
     navigation: [
-      'Why buy a wood?',
-      'How to buy a woodland',
-      'How we support owners',
-      'Legal guide',
-      'Finance guide',
-      'Our covenant',
-      'Recommended solicitors'
-    ]
-  },
-  {
-    main: false,
-    text: 'Sell your wood',
-    link: 'page-sell',
-    navigation: [
-      'Sell your wood to us',
-      'Selling your wood through us'
+      {
+        main: false,
+        text: 'Woodlands for sale',
+        link: 'page-buy',
+        navigation: [
+          'Search for woods',
+          'South East England',
+          'Northern England',
+          'Cumbria',
+          'Central England',
+          'East Anglia',
+          'Devon'
+        ]
+      },
+      {
+        main: true,
+        text: 'Buying a wood',
+        link: 'page-buy',
+        navigation: [
+          'Why buy a wood?',
+          'How to buy a woodland',
+          'How we support owners',
+          'Legal guide',
+          'Finance guide',
+          'Our covenant',
+          'Recommended solicitors'
+        ]
+      },
+      {
+        main: false,
+        text: 'Other land for sale',
+        link: '#',
+        navigation: [
+          'Tree planting land',
+          'Lakes and rivers'
+        ]
+      },
+      {
+        main: true,
+        text: 'Sell your wood',
+        link: 'page-sell',
+        navigation: [
+          'Sell your wood to us',
+          'Selling your wood through us'
+        ]
+      }
     ]
   },
   {
