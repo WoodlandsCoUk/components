@@ -121,9 +121,16 @@ $animationDelay: 150ms;
                 > a {
                     @apply text-brand-yellow-dark;
 
-                    &:after {
-                        @apply pl-2;
-                        content: "?";
+                    &:hover,
+                    &:focus {
+                        @apply text-brand-yellow;
+                    }
+
+                    &::after {
+                        @apply inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top;
+                        content: "";
+                        margin-top: 3px;
+                        background-image: url(../icons/search.png);
                     }
                 }
             }
