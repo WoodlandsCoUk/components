@@ -33,7 +33,7 @@
     }
 
     .form--search {
-        @apply absolute z-10 inset-x-0 py-8 px-4;
+        @apply hidden absolute z-10 inset-x-0 py-8 px-4;
         @apply transition-transform ease-in-out duration-300;
 
         top: 100%;
@@ -41,6 +41,10 @@
 
         &.is-shown {
             transform: translateY(0);
+        }
+
+        @screen lg {
+            @apply block;
         }
     }
 }
