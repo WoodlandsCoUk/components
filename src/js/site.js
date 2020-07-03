@@ -1,3 +1,4 @@
+// require('./responsive')
 require('components/blocks/accordion/accordion')
 require('components/blocks/hero/hero')
 require('components/blocks/modal/modal')
