@@ -10,10 +10,10 @@
     }
 
     &__logo {
-        @apply relative z-40 font-display text-4xl text-center m-0 overflow-hidden;
+        @apply z-40 font-display text-4xl text-center m-0 overflow-hidden;
 
         a {
-            @apply block bg-auto bg-no-repeat bg-center indent-full;
+            @apply relative z-40 block bg-auto bg-no-repeat bg-center indent-full;
 
             width: 300px;
             background-image: url(../images/logo.svg);
@@ -24,11 +24,24 @@
                 @apply text-brand-red-dark;
             }
         }
+
+        &::after {
+            @apply absolute inset-0 z-30 bg-brand-green-dark;
+            content: "";
+        }
     }
 
     @screen md {
         &__logo {
             @apply w-auto;
+        }
+    }
+
+    @screen lg {
+        &__logo {
+            &::after {
+                @apply hidden;
+            }
         }
     }
 

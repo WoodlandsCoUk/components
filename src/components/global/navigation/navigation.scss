@@ -20,10 +20,10 @@ $animationDelay: 150ms;
     @apply flex flex-col bg-brand-green-dark;
 
     &__list {
-        @apply fixed inset-0 z-30 block bg-brand-green border-brand-green-dark overflow-hidden;
+        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green overflow-hidden;
         @apply origin-top duration-300 ease-in-out;
 
-        border-top-width: 102px;
+        padding-top: 102px;
         transform: translateY(-100%);
 
         body.navigation--shown & {
@@ -32,28 +32,29 @@ $animationDelay: 150ms;
     }
 
     &__item {
-        @apply relative opacity-0 -translate-x-48 origin-top duration-300 ease-in-out text-2xl;
+        @apply relative text-2xl;
         @apply border-b border-brand-green-light;
 
-        // transition-property: transform, opacity;
-
-        // @for $i from 1 through $navigationCount {
-        //     &:nth-child(#{$i}) {
-        //         transition-delay: $i * $animationDelay;
-        //     }
-        // }
-
-        body.navigation--shown & {
-            @apply opacity-100 translate-x-0;
-        }
-
         > a {
-            @apply block py-4 px-6 text-white font-normal no-underline;
+            @apply relative block py-4 px-6 text-white font-normal no-underline;
+            @apply origin-top duration-300 ease-in-out opacity-0 transform -translate-x-48;
+
+            transition-property: transform, opacity;
 
             &:hover,
             &:focus,
             &:active {
-                @apply text-brand-yellow;
+                @apply text-brand-yellow bg-brand-green-dark;
+            }
+
+            body.navigation--shown & {
+                @apply opacity-100 translate-x-0;
+            }
+        }
+
+        @for $i from 1 through $navigationCount {
+            &:nth-child(#{$i}) > a {
+                transition-delay: $i * $animationDelay;
             }
         }
 
@@ -81,7 +82,7 @@ $animationDelay: 150ms;
         @apply relative;
 
         &__list {
-            @apply relative p-0 border-0 bg-transparent;
+            @apply relative p-0 bg-transparent;
             transition-property: none;
             transform: translateY(0);
 
@@ -91,8 +92,7 @@ $animationDelay: 150ms;
         }
 
         &__item {
-            @apply flex items-center opacity-100 ml-2 mr-1 border-0;
-            transition-property: none;
+            @apply flex items-center ml-2 mr-1 border-0;
 
             &::before {
                 @apply inline-block border-l border-brand-green-light h-4 mr-3;
@@ -112,12 +112,13 @@ $animationDelay: 150ms;
             }
 
             > a {
-                @apply px-0 py-4 border-0 text-white text-base font-normal uppercase tracking-wide;
+                @apply px-0 py-4 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+                transition-property: none;
 
                 &:hover,
                 &:focus,
                 &:active {
-                    @apply text-brand-yellow-dark;
+                    @apply text-brand-yellow-dark bg-transparent;
                 }
             }
 
