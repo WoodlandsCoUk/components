@@ -20,7 +20,8 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "test": "",
     "lint": "npm run lint:js",
-    "lint:js": "npx standard --fix",
+    "lint:js": "npx standard",
+    "lint:css": "npx stylelint 'src/**/*.{css,scss,sass}'",
     "deploy": "npm run build && push-dir --dir=build --branch=gh-pages --force",
     "release": "standard-version --tag-prefix=",
     "install": "npm run production"
@@ -64,6 +65,9 @@
   "lint-staged": {
     "*.(vue|js)": [
       "npm run lint:js"
+    ],
+    "*.(css|scss|sass)": [
+      "npm run lint:css"
     ]
   },
   "husky": {
@@ -80,7 +84,9 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
-      "at-rule-no-unknown": null
+      "at-rule-no-unknown": null,
+      "no-descending-specificity": null,
+      "indentation": 4
     }
   },
   "standard-version": {

@@ -1,13 +1,15 @@
 .item {
     &__item {
         &--display > div {
-            &, * {
+            &,
+            * {
                 @apply font-display;
             }
         }
 
         &--body > div {
-            &, * {
+            &,
+            * {
                 @apply font-body;
             }
         }

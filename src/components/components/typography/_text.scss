@@ -87,7 +87,7 @@ ol {
     @apply list-decimal pl-5;
 
     & + *,
-    * + &  {
+    * + & {
         @apply mt-4;
     }
 }
@@ -96,7 +96,7 @@ ul {
     @apply list-disc pl-5;
 
     & + *,
-    * + &  {
+    * + & {
         @apply mt-4;
     }
 }
@@ -129,6 +129,7 @@ pre.code {
 
 pre {
     @apply bg-gray max-w-4xl py-3 px-4 w-screen;
+
     margin-left: 50%;
     transform: translateX(-50%);
 
@@ -144,11 +145,13 @@ pre {
 
 code {
     @apply px-1;
+
     font-size: 0.875em;
 }
 
 blockquote {
     @apply leading-tight font-display italic border-l-4 border-brand-red pl-4 max-w-4xl w-screen;
+
     margin-left: 50%;
     transform: translateX(-50%);
 

@@ -1,33 +1,33 @@
 .listing {
-  @apply relative pl-0 list-none;
+    @apply relative pl-0 list-none;
 
-  &__item {
-    @apply py-3 border-b border-gray;
+    &__item {
+        @apply py-3 border-b border-gray;
 
-    &:first-child {
-      @apply -mt-3;
-    }
-  }
-
-  &--linked {
-    @apply mb-6;
-
-    .section__title + & {
-      @apply -mt-6;
-    }
-
-    .listing__item {
-      @apply py-0 border-0;
-
-      > a {
-        @apply block py-3 border-b text-lg border-gray text-brand-green-dark;
-
-        &:hover,
-        &:focus,
-        &:active {
-          //
+        &:first-child {
+            @apply -mt-3;
         }
-      }
     }
-  }
+
+    &--linked {
+        @apply mb-6;
+
+        .section__title + & {
+            @apply -mt-6;
+        }
+
+        .listing__item {
+            @apply py-0 border-0;
+
+            > a {
+                @apply block py-3 border-b text-lg border-gray text-brand-green-dark;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    //
+                }
+            }
+        }
+    }
 }

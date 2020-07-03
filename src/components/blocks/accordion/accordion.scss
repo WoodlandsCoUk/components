@@ -13,6 +13,7 @@
 
             &::after {
                 @apply absolute right-0 text-center w-5 text-lg;
+
                 top: 50%;
                 transform: translate(0, -50%);
                 content: '+';
@@ -50,6 +51,7 @@
                     content: '–';
                 }
             }
+
             > .accordion__item__content {
                 visibility: visible;
             }

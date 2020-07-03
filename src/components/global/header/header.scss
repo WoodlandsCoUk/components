@@ -27,6 +27,7 @@
 
         &::after {
             @apply absolute inset-0 z-30 bg-brand-green-dark;
+
             content: "";
         }
     }

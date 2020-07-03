@@ -65,7 +65,6 @@ $animationDelay: 150ms;
         &--active > a {
             @apply text-brand-yellow-light;
         }
-
     }
 
     &__button {
@@ -83,6 +82,7 @@ $animationDelay: 150ms;
 
         &__list {
             @apply relative p-0 bg-transparent overflow-visible;
+
             transition-property: none;
             transform: translateY(0);
 
@@ -96,6 +96,7 @@ $animationDelay: 150ms;
 
             &::before {
                 @apply inline-block border-l border-brand-green-light h-4 mr-3;
+
                 content: '';
             }
 
@@ -113,6 +114,7 @@ $animationDelay: 150ms;
 
             > a {
                 @apply px-0 py-4 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+
                 transition-property: none;
 
                 &:hover,
@@ -135,6 +137,7 @@ $animationDelay: 150ms;
 
                     &::after {
                         @apply inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top;
+
                         content: "";
                         margin-top: 3px;
                         background-image: url(../icons/search.png);
@@ -144,6 +147,7 @@ $animationDelay: 150ms;
 
             > ul {
                 @apply hidden absolute top-0 left-0 bg-brand-green w-screen;
+
                 top: 50px;
 
                 li {

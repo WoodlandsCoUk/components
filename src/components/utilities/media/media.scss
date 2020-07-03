@@ -3,6 +3,7 @@
 
     &__content {
         @apply relative overflow-hidden w-full;
+
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
 

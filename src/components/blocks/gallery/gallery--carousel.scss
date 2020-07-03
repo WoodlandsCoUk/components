@@ -55,6 +55,7 @@
     .tns-item {
         .gallery__description {
             @apply transition-transform ease-in-out duration-300 delay-500;
+
             transform: translateY(105%);
         }
     }
@@ -68,6 +69,7 @@
     .tns-nav {
         @apply absolute top-0 inset-x-0 text-center z-10 pointer-events-none;
         @apply transition-transform ease-in-out duration-300;
+
         transform: translateY(-105%);
 
         > button {
