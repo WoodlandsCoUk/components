@@ -16,7 +16,7 @@ const classes = {
 document.querySelectorAll('.js--navigation').forEach((toggle) => {
   toggle.addEventListener('click', () => {
     document.body.classList.toggle(classes.shown)
-    navigation.classList.toggle(classes.toggle)
+    toggle.classList.toggle(classes.toggle)
 
     // Reset the sub-navigations, making sure they're closed.
     listItems.forEach((listItem) => {

@@ -148,10 +148,10 @@ body.navigation--shown {
 
 @screen nav {
     .navigation {
-        @apply relative;
+        @apply static;
 
         &__list {
-            @apply relative p-0 bg-transparent overflow-visible;
+            @apply static p-0 bg-transparent overflow-visible;
 
             transition-property: none;
             transform: translateY(0);
@@ -162,7 +162,7 @@ body.navigation--shown {
         }
 
         &__item {
-            @apply relative flex items-center ml-2 mr-1 border-0;
+            @apply static flex items-center ml-2 mr-1 border-0;
 
             &::before {
                 @apply inline-block border-l border-brand-green-light h-4 mr-3;
@@ -183,20 +183,46 @@ body.navigation--shown {
             }
 
             > a {
-                @apply px-0 py-4 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+                @apply relative px-0 py-4 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
 
                 transition-property: none;
 
                 &:hover,
-                &:focus,
-                &:active {
+                &:focus {
                     @apply text-brand-yellow-dark bg-transparent;
                 }
             }
 
             &--has-sub {
-                > a::after {
-                    @apply hidden;
+                > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        &::after {
+                            @apply hidden m-0 top-auto right-auto;
+
+                            content: "";
+                            bottom: 0;
+                            left: 50%;
+                            width: 0;
+                            height: 0;
+                            margin: 0 0 0 -14px;
+                            border-style: solid;
+                            border-width: 0 14px 14px 14px;
+                            border-color: transparent transparent theme('colors.brand-green.default') transparent;
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                &:hover {
+                    > ul {
+                        @apply block;
+                    }
+
+                    > a::after {
+                        @apply block;
+                    }
                 }
             }
 
@@ -223,9 +249,10 @@ body.navigation--shown {
             }
 
             > ul {
-                @apply hidden absolute top-0 left-0 bg-brand-green w-screen;
+                @apply hidden absolute bottom-auto bg-brand-green w-full transform -translate-x-1/2 max-w-screen-md p-6;
 
-                top: 50px;
+                top: 100%;
+                left: 50%;
 
                 li {
                     @apply block m-0;
@@ -233,15 +260,33 @@ body.navigation--shown {
                     &::before {
                         @apply hidden;
                     }
+
+                    ul {
+                        @apply relative top-auto left-auto block translate-x-0 p-0 m-0;
+
+                        padding-top: 4px;
+
+                        a {
+                            @apply text-white;
+
+                            &::after {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+
+                .navigation__item--has-sub > a {
+                    @apply text-brand-yellow-dark;
                 }
 
                 a {
                     @apply normal-case p-0 m-0 border-0;
                 }
+            }
 
-                ul {
-                    @apply relative top-0;
-                }
+            &:first-child > ul {
+                // @apply block;
             }
         }
 
