@@ -44,9 +44,25 @@ body.navigation--shown {
 
             transition-property: transform, opacity;
 
+            &::after {
+                @apply hidden absolute right-0 mr-6 border-white;
+
+                content: '';
+                top: 50%;
+                height: 12px;
+                width: 12px;
+                margin-top: -6px;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+
             &:hover,
             &:focus {
                 @apply text-brand-yellow bg-brand-green-dark;
+
+                &::after {
+                    @apply border-brand-yellow;
+                }
             }
 
             body.navigation--shown & {
@@ -88,6 +104,12 @@ body.navigation--shown {
             }
         }
 
+        &--has-sub {
+            > a::after {
+                @apply block;
+            }
+        }
+
         &--search {
             @apply hidden;
         }
@@ -101,6 +123,12 @@ body.navigation--shown {
             > a:focus,
             > a:active {
                 @apply bg-brand-green-dark text-brand-yellow-dark;
+
+                &::after {
+                    @apply mt-0 border-brand-yellow-dark;
+
+                    border-width: 2px 0 0 2px;
+                }
             }
 
             > ul {
@@ -118,7 +146,7 @@ body.navigation--shown {
     }
 }
 
-@screen lg {
+@screen nav {
     .navigation {
         @apply relative;
 
@@ -166,6 +194,12 @@ body.navigation--shown {
                 }
             }
 
+            &--has-sub {
+                > a::after {
+                    @apply hidden;
+                }
+            }
+
             &--search {
                 @apply flex mr-0;
 
@@ -178,11 +212,12 @@ body.navigation--shown {
                     }
 
                     &::after {
-                        @apply inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top;
+                        @apply relative right-auto top-0 inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top border-0 p-0 mr-0;
 
                         content: "";
                         margin-top: 3px;
                         background-image: url(../icons/search.png);
+                        transform: rotate(0deg);
                     }
                 }
             }

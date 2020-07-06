@@ -1,4 +1,4 @@
-<li class="navigation__item {{#ifeq @root/active link}}navigation__item--active{{/ifeq}}">
+<li class="navigation__item {{#if navigation}}navigation__item--has-sub{{/if}} {{#ifeq @root/active link}}navigation__item--active{{/ifeq}}">
     <a href="{{ link }}">{{ text }}</a>
 
     {{#if navigation}}

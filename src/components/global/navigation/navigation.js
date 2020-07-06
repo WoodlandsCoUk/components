@@ -1,3 +1,9 @@
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../../../tailwind.config.js'
+
+const config = resolveConfig(tailwindConfig)
+const media = `(min-width: ${config.theme.screens.nav})`
+
 const navigation = document.querySelector('.navigation')
 const listItems = navigation.querySelectorAll('li')
 const classes = {
@@ -26,7 +32,10 @@ listItems.forEach((listItem) => {
     const isActive = listItem.classList.contains(classes.active)
 
     if (sub) {
-      event.preventDefault()
+      // Only restrict click event if on mobile layout.
+      if (!window.matchMedia(media).matches) {
+        event.preventDefault()
+      }
 
       if (isActive) {
         listItem.classList.remove(classes.active)

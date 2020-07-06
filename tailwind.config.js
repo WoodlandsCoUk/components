@@ -59,6 +59,7 @@ module.exports = {
         '2/3': 'auto minmax(25%, 30%)'
       },
       screens: {
+        nav: '1024px',
         md: '800px',
         dark: { raw: '(prefers-color-scheme: dark)' }
       },
