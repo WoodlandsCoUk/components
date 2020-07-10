@@ -1,3 +1,5 @@
-## Call to Action Forms
+## SubScribe Form
 
-Different types of forms which include email subscription, blog subscription and basic search call to action.
+An email subscription form, which also includes “region” tags.
+
+The “Dismiss” tags should include a hidden form input which can then be dismissed.
