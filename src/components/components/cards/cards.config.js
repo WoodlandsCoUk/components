@@ -31,6 +31,7 @@ module.exports = {
     title: 'General card listing',
     cards: items,
     woodlands: false,
+    simple: false,
     blog: false,
     listing: {
       modifiers: ['grid']
