@@ -9,5 +9,33 @@ module.exports = {
   context: {
     text: faker.lorem.word(),
     link: '#'
-  }
+  },
+  variants: [
+    {
+      name: 'default',
+      label: 'Tag'
+    },
+    {
+      name: 'large',
+      label: 'Large',
+      context: {
+        modifiers: ['large']
+      }
+    },
+    {
+      name: 'dismiss',
+      label: 'Dismiss',
+      context: {
+        modifiers: ['dismiss']
+      }
+    },
+    {
+      name: 'dismiss--large',
+      label: 'Dismiss (Large)',
+      template: 'dismiss',
+      context: {
+        modifiers: ['dismiss', 'large']
+      }
+    }
+  ]
 }

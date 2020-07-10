@@ -1,4 +1,5 @@
 // require('./responsive')
+require('components/utilities/tag/tag')
 require('components/blocks/accordion/accordion')
 require('components/blocks/hero/hero')
 require('components/blocks/modal/modal')

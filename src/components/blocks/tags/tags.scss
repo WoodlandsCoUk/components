@@ -2,6 +2,12 @@
     @apply list-none pl-0;
 
     > * {
-        @apply inline-block mb-2 mr-1;
+        @apply inline-flex mb-2 mr-1;
+    }
+
+    &--gap {
+        > * {
+            @apply mb-4 mr-3;
+        }
     }
 }
