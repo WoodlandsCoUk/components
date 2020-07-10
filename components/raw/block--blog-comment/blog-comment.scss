@@ -15,14 +15,15 @@
         > * {
             @apply inline-block;
 
-            &:before {
+            &::before {
                 @apply inline-block align-middle mr-2 -mt-1 ml-1 rounded-full bg-brand-green-light;
+
                 content: '';
                 height: $dotSize;
                 width: $dotSize;
             }
 
-            &:first-child:before {
+            &:first-child::before {
                 @apply hidden;
             }
         }

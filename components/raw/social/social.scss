@@ -1,6 +1,10 @@
 .social {
     @apply inline-flex;
 
+    svg {
+        @apply fill-current;
+    }
+
     a {
         @apply flex items-center justify-center h-12 w-12 p-2 rounded-full overflow-hidden border-2 border-white text-white;
 
@@ -10,13 +14,9 @@
             @apply border-brand-yellow;
 
             svg {
-                fill: theme('colors.brand-yellow.default')
+                fill: theme('colors.brand-yellow.default');
             }
         }
-    }
-
-    svg {
-        @apply fill-current;
     }
 
     &--medium {

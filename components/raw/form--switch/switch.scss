@@ -16,8 +16,8 @@
             &::after {
                 @apply block absolute h-6 w-6 bg-white rounded-full;
                 @apply transition-transform duration-300;
-                content: '';
 
+                content: '';
                 top: 4px;
                 left: 4px;
                 transition: 0.3s;

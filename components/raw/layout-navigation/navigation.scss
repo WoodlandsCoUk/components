@@ -11,20 +11,25 @@ $hamburger-types: (
     squeeze
 );
 
+$arrowSize: 10px;
 $navigationCount: 5;
 $animationDelay: 150ms;
 
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 
+body.navigation--shown {
+    @apply overflow-hidden;
+}
+
 .navigation {
     @apply flex flex-col bg-brand-green-dark;
 
     &__list {
-        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green overflow-hidden;
+        @apply fixed top-0 inset-x-0 z-30 block bg-brand-green max-h-screen overflow-auto;
         @apply origin-top duration-300 ease-in-out;
 
         padding-top: 102px;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
 
         body.navigation--shown & {
             transform: translateY(0);
@@ -32,8 +37,7 @@ $animationDelay: 150ms;
     }
 
     &__item {
-        @apply relative text-2xl;
-        @apply border-b border-brand-green-light;
+        @apply relative text-2xl border-b border-brand-green-light;
 
         > a {
             @apply relative block py-4 px-6 text-white font-normal no-underline;
@@ -41,10 +45,25 @@ $animationDelay: 150ms;
 
             transition-property: transform, opacity;
 
+            &::after {
+                @apply hidden absolute right-0 mr-6 border-white;
+
+                content: '';
+                top: 50%;
+                height: 12px;
+                width: 12px;
+                margin-top: -6px;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+
             &:hover,
-            &:focus,
-            &:active {
+            &:focus {
                 @apply text-brand-yellow bg-brand-green-dark;
+
+                &::after {
+                    @apply border-brand-yellow;
+                }
             }
 
             body.navigation--shown & {
@@ -58,6 +77,40 @@ $animationDelay: 150ms;
             }
         }
 
+        > ul {
+            @apply hidden bg-brand-green-dark;
+
+            li {
+                @apply border-b-0 text-lg border-brand-green;
+            }
+
+            a {
+                @apply py-2;
+            }
+
+            > li {
+                @apply border-t;
+
+                ul {
+                    @apply pb-2 -mt-1;
+                }
+
+                li {
+                    @apply border-t-0;
+
+                    a {
+                        @apply py-1;
+                    }
+                }
+            }
+        }
+
+        &--has-sub {
+            > a::after {
+                @apply block;
+            }
+        }
+
         &--search {
             @apply hidden;
         }
@@ -66,23 +119,51 @@ $animationDelay: 150ms;
             @apply text-brand-yellow-light;
         }
 
+        &--is-active {
+            > a,
+            > a:focus,
+            > a:active {
+                @apply bg-brand-green-dark text-brand-yellow-dark;
+
+                &::after {
+                    @apply mt-0 border-brand-yellow-dark;
+
+                    border-width: 2px 0 0 2px;
+                }
+            }
+
+            > ul {
+                @apply block;
+
+                a,
+                > a:focus,
+                > a:active {
+                    @apply bg-transparent;
+
+                    &::after {
+                        @apply hidden;
+                    }
+                }
+            }
+        }
     }
 
     &__button {
-        @apply z-40 order-first;
+        @apply float-right z-40 order-first;
     }
 
     .form--search {
-        @apply relative block top-0 transform-none border-b border-brand-green-light;
+        @apply sticky block top-0 transform-none border-b border-brand-green-light;
     }
 }
 
-@screen lg {
+@screen nav {
     .navigation {
-        @apply relative;
+        @apply static w-full;
 
         &__list {
-            @apply relative p-0 bg-transparent;
+            @apply static p-0 bg-transparent overflow-visible;
+
             transition-property: none;
             transform: translateY(0);
 
@@ -92,33 +173,73 @@ $animationDelay: 150ms;
         }
 
         &__item {
-            @apply flex items-center ml-2 mr-1 border-0;
-
-            &::before {
-                @apply inline-block border-l border-brand-green-light h-4 mr-3;
-                content: '';
-            }
-
-            &:first-child::before {
-                @apply hidden;
-            }
-
-            @screen xl {
-                @apply mx-3;
-
-                &::before {
-                    @apply mr-6;
-                }
-            }
+            @apply static flex items-center border-0;
 
             > a {
-                @apply px-0 py-4 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+                @apply relative flex items-center py-10 pl-3 pr-0 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+
                 transition-property: none;
 
                 &:hover,
-                &:focus,
-                &:active {
+                &:focus {
                     @apply text-brand-yellow-dark bg-transparent;
+                }
+
+                &::before {
+                    @apply inline-block border-l border-brand-green-light h-4 pr-3;
+
+                    content: '';
+                }
+
+                @screen xl {
+                    @apply px-3;
+
+                    &::before {
+                        @apply pr-6;
+                    }
+                }
+            }
+
+            &:first-child > a {
+                &::before {
+                    @apply hidden;
+                }
+            }
+
+            &--has-sub {
+                > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        &::after {
+                            @apply hidden m-0 top-auto right-auto;
+
+                            content: "";
+                            bottom: 0;
+                            left: 50%;
+                            width: 0;
+                            height: 0;
+                            margin-left: -$arrowSize;
+                            border-style: solid;
+                            border-width: 0 $arrowSize $arrowSize $arrowSize;
+                            border-color: transparent transparent theme('colors.brand-green.default') transparent;
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        @apply text-brand-yellow-dark;
+                    }
+
+                    > ul {
+                        @apply block;
+                    }
+
+                    > a::after {
+                        @apply block;
+                    }
                 }
             }
 
@@ -134,12 +255,59 @@ $animationDelay: 150ms;
                     }
 
                     &::after {
-                        @apply inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top;
+                        @apply relative right-auto top-0 inline-block ml-2 bg-center bg-no-repeat bg-auto h-4 w-8 text-base align-text-top border-0 p-0 mr-0;
+
                         content: "";
                         margin-top: 3px;
                         background-image: url(../icons/search.png);
+                        transform: rotate(0deg);
                     }
                 }
+            }
+
+            > ul {
+                @apply hidden absolute bottom-auto bg-brand-green w-full transform -translate-x-1/2 max-w-screen-md p-6;
+
+                top: 100%;
+                left: 50%;
+
+                li {
+                    @apply block m-0;
+
+                    a {
+                        @apply px-0;
+
+                        &::before {
+                            @apply hidden;
+                        }
+                    }
+
+                    ul {
+                        @apply relative top-auto left-auto block translate-x-0 p-0 m-0;
+
+                        padding-top: 4px;
+
+                        a {
+                            @apply text-white;
+
+                            &::after {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+
+                .navigation__item--has-sub > a {
+                    @apply text-brand-yellow-dark;
+                }
+
+                a {
+                    @apply normal-case p-0 m-0 border-0;
+                }
+            }
+
+            &:first-child > ul {
+                // @apply block;
             }
         }
 
@@ -152,5 +320,3 @@ $animationDelay: 150ms;
         }
     }
 }
-
-

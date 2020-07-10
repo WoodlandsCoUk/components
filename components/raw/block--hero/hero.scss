@@ -1,5 +1,6 @@
 .hero {
     @apply relative bg-brand-yellow flex items-center justify-center text-center;
+
     min-height: 200px;
 
     @screen md {
