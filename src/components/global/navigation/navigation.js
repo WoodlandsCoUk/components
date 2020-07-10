@@ -5,7 +5,8 @@ const config = resolveConfig(tailwindConfig)
 const media = `(min-width: ${config.theme.screens.nav})`
 
 const navigation = document.querySelector('.navigation')
-const listItems = navigation.querySelectorAll('li')
+const listItems = navigation ? navigation.querySelectorAll('li') : []
+
 const classes = {
   toggle: 'is-active',
   shown: 'navigation--shown',

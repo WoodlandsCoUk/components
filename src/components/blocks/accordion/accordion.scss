@@ -8,21 +8,30 @@
     &__item {
         @apply relative border-b border-gray;
 
+        &:first-child {
+            @apply border-t;
+        }
+
         &__title {
-            @apply relative text-brand-green text-sm font-bold cursor-pointer py-3 outline-none;
+            @apply relative text-brand-red text-lg font-bold cursor-pointer py-3 outline-none;
 
             &::after {
-                @apply absolute right-0 text-center w-5 text-lg;
+                @apply absolute right-0 duration-300 transition-transform text-center mr-3 w-3 h-3 text-lg border-brand-red border-b-2 border-l-2;
 
+                content: '';
                 top: 50%;
-                transform: translate(0, -50%);
-                content: '+';
+                margin-top: -0.375rem;
+                transform: rotate(-45deg);
             }
 
             &:hover,
             &:focus,
             &:active {
-                @apply text-brand-green-dark;
+                @apply text-brand-green-light;
+
+                &::after {
+                    @apply border-brand-green-light;
+                }
             }
         }
 
@@ -45,10 +54,10 @@
 
         &.is-active {
             > .accordion__item__title {
-                @apply text-brand-green-dark;
+                @apply text-brand-green-light;
 
                 &::after {
-                    content: '–';
+                    transform: rotate(135deg);
                 }
             }
 

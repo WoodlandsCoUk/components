@@ -21,6 +21,10 @@
         @apply mb-1 -mt-1 uppercase text-brand-red font-bold text-sm tracking-wide;
     }
 
+    &__extra {
+        @apply my-0 text-brand-green-light;
+    }
+
     &__content {
         @apply text-base text-text;
     }

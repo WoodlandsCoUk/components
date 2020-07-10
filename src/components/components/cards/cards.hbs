@@ -5,9 +5,17 @@
 {{#> @grid modifiers=modifiers }}
   {{#each cards }}
   {{#if ../woodlands }}
-    {{ render '@block--card--woodland' this merge=true }}
+    {{#if ../simple }}
+      {{ render '@block--card--woodland' this merge=true }}
+    {{else}}
+      {{ render '@block--card--woodland' this merge=true }}
+    {{/if}}
   {{else if ../blog }}
-    {{ render '@block--card--blog' this merge=true }}
+    {{#if ../simple }}
+      {{ render '@block--card--blog' this merge=true }}
+    {{else}}
+      {{ render '@block--card--blog' this merge=true }}
+    {{/if}}
   {{ else }}
     {{ render '@block--card' this merge=true }}
   {{/if }}

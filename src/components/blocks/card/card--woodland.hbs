@@ -6,6 +6,9 @@
       {{#if card.meta}}
       <p class="card__meta">{{ card.meta }}</p>
       {{/if}}
+      {{#if card.extra}}
+      <p class="card__extra">{{ card.extra }}</p>
+      {{/if}}
       <div class="card__content">
         {{ card.text }}
       </div>

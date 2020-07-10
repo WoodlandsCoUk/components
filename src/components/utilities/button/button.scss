@@ -75,8 +75,20 @@ $variants: (
             @apply px-12;
 
             @screen sm {
-                @apply w-auto mx-auto;
+                @apply w-auto mx-auto px-6;
             }
+        }
+    }
+
+    &--left {
+        > span {
+            @apply ml-0;
+        }
+    }
+
+    &--right {
+        > span {
+            @apply mr-0;
         }
     }
 

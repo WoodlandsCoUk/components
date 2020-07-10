@@ -1,0 +1,31 @@
+{{ render '@layout-header' header merge=true }}
+
+<main>
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@block--hero' hero }}
+    {{/ @section }}
+
+    {{#> @section }}
+        <h2 class="section__title section__title--alt">{{ title }}</h2>
+
+        {{#> @grid modifiers="2,spaced,divider" }}
+            <div class="grid__item">
+                map
+            </div>
+            <div class="grid__item">
+                {{ render '@block--subscribe' }}
+            </div>
+        {{/ @grid }}
+
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow' }}
+        {{ render '@block--quote--full' this merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form' }}
+    {{/ @section }}
+</main>
+
+{{ render '@layout-footer' }}

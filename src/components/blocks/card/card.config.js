@@ -77,7 +77,8 @@ module.exports = {
       context: {
         card: {
           title: 'Woodland Card',
-          text: faker.random.arrayElement([
+          text: faker.lorem.paragraph(),
+          extra: faker.random.arrayElement([
             'About 5 ½ acres',
             'Almost 4 acres',
             'About 3 ¼ acres'
