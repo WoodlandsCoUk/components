@@ -17,7 +17,6 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
-    title: 'Summary',
     items
   }
 }
