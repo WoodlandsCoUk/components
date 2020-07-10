@@ -10,12 +10,13 @@
     }
 
     &__logo {
-        @apply z-40 font-display text-4xl text-center m-0 overflow-hidden;
+        @apply z-40 font-display text-4xl text-center m-0 flex-shrink-0;
+
+        width: 300px;
 
         a {
-            @apply relative z-40 block bg-auto bg-no-repeat bg-center indent-full;
+            @apply relative z-40 block bg-auto bg-no-repeat bg-center indent-full w-full overflow-hidden;
 
-            width: 300px;
             background-image: url(../images/logo.svg);
 
             &:hover,
@@ -32,14 +33,14 @@
         }
     }
 
-    @screen md {
-        &__logo {
-            @apply w-auto;
-        }
-    }
-
     @screen lg {
+        &__container {
+            @apply py-0;
+        }
+
         &__logo {
+            @apply absolute;
+
             &::after {
                 @apply hidden;
             }

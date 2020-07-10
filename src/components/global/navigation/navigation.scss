@@ -11,6 +11,7 @@ $hamburger-types: (
     squeeze
 );
 
+$arrowSize: 10px;
 $navigationCount: 5;
 $animationDelay: 150ms;
 
@@ -133,12 +134,22 @@ body.navigation--shown {
 
             > ul {
                 @apply block;
+
+                a,
+                > a:focus,
+                > a:active {
+                    @apply bg-transparent;
+
+                    &::after {
+                        @apply hidden;
+                    }
+                }
             }
         }
     }
 
     &__button {
-        @apply z-40 order-first;
+        @apply float-right z-40 order-first;
     }
 
     .form--search {
@@ -148,7 +159,7 @@ body.navigation--shown {
 
 @screen nav {
     .navigation {
-        @apply static;
+        @apply static w-full;
 
         &__list {
             @apply static p-0 bg-transparent overflow-visible;
@@ -162,34 +173,36 @@ body.navigation--shown {
         }
 
         &__item {
-            @apply static flex items-center ml-2 mr-1 border-0;
-
-            &::before {
-                @apply inline-block border-l border-brand-green-light h-4 mr-3;
-
-                content: '';
-            }
-
-            &:first-child::before {
-                @apply hidden;
-            }
-
-            @screen xl {
-                @apply mx-3;
-
-                &::before {
-                    @apply mr-6;
-                }
-            }
+            @apply static flex items-center border-0;
 
             > a {
-                @apply relative px-0 py-4 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+                @apply relative flex items-center py-10 pl-3 pr-0 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
 
                 transition-property: none;
 
                 &:hover,
                 &:focus {
                     @apply text-brand-yellow-dark bg-transparent;
+                }
+
+                &::before {
+                    @apply inline-block border-l border-brand-green-light h-4 pr-3;
+
+                    content: '';
+                }
+
+                @screen xl {
+                    @apply px-3;
+
+                    &::before {
+                        @apply pr-6;
+                    }
+                }
+            }
+
+            &:first-child > a {
+                &::before {
+                    @apply hidden;
                 }
             }
 
@@ -206,9 +219,9 @@ body.navigation--shown {
                             left: 50%;
                             width: 0;
                             height: 0;
-                            margin: 0 0 0 -14px;
+                            margin-left: -$arrowSize;
                             border-style: solid;
-                            border-width: 0 14px 14px 14px;
+                            border-width: 0 $arrowSize $arrowSize $arrowSize;
                             border-color: transparent transparent theme('colors.brand-green.default') transparent;
                             transform: rotate(0deg);
                         }
@@ -216,6 +229,10 @@ body.navigation--shown {
                 }
 
                 &:hover {
+                    > a {
+                        @apply text-brand-yellow-dark;
+                    }
+
                     > ul {
                         @apply block;
                     }
@@ -257,8 +274,12 @@ body.navigation--shown {
                 li {
                     @apply block m-0;
 
-                    &::before {
-                        @apply hidden;
+                    a {
+                        @apply px-0;
+
+                        &::before {
+                            @apply hidden;
+                        }
                     }
 
                     ul {
