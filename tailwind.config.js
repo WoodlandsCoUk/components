@@ -56,7 +56,12 @@ module.exports = {
     }),
     extend: {
       gridTemplateColumns: {
-        '2/3': 'auto minmax(25%, 30%)'
+        '2/3': 'auto minmax(25%, 30%)',
+        '3/2': 'minmax(25%, 30%) auto'
+      },
+      height: {
+        screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
+        'screen-mobile': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
       },
       screens: {
         nav: '1024px',

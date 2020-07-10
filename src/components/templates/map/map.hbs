@@ -1,0 +1,19 @@
+{{ render '@layout-header' header merge=true }}
+
+<main>
+    {{#> @section modifiers="map" }}
+        {{#> @grid modifiers="2/3--reverse" }}
+            <div class="grid__item map--listing">
+                {{ render '@button' back merge=true }}
+
+                <h2 class="section__title section__title--medium">{{ title }}</h2>
+
+                {{ render '@components--cards' woodlands merge=true }}
+            </div>
+            <div class="grid__item map--map">
+                {{ render '@map' }}
+            </div>
+        {{/ @grid }}
+
+    {{/ @section }}
+</main>
