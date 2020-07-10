@@ -11,7 +11,8 @@ for (let i = 0; i < itemCount; i++) {
   woodlands.push({
     card: {
       title: faker.lorem.sentence(),
-      text: faker.random.arrayElement([
+      text: faker.lorem.paragraph(),
+      extra: faker.random.arrayElement([
         'About 5 ½ acres',
         'Almost 4 acres',
         'About 3 ¼ acres'
