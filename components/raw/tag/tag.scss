@@ -1,5 +1,37 @@
 .tag {
-    @apply inline-block px-3 py-2 bg-gray underline text-brand-green-dark rounded-md leading-none;
+    @apply inline-flex items-center justify-center bg-gray text-brand-green-dark rounded-md leading-none;
+
+    &--dismiss {
+        @apply bg-brand-yellow uppercase text-sm leading-tight font-bold;
+    }
+
+    &__title {
+        @apply px-3 py-2;
+    }
+
+    &__dismiss {
+        @apply py-2 px-3 text-center rounded-r-md bg-brand-red cursor-pointer text-white font-bold text-lg leading-none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply bg-brand-red-dark;
+        }
+    }
+
+    &--large {
+        .tag__title {
+            @apply px-5 py-4 text-lg;
+        }
+
+        .tag__dismiss {
+            @apply px-5 py-4 text-2xl;
+        }
+    }
+}
+
+a.tag {
+    @apply underline;
 
     &:hover,
     &:focus,

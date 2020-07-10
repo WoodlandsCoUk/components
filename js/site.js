@@ -31771,12 +31771,13 @@ __webpack_require__.r(__webpack_exports__);
 var getPath = __webpack_require__(/*! helpers/get-path.js */ "./src/js/helpers/get-path.js");
 
 var selector = document.querySelectorAll('.accordion');
+var duration = 500;
 var options = {
   elementClass: 'accordion__item',
   questionClass: 'accordion__item__title',
   answerClass: 'accordion__item__content',
   itemNumber: 0,
-  duration: 500,
+  duration: duration,
   closeOthers: true,
   showItem: false
 };
@@ -32031,15 +32032,18 @@ tabs.forEach(function (tab) {
 /***/ (function(module, exports) {
 
 var header = document.querySelector('.header');
-var navigationSearch = header.querySelector('.form--search:not(.form--search--simple)');
-var navigationSearchToggle = header.querySelector('.js--navigation-search');
 
-if (navigationSearch && navigationSearchToggle) {
-  navigationSearchToggle.addEventListener('click', function (event) {
-    event.preventDefault();
-    navigationSearch.classList.toggle('is-shown');
-    navigationSearch.querySelector('input').focus();
-  });
+if (header) {
+  var navigationSearch = header.querySelector('.form--search:not(.form--search--simple)');
+  var navigationSearchToggle = header.querySelector('.js--navigation-search');
+
+  if (navigationSearch && navigationSearchToggle) {
+    navigationSearchToggle.addEventListener('click', function (event) {
+      event.preventDefault();
+      navigationSearch.classList.toggle('is-shown');
+      navigationSearch.querySelector('input').focus();
+    });
+  }
 }
 
 /***/ }),
@@ -32062,7 +32066,7 @@ __webpack_require__.r(__webpack_exports__);
 var config = tailwindcss_resolveConfig__WEBPACK_IMPORTED_MODULE_0___default()(_tailwind_config_js__WEBPACK_IMPORTED_MODULE_1___default.a);
 var media = "(min-width: ".concat(config.theme.screens.nav, ")");
 var navigation = document.querySelector('.navigation');
-var listItems = navigation.querySelectorAll('li');
+var listItems = navigation ? navigation.querySelectorAll('li') : [];
 var classes = {
   toggle: 'is-active',
   shown: 'navigation--shown',
@@ -32097,6 +32101,37 @@ listItems.forEach(function (listItem) {
         listItem.classList.add(classes.active);
       }
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/components/utilities/map/map.js":
+/*!*********************************************!*\
+  !*** ./src/components/utilities/map/map.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var maps = document.querySelectorAll('[data-map]');
+maps.forEach(function (map) {
+  console.log('Map: ', map);
+});
+
+/***/ }),
+
+/***/ "./src/components/utilities/tag/tag.js":
+/*!*********************************************!*\
+  !*** ./src/components/utilities/tag/tag.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var dismissElements = document.querySelectorAll('.js--dismiss');
+dismissElements.forEach(function (dismiss) {
+  var tag = dismiss.closest('.tag');
+  dismiss.addEventListener('click', function (event) {
+    tag.remove();
   });
 });
 
@@ -32153,6 +32188,10 @@ module.exports = function (element) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // require('./responsive')
+__webpack_require__(/*! components/utilities/map/map */ "./src/components/utilities/map/map.js");
+
+__webpack_require__(/*! components/utilities/tag/tag */ "./src/components/utilities/tag/tag.js");
+
 __webpack_require__(/*! components/blocks/accordion/accordion */ "./src/components/blocks/accordion/accordion.js");
 
 __webpack_require__(/*! components/blocks/hero/hero */ "./src/components/blocks/hero/hero.js");
@@ -32246,7 +32285,14 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        '2/3': 'auto minmax(25%, 30%)'
+        '2/3': 'auto minmax(25%, 30%)',
+        '3/2': 'minmax(25%, 30%) auto'
+      },
+      height: {
+        screen: 'calc(100vh - 96px)',
+        // Compensate for the fixed header.
+        'screen-mobile': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+
       },
       screens: {
         nav: '1024px',

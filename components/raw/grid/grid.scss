@@ -75,6 +75,14 @@ $gap: 24;
         }
     }
 
+    &--2\/3--reverse {
+        > .grid__inner {
+            @screen lg {
+                @apply grid-cols-3/2;
+            }
+        }
+    }
+
     &--3 {
         > .grid__inner {
             @screen md {
