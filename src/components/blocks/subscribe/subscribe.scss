@@ -1,0 +1,25 @@
+.form--subscribe {
+    .form__group {
+        @apply pb-4;
+    }
+
+    label {
+        @apply block pb-3 text-lg font-bold text-brand-green-dark;
+    }
+
+    input {
+        @apply block w-full rounded-md border border-gray px-4 py-3 max-w-md;
+    }
+
+    button {
+        @apply mt-0;
+
+        > span {
+            @apply ml-0;
+        }
+    }
+
+    a {
+        @apply text-lg text-brand-green-dark;
+    }
+}
