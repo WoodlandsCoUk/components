@@ -19,7 +19,8 @@ module.exports = {
       name: 'svg',
       label: 'SVG',
       context: {
-        update: false,
+        reference: false,
+        type: false,
         svg
       }
     }

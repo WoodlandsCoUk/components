@@ -13,10 +13,8 @@ module.exports = {
       text: 'Every time I go through the gate into the wood I can’t help but smile to myself.'
     },
     map: {
-      update: {
-        selector: '.form--subscribe .tags',
-        type: 'tag--dismiss'
-      }
+      reference: '.form--subscribe .tags',
+      type: 'tag--dismiss'
     }
   }
 }

@@ -12,19 +12,19 @@ maps.forEach((map) => {
 
   regions.forEach((region) => {
     region.addEventListener('click', (event) => {
-      const type = region.classList.contains(classes.selected) ? 'remove' : 'add'
-      const { update, updateType } = map.dataset
+      const action = region.classList.contains(classes.selected) ? 'remove' : 'add'
+      const { reference, type } = map.dataset
 
       let methodName
 
-      if (updateType) {
-        // Convert the updateType to camelCase which is our method name.
-        methodName = updateType.replace('--', ' ').replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => index === 0 ? match.toLowerCase() : match.toUpperCase()).replace(/\s+/g, '')
+      if (type) {
+        // Convert the type to camelCase which is our method name.
+        methodName = type.replace('--', ' ').replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => index === 0 ? match.toLowerCase() : match.toUpperCase()).replace(/\s+/g, '')
       }
 
-      if (methodName && update && methodName in Methods) {
+      if (methodName && reference && methodName in Methods) {
         // Call a custom method to update the interface.
-        Methods[methodName](type, update, region)
+        Methods[methodName](action, reference, region)
       }
     })
 

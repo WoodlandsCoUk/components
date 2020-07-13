@@ -1,4 +1,4 @@
-<div class="map map--svg" data-map-svg {{#if update}}data-update="{{ update.selector }}" data-update-type="{{ update.type }}"{{/if}}>
+<div class="map map--svg" data-map-svg {{#if reference}}data-reference="{{ reference }}"{{/if}} {{#if type}}data-type="{{ type }}"{{/if}}>
     <span class="map__key"></span>
     {{{ svg }}}
 </div>
