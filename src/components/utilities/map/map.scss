@@ -8,10 +8,16 @@
     }
 
     &--svg {
-        @apply p-0 bg-transparent block w-full h-full max-h-screen;
+        @apply p-0 bg-transparent block w-full h-full;
 
         svg {
-            @apply max-h-screen;
+            @apply mx-auto;
+
+            max-height: 500px;
+
+            @screen lg {
+                @apply mr-0;
+            }
         }
 
         path {
