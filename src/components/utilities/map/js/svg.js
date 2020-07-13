@@ -22,9 +22,9 @@ maps.forEach((map) => {
         methodName = type.replace('--', ' ').replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => index === 0 ? match.toLowerCase() : match.toUpperCase()).replace(/\s+/g, '')
       }
 
-      if (methodName && reference && methodName in Methods) {
+      if (methodName && methodName in Methods) {
         // Call a custom method to update the interface.
-        Methods[methodName](action, reference, region)
+        Methods[methodName](region, action, reference)
       }
     })
 

@@ -1,9 +1,9 @@
 {{ render '@layout-header' header merge=true }}
 
 <main>
-    {{!-- {{#> @section modifiers='bg-yellow,short' }}
-        {{ render '@block--hero' hero }}
-    {{/ @section }} --}}
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@map--svg' map merge=true }}
+    {{/ @section }}
 
     {{#> @section }}
         {{ render '@components--cards' woodlands merge=true }}

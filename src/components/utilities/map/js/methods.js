@@ -1,10 +1,20 @@
 module.exports = class Methods {
-  static tagDismiss (type, selector, region) {
-    const element = document.querySelector(selector)
+  static link (region, type, reference) {
+    const slug = region.getAttribute('key')
+
+    window.location.href = `/buying-a-wood/${slug}`
+  }
+
+  static tagDismiss (region, type, reference) {
     const title = region.getAttribute('title')
     const value = region.getAttribute('key')
 
+    let element
     let item
+
+    if (reference) {
+      element = document.querySelector(reference)
+    }
 
     const html = `<span class="tag tag--dismiss" data-value="${value}">
       <span class="tag__title">${title}</span>

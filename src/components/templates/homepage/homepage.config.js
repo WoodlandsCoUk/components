@@ -75,6 +75,9 @@ module.exports = {
         modifiers: ['alt']
       }
     },
+    map: {
+      type: 'link'
+    },
     woodlands: {
       title: 'New woodlands for sale',
       cards: woodlands,
