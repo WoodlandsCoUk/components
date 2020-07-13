@@ -31980,6 +31980,62 @@ selector.forEach(function (block) {
 
 /***/ }),
 
+/***/ "./src/components/blocks/subscribe/subscribe.js":
+/*!******************************************************!*\
+  !*** ./src/components/blocks/subscribe/subscribe.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var forms = document.querySelectorAll('.form--subscribe');
+forms.forEach(function (form) {
+  var tagsContainer = form.querySelector('.tags[data-empty]');
+  var tagSelector = '.tag';
+  var dismissSelector = '.tag__dismiss.js--dismiss';
+
+  if (tagsContainer) {
+    tagsContainer.addEventListener('updated', function (event) {
+      var tags = tagsContainer.querySelectorAll('.tag');
+      var empty = tagsContainer.dataset.empty;
+      var emptyElement = tagsContainer.querySelector(empty);
+
+      if (emptyElement) {
+        if (tags.length === 0) {
+          emptyElement.classList.remove('hidden');
+        } else {
+          emptyElement.classList.add('hidden');
+        }
+      }
+    });
+    tagsContainer.addEventListener('click', function (event) {
+      var query = tagsContainer.querySelectorAll(dismissSelector);
+
+      if (query) {
+        var element = event.target || event.srcElement;
+        var index = -1;
+
+        while (element && (index = Array.prototype.indexOf.call(query, element)) === -1) {
+          element = element.parentElement;
+        }
+
+        if (index > -1) {
+          var item = element.closest(tagSelector);
+          item.dispatchEvent(new CustomEvent('removed'));
+          item.remove();
+          tagsContainer.dispatchEvent(new CustomEvent('updated', {
+            detail: {
+              item: item,
+              type: 'remove'
+            }
+          }));
+        }
+      }
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/components/blocks/tabs/tabs.js":
 /*!********************************************!*\
   !*** ./src/components/blocks/tabs/tabs.js ***!
@@ -32106,16 +32162,156 @@ listItems.forEach(function (listItem) {
 
 /***/ }),
 
-/***/ "./src/components/utilities/map/map.js":
-/*!*********************************************!*\
-  !*** ./src/components/utilities/map/map.js ***!
-  \*********************************************/
+/***/ "./src/components/utilities/map/js/dynamic.js":
+/*!****************************************************!*\
+  !*** ./src/components/utilities/map/js/dynamic.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 var maps = document.querySelectorAll('[data-map]');
 maps.forEach(function (map) {
-  console.log('Map: ', map);
+  var type = map.dataset.type;
+  console.log('Map:', map, type);
+});
+
+/***/ }),
+
+/***/ "./src/components/utilities/map/js/methods.js":
+/*!****************************************************!*\
+  !*** ./src/components/utilities/map/js/methods.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+module.exports = /*#__PURE__*/function () {
+  function Methods() {
+    _classCallCheck(this, Methods);
+  }
+
+  _createClass(Methods, null, [{
+    key: "link",
+    value: function link(region, type, reference) {
+      var slug = region.getAttribute('key');
+      window.location.href = "/buying-a-wood/".concat(slug);
+    }
+  }, {
+    key: "tagDismiss",
+    value: function tagDismiss(region, type, reference) {
+      var title = region.getAttribute('title');
+      var value = region.getAttribute('key');
+      var element;
+      var item;
+
+      if (reference) {
+        element = document.querySelector(reference);
+      }
+
+      var html = "<span class=\"tag tag--dismiss\" data-value=\"".concat(value, "\">\n      <span class=\"tag__title\">").concat(title, "</span>\n      <input type=\"hidden\" name=\"region[]\" value=\"").concat(value, "\" />\n      <button type=\"button\" class=\"tag__dismiss js--dismiss\">\u2A09</button>\n    </span>");
+      var itemSelector = ".tag[data-value=\"".concat(value, "\"]");
+
+      if (element) {
+        if (type === 'add') {
+          element.insertAdjacentHTML('beforeend', html);
+        }
+
+        item = element.querySelector(itemSelector);
+
+        if (type === 'remove' && item) {
+          item.remove();
+        } // Listen to the "removed" event and update the region accordingly.
+
+
+        item.addEventListener('removed', function () {
+          region.dispatchEvent(new CustomEvent('updated', {
+            detail: {
+              type: 'remove'
+            }
+          }));
+        }); // Fire custom event to update the region.
+
+        region.dispatchEvent(new CustomEvent('updated', {
+          detail: {
+            type: type
+          }
+        })); // Fire custom event to update the tag list.
+
+        element.dispatchEvent(new CustomEvent('updated', {
+          detail: {
+            item: item,
+            type: type
+          }
+        }));
+      }
+    }
+  }]);
+
+  return Methods;
+}();
+
+/***/ }),
+
+/***/ "./src/components/utilities/map/js/svg.js":
+/*!************************************************!*\
+  !*** ./src/components/utilities/map/js/svg.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Methods = __webpack_require__(/*! ./methods.js */ "./src/components/utilities/map/js/methods.js");
+
+var maps = document.querySelectorAll('[data-map-svg]');
+var classes = {
+  selected: 'selected'
+};
+maps.forEach(function (map) {
+  var key = map.querySelector('.map__key');
+  var regions = map.querySelectorAll('[title][key]');
+  regions.forEach(function (region) {
+    region.addEventListener('click', function (event) {
+      var action = region.classList.contains(classes.selected) ? 'remove' : 'add';
+      var _map$dataset = map.dataset,
+          reference = _map$dataset.reference,
+          type = _map$dataset.type;
+      var methodName;
+
+      if (type) {
+        // Convert the type to camelCase which is our method name.
+        methodName = type.replace('--', ' ').replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+          return index === 0 ? match.toLowerCase() : match.toUpperCase();
+        }).replace(/\s+/g, '');
+      }
+
+      if (methodName && methodName in Methods) {
+        // Call a custom method to update the interface.
+        Methods[methodName](region, action, reference);
+      }
+    });
+    region.addEventListener('mouseenter', function (event) {
+      if (key) {
+        key.innerHTML = region.getAttribute('title');
+      }
+    });
+    region.addEventListener('mouseleave', function (event) {
+      if (key) {
+        key.innerHTML = '';
+      }
+    }); // Custom event for the region, to listen when it is updated.
+
+    region.addEventListener('updated', function (event) {
+      if (event.detail.type === 'add') {
+        region.classList.add(classes.selected);
+      } else {
+        region.classList.remove(classes.selected);
+      }
+    });
+  });
 });
 
 /***/ }),
@@ -32188,7 +32384,9 @@ module.exports = function (element) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // require('./responsive')
-__webpack_require__(/*! components/utilities/map/map */ "./src/components/utilities/map/map.js");
+__webpack_require__(/*! components/utilities/map/js/dynamic */ "./src/components/utilities/map/js/dynamic.js");
+
+__webpack_require__(/*! components/utilities/map/js/svg */ "./src/components/utilities/map/js/svg.js");
 
 __webpack_require__(/*! components/utilities/tag/tag */ "./src/components/utilities/tag/tag.js");
 
@@ -32198,11 +32396,11 @@ __webpack_require__(/*! components/blocks/hero/hero */ "./src/components/blocks/
 
 __webpack_require__(/*! components/blocks/modal/modal */ "./src/components/blocks/modal/modal.js");
 
-__webpack_require__(/*! components/blocks/tabs/tabs */ "./src/components/blocks/tabs/tabs.js");
-
 __webpack_require__(/*! components/blocks/gallery/gallery--carousel */ "./src/components/blocks/gallery/gallery--carousel.js");
 
 __webpack_require__(/*! components/blocks/read-more/read-more */ "./src/components/blocks/read-more/read-more.js");
+
+__webpack_require__(/*! components/blocks/subscribe/subscribe */ "./src/components/blocks/subscribe/subscribe.js");
 
 __webpack_require__(/*! components/blocks/tabs/tabs */ "./src/components/blocks/tabs/tabs.js");
 
@@ -32260,6 +32458,11 @@ module.exports = {
         light: '#f4f5f7',
         text: '#333'
       },
+      map: {
+        "default": '#b9cfb9',
+        hover: '#92a892',
+        selected: '#92a892'
+      },
       'brand-red': {
         "default": '#c30028',
         dark: '#982c2c'
@@ -32286,12 +32489,18 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         '2/3': 'auto minmax(25%, 30%)',
-        '3/2': 'minmax(25%, 30%) auto'
+        '3/2': 'minmax(30%, 35%) auto'
       },
       height: {
         screen: 'calc(100vh - 96px)',
         // Compensate for the fixed header.
-        'screen-mobile': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+
+      },
+      maxHeight: {
+        screen: 'calc(100vh - 96px)',
+        // Compensate for the fixed header.
+        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
 
       },
       screens: {

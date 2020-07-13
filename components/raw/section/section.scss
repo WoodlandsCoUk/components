@@ -67,7 +67,23 @@ $backgrounds: (
     }
 }
 
-// Page Specific.
+// Page specific sections.
+.section--intro {
+    @apply p-0 bg-brand-yellow max-h-screen-teaser;
+
+    + .section {
+        @apply pt-3;
+    }
+
+    .section__inner {
+        @apply max-w-none;
+
+        > .grid > .grid__inner {
+            @apply gap-0;
+        }
+    }
+}
+
 .section--map {
     @apply p-0;
 
@@ -88,7 +104,7 @@ $backgrounds: (
     }
 
     .map--map {
-        @apply relative h-screen-mobile;
+        @apply relative h-screen-teaser;
     }
 
     @screen md {
