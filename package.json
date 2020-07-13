@@ -81,6 +81,11 @@
       "@commitlint/config-conventional"
     ]
   },
+  "standard": {
+    "global": [
+      "CustomEvent"
+    ]
+  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {

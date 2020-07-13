@@ -8,11 +8,16 @@
     <div class="form__group">
         <label for="form__subscribe__region">{{ region.label }}</label>
 
-        <div class="tags tags--gap">
+        <div class="tags tags--gap" data-empty=".tags__empty">
             {{#each region.tags}}
                 {{ render '@tag--dismiss' this merge=true }}
             {{/each}}
 
+            {{#if region.tags.length }}
+                <p class="tags__empty hidden">{{ region.empty }}</p>
+            {{else}}
+                <p class="tags__empty">{{ region.empty }}</p>
+            {{/if}}
         </div>
     </div>
 

@@ -1,8 +1,8 @@
 const regions = [
-  'Northen Scotland',
-  'Cornwall',
-  'West and South Wales and Herefordshire',
-  'North Wales and The Welsh Marches'
+  // 'Northen Scotland',
+  // 'Cornwall',
+  // 'West and South Wales and Herefordshire',
+  // 'North Wales and The Welsh Marches'
 ]
 
 module.exports = {
@@ -19,6 +19,7 @@ module.exports = {
     },
     region: {
       label: 'Selected regions*',
+      empty: 'Please select at least one region from the map.',
       tags: regions.map((region) => {
         return {
           text: region
