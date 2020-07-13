@@ -57,7 +57,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         '2/3': 'auto minmax(25%, 30%)',
-        '3/2': 'minmax(25%, 30%) auto'
+        '3/2': 'minmax(30%, 35%) auto'
       },
       height: {
         screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
