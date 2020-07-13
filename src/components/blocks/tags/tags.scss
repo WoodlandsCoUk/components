@@ -10,4 +10,8 @@
             @apply mb-4 mr-3;
         }
     }
+
+    &__empty {
+        @apply px-3 py-2 leading-tight bg-brand-yellow-light rounded-md;
+    }
 }

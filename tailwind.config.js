@@ -31,6 +31,12 @@ module.exports = {
         text: '#333'
       },
 
+      map: {
+        default: '#b9cfb9',
+        hover: '#92a892',
+        selected: '#92a892'
+      },
+
       'brand-red': {
         default: '#c30028',
         dark: '#982c2c'
@@ -57,11 +63,15 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         '2/3': 'auto minmax(25%, 30%)',
-        '3/2': 'minmax(25%, 30%) auto'
+        '3/2': 'minmax(30%, 35%) auto'
       },
       height: {
         screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
-        'screen-mobile': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+      },
+      maxHeight: {
+        screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
+        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
       },
       screens: {
         nav: '1024px',

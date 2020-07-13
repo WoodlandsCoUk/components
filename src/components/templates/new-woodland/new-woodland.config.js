@@ -11,6 +11,10 @@ module.exports = {
     title: 'Click on the regions to get emailed which woodlands are for sale in those areas.',
     quote: {
       text: 'Every time I go through the gate into the wood I can’t help but smile to myself.'
+    },
+    map: {
+      reference: '.form--subscribe .tags',
+      type: 'tag--dismiss'
     }
   }
 }
