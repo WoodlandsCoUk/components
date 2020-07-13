@@ -31,6 +31,12 @@ module.exports = {
         text: '#333'
       },
 
+      map: {
+        default: '#b9cfb9',
+        hover: '#92a892',
+        selected: '#92a892'
+      },
+
       'brand-red': {
         default: '#c30028',
         dark: '#982c2c'

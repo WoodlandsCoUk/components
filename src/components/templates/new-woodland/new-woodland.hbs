@@ -10,7 +10,7 @@
 
         {{#> @grid modifiers="2,spaced,divider" }}
             <div class="grid__item">
-                map
+                {{ render '@map--svg' map merge=true }}
             </div>
             <div class="grid__item">
                 {{ render '@block--subscribe' }}

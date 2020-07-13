@@ -1,5 +1,7 @@
 const maps = document.querySelectorAll('[data-map]')
 
 maps.forEach((map) => {
-  console.log('Map: ', map)
+  const { type } = map.dataset
+
+  console.log('Map:', map, type)
 })
