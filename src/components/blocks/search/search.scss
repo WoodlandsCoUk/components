@@ -2,7 +2,7 @@
     @apply relative max-w-none;
 
     .form__inner {
-        @apply flex flex-wrap max-w-none;
+        @apply flex flex-wrap;
     }
 
     label {

@@ -67,7 +67,11 @@ module.exports = {
       },
       height: {
         screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
-        'screen-mobile': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+      },
+      maxHeight: {
+        screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
+        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
       },
       screens: {
         nav: '1024px',

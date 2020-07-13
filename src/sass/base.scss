@@ -38,3 +38,51 @@ form {
     @apply italic;
 }
 // end of forms
+
+.intro {
+    @apply relative;
+
+    &__content {
+        @apply px-6 pt-10 pb-2 max-w-lg mx-auto;
+
+        @screen md {
+            @apply ml-0;
+        }
+
+        @screen xl {
+            @apply pt-12 max-w-xl mx-auto;
+        }
+
+        .map svg {
+            @apply mx-auto;
+        }
+    }
+
+    &__image {
+        @apply hidden;
+
+        @screen md {
+            @apply block;
+        }
+
+        img {
+            @apply max-w-none h-full w-full object-cover;
+        }
+    }
+
+    &__title {
+        @apply mb-4 text-brand-red-dark font-display text-3xl leading-none;
+
+        @screen xl {
+            @apply text-4xl;
+        }
+    }
+
+    &__text {
+        @apply text-brand-green italic text-lg;
+
+        @screen xl {
+            @apply text-xl;
+        }
+    }
+}

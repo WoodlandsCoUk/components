@@ -5,6 +5,10 @@
         @apply absolute top-0 inset-x-0 mt-2 p-3 text-black text-center;
 
         background: rgba(#fff, 0.5);
+
+        &:empty {
+            @apply hidden;
+        }
     }
 
     &--svg {
