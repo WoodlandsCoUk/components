@@ -14,6 +14,13 @@
             }
         }
 
+        &--quote > div {
+            &,
+            * {
+                @apply font-quote;
+            }
+        }
+
         h1 {
             @apply text-3xl;
         }
