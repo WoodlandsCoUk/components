@@ -1,28 +1,11 @@
 .item {
     &__item {
-        &--display > div {
-            &,
-            * {
-                @apply font-display;
-            }
-        }
-
-        &--body > div {
-            &,
-            * {
-                @apply font-body;
-            }
-        }
-
-        &--quote > div {
-            &,
-            * {
-                @apply font-quote;
-            }
-        }
-
         h1 {
             @apply text-3xl;
+        }
+
+        h2 {
+            @apply text-xl;
         }
     }
 }
