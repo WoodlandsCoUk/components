@@ -24,6 +24,10 @@
             @screen lg {
                 @apply mr-0;
             }
+
+            @screen xl {
+                max-height: 700px;
+            }
         }
 
         path {

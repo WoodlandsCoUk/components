@@ -2,16 +2,7 @@
 
 <main>
     {{#> @section modifiers='intro' }}
-        {{#> @grid modifiers="2" }}
-            <div class="grid__item intro__content">
-                <h2 class="intro__title">{{ banner.title }}</h2>
-                <p class="intro__text">{{ banner.text }} </p>
-                {{ render '@map--svg' map merge=true }}
-            </div>
-            <div class="grid__item intro__image">
-                <img src={{ path '/images/banner.jpg' }} alt="" />
-            </div>
-        {{/ @grid }}
+        {{ render '@block--hero--intro' hero merge=true }}
     {{/ @section }}
 
     {{#> @section }}

@@ -1,0 +1,12 @@
+<div class="{{modifier 'hero' modifiers}}">
+    {{#> @grid modifiers="2" }}
+        <div class="grid__item hero__content">
+            <h2 class="hero__title">{{ title }}</h2>
+            <p class="hero__text">{{ text }}</p>
+            {{ render '@map--svg' map merge=true }}
+        </div>
+        <div class="grid__item hero__image">
+            <img src={{ path image }} alt="" />
+        </div>
+    {{/ @grid }}
+</div>

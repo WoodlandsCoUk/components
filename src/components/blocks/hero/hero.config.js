@@ -31,6 +31,19 @@ module.exports = {
         text: faker.lorem.words(3),
         extra: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3)
       }
+    },
+    {
+      name: 'intro',
+      label: 'Intro with Map',
+      context: {
+        title: faker.lorem.sentence(),
+        text: faker.lorem.sentences(2),
+        map: {
+          type: 'link'
+        },
+        image: '/images/banner.jpg',
+        modifiers: ['intro']
+      }
     }
   ]
 }

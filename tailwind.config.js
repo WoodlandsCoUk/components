@@ -84,6 +84,7 @@ module.exports = {
       screens: {
         nav: '1024px',
         md: '800px',
+        '2xl': '2000px',
         dark: { raw: '(prefers-color-scheme: dark)' }
       },
       padding: {

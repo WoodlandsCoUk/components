@@ -75,12 +75,12 @@ module.exports = {
         modifiers: ['alt']
       }
     },
-    banner: {
+    hero: {
       title: 'Woodlands for sale for conservation and enjoyment',
-      text: 'Search woodlands for sale by region with this map…'
-    },
-    map: {
-      type: 'link'
+      text: 'Search woodlands for sale by region with this map…',
+      map: {
+        type: 'link'
+      }
     },
     woodlands: {
       title: 'New woodlands for sale',
