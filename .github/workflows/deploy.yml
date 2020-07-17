@@ -16,6 +16,8 @@ jobs:
           npm ci
           npm test
           npm run build
+        env:
+          MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
