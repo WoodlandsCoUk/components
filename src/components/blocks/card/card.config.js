@@ -89,7 +89,31 @@ module.exports = {
             faker.address.city(),
             faker.address.county()
           ].join(', '),
-          banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3)
+          banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+          modifiers: ['woodland']
+        }
+      }
+    },
+    {
+      name: 'woodland-map',
+      label: 'Woodland (Map)',
+      context: {
+        card: {
+          title: 'Woodland Map Card',
+          text: faker.lorem.paragraph(),
+          extra: faker.random.arrayElement([
+            'About 5 ½ acres',
+            'Almost 4 acres',
+            'About 3 ¼ acres'
+          ]),
+          link: 'page-woodland',
+          meta: [
+            `NR. ${faker.address.streetName()}`,
+            faker.address.city(),
+            faker.address.county()
+          ].join(', '),
+          banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+          modifiers: ['woodland', 'woodland--map']
         }
       }
     },

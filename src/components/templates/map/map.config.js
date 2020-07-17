@@ -24,7 +24,7 @@ for (let i = 0; i < itemCount; i++) {
         modifiers: []
       },
       banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
-      modifiers: ['woodland', 'woodland--simple'],
+      modifiers: ['woodland', 'woodland--map'],
       woodland: true
     }
   })
