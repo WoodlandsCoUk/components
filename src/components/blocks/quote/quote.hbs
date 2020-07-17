@@ -14,4 +14,9 @@
         <a href="{{ quote.link.href }}">{{ quote.link.text }}</a>
     </p>
     {{/if}}
+    {{#if quote.drawing}}
+    <div class="quote__image">
+        {{ render '@drawing' }}
+    </div>
+    {{/if}}
 </blockquote>

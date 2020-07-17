@@ -6,10 +6,10 @@ $quotePadding: 40px;
     padding-bottom: $quotePadding;
 
     &__content {
-        @apply font-display leading-none tracking-wide text-3xl italic;
+        @apply leading-none font-quote font-light tracking-wide text-3xl italic;
 
         @screen md {
-            @apply text-3xl;
+            @apply text-4xl max-w-screen-md mx-auto;
         }
     }
 
@@ -25,7 +25,11 @@ $quotePadding: 40px;
         @apply mb-0 mt-4;
 
         a {
-            @apply text-brand-green;
+            @apply text-brand-green text-lg;
         }
+    }
+
+    &__image {
+        @apply mx-auto max-w-xs mt-12;
     }
 }

@@ -49,28 +49,8 @@
 @import url("//hello.myfonts.net/count/3bb622");
 
 @font-face {
-    font-family: 'SofiaPro-Medium';
-    src: url('../fonts/SofiaPro-Medium/font.woff2') format('woff2'), url('../fonts/SofiaPro-Medium/font.woff') format('woff');
-}
-
-@font-face {
     font-family: 'FreightNeoProBold-Regular';
     src: url('../fonts/FreightNeoProBold-Regular/font.woff2') format('woff2'), url('../fonts/FreightNeoProBold-Regular/font.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'SofiaPro-Bolditalic';
-    src: url('../fonts/SofiaPro-Bolditalic/font.woff2') format('woff2'), url('../fonts/SofiaPro-Bolditalic/font.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'SofiaPro-Bold';
-    src: url('../fonts/SofiaPro-Bold/font.woff2') format('woff2'), url('../fonts/SofiaPro-Bold/font.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'SofiaPro-Black';
-    src: url('../fonts/SofiaPro-Black/font.woff2') format('woff2'), url('../fonts/SofiaPro-Black/font.woff') format('woff');
 }
 
 @font-face {
@@ -79,11 +59,31 @@
 }
 
 @font-face {
-    font-family: 'SofiaPro-SemiBold';
-    src: url('../fonts/SofiaPro-SemiBold/font.woff2') format('woff2'), url('../fonts/SofiaPro-SemiBold/font.woff') format('woff');
+    font-family: 'SofiaPro-Medium';
+    src: url('../fonts/SofiaPro-Medium/font.woff2') format('woff2'), url('../fonts/SofiaPro-Medium/font.woff') format('woff');
 }
 
 @font-face {
     font-family: 'SofiaPro-Mediumitalic';
     src: url('../fonts/SofiaPro-Mediumitalic/font.woff2') format('woff2'), url('../fonts/SofiaPro-Mediumitalic/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SofiaPro-SemiBold';
+    src: url('../fonts/SofiaPro-SemiBold/font.woff2') format('woff2'), url('../fonts/SofiaPro-SemiBold/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SofiaPro-Bold';
+    src: url('../fonts/SofiaPro-Bold/font.woff2') format('woff2'), url('../fonts/SofiaPro-Bold/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SofiaPro-Bolditalic';
+    src: url('../fonts/SofiaPro-Bolditalic/font.woff2') format('woff2'), url('../fonts/SofiaPro-Bolditalic/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SofiaPro-Black';
+    src: url('../fonts/SofiaPro-Black/font.woff2') format('woff2'), url('../fonts/SofiaPro-Black/font.woff') format('woff');
 }

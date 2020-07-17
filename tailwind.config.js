@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['FreightNeo Pro Bold', 'FreightNeoProBold-Regular', 'serif'],
-      body: ['Sofia Pro', 'SofiaPro-Medium', 'sans-serif']
+      body: ['Sofia Pro Medium', 'SofiaPro-Medium', 'sans-serif'],
+      quote: ['FreightNeo Pro Semi-Italic', 'FreightNeoProSemi-Italic', 'serif']
     },
     colors: {
       transparent: 'transparent',

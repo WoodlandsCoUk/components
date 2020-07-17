@@ -8,7 +8,8 @@ module.exports = {
   default: 'default',
   context: {
     quote: {
-      text: faker.lorem.paragraph()
+      text: faker.lorem.paragraph(),
+      drawing: true
     }
   },
   variants: [
