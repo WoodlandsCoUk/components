@@ -31,7 +31,7 @@ for (let i = 0; i < itemCount; i++) {
 }
 
 module.exports = {
-  order: 3,
+  order: 16,
   title: 'Map',
   handle: 'page-map',
   status: 'prototype',

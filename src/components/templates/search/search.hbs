@@ -1,0 +1,27 @@
+{{ render '@layout-header' header merge=true }}
+
+<main>
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@block--hero' hero }}
+    {{/ @section }}
+
+    {{#> @section modifiers='shadow' }}
+        {{ render '@block--search' search merge=true }}
+    {{/ @section }}
+
+    {{#> @section }}
+        {{ render '@block--search-results' woodlands merge=true }}
+        {{ render '@components--cards' woodlands merge=true }}
+        {{ render '@button' woodlands merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-yellow,short' }}
+        {{ render '@block--cta--need-help' help merge=true }}
+    {{/ @section }}
+
+    {{#> @section modifiers='bg-green' }}
+        {{ render '@block--cta-form--subscribe' }}
+    {{/ @section }}
+</main>
+
+{{ render '@layout-footer' }}
