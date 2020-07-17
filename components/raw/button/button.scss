@@ -75,6 +75,14 @@ $variants: (
             @apply px-12;
 
             @screen sm {
+                @apply w-auto mx-auto;
+            }
+        }
+    }
+
+    &--inline--small {
+        > span {
+            @screen sm {
                 @apply w-auto mx-auto px-6;
             }
         }
