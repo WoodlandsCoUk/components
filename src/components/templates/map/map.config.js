@@ -47,7 +47,7 @@ module.exports = {
     back: {
       button: {
         text: '← Exit map view',
-        modifiers: ['inline', 'green--dark', 'left']
+        modifiers: ['inline', 'inline--small', 'green--dark', 'left']
       }
     }
   }
