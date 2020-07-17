@@ -35,10 +35,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new Dotenv({
-      path: './.env',
-      safe: true
-    }),
+    new Dotenv(),
     new StylelintPlugin({
       files: 'src/sass/site.scss'
     })
