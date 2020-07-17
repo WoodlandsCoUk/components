@@ -110,6 +110,39 @@ module.exports = {
           modifiers: ['blog']
         }
       }
+    },
+    {
+      name: 'cta',
+      label: 'Call To Action',
+      context: {
+        card: {
+          title: 'Call to Action',
+          text: faker.lorem.sentences(2),
+          button: {
+            button: {
+              modifiers: ['green--dark', 'inline']
+            }
+          },
+          modifiers: ['cta']
+        }
+      }
+    },
+    {
+      name: 'cta-form',
+      label: 'Call To Action Form',
+      context: {
+        card: {
+          title: 'Call to Action',
+          text: faker.lorem.sentences(2),
+          placeholder: faker.lorem.words(3),
+          button: {
+            button: {
+              modifiers: ['green--dark']
+            }
+          },
+          modifiers: ['cta']
+        }
+      }
     }
   ]
 }
