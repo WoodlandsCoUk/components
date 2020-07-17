@@ -6,8 +6,12 @@ status: draft
 ## Running the project
 
 To use the project locally you will need install [Node.js](https://nodejs.org).
-Modules are then installed using `npm install` and finally to run the development build
-use `npm start`.
+
+Dependencies are managed and installed using `npm install`.
+
+You will need to create a `.env` file based on the `.env.example` file.
+
+Finally to run the development build use `npm start`.
 
 ## Configuration
 
