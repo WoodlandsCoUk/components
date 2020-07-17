@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const globImporter = require('node-sass-glob-importer')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
@@ -35,6 +36,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'production',
+      DEBUG: false,
+      MAPBOX_KEY: ''
+    }),
     new Dotenv(),
     new StylelintPlugin({
       files: 'src/sass/site.scss'
