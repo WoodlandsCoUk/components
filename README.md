@@ -11,6 +11,8 @@ Modules are then installed using `npm install`.
 
 ## Development
 
+You must create an `.env` file based on the `.env.example` and update the appropriate variables.
+
 ### Preview
 
 The following command while compile all required assets and a local node server to preview
