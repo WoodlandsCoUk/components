@@ -1,3 +1,5 @@
+@import "mapbox-gl/dist/mapbox-gl";
+
 .map {
     @apply relative bg-gray-light w-full h-full p-6;
 

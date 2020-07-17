@@ -1,7 +1,14 @@
+const System = require('mapbox-gl/dist/mapbox-gl.js')
+const config = require('./config')
+
 const maps = document.querySelectorAll('[data-map]')
 
-maps.forEach((map) => {
-  const { type } = map.dataset
+maps.forEach((container) => {
+  const map = new System.Map({
+    ...config,
+    container,
+    accessToken: process.env.MAPBOX_KEY
+  })
 
-  console.log('Map:', map, type)
+  map.addControl(new System.NavigationControl())
 })

@@ -1,3 +1,5 @@
+const headerHeight = '104px'
+
 module.exports = {
   purge: [
     './src/components/**/*.html',
@@ -72,17 +74,20 @@ module.exports = {
         '3/2': 'minmax(30%, 35%) auto'
       },
       height: {
-        screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
-        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+        screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
+        'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
       },
       maxHeight: {
-        screen: 'calc(100vh - 96px)', // Compensate for the fixed header.
-        'screen-teaser': 'calc(100vh - 96px - 4rem)' // Compensate for the fixed header and leave room for scrolling passed.
+        screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
+        'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
       },
       screens: {
         nav: '1024px',
         md: '800px',
         dark: { raw: '(prefers-color-scheme: dark)' }
+      },
+      padding: {
+        header: headerHeight
       },
       cursor: {
         zoom: 'zoom-in'
