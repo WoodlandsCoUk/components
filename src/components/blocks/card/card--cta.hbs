@@ -1,0 +1,10 @@
+<div class="{{modifier 'card' card.modifiers}}">
+  <div class="card__body">
+    {{ render '@drawing' }}
+    <h3 class="card__title">{{ titlecase card.title }}</h3>
+    <div class="card__content">
+      {{ card.text }}
+    </div>
+    {{ render '@button' card.button merge=true }}
+  </div>
+</div>

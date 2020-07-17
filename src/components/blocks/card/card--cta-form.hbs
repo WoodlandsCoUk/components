@@ -1,0 +1,17 @@
+<div class="{{modifier 'card' card.modifiers}}">
+  <div class="card__body">
+    {{ render '@drawing' }}
+
+    <form action="" method="GET" class="form form--card">
+      <label for="form__card--cta__field" class="form__label card__title">{{ titlecase card.title }}</label>
+
+      <div class="form__field">
+        <label for="form__card--cta__field" class="card__content">{{ card.text }}</label>
+        <input type="text" id="form__card--cta__field" name="field" class="form-input" placeholder="{{ card.placeholder }}" />
+      </div>
+
+      {{ render '@button' card.button merge=true }}
+  </form>
+
+  </div>
+</div>

@@ -14,7 +14,7 @@
     }
 
     &__title {
-        @apply mb-2 text-brand-green-light font-bold text-lg;
+        @apply block mb-2 text-brand-green-light font-bold text-lg;
     }
 
     &__meta {
@@ -51,6 +51,34 @@
 
             .media > .media__content > * {
                 transform: scale(1.1);
+            }
+        }
+    }
+
+    &--cta {
+        @apply bg-brand-yellow shadow-none text-center;
+
+        .card__body {
+            @apply p-6 max-w-2xl mx-auto;
+        }
+
+        .drawing {
+            @apply mx-auto max-w-xs my-6;
+        }
+
+        .card__title {
+            @apply text-brand-red-dark text-2xl;
+        }
+
+        .card__content {
+            @apply block p-0 pb-4 w-auto uppercase text-brand-green font-bold text-base text-center;
+        }
+
+        .form__field {
+            @apply m-0 -mb-3;
+
+            input {
+                @apply rounded-md px-5 py-3 text-brand-green-dark max-w-none;
             }
         }
     }
