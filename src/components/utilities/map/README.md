@@ -1,3 +1,3 @@
 ## Map
 
-Using x map framework.
+Using MapBox framework for the full mapping system and custom SVG.
