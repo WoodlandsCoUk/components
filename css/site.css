@@ -2763,6 +2763,7 @@ a.tag:hover, a.tag:focus, a.tag:active {
 }
 
 .card__title {
+  display: block;
   margin-bottom: 0.5rem;
   --text-opacity: 1;
   color: #007a43;
@@ -2842,6 +2843,67 @@ a.tag:hover, a.tag:focus, a.tag:active {
 
 .card__link:hover .media > .media__content > *, .card__link:focus .media > .media__content > *, .card__link:active .media > .media__content > * {
   transform: scale(1.1);
+}
+
+.card--cta {
+  --bg-opacity: 1;
+  background-color: #f2eadc;
+  background-color: rgba(242, 234, 220, var(--bg-opacity));
+  box-shadow: none;
+  text-align: center;
+}
+
+.card--cta .card__body {
+  padding: 1.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card--cta .drawing {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card--cta .card__title {
+  --text-opacity: 1;
+  color: #982c2c;
+  color: rgba(152, 44, 44, var(--text-opacity));
+  font-size: 1.5rem;
+}
+
+.card--cta .card__content {
+  display: block;
+  padding: 0;
+  padding-bottom: 1rem;
+  width: auto;
+  text-transform: uppercase;
+  --text-opacity: 1;
+  color: #02532f;
+  color: rgba(2, 83, 47, var(--text-opacity));
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card--cta .form__field {
+  margin: 0;
+  margin-bottom: -0.75rem;
+}
+
+.card--cta .form__field input {
+  border-radius: 0.375rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --text-opacity: 1;
+  color: #0b3824;
+  color: rgba(11, 56, 36, var(--text-opacity));
+  max-width: none;
 }
 
 .form--cta {
