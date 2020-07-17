@@ -28,4 +28,68 @@
             background: rgba(#333, 0.9);
         }
     }
+
+    &--intro {
+        @apply relative;
+
+        > .grid {
+            @apply w-full;
+
+            > .grid__inner {
+                @apply gap-0;
+            }
+        }
+
+        .hero__content {
+            @apply px-6 pt-10 pb-2 max-w-lg mx-auto;
+
+            @screen md {
+                @apply ml-0 text-left;
+            }
+
+            @screen xl {
+                @apply pt-12 px-0 max-w-xl ml-0;
+            }
+
+            .map svg {
+                @apply mx-auto;
+            }
+        }
+
+        .hero__image {
+            @apply hidden;
+
+            @screen md {
+                @apply block;
+            }
+
+            @screen xl {
+                margin-right: -20vw;
+            }
+
+            @screen 2xl {
+                margin-right: -25vw;
+            }
+
+            img {
+                @apply max-w-none h-full w-full object-cover;
+            }
+        }
+
+        .hero__title {
+            @apply mb-4 text-brand-red-dark font-display text-3xl leading-none;
+
+            @screen xl {
+                @apply text-4xl;
+            }
+        }
+
+        .hero__text {
+            @apply text-brand-green italic text-lg;
+
+            @screen xl {
+                @apply text-xl;
+            }
+        }
+    }
 }

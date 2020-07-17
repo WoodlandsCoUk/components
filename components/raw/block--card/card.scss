@@ -33,6 +33,16 @@
         @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white font-bold text-sm tracking-wide;
     }
 
+    &__more {
+        @apply text-brand-red underline;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply no-underline;
+        }
+    }
+
     &--sold {
         .card__banner {
             @apply bg-white text-brand-red text-base;
@@ -47,6 +57,10 @@
         &:active {
             .card__title {
                 @apply text-brand-green underline;
+            }
+
+            .card__more {
+                @apply no-underline;
             }
 
             .media > .media__content > * {
@@ -79,6 +93,30 @@
 
             input {
                 @apply rounded-md px-5 py-3 text-brand-green-dark max-w-none;
+            }
+        }
+    }
+
+    &--woodland {
+        @apply relative;
+
+        &--map {
+            @apply flex flex-row shadow-none pb-6 border-0 border-b rounded-none;
+
+            .media {
+                @apply w-1/3;
+            }
+
+            .card__body {
+                @apply w-2/3 py-0 ml-1;
+            }
+
+            .card__title {
+                @apply text-brand-green-light;
+            }
+
+            .card__meta {
+                @apply uppercase text-brand-green;
             }
         }
     }
