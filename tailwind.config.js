@@ -73,6 +73,9 @@ module.exports = {
         '2/3': 'auto minmax(25%, 30%)',
         '3/2': 'minmax(30%, 35%) auto'
       },
+      lineHeight: {
+        snug: '1.333'
+      },
       height: {
         screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
         'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
