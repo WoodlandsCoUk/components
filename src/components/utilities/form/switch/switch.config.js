@@ -19,12 +19,12 @@ module.exports = {
       label: 'Default'
     },
     {
-      name: 'red',
-      label: 'Red',
+      name: 'green',
+      label: 'Green',
       context: {
-        id: 'form__example__checkbox--red',
-        name: 'example-checkbox--red',
-        modifiers: ['red']
+        id: 'form__example__checkbox--green',
+        name: 'example-checkbox--green',
+        modifiers: ['green']
       }
     },
     {
@@ -37,12 +37,12 @@ module.exports = {
       }
     },
     {
-      name: 'red--large',
-      label: 'Large Red',
+      name: 'green--large',
+      label: 'Large Green',
       context: {
-        id: 'form__example__checkbox--red--large',
+        id: 'form__example__checkbox--green--large',
         name: 'example-checkbox--large',
-        modifiers: ['red', 'large']
+        modifiers: ['green', 'large']
       }
     },
     {
@@ -55,12 +55,12 @@ module.exports = {
       }
     },
     {
-      name: 'reverse--red',
-      label: 'Reversed (Red)',
+      name: 'reverse--green',
+      label: 'Reversed (Green)',
       context: {
-        id: 'form__example__checkbox--red--reverse',
-        name: 'example-checkbox--red--reverse',
-        modifiers: ['reverse', 'red']
+        id: 'form__example__checkbox--green--reverse',
+        name: 'example-checkbox--green--reverse',
+        modifiers: ['reverse', 'green']
       }
     },
     {
@@ -73,12 +73,12 @@ module.exports = {
       }
     },
     {
-      name: 'reverse--red--large',
-      label: 'Reversed (Large Red)',
+      name: 'reverse--green--large',
+      label: 'Reversed (Large Green)',
       context: {
-        id: 'form__example__checkbox--red--reverse--large',
-        name: 'example-checkbox--red--reverse--large',
-        modifiers: ['reverse', 'red', 'large']
+        id: 'form__example__checkbox--green--reverse--large',
+        name: 'example-checkbox--green--reverse--large',
+        modifiers: ['reverse', 'green', 'large']
       }
     },
     {
@@ -91,12 +91,12 @@ module.exports = {
       }
     },
     {
-      name: 'standalone--red',
-      label: 'Standalone (Red)',
+      name: 'standalone--green',
+      label: 'Standalone (Green)',
       context: {
-        id: 'form__example__checkbox--standalone--red',
-        name: 'example-checkbox--standalone--red',
-        modifiers: ['standalone', 'red']
+        id: 'form__example__checkbox--standalone--green',
+        name: 'example-checkbox--standalone--green',
+        modifiers: ['standalone', 'green']
       }
     },
     {
@@ -109,12 +109,12 @@ module.exports = {
       }
     },
     {
-      name: 'standalone--red-large',
-      label: 'Standalone (Red Large)',
+      name: 'standalone--green-large',
+      label: 'Standalone (Green Large)',
       context: {
-        id: 'form__example__checkbox--standalone--red-large',
-        name: 'example-checkbox--standalone--red-large',
-        modifiers: ['standalone', 'red', 'large']
+        id: 'form__example__checkbox--standalone--green-large',
+        name: 'example-checkbox--standalone--green-large',
+        modifiers: ['standalone', 'green', 'large']
       }
     }
   ]
