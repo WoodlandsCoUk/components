@@ -76,6 +76,9 @@ module.exports = {
       lineHeight: {
         snug: '1.333'
       },
+      fontSize: {
+        hero: '2.5rem'
+      },
       height: {
         screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
         'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
