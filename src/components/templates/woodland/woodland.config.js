@@ -45,7 +45,7 @@ module.exports = {
     intro: {
       items: [
         woodland.meta,
-        woodland.text,
+        woodland.extra,
         '2.6 miles away'
       ]
     },
