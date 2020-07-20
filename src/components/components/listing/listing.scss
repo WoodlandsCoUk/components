@@ -2,7 +2,7 @@
     @apply relative pl-0 list-none;
 
     &__item {
-        @apply py-3 border-b border-gray;
+        @apply py-3 border-b border-gray text-lg;
 
         &:first-child {
             @apply -mt-3;
