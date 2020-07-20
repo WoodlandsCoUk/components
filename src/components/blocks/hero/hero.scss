@@ -8,7 +8,7 @@
     }
 
     > h1 {
-        @apply font-display text-4xl leading-none text-brand-green-dark font-bold;
+        @apply font-display text-hero leading-none text-brand-green-dark font-bold;
 
         span {
             &::before {
@@ -77,15 +77,11 @@
         }
 
         .hero__title {
-            @apply mb-4 text-brand-red-dark font-display text-3xl leading-none;
-
-            @screen xl {
-                @apply text-4xl;
-            }
+            @apply mb-4 text-brand-red-dark font-display text-hero leading-none;
         }
 
         .hero__text {
-            @apply text-brand-green italic text-lg;
+            @apply font-body-semi-bold italic text-brand-green text-lg;
 
             @screen xl {
                 @apply text-xl;

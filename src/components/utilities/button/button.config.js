@@ -147,6 +147,17 @@ module.exports = {
           modifiers: ['inline', 'yellow']
         }
       }
+    },
+    {
+      name: 'small--inline',
+      label: 'Small Inline (Default)',
+      context: {
+        button: {
+          text: 'Default Small Inline Button',
+          link: null,
+          modifiers: ['inline--small']
+        }
+      }
     }
   ]
 }

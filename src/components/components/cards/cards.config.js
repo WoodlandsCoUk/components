@@ -28,6 +28,7 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
+    id: faker.random.uuid(),
     title: 'General card listing',
     cards: items,
     woodlands: false,

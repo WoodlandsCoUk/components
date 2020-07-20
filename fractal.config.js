@@ -1,6 +1,6 @@
 const path = require('path')
-const faker = require('faker')
 const packageJson = require('./package.json')
+const faker = require('./faker.schema') // eslint-disable-line no-unused-vars
 
 const paths = {
   build: path.join(__dirname, 'build'),
@@ -58,22 +58,5 @@ fractal.web.set('builder.dest', paths.build)
 
 /* Set the theme. */
 fractal.web.theme(theme)
-
-// Override the default faker image URL.
-faker.image.imageUrl = function (width, height, category, randomize, https) {
-  const protocol = typeof https !== 'undefined' && https === true ? 'https://' : 'http://'
-
-  var url = `${protocol}placeimg.com/${width || 640}/${height || 480}`
-
-  if (typeof category !== 'undefined') {
-    url += '/' + category
-  }
-
-  if (randomize) {
-    url += '?' + faker.random.number()
-  }
-
-  return url
-}
 
 module.exports = fractal

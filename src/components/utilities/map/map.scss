@@ -50,4 +50,46 @@
             }
         }
     }
+
+    &__marker {
+        @apply cursor-pointer bg-cover;
+
+        height: 40px;
+        width: 40px;
+        background-image: url(../images/marker.png);
+    }
+
+    .mapboxgl-popup {
+        @apply max-w-3xl;
+    }
+
+    .mapboxgl-popup-content {
+        @apply text-center;
+
+        .mapboxgl-popup-close-button {
+            @apply text-2xl mr-2 mt-1 p-1 text-gray-dark z-50 bg-white;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply bg-white text-black;
+            }
+        }
+
+        .card__body {
+            @apply px-0 pb-1;
+        }
+
+        .card__title {
+            @apply text-brand-green-light;
+        }
+
+        .card__meta {
+            @apply mb-2 text-brand-green font-body-bold text-base;
+        }
+
+        .card__more {
+            @apply text-base;
+        }
+    }
 }

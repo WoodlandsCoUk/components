@@ -36,7 +36,8 @@ module.exports = {
         default: '#e5e7e8',
         dark: '#c0ced2',
         light: '#f4f5f7',
-        text: '#333'
+        text: '#333',
+        form: '#505050'
       },
 
       map: {
@@ -72,6 +73,13 @@ module.exports = {
       gridTemplateColumns: {
         '2/3': 'auto minmax(25%, 30%)',
         '3/2': 'minmax(30%, 35%) auto'
+      },
+      lineHeight: {
+        snug: '1.333'
+      },
+      fontSize: {
+        '4xl': '2.125rem',
+        hero: '2.5rem'
       },
       height: {
         screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.

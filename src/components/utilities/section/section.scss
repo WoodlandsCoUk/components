@@ -19,18 +19,18 @@ $backgrounds: (
     }
 
     &__title {
-        @apply text-center mt-3 mb-6 text-2xl text-brand-red;
+        @apply text-center mt-3 mb-6 text-2xl text-brand-red font-body-bold leading-tight;
 
         &--upper {
             @apply uppercase;
         }
 
         &--medium {
-            @apply text-base font-bold uppercase text-left;
+            @apply text-lg uppercase text-left;
         }
 
         &--small {
-            @apply text-sm font-bold uppercase text-left;
+            @apply text-base uppercase text-left;
         }
 
         &--alt {

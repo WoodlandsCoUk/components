@@ -14,23 +14,23 @@
     }
 
     &__title {
-        @apply block mb-2 text-brand-green-light font-bold text-lg;
+        @apply block mb-2 text-brand-green-light font-body text-lg leading-snug;
     }
 
     &__meta {
-        @apply mb-1 -mt-1 uppercase text-brand-red font-bold text-sm tracking-wide;
+        @apply mb-1 -mt-1 uppercase text-brand-red font-body-bold text-base;
     }
 
     &__extra {
-        @apply my-0 text-brand-green-light;
+        @apply mt-0 mb-1 text-brand-green-light;
     }
 
     &__content {
-        @apply text-base text-text;
+        @apply text-base text-text leading-tight;
     }
 
     &__banner {
-        @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white font-bold text-sm tracking-wide;
+        @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white text-base font-body-bold;
     }
 
     &__more {

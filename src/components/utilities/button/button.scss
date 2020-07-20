@@ -59,7 +59,7 @@ $variants: (
 );
 
 .button {
-    @apply relative flex w-full my-6 justify-center text-center appearance-none no-underline uppercase text-sm;
+    @apply relative flex w-full my-6 justify-center text-center appearance-none no-underline uppercase text-base font-body-semi-bold;
 
     &:last-child {
         @apply mb-0;
@@ -100,8 +100,12 @@ $variants: (
         }
     }
 
-    &--small {
-        @apply text-sm normal-case;
+    &.normal-case {
+        @apply normal-case;
+    }
+
+    &.lowercase {
+        @apply lowercase;
     }
 
     &:hover,
