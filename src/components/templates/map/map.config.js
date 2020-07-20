@@ -31,12 +31,14 @@ module.exports = {
   context: {
     title: 'Woodlands for sale in this location',
     woodlands: {
+      id: 'listing--map',
       title: false,
       cards: woodlands,
       woodlands: true,
       simple: true,
       modifiers: ['single']
     },
+    map: '#listing--map',
     back: {
       button: {
         text: '← Exit map view',

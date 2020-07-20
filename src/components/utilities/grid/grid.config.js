@@ -1,10 +1,14 @@
+const faker = require('faker')
+
 module.exports = {
   title: 'Grid',
   label: 'Grid',
   handle: 'grid',
   status: 'wip',
   default: 'default',
-  context: {},
+  context: {
+    id: faker.random.uuid()
+  },
   variants: [
     {
       name: 'default',
