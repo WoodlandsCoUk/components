@@ -7,22 +7,22 @@
     }
 
     .form__title {
-        @apply text-4xl leading-none text-white font-bold font-display;
+        @apply text-4xl leading-none text-white font-display;
     }
 
     .form__subtitle {
-        @apply text-base -mt-2 text-brand-yellow-dark font-bold uppercase;
+        @apply text-base font-body-bold leading-tight -mt-2 text-brand-yellow-dark uppercase;
     }
 
     .form__group {
         @apply mx-auto;
 
         input {
-            @apply block w-full mb-6 rounded-md px-5 py-4 text-center text-brand-green-dark;
+            @apply block w-full mb-6 rounded-md px-5 py-4 text-center text-lg font-body-italic text-gray-form;
         }
 
         ::placeholder {
-            @apply italic text-brand-green-dark;
+            @apply italic;
         }
 
         @screen md {

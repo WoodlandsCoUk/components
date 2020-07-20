@@ -159,16 +159,16 @@ Optionally, include a “banner”.</p>
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e25ab59a11d299f16bf70fece86e3896-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card card--woodland card--woodland--map"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card card--woodland card--woodland--map"</span> <span class="hljs-attr">data-longitude</span>=<span class="hljs-string">"52.6016074"</span> <span class="hljs-attr">data-latitude</span>=<span class="hljs-string">"-2.3530738"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"media"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"media__content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placeimg.com/400/225/nature?32565"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placeimg.com/400/225/nature?55187"</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__body"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__title"</span>&gt;</span>Et Ullam Culpa Possimus Mollitia Libero Maiores.<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__meta"</span>&gt;</span>NR. Mills Mall, Maevemouth, Cambridgeshire<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__title"</span>&gt;</span>Sed Omnis Sunt Assumenda Voluptatem Sunt Repudiandae.<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__meta"</span>&gt;</span>NR. Melany Union, North Rosieville, Avon<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"page-woodland"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__more"</span>&gt;</span>See more details<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
@@ -179,7 +179,7 @@ Optionally, include a “banner”.</p>
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e25ab59a11d299f16bf70fece86e3896-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier 'card' card.modifiers}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier 'card' card.modifiers}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">data-longitude</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ card.coordinates.longitude }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">data-latitude</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ card.coordinates.latitude }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   </span><span class="hljs-template-variable">{{ render '<a href="media.html">@media</a>' card merge=true}}</span><span class="xml">
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__body"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ titlecase card.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
@@ -3523,8 +3523,8 @@ Optionally, include a “banner”.</p>
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-07-17T16:07:56.444Z">
-                7/17/2020
+            <time datetime="2020-07-20T16:29:15.456Z">
+                7/20/2020
             </time>
         </div>
     </div>
