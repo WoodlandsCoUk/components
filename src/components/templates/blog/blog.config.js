@@ -1,5 +1,4 @@
 const faker = require('faker')
-const { helpers } = require('../../../../fractal.helpers')
 
 const itemCount = 6
 const tagCount = 12
@@ -18,11 +17,7 @@ for (let i = 0; i < itemCount; i++) {
         modifiers: []
       },
       banner: 'Blog',
-      meta: [
-        faker.name.firstName(),
-        helpers.date(faker.date.recent(), 'd/m/Y'),
-        `${faker.random.number()} comments`
-      ].join(', '),
+      meta: faker.woodland.blogMeta(),
       modifiers: ['blog']
     }
   })

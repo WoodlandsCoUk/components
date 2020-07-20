@@ -1,5 +1,4 @@
 const faker = require('faker')
-const { helpers } = require('../../../../fractal.helpers')
 
 module.exports = {
   order: 10,
@@ -78,17 +77,9 @@ module.exports = {
         card: {
           title: 'Woodland Card',
           text: faker.lorem.paragraph(),
-          extra: faker.random.arrayElement([
-            'About 5 ½ acres',
-            'Almost 4 acres',
-            'About 3 ¼ acres'
-          ]),
+          extra: faker.woodland.acre(),
           link: 'page-woodland',
-          meta: [
-            `NR. ${faker.address.streetName()}`,
-            faker.address.city(),
-            faker.address.county()
-          ].join(', '),
+          meta: faker.woodland.meta(),
           banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
           modifiers: ['woodland']
         }
@@ -101,18 +92,12 @@ module.exports = {
         card: {
           title: 'Woodland Map Card',
           text: faker.lorem.paragraph(),
-          extra: faker.random.arrayElement([
-            'About 5 ½ acres',
-            'Almost 4 acres',
-            'About 3 ¼ acres'
-          ]),
+          extra: faker.woodland.acre(),
           link: 'page-woodland',
-          meta: [
-            `NR. ${faker.address.streetName()}`,
-            faker.address.city(),
-            faker.address.county()
-          ].join(', '),
+          meta: faker.woodland.meta(),
+          coordinates: faker.woodland.coordinates(),
           banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+
           modifiers: ['woodland', 'woodland--map']
         }
       }
@@ -126,11 +111,7 @@ module.exports = {
           text: faker.lorem.paragraph(),
           link: 'page-blog-post',
           banner: '',
-          meta: [
-            faker.name.firstName(),
-            helpers.date(faker.date.recent(), 'd/m/Y'),
-            `${faker.random.number()} comments`
-          ].join(', '),
+          meta: faker.woodland.blogMeta(),
           modifiers: ['blog']
         }
       }

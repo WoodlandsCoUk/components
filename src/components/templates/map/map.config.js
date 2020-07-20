@@ -8,17 +8,10 @@ for (let i = 0; i < itemCount; i++) {
     card: {
       title: faker.lorem.sentence(),
       text: faker.lorem.paragraph(),
-      extra: faker.random.arrayElement([
-        'About 5 ½ acres',
-        'Almost 4 acres',
-        'About 3 ¼ acres'
-      ]),
+      extra: faker.woodland.acre(),
       link: 'page-woodland',
-      meta: [
-        `NR. ${faker.address.streetName()}`,
-        faker.address.city(),
-        faker.address.county()
-      ].join(', '),
+      meta: faker.woodland.meta(),
+      coordinates: faker.woodland.coordinates(),
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: []
