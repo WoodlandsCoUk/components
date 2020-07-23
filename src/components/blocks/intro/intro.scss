@@ -3,6 +3,12 @@
 
     min-height: 133px;
 
+    > ul {
+        @apply truncate;
+
+        text-overflow: clip;
+    }
+
     &__item {
         @apply inline-block text-xl text-brand-green;
 

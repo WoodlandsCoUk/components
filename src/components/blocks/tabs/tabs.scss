@@ -2,10 +2,14 @@
     @apply relative;
 
     &__navigation {
-        @apply mb-3;
+        @apply my-10;
 
         .button {
             @apply min-w-0 truncate;
+
+            > span {
+                @apply normal-case tracking-normal;
+            }
         }
 
         .tab--active {

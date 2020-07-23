@@ -10,15 +10,19 @@
     }
 
     &__title {
-        @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6;
+        @apply font-display leading-none text-3xl not-italic text-brand-red-dark font-bold mb-6;
+
+        @screen lg {
+            @apply text-4xl;
+        }
     }
 
     &__text {
-        @apply my-8 text-base tracking-widest;
+        @apply my-8 text-lg leading-tight;
     }
 
     &__items {
-        @apply flex flex-wrap items-start;
+        @apply flex flex-wrap items-start pt-4;
     }
 
     &__item {
@@ -33,7 +37,7 @@
         }
 
         &__title {
-            @apply text-base text-brand-green-dark font-bold uppercase mr-auto ml-5;
+            @apply text-base text-gray-dark font-bold uppercase mr-auto ml-5;
 
             @screen md {
                 @apply mx-auto mt-4;
