@@ -18,7 +18,7 @@
     }
 
     &__items {
-        @apply flex flex-wrap items-start;
+        @apply flex flex-wrap items-start pt-4;
     }
 
     &__item {
@@ -33,7 +33,7 @@
         }
 
         &__title {
-            @apply text-base text-brand-green-dark font-bold uppercase mr-auto ml-5;
+            @apply text-base text-gray-dark font-bold uppercase mr-auto ml-5;
 
             @screen md {
                 @apply mx-auto mt-4;
