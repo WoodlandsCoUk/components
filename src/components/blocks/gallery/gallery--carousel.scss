@@ -73,9 +73,7 @@
         transform: translateY(-105%);
 
         > button {
-            @apply inline-block overflow-hidden h-3 w-3 mx-1 rounded-full bg-white indent-full pointer-events-auto;
-
-            background-color: rgba(#fff, 0.5);
+            @apply inline-block overflow-hidden h-3 w-3 mx-1 rounded-full bg-white bg-opacity-50 indent-full pointer-events-auto;
 
             &.tns-nav-active {
                 @apply bg-white;
@@ -93,10 +91,8 @@
         @apply absolute inset-0 flex items-center justify-between z-10 pointer-events-none overflow-hidden;
 
         > button {
-            @apply relative block overflow-hidden h-10 w-10 rounded-full bg-white indent-full pointer-events-auto mx-3;
+            @apply relative block overflow-hidden h-10 w-10 rounded-full bg-white bg-opacity-75 indent-full pointer-events-auto mx-3;
             @apply transition-transform ease-in-out duration-300;
-
-            background-color: rgba(#fff, 0.9);
 
             &[disabled] {
                 @apply invisible;
@@ -168,10 +164,10 @@
     &__button {
         &.pswp__button--arrow--left,
         &.pswp__button--arrow--right {
-            @apply block overflow-hidden h-10 w-10 rounded-full bg-white indent-full pointer-events-auto mx-3 opacity-100;
+            @apply block overflow-hidden h-10 w-10 rounded-full bg-white bg-opacity-75 indent-full pointer-events-auto mx-3 opacity-100;
             @apply transition-transform ease-in-out duration-300;
 
-            background: rgba(#fff, 0.9) none;
+            background-image: none;
 
             &::before {
                 @apply hidden;

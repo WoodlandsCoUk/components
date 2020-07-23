@@ -22,9 +22,7 @@
     }
 
     &__description {
-        @apply absolute bottom-0 inset-x-0 m-0 px-2 py-4 text-center;
-
-        background-color: rgba(#fff, 0.5);
+        @apply absolute bottom-0 inset-x-0 m-0 px-2 py-4 text-center bg-white bg-opacity-75;
     }
 
     &__thumbnails {
