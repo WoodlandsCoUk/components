@@ -266,7 +266,7 @@ body.navigation--shown {
             }
 
             > ul {
-                @apply hidden absolute bottom-auto bg-brand-green w-full transform -translate-x-1/2 max-w-screen-md p-6;
+                @apply hidden absolute bottom-auto bg-brand-green w-full transform -translate-x-1/2 max-w-screen-md p-10;
 
                 top: 100%;
                 left: 50%;
