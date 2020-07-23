@@ -2,9 +2,10 @@
     @apply relative z-50 hidden pointer-events-none;
 
     &__container {
-        @apply fixed inset-0 bg-black w-screen h-screen flex items-center justify-center pointer-events-auto;
+        @apply fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center pointer-events-auto;
 
-        background: rgba(#000, 0.5);
+        height: 100vh;
+        width: 100vw;
     }
 
     &__item {

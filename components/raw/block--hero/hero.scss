@@ -23,9 +23,7 @@
         @apply relative bg-center bg-no-repeat bg-cover;
 
         > h1 {
-            @apply inline-block px-5 pt-5 pb-3 text-white;
-
-            background: rgba(#333, 0.9);
+            @apply inline-block px-5 pt-5 pb-3 text-white bg-gray-dark bg-opacity-75;
         }
     }
 
