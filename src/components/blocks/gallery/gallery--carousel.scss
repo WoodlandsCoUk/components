@@ -103,13 +103,13 @@
             }
 
             &::after {
-                @apply absolute border-brand-red-dark;
+                @apply absolute border-brand-red-dark mb-0;
 
                 content: '';
                 top: 50%;
                 height: 12px;
                 width: 12px;
-                margin: -6px 0 0;
+                margin-top: -6px;
                 border-width: 0 2px 2px 0;
             }
 
@@ -136,6 +136,83 @@
 
         > [data-controls="next"] {
             transform: translateX(135%);
+
+            &::after {
+                right: 50%;
+                margin-right: -4px;
+                transform: rotate(315deg);
+            }
+        }
+    }
+}
+
+.pswp {
+    &__caption {
+        @apply text-sm;
+
+        &__center {
+            @apply text-center;
+        }
+    }
+
+    &__ui--idle {
+        .pswp__button--arrow--left {
+            transform: translateX(-135%);
+        }
+
+        .pswp__button--arrow--right {
+            transform: translateX(135%);
+        }
+    }
+
+    &__button {
+        &.pswp__button--arrow--left,
+        &.pswp__button--arrow--right {
+            @apply block overflow-hidden h-10 w-10 rounded-full bg-white indent-full pointer-events-auto mx-3 opacity-100;
+            @apply transition-transform ease-in-out duration-300;
+
+            background: rgba(#fff, 0.9) none;
+
+            &::before {
+                @apply hidden;
+
+                content: '';
+            }
+
+            &::after {
+                @apply absolute border-brand-red-dark mb-0;
+
+                content: '';
+                top: 50%;
+                height: 12px;
+                width: 12px;
+                margin-top: -6px;
+                border-width: 0 2px 2px 0;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply bg-white;
+
+                &::after {
+                    @apply border-brand-red;
+                }
+            }
+        }
+
+        &--arrow--left {
+            transform: translateX(0);
+
+            &::after {
+                left: 50%;
+                margin-left: -4px;
+                transform: rotate(135deg);
+            }
+        }
+
+        &--arrow--right {
+            transform: translateX(0);
 
             &::after {
                 right: 50%;
