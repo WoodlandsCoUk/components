@@ -53,7 +53,7 @@ module.exports = {
       cards: items,
       button: {
         text: 'See more woodlands for sale',
-        modifiers: ['inline', 'green', 'green--outline']
+        modifiers: ['inline', 'green', 'green--outline', 'transparent']
       },
       count,
       type: 'Woodlands',

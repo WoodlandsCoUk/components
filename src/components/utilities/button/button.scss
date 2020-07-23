@@ -182,4 +182,14 @@ $variants: (
             }
         }
     }
+
+    &--transparent {
+        > span {
+            @apply bg-transparent;
+        }
+    }
+
+    section.grid + & {
+        @apply mt-12;
+    }
 }
