@@ -6,10 +6,10 @@
     }
 
     &__title {
-        @apply mr-auto text-brand-green-light uppercase text-base tracking-widest font-normal;
+        @apply mr-auto text-brand-green-light uppercase text-base font-normal;
 
         strong {
-            @apply block normal-case text-brand-green font-normal text-base;
+            @apply block normal-case text-brand-green font-normal text-xl;
         }
     }
 
@@ -29,7 +29,7 @@
         }
 
         a {
-            @apply text-current;
+            @apply text-current truncate;
         }
     }
 
