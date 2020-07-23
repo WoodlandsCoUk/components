@@ -111,7 +111,7 @@ carousels.forEach((carousel) => {
     image.addEventListener('click', (event) => {
       event.preventDefault()
 
-      const index = Array.from(listImages).indexOf(image)
+      const index = Array.from(listImages).indexOf(image) + 1
 
       gallery(carousel, index)
     })
