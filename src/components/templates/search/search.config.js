@@ -27,7 +27,7 @@ const buttons = [
   {
     button: {
       text: 'List View',
-      modifiers: ['small', 'green', 'green--outline']
+      modifiers: ['small', 'green', 'green--outline', 'active']
     }
   },
   {

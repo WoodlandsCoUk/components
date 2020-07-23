@@ -66,7 +66,7 @@ $variants: (
     }
 
     > span {
-        @apply flex items-center justify-center w-full rounded-md px-5 py-4 font-bold tracking-widest;
+        @apply flex items-center justify-center w-full rounded-md px-5 py-4 font-bold tracking-wide;
         @apply border bg-white text-brand-red-dark border-brand-red-dark;
     }
 
@@ -127,6 +127,8 @@ $variants: (
         $hover: map.get($colors, 'hover');
 
         &--#{$prefix} {
+            @apply text-#{$text};
+
             > span {
                 @apply text-#{$text} bg-#{$bg} border-#{$border};
             }
@@ -136,6 +138,8 @@ $variants: (
                     $text: map.get($outline, 'text');
                     $bg: map.get($outline, 'bg');
                     $border: map.get($outline, 'border');
+
+                    @apply text-#{$text};
 
                     > span {
                         @apply text-#{$text} bg-#{$bg} border-#{$border};
@@ -149,6 +153,8 @@ $variants: (
                     $bg: map.get($dark, 'bg');
                     $border: map.get($dark, 'border');
 
+                    @apply text-#{$text};
+
                     > span {
                         @apply text-#{$text} bg-#{$bg} border-#{$border};
                     }
@@ -159,6 +165,8 @@ $variants: (
                         $text: map.get($hover, 'text');
                         $bg: map.get($hover, 'bg');
                         $border: map.get($hover, 'border');
+
+                        @apply text-#{$text};
 
                         > span {
                             @apply text-#{$text} bg-#{$bg} border-#{$border};
@@ -175,10 +183,26 @@ $variants: (
                     $bg: map.get($hover, 'bg');
                     $border: map.get($hover, 'border');
 
+                    @apply text-#{$text};
+
                     > span {
                         @apply text-#{$text} bg-#{$bg} border-#{$border};
                     }
                 }
+            }
+        }
+    }
+
+    &--active {
+        > span {
+            @apply bg-gray cursor-default text-brand-green-dark;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            > span {
+                @apply bg-gray text-brand-green-dark;
             }
         }
     }
