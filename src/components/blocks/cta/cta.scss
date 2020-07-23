@@ -10,11 +10,15 @@
     }
 
     &__title {
-        @apply font-display leading-none tracking-wide text-3xl not-italic text-brand-red-dark font-bold mb-6;
+        @apply font-display leading-none text-3xl not-italic text-brand-red-dark font-bold mb-6;
+
+        @screen lg {
+            @apply text-4xl;
+        }
     }
 
     &__text {
-        @apply my-8 text-base tracking-widest;
+        @apply my-8 text-lg leading-tight;
     }
 
     &__items {
