@@ -1,25 +1,27 @@
 .intro {
-    @apply bg-white flex items-center justify-center text-center mb-4;
+    @apply bg-white flex items-center justify-center text-center mb-4 py-3;
 
     min-height: 133px;
 
-    > ul {
-        @apply truncate;
-
-        text-overflow: clip;
+    @screen md {
+        @apply py-0;
     }
 
     &__item {
-        @apply inline-block text-xl text-brand-green;
+        @apply block text-lg text-brand-green;
 
-        &::before {
-            @apply inline-block mr-3 ml-2 -mt-1 text-xs align-middle;
+        @screen md {
+            @apply inline-block text-xl;
 
-            content: '•';
-        }
+            &::before {
+                @apply inline-block mr-3 ml-2 -mt-1 text-xs align-middle;
 
-        &:first-child::before {
-            @apply hidden;
+                content: '•';
+            }
+
+            &:first-child::before {
+                @apply hidden;
+            }
         }
     }
 }

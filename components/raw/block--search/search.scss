@@ -88,7 +88,11 @@
     }
 
     &--simple {
-        @apply bg-brand-green p-6;
+        @apply bg-brand-green py-6 px-3;
+
+        @screen xs {
+            @apply px-6;
+        }
 
         .form__field {
             @apply m-0 w-auto flex-grow;
@@ -97,7 +101,15 @@
                 @apply rounded-r-none border-0 m-0;
             }
 
-            @screen sm {
+            input {
+                @apply text-sm;
+            }
+
+            @screen xs {
+                input {
+                    @apply text-lg;
+                }
+
                 &:first-child .form-input {
                     @apply mr-0;
                 }
@@ -108,7 +120,11 @@
             margin-left: -1px;
 
             > span {
-                @apply rounded-l-none px-3 border-2 border-transparent;
+                @apply rounded-l-none px-3 border-2 border-transparent text-xs;
+
+                @screen xs {
+                    @apply text-base;
+                }
             }
         }
     }
