@@ -12,6 +12,6 @@
     }
 
     &__empty {
-        @apply px-3 py-2 leading-tight bg-brand-yellow-light rounded-md;
+        @apply px-3 py-2 bg-brand-yellow-light rounded-md uppercase text-brand-green-dark font-body-semi-bold;
     }
 }

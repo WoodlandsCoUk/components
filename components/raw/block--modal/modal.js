@@ -4,7 +4,7 @@ const modalConfig = {
   openTrigger: 'data-modal-open',
   closeTrigger: 'data-modal-close',
   openClass: 'modal--is-open',
-  disableScroll: false,
+  disableScroll: true,
   disableFocus: true,
   awaitOpenAnimation: true,
   awaitCloseAnimation: true,
