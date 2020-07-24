@@ -19,7 +19,7 @@ module.exports = {
                   '$env: ' + process.env.NODE_ENV + ';'
                 ]
 
-                if (process.env.NODE_ENV === 'development') {
+                if (['development', 'production'].includes(process.env.NODE_ENV)) {
                   data.push('@import "../components/dna/**/*.scss";')
                 }
 
