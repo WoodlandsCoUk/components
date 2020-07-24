@@ -90,6 +90,7 @@ module.exports = {
         'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
       },
       screens: {
+        xs: '420px',
         nav: '1024px',
         md: '800px',
         '2xl': '2000px',

@@ -19,6 +19,10 @@ $animationDelay: 150ms;
 
 body.navigation--shown {
     @apply overflow-hidden;
+
+    @screen lg {
+        @apply overflow-auto;
+    }
 }
 
 .navigation {
@@ -150,6 +154,8 @@ body.navigation--shown {
 
     &__button {
         @apply float-right z-40 order-first;
+
+        padding: 15px 0 8px;
     }
 
     .form--search {
