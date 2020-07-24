@@ -41,8 +41,7 @@ fractal.components.set('default.context', {
   drawings: require('./src/data/drawings.js')
 })
 fractal.components.set('default.display', {
-  // 'max-width': '480px',
-  'min-width': '420px'
+  'min-width': '320px'
 })
 
 /* Documentation */
