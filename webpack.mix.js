@@ -1,4 +1,5 @@
 const mix = require('laravel-mix')
+const autoprefixer = require('autoprefixer')
 const tailwindcss = require('tailwindcss')
 const webpackConfig = require('./webpack.config')
 
@@ -21,7 +22,11 @@ mix.sass('src/sass/site.scss', 'css/site.css')
   .options({
     processCssUrls: false,
     postCss: [
-      tailwindcss('./tailwind.config.js')
+      tailwindcss('./tailwind.config.js'),
+      autoprefixer({
+        grid: 'autoplace',
+        supports: true
+      })
     ]
   })
 
