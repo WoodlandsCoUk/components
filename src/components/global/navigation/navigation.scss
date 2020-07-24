@@ -159,7 +159,13 @@ body.navigation--shown {
     }
 
     .form--search {
-        @apply sticky block top-0 transform-none border-b border-brand-green-light;
+        @apply sticky block top-0 transform-none border-b border-brand-green-light py-6 px-3;
+
+        @screen xs {
+            @apply px-6;
+        }
+
+        min-width: 310px;
     }
 }
 
