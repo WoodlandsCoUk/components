@@ -2,15 +2,23 @@
 <html class="min-h-screen">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{{ _target.title }} | Component Library</title>
+
+    <meta name="description" content="Component Library for {{ _target.title }}" />
+    <meta name="keywords" content="Component Library, Template, Style Guide, Atomic Design, HTML, SCSS" />
 
     <script>
         document.getElementsByTagName('html')[0].className += ' js';
     </script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link media="all" rel="stylesheet" href="{{ path '/css/site.css' }}" />
+
+    <meta property="og:title" content="{{ _target.title }} Component Library">
+    <meta property="og:site_name" content="{{ _target.title }} Component Library">
+    <meta property="og:url" content="https://woodlandscouk.github.io/components/">
+    <meta property="og:description" content="Component Library for {{ _target.title }}">
 </head>
 <body class="h-screen">
 
