@@ -30,7 +30,7 @@ module.exports = {
       button: {
         text: 'Subscribe to email updates',
         link: null,
-        modifiers: ['green--dark', 'inline']
+        modifiers: ['green--dark', 'inline--small']
       }
     },
     policy: {
