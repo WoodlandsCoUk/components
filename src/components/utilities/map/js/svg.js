@@ -7,7 +7,7 @@ const classes = {
 }
 
 maps.forEach((map) => {
-  const key = map.querySelector('.map__key')
+  const key = document.querySelector('[data-region]')
   const regions = map.querySelectorAll('[title][key]')
 
   regions.forEach((region) => {
@@ -36,7 +36,7 @@ maps.forEach((map) => {
 
     region.addEventListener('mouseleave', (event) => {
       if (key) {
-        key.innerHTML = ''
+        key.innerHTML = key.dataset.region
       }
     })
 
