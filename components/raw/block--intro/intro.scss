@@ -8,15 +8,43 @@
     }
 
     &__item {
-        @apply block text-lg text-brand-green;
+        @apply inline text-lg text-brand-green;
+
+        &--link {
+            @apply block;
+        }
+
+        > span::before {
+            @apply -ml-1 mr-1;
+
+            content: ",";
+        }
+
+        &:first-child span::before {
+            content: "";
+        }
+
+        a {
+            @apply text-current;
+        }
 
         @screen md {
-            @apply inline-block text-xl;
+            @apply text-xl;
+
+            &--link {
+                @apply inline-block;
+            }
 
             &::before {
                 @apply inline-block mr-3 ml-2 -mt-1 text-xs align-middle;
 
                 content: '•';
+            }
+
+            > span::before {
+                @apply hidden;
+
+                content: "";
             }
 
             &:first-child::before {
