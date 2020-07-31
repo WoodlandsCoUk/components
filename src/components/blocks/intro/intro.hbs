@@ -1,7 +1,13 @@
 <div class="{{modifier 'intro' modifiers}}">
   <ul class="list list--unstyled">
     {{#each items }}
-    <li class="intro__item">{{ this }}</li>
+    <li class="intro__item {{#if link}} intro__item--link {{/if}}">
+      {{#if link}}
+        <a href="{{ link }}">{{ text }}</a>
+      {{else}}
+        <span>{{ text }}</span>
+      {{/if}}
+    </li>
     {{/each}}
   </ul>
 </div>

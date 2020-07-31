@@ -36,9 +36,20 @@ module.exports = {
     },
     intro: {
       items: [
-        woodland.meta,
-        woodland.extra,
-        '2.6 miles away'
+        {
+          text: woodland.meta
+        },
+
+        {
+          text: woodland.extra
+        },
+        {
+          text: '2.6 miles away'
+        },
+        {
+          link: '#',
+          text: 'Region Link'
+        }
       ]
     },
     woodland: {
