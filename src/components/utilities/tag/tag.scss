@@ -6,16 +6,16 @@
     }
 
     &__title {
-        @apply px-3 py-2;
+        @apply w-full px-3 py-2;
     }
 
     &__dismiss {
-        @apply py-2 px-3 text-center rounded-r-md bg-brand-red cursor-pointer text-white font-bold text-lg leading-none;
+        @apply py-2 px-3 text-center rounded-r-md cursor-pointer text-brand-red font-bold text-lg leading-none;
 
         &:hover,
         &:focus,
         &:active {
-            @apply bg-brand-red-dark;
+            @apply text-brand-red-dark;
         }
     }
 
