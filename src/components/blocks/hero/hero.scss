@@ -28,6 +28,10 @@
     &__extra {
         @apply block text-brand-green-light font-body;
 
+        @screen sm {
+            font-size: 2.375rem;
+        }
+
         @screen md {
             @apply inline-block;
         }
