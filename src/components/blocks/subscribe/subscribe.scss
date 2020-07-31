@@ -1,5 +1,5 @@
 .form--subscribe {
-    .form__group {
+    .form__group + .form__group {
         @apply pb-4;
     }
 
@@ -12,7 +12,7 @@
     }
 
     button {
-        @apply -mt-4;
+        @apply mt-0;
 
         > span {
             @apply ml-0;

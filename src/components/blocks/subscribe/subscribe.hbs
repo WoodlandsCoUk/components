@@ -1,11 +1,6 @@
 <form action="" method="POST" class="form {{modifier 'form--subscribe' form.modifiers}}">
 
     <div class="form__group">
-        <label for="form__subscribe__email">{{ email.label }}</label>
-        <input type="text" id="form__subscribe__email" name="email" placeholder="{{ email.placeholder }}" />
-    </div>
-
-    <div class="form__group">
         <label for="form__subscribe__region">{{ region.label }}</label>
 
         <div class="tags tags--gap" data-empty=".tags__empty">
@@ -19,6 +14,11 @@
                 <p class="tags__empty">{{ region.empty }}</p>
             {{/if}}
         </div>
+    </div>
+
+    <div class="form__group">
+        <label for="form__subscribe__email">{{ email.label }}</label>
+        <input type="text" id="form__subscribe__email" name="email" placeholder="{{ email.placeholder }}" />
     </div>
 
     {{ render '@button' button merge=true }}
