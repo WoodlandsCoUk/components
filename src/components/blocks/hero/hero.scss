@@ -26,14 +26,16 @@
     }
 
     &__extra {
-        @apply block text-brand-green-light font-body;
+        @apply block text-brand-green-light font-body mt-1;
+
+        font-size: 1.75rem;
 
         @screen sm {
             font-size: 2.375rem;
         }
 
         @screen md {
-            @apply inline-block;
+            @apply inline-block mt-0;
         }
     }
 
