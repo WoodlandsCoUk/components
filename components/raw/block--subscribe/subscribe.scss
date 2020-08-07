@@ -1,5 +1,5 @@
 .form--subscribe {
-    .form__group {
+    .form__group + .form__group {
         @apply pb-4;
     }
 
@@ -11,8 +11,16 @@
         @apply block w-full rounded-md border border-gray px-4 py-3 max-w-md;
     }
 
+    .tag {
+        @apply flex mr-0;
+
+        @screen sm {
+            @apply inline-flex mr-3;
+        }
+    }
+
     button {
-        @apply -mt-4;
+        @apply mt-0;
 
         > span {
             @apply ml-0;
