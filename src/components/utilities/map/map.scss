@@ -12,19 +12,17 @@
     }
 
     &--svg {
-        @apply p-0 bg-transparent block w-full h-full;
+        @apply p-0 bg-transparent block w-full h-full max-h-map;
+
+        @media (min-height: 900px) and (min-width: 1024px) {
+            max-height: 600px;
+        }
 
         svg {
-            @apply mx-auto;
-
-            max-height: 500px;
+            @apply h-full mx-auto;
 
             @screen lg {
                 @apply mr-0;
-            }
-
-            @media (min-height: 1024px) {
-                max-height: 700px;
             }
         }
 
