@@ -110,4 +110,10 @@
             }
         }
     }
+
+    .map--svg {
+        path.disabled {
+            @apply text-brand-yellow-light;
+        }
+    }
 }

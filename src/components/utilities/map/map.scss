@@ -37,6 +37,10 @@
                 @apply text-map-selected;
             }
 
+            &.disabled {
+                @apply text-map-disabled stroke-current;
+            }
+
             &[key] {
                 @apply cursor-pointer;
 

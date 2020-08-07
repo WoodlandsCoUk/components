@@ -43,7 +43,8 @@ module.exports = {
       map: {
         default: '#b9cfb9',
         hover: '#92a892',
-        selected: '#5F755F'
+        selected: '#5F755F',
+        disabled: '#f0f0ef'
       },
 
       'brand-red': {
