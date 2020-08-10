@@ -54,6 +54,13 @@ module.exports = {
       title: 'Tags',
       tags
     },
+    card: {
+      card: {
+        title: 'Wild Flower Guide',
+        text: 'Read our guide to wild flowers of woodland and hedgerow',
+        button: false
+      }
+    },
     blog: {
       title: null,
       cards: items,

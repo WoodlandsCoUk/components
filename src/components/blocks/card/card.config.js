@@ -11,6 +11,7 @@ module.exports = {
     card: {
       title: 'Default Card',
       text: faker.lorem.paragraph(),
+      classes: '',
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: []
@@ -129,6 +130,18 @@ module.exports = {
             }
           },
           modifiers: ['cta']
+        }
+      }
+    },
+    {
+      name: 'cta-link',
+      label: 'Call To Action (with Link)',
+      context: {
+        card: {
+          title: 'Call to Action',
+          text: faker.lorem.sentences(2),
+          button: false,
+          modifiers: ['cta', 'link']
         }
       }
     },

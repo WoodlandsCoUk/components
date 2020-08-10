@@ -1,4 +1,4 @@
-<div class="{{modifier 'card' card.modifiers}}">
+<div class="{{modifier 'card' card.modifiers}} {{ card.classes }}">
   {{ render '@media--video' card merge=true}}
   <div class="card__body">
     <h3 class="card__title">{{ titlecase card.title }}</h3>

@@ -49,6 +49,7 @@ module.exports = {
           label: 'Hear about new woodlands first',
           sub: 'Get emailed as soon as new woodlands go on the market',
           placeholder: 'Enter email address…',
+          drawing: true,
           modifiers: ['alt']
         },
         button: {

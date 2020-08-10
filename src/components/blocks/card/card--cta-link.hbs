@@ -1,12 +1,9 @@
 <div class="{{modifier 'card' card.modifiers}} {{ card.classes }}">
   <div class="card__body">
-    {{ render '@drawing' }}
     <h3 class="card__title">{{ titlecase card.title }}</h3>
+    {{ render '@drawing' }}
     <div class="card__content">
-      {{ card.text }}
+      <a href="#">{{ card.text }}</a>
     </div>
-    {{#if card.button }}
-    {{ render '@button' card.button merge=true }}
-    {{/if}}
   </div>
 </div>

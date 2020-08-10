@@ -21,7 +21,7 @@
                 <h2 class="section__title section__title--medium mb-3">{{ titlecase tags.title }}</h2>
                 {{ render '@block--tags' tags merge=true }}
 
-                <div class="h-64 mt-8 rounded-md bg-brand-yellow"></div>
+                {{ render '@block--card--cta-link' card merge=true }}
             </div>
         {{/ @grid }}
     {{/ @section }}

@@ -1,6 +1,10 @@
 .form--cta {
     @apply py-8 text-center bg-brand-green max-w-none;
 
+    &__image {
+        @apply mx-auto max-w-xs mb-8;
+    }
+
     .form__title,
     .form__subtitle {
         @apply block w-full max-w-lg text-center mx-auto pb-6 -mt-2;
@@ -39,7 +43,23 @@
     }
 
     &--alt {
-        @apply bg-brand-yellow py-0;
+        @apply bg-brand-yellow;
+
+        .section & {
+            @apply py-0;
+        }
+
+        @screen md {
+            @apply flex;
+
+            .form--cta__image {
+                @apply flex-shrink-0 mb-0 mr-6;
+            }
+
+            .form--cta__container {
+                @apply flex-grow;
+            }
+        }
 
         .form__title,
         .form__subtitle {
@@ -68,10 +88,36 @@
             ::placeholder {
                 @apply text-left italic text-brand-green-dark;
             }
+
+            @screen md {
+                @apply block max-w-screen-md;
+
+                input {
+                    @apply mb-3 mr-0;
+                }
+
+                .button {
+                    @apply m-0;
+                }
+            }
+
+            @screen lg {
+                @apply flex max-w-screen-md;
+
+                input {
+                    @apply m-0 mr-3;
+                }
+            }
         }
     }
 
     &--blog {
+        @apply py-5;
+
+        .section & {
+            @apply py-5;
+        }
+
         .form__title {
             @apply py-4 text-3xl font-normal;
         }
@@ -85,7 +131,7 @@
         @apply p-5 mb-5 rounded-md;
 
         .form__group {
-            @screen lg {
+            @screen md {
                 @apply block;
 
                 input {

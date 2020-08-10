@@ -1,4 +1,4 @@
-<div class="{{modifier 'card' card.modifiers}}" data-longitude="{{ card.coordinates.longitude }}" data-latitude="{{ card.coordinates.latitude }}">
+<div class="{{modifier 'card' card.modifiers}} {{ card.classes }}" data-longitude="{{ card.coordinates.longitude }}" data-latitude="{{ card.coordinates.latitude }}">
   {{ render '@media' card merge=true }}
   <div class="card__body">
     <h3 class="card__title">{{ titlecase card.title }} <span class="card__price">{{ titlecase card.banner }}</span></h3>

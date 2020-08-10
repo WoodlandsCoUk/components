@@ -1,4 +1,4 @@
-<div class="{{modifier 'card' card.modifiers}}">
+<div class="{{modifier 'card' card.modifiers}} {{ card.classes }}">
   <a href="{{ card.link }}" class="card__link">
     {{ render '@media' card merge=true}}
     <div class="card__body">
