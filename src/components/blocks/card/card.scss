@@ -33,6 +33,10 @@
         @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white text-base font-body-bold;
     }
 
+    &__price {
+        @apply font-body-bold;
+    }
+
     &__more {
         @apply text-brand-red underline;
 
@@ -98,25 +102,57 @@
     }
 
     &--woodland {
-        @apply relative;
+        @apply relative px-6;
 
         &--map {
-            @apply flex flex-row shadow-none pb-6 border-0 border-b rounded-none;
+            @apply shadow-none border-0 rounded-none;
 
             .media {
-                @apply w-1/3;
+                @apply order-last -mx-6 mt-6;
+
+                height: 100px;
             }
 
             .card__body {
-                @apply w-2/3 py-0 ml-1;
+                @apply p-0;
             }
 
             .card__title {
-                @apply text-brand-green-light;
+                @apply text-gray-text mb-1;
             }
 
             .card__meta {
-                @apply uppercase text-brand-green;
+                @apply font-body uppercase text-gray-text mb-0;
+            }
+
+            .card__extra {
+                @apply mb-0;
+            }
+
+            @screen md {
+                & {
+                    @apply flex flex-row border-b pb-6;
+                }
+
+                .media {
+                    @apply flex w-1/3 order-first mx-0 mt-0 h-auto;
+                }
+
+                .card__body {
+                    @apply w-2/3 px-4;
+                }
+
+                .card__title {
+                    @apply text-brand-green-light;
+                }
+
+                .card__meta {
+                    @apply font-body-semi-bold text-brand-green;
+                }
+
+                .card__extra {
+                    @apply hidden;
+                }
             }
         }
     }

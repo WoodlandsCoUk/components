@@ -95,7 +95,7 @@ $backgrounds: (
         @apply relative overflow-auto py-4 px-6;
 
         > .grid {
-            @apply mb-4;
+            @apply mb-6 -mx-6;
 
             + .button {
                 @apply my-4;
@@ -115,7 +115,7 @@ $backgrounds: (
 
     @screen md {
         .map--listing {
-            @apply h-screen order-1;
+            @apply h-screen order-first;
 
             > .grid {
                 @apply border-t border-gray-light pt-6;
@@ -127,7 +127,7 @@ $backgrounds: (
         }
 
         .map--map {
-            @apply h-screen order-2;
+            @apply h-screen order-last;
         }
     }
 }
