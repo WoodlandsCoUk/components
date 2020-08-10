@@ -50,14 +50,39 @@
     }
 
     &--help {
-        @apply text-center bg-brand-yellow bg-no-repeat;
+        @apply text-left bg-brand-yellow bg-no-repeat;
 
-        padding-top: 80px;
         background-image: url(../images/question-mark.png);
-        background-position: 50% -25px;
+        background-position: 100% -15px;
+        background-size: 120px auto;
 
         .cta__inner {
             @apply max-w-xl mx-auto;
+
+            padding-top: 50px;
+        }
+
+        .managed-by {
+            @apply justify-start ml-0;
+        }
+
+        hr {
+            @apply border-gray-divider;
+        }
+
+        @screen md {
+            @apply text-center;
+
+            background-position: 50% -25px;
+            background-size: 150px auto;
+
+            .cta__inner {
+                padding-top: 80px;
+            }
+
+            .managed-by {
+                @apply justify-center ml-auto;
+            }
         }
     }
 }
