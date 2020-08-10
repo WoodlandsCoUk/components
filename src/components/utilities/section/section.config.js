@@ -4,7 +4,9 @@ module.exports = {
   handle: 'section',
   status: 'wip',
   default: 'default',
-  context: {},
+  context: {
+    classes: ''
+  },
   variants: [
     {
       name: 'default',

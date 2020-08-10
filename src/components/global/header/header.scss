@@ -2,7 +2,7 @@
     @apply fixed inset-x-0 z-40 text-white bg-brand-green-dark;
 
     &__container {
-        @apply relative z-20 bg-brand-green-dark py-6 pl-3 pr-5;
+        @apply relative z-20 bg-brand-green-dark p-5;
     }
 
     &__inner {
@@ -19,9 +19,10 @@
         }
 
         a {
-            @apply relative z-40 block bg-auto bg-no-repeat bg-center indent-full w-full overflow-hidden;
+            @apply relative z-40 block bg-auto bg-no-repeat indent-full w-full overflow-hidden;
 
             background-image: url(../images/logo.svg);
+            background-position: 0 50%;
 
             &:hover,
             &:focus,

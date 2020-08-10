@@ -77,7 +77,7 @@
         @apply bg-brand-yellow shadow-none text-center;
 
         .card__body {
-            @apply p-6 max-w-2xl mx-auto;
+            @apply p-5 max-w-2xl mx-auto;
         }
 
         .drawing {
@@ -102,10 +102,10 @@
     }
 
     &--woodland {
-        @apply relative px-6;
+        @apply relative;
 
         &--map {
-            @apply shadow-none border-0 rounded-none;
+            @apply px-6 shadow-none border-0 rounded-none;
 
             .media {
                 @apply order-last -mx-6 mt-6;

@@ -1,7 +1,7 @@
 $quotePadding: 40px;
 
 .quote {
-    @apply flex flex-col p-6 text-brand-red-dark text-center bg-no-repeat bg-brand-yellow mx-auto max-w-screen-lg;
+    @apply flex flex-col p-5 text-brand-red-dark text-center bg-no-repeat bg-brand-yellow mx-auto max-w-screen-lg;
 
     padding-bottom: $quotePadding;
 

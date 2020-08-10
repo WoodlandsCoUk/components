@@ -39,11 +39,15 @@
     }
 
     &--alt {
-        @apply bg-brand-yellow;
+        @apply bg-brand-yellow py-0;
 
         .form__title,
         .form__subtitle {
-            @apply ml-0 text-left max-w-xl;
+            @apply max-w-xl;
+
+            @screen md {
+                @apply ml-0 text-left;
+            }
         }
 
         .form__title {
@@ -78,7 +82,7 @@
     }
 
     &--box {
-        @apply p-6 mb-6 rounded-md;
+        @apply p-5 mb-5 rounded-md;
 
         .form__group {
             @screen lg {

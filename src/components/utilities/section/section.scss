@@ -8,7 +8,7 @@ $backgrounds: (
 );
 
 .section {
-    @apply relative bg-white py-12 px-3;
+    @apply relative bg-white py-12 px-5;
 
     &__inner {
         @apply mx-auto max-w-screen-xl;
@@ -69,10 +69,14 @@ $backgrounds: (
 
 // Page specific sections.
 .section--intro {
-    @apply p-0 bg-brand-yellow max-h-screen-teaser overflow-hidden;
+    @apply p-0 bg-brand-yellow overflow-hidden;
 
     + .section {
         @apply pt-3;
+    }
+
+    @screen md {
+        @apply max-h-screen-teaser;
     }
 
     @media (max-height: 700px) {
@@ -92,10 +96,10 @@ $backgrounds: (
     }
 
     .map--listing {
-        @apply relative overflow-auto py-4 px-6;
+        @apply relative overflow-auto py-4 px-5;
 
         > .grid {
-            @apply mb-6 -mx-6;
+            @apply mb-6 -mx-5;
 
             + .button {
                 @apply my-4;

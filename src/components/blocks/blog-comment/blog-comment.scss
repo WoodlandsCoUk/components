@@ -1,5 +1,5 @@
 .blog-comment {
-    @apply relative flex flex-col-reverse p-6 bg-gray-light rounded-md;
+    @apply relative flex flex-col-reverse p-5 bg-gray-light rounded-md;
 
     &__content.typography {
         @apply mx-0 w-auto max-w-none;
