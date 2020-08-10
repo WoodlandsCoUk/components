@@ -19,6 +19,7 @@ module.exports = {
   status: 'wip',
   default: 'default',
   context: {
+    title: 'Search for woodlands',
     fields: {
       location: {
         id: 'form__search_location',

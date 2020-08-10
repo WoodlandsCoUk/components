@@ -9,6 +9,14 @@
         @apply sr-only text-brand-green;
     }
 
+    &__title {
+        @apply w-full text-center text-2xl font-display text-brand-green-dark mb-6;
+
+        @screen md {
+            @apply hidden;
+        }
+    }
+
     .form__field {
         @apply flex w-full mb-4 mt-0;
 
@@ -23,7 +31,11 @@
 
         &--checkbox,
         &--switch {
-            @apply justify-center w-auto mb-0 mr-4;
+            @apply justify-center w-auto mr-4;
+
+            @screen xs {
+                @apply mb-0;
+            }
 
             label {
                 @apply not-sr-only pr-2;
@@ -49,11 +61,12 @@
         .form__field {
             @apply w-1/2;
 
-            &:first-child input {
+            &:first-of-type input {
                 @apply mr-4;
             }
 
-            &--checkbox {
+            &--checkbox,
+            &--switch {
                 @apply w-auto;
 
                 input {
@@ -110,7 +123,7 @@
                     @apply text-lg;
                 }
 
-                &:first-child .form-input {
+                &:first-of-type .form-input {
                     @apply mr-0;
                 }
             }

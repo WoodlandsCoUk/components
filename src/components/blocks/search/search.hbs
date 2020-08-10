@@ -1,5 +1,7 @@
 <form action="/search" method="post" class="form {{modifier 'form--search' modifiers}}">
     <div class="form__inner">
+        <h4 class="form--search__title">{{ title }}</h4>
+
         {{ render '@form--field' fields.location merge=true }}
         {{ render '@form--field--select' fields.type merge=true }}
 
