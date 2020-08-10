@@ -3,15 +3,20 @@
         @apply pb-4;
     }
 
+    @screen sm {
+        @apply mx-auto max-w-md;
+    }
+
     label {
         @apply block pb-3 text-lg font-bold text-brand-green-dark;
     }
 
     input {
-        @apply block w-full rounded-md border border-gray px-4 py-3 max-w-md;
+        @apply block w-full rounded-md border border-gray px-4 py-3;
     }
 
-    .tag {
+    .tag,
+    .tags__empty {
         @apply flex mr-0;
 
         @screen sm {
