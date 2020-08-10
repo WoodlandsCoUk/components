@@ -25,16 +25,19 @@
 <body class="h-screen">
 
     <form action="" method="GET" class="form form--cta form--cta--alt form--cta--blog form--cta--box">
-    <label for="form__cta__field" class="form__label form__title">Subscribe to our blog</label>
 
-    <label for="form__cta__field" class="form__subtitle">We’ll email you with every new article</label>
+    <div class="form--cta__container">
+        <label for="form--cta__field-id" class="form__label form__title">Subscribe to our blog</label>
 
-    <div class="form__group">
-        <input type="text" id="form__cta__field" name="field" placeholder="Enter email address…" />
-        <button class="button button--green button--green--dark ">
+        <label for="form--cta__field-id" class="form__subtitle">We’ll email you with every new article</label>
+
+        <div class="form__group">
+            <input type="text" id="form--cta__field-id" name="field" placeholder="Enter email address…" />
+            <button class="button button--green button--green--dark ">
   <span>Subscribe</span>
 </button>
 
+        </div>
     </div>
 </form>
 

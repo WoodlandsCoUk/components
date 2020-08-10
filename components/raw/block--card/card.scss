@@ -90,6 +90,20 @@
 
         .card__content {
             @apply block p-0 pb-4 w-auto uppercase text-brand-green font-bold text-base text-center;
+
+            > a {
+                @apply text-current no-underline;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    @apply underline;
+                }
+            }
+
+            + .button {
+                @apply mt-0;
+            }
         }
 
         .form__field {

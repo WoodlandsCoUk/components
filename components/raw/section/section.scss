@@ -36,6 +36,10 @@ $backgrounds: (
         &--alt {
             @apply text-brand-green-light;
         }
+
+        &--alt-dark {
+            @apply text-brand-green;
+        }
     }
 
     &--short {

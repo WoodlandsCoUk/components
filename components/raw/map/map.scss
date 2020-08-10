@@ -21,7 +21,7 @@
         svg {
             @apply h-full mx-auto;
 
-            @screen lg {
+            @screen md {
                 @apply mr-0;
             }
         }
