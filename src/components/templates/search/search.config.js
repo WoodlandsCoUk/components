@@ -66,6 +66,9 @@ module.exports = {
         text: 'We have other woods, some much larger, which will be available soon. Contact the manager for this region for more details.',
         extra: 'Or visit <a href="http://forests.co.uk" rel="nofollow">forests.co.uk</a> for other woodlands for sale'
       }
+    },
+    search: {
+      modifiers: ['page']
     }
   }
 }

@@ -29,7 +29,7 @@ module.exports = {
   handle: 'page-map',
   status: 'prototype',
   context: {
-    title: 'Woodlands for sale in this location',
+    title: 'Woodlands for sale in this location:',
     woodlands: {
       id: 'listing--map',
       title: false,
@@ -40,9 +40,19 @@ module.exports = {
     },
     map: '#listing--map',
     back: {
-      button: {
-        text: '← Exit map view',
-        modifiers: ['inline', 'inline--small', 'green--dark', 'left']
+      top: {
+        button: {
+          text: '← Exit map view',
+          modifiers: ['inline', 'inline--small', 'green--dark', 'left'],
+          classes: 'top'
+        }
+      },
+      bottom: {
+        button: {
+          text: '← Exit map view',
+          modifiers: ['inline', 'inline--small', 'green--dark', 'left'],
+          classes: 'bottom'
+        }
       }
     }
   }

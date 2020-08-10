@@ -92,24 +92,42 @@ $backgrounds: (
     }
 
     .map--listing {
-        @apply relative overflow-auto pt-4 px-6;
+        @apply relative overflow-auto py-4 px-6;
 
         > .grid {
-            @apply mb-8;
+            @apply mb-4;
+
+            + .button {
+                @apply my-4;
+            }
+        }
+
+        .button.top {
+            @apply hidden;
         }
     }
 
     .map--map {
-        @apply relative h-screen-teaser;
+        @apply relative;
+
+        height: 60vh;
     }
 
     @screen md {
         .map--listing {
-            @apply h-screen;
+            @apply h-screen order-1;
+
+            > .grid {
+                @apply border-t border-gray-light pt-6;
+            }
+
+            .button.top {
+                @apply flex;
+            }
         }
 
         .map--map {
-            @apply h-screen;
+            @apply h-screen order-2;
         }
     }
 }

@@ -8,7 +8,8 @@ module.exports = {
   context: {
     button: {
       text: 'Default Button',
-      link: null
+      link: null,
+      classes: ''
     }
   },
   variants: [

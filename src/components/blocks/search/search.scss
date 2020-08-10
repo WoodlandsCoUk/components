@@ -1,6 +1,10 @@
 .form--search {
     @apply relative max-w-none;
 
+    &--page {
+        //
+    }
+
     .form__inner {
         @apply flex flex-wrap;
     }
@@ -56,7 +60,7 @@
     }
 
     @screen sm {
-        @apply flex;
+        @apply flex flex-wrap;
 
         .form__field {
             @apply w-1/2;

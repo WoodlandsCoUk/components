@@ -20,6 +20,13 @@ module.exports = {
   default: 'default',
   context: {
     title: 'Search for woodlands',
+    toggle: {
+      button: {
+        text: 'Show search filters',
+        link: null,
+        modifiers: ['green--dark']
+      }
+    },
     fields: {
       location: {
         id: 'form__search_location',
@@ -45,7 +52,7 @@ module.exports = {
       button: {
         text: 'Search',
         link: null,
-        modifiers: ['green', 'inline']
+        modifiers: ['green--dark', 'inline']
       }
     }
   },
