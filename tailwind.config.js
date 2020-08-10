@@ -37,7 +37,8 @@ module.exports = {
         dark: '#414141',
         light: '#f0f0ef',
         text: '#333',
-        form: '#505050'
+        form: '#505050',
+        divider: '#c9cacb'
       },
 
       map: {
