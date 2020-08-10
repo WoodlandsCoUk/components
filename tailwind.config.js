@@ -43,7 +43,7 @@ module.exports = {
       map: {
         default: '#b9cfb9',
         hover: '#92a892',
-        selected: '#5F755F',
+        selected: '#5f755f',
         disabled: '#f0f0ef'
       },
 
@@ -54,7 +54,8 @@ module.exports = {
       'brand-green': {
         default: '#02532f',
         dark: '#0b3824',
-        light: '#007a43'
+        light: '#007a43',
+        divider: '#42725d'
       },
       'brand-yellow': {
         default: '#f2eadc',

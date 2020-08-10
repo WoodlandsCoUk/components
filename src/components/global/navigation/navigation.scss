@@ -41,7 +41,7 @@ body.navigation--shown {
     }
 
     &__item {
-        @apply relative text-2xl border-b border-brand-green-light;
+        @apply relative text-2xl border-b border-brand-green-divider;
 
         > a {
             @apply relative block py-4 px-6 text-white font-normal no-underline;
@@ -198,7 +198,7 @@ body.navigation--shown {
                 }
 
                 &::before {
-                    @apply inline-block border-l border-brand-green-light h-4 pr-3;
+                    @apply inline-block border-l border-brand-green-divider h-4 pr-3;
 
                     content: '';
                 }
