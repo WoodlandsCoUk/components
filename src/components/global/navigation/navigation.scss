@@ -143,10 +143,6 @@ body.navigation--shown {
                 > a:focus,
                 > a:active {
                     @apply bg-transparent;
-
-                    &::after {
-                        @apply hidden;
-                    }
                 }
             }
         }
