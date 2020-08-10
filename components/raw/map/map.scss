@@ -1,7 +1,7 @@
 @import "mapbox-gl/dist/mapbox-gl";
 
 .map {
-    @apply relative bg-gray-light w-full h-full p-6;
+    @apply relative bg-gray-light w-full h-full p-5;
 
     &__key {
         @apply absolute top-0 inset-x-0 mt-2 p-3 text-black text-center bg-white bg-opacity-50;

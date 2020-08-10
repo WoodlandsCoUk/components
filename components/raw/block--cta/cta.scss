@@ -1,5 +1,9 @@
 .cta {
-    @apply p-6;
+    @apply p-5;
+
+    .section & {
+        @apply py-3 px-0;
+    }
 
     @screen md {
         @apply text-center;

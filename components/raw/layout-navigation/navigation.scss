@@ -41,7 +41,7 @@ body.navigation--shown {
     }
 
     &__item {
-        @apply relative text-2xl border-b border-brand-green-light;
+        @apply relative text-2xl border-b border-brand-green-divider;
 
         > a {
             @apply relative block py-4 px-6 text-white font-normal no-underline;
@@ -143,10 +143,6 @@ body.navigation--shown {
                 > a:focus,
                 > a:active {
                     @apply bg-transparent;
-
-                    &::after {
-                        @apply hidden;
-                    }
                 }
             }
         }
@@ -188,7 +184,7 @@ body.navigation--shown {
             @apply static flex items-center border-0;
 
             > a {
-                @apply relative flex items-center py-10 pl-3 pr-0 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
+                @apply relative flex items-center py-10 pb-8 pl-3 pr-0 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
 
                 transition-property: none;
 
@@ -198,7 +194,7 @@ body.navigation--shown {
                 }
 
                 &::before {
-                    @apply inline-block border-l border-brand-green-light h-4 pr-3;
+                    @apply inline-block border-l border-brand-green-divider h-4 pr-3;
 
                     content: '';
                 }

@@ -1,12 +1,24 @@
 .icon {
-    @apply inline-flex items-center justify-center rounded-full leading-none w-10 h-10 p-3;
+    @apply inline-flex items-center flex-shrink-0 justify-center rounded-full leading-none w-8 h-8 p-3;
+
+    @screen md {
+        @apply w-10 h-10;
+    }
 
     &--medium {
-        @apply w-16 h-16;
+        @apply w-12 h-12;
+
+        @screen md {
+            @apply w-16 h-16;
+        }
     }
 
     &--large {
-        @apply w-20 h-20;
+        @apply w-16 h-16;
+
+        @screen md {
+            @apply w-20 h-20;
+        }
     }
 
     &--yellow {

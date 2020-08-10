@@ -13,8 +13,7 @@
     }
 
     &__navigation {
-        @apply pb-12 mb-12 border-b border-brand-green text-lg;
-        @apply hidden;
+        @apply hidden pb-12 mb-12 border-b border-brand-green-divider text-lg;
 
         @screen md {
             @apply block;
@@ -89,6 +88,6 @@
     }
 
     .listing--social {
-        @apply pb-12 mb-12 border-b border-brand-green;
+        @apply pb-12 mb-12 border-b border-brand-green-divider;
     }
 }

@@ -38,7 +38,7 @@
     <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
 </div>
 
-        <button class="button button--red button--inline">
+        <button class="button button--red button--inline bottom">
   <span>Search</span>
 </button>
 
@@ -300,6 +300,8 @@
 
     <form action="/search" method="post" class="form form--search form--search--alt">
     <div class="form__inner">
+        <h4 class="form--search__title">Search for woodlands</h4>
+
         <div class="form__field">
     <label for="form__search_location" class="form__label"><span>Location</span></label>
     <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
@@ -323,28 +325,33 @@
 </div>
 
 
-        <button class="button button--red button--inline">
+        <button class="button button--red button--inline bottom">
   <span>Search</span>
 </button>
 
     </div>
+
 </form>
 
 </header>
 
 
 <main>
-<section class="section section--map">
+<section class="section section--map ">
     <div class="section__inner">
 <section id="" class="grid grid--2/3--reverse">
     <div class="grid__inner">
+            <div class="grid__item map--map">
+                <div class="map" data-map="#listing--map"></div>
+
+            </div>
             <div class="grid__item map--listing">
-                <button class="button button--inline button--inline--small button--green--dark button--left">
+                <button class="button button--inline button--inline--small button--green--dark button--left top">
   <span>← Exit map view</span>
 </button>
 
 
-                <h2 class="section__title section__title--medium">Woodlands for sale in this location</h2>
+                <h2 class="section__title section__title--medium normal-case">Woodlands for sale in this location:</h2>
 
                 
 <section id="listing--map" class="grid grid--single">
@@ -352,13 +359,14 @@
       <div class="card card--woodland card--woodland--map" data-longitude="52.6016074" data-latitude="-2.3530738">
   <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?97176" alt="" title="" />
+        <img src="http://placeimg.com/400/225/nature?22866" alt="" title="" />
     </div>
 </div>
 
   <div class="card__body">
-    <h3 class="card__title">Facere Voluptatem Praesentium Nemo Perferendis Libero.</h3>
-    <p class="card__meta">NR. Karson Isle, Guadalupefurt, Berkshire</p>
+    <h3 class="card__title">Ex Vel Sequi Nostrum Vel Inventore Quis Vel Eaque Aut. <span class="card__price">£44,095</span></h3>
+    <p class="card__meta">NR. Stark Wall, East Monaport, Buckinghamshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
     <a href="page-woodland" class="card__more">See more details</a>
   </div>
 </div>
@@ -366,13 +374,29 @@
       <div class="card card--woodland card--woodland--map" data-longitude="52.5248441" data-latitude="-2.5737944">
   <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?16246" alt="" title="" />
+        <img src="http://placeimg.com/400/225/nature?67217" alt="" title="" />
     </div>
 </div>
 
   <div class="card__body">
-    <h3 class="card__title">Aut Totam Sit Perspiciatis Aut Ab.</h3>
-    <p class="card__meta">NR. Hartmann Prairie, Treutelview, Bedfordshire</p>
+    <h3 class="card__title">Ipsum Sunt Ipsam Quae. <span class="card__price">£45,359</span></h3>
+    <p class="card__meta">NR. Bernier Terrace, Port Emanuelville, Borders</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map" data-longitude="52.6016074" data-latitude="-2.3530738">
+  <div class="media">
+    <div class="media__content">
+        <img src="http://placeimg.com/400/225/nature?92152" alt="" title="" />
+    </div>
+</div>
+
+  <div class="card__body">
+    <h3 class="card__title">Accusantium Qui Ut Dolores Sunt Similique Consequatur Soluta Eligendi. <span class="card__price">£59,068</span></h3>
+    <p class="card__meta">NR. Douglas Square, Kesslerbury, Bedfordshire</p>
+    <p class="card__extra">Almost 4 acres</p>
     <a href="page-woodland" class="card__more">See more details</a>
   </div>
 </div>
@@ -380,55 +404,44 @@
       <div class="card card--woodland card--woodland--map" data-longitude="52.5248441" data-latitude="-2.5737944">
   <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?73469" alt="" title="" />
+        <img src="http://placeimg.com/400/225/nature?73040" alt="" title="" />
     </div>
 </div>
 
   <div class="card__body">
-    <h3 class="card__title">Sint Nesciunt Ex Non.</h3>
-    <p class="card__meta">NR. Stroman Mall, Kochside, Buckinghamshire</p>
+    <h3 class="card__title">Praesentium Est Est Alias Hic. <span class="card__price">£3,926</span></h3>
+    <p class="card__meta">NR. Champlin Street, Annabellstad, Buckinghamshire</p>
+    <p class="card__extra">Almost 4 acres</p>
     <a href="page-woodland" class="card__more">See more details</a>
   </div>
 </div>
 
-      <div class="card card--woodland card--woodland--map" data-longitude="52.6016074" data-latitude="-2.3530738">
+      <div class="card card--woodland card--woodland--map" data-longitude="52.5248441" data-latitude="-2.5737944">
   <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?47233" alt="" title="" />
+        <img src="http://placeimg.com/400/225/nature?34242" alt="" title="" />
     </div>
 </div>
 
   <div class="card__body">
-    <h3 class="card__title">Doloremque Dolorem Nisi Nam Minima Cumque Molestiae Sit.</h3>
-    <p class="card__meta">NR. Heidenreich Ports, Ileneview, Avon</p>
+    <h3 class="card__title">Qui Nam Inventore Nostrum Provident Aliquid. <span class="card__price">£58,691</span></h3>
+    <p class="card__meta">NR. Weber Prairie, Lake Lois, Cambridgeshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
     <a href="page-woodland" class="card__more">See more details</a>
   </div>
 </div>
 
-      <div class="card card--woodland card--woodland--map" data-longitude="52.6016074" data-latitude="-2.3530738">
+      <div class="card card--woodland card--woodland--map" data-longitude="52.5248441" data-latitude="-2.5737944">
   <div class="media">
     <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?81895" alt="" title="" />
+        <img src="http://placeimg.com/400/225/nature?62947" alt="" title="" />
     </div>
 </div>
 
   <div class="card__body">
-    <h3 class="card__title">Praesentium Nihil Iusto Debitis.</h3>
-    <p class="card__meta">NR. Zieme Springs, Lake Shania, Buckinghamshire</p>
-    <a href="page-woodland" class="card__more">See more details</a>
-  </div>
-</div>
-
-      <div class="card card--woodland card--woodland--map" data-longitude="52.6016074" data-latitude="-2.3530738">
-  <div class="media">
-    <div class="media__content">
-        <img src="http://placeimg.com/400/225/nature?90908" alt="" title="" />
-    </div>
-</div>
-
-  <div class="card__body">
-    <h3 class="card__title">Quo Delectus Natus Rerum Ducimus.</h3>
-    <p class="card__meta">NR. Block Island, Gloverstad, Cambridgeshire</p>
+    <h3 class="card__title">Perferendis Velit Velit. <span class="card__price">£84,604</span></h3>
+    <p class="card__meta">NR. Einar Hollow, New Lazarofurt, Cambridgeshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
     <a href="page-woodland" class="card__more">See more details</a>
   </div>
 </div>
@@ -436,9 +449,10 @@
     </div>
 </section>
 
-            </div>
-            <div class="grid__item map--map">
-                <div class="map" data-map="#listing--map"></div>
+
+                <button class="button button--inline button--inline--small button--green--dark button--left bottom">
+  <span>← Exit map view</span>
+</button>
 
             </div>
     </div>

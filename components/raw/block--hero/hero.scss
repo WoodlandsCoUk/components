@@ -59,10 +59,10 @@
         }
 
         .hero__content {
-            @apply px-6 pt-10 pb-2 max-w-lg mx-auto;
+            @apply px-6 pt-10 pb-2 max-w-lg mx-auto text-center order-last;
 
             @screen md {
-                @apply ml-0 text-left;
+                @apply ml-0 text-left order-first;
             }
 
             @screen xl {
@@ -75,10 +75,10 @@
         }
 
         .hero__image {
-            @apply hidden;
+            @apply order-first max-h-hero;
 
             @screen md {
-                @apply block;
+                @apply block order-last max-h-full;
             }
 
             @screen xl {
