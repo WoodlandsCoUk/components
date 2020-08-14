@@ -1,6 +1,6 @@
 const faker = require('faker')
 
-const itemCount = 6
+const itemCount = 50
 const woodlands = []
 
 for (let i = 0; i < itemCount; i++) {

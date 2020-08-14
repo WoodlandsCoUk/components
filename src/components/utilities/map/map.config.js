@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const faker = require('faker')
 
 const svg = fs.readFileSync(path.resolve(__dirname, 'assets', 'regions.svg'), 'utf8')
 
@@ -11,7 +10,7 @@ module.exports = {
   status: 'wip',
   default: 'full',
   context: {
-    map: faker.random.uuid()
+    map: '.listing'
   },
   variants: [
     {

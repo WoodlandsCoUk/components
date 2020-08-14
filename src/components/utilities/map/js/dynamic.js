@@ -1,18 +1,21 @@
 const System = require('mapbox-gl/dist/mapbox-gl.js')
-const config = require('./config')
+const config = require('./config/map')
+const steps = require('./config/steps')
+const markerLayer = require('./config/marker')
+const countLayer = require('./config/count')
 
 const maps = document.querySelectorAll('[data-map]')
 
-maps.forEach((container) => {
+maps.forEach(container => {
   const reference = container.dataset.map
   const listing = document.querySelector(reference)
   let markers = []
-  let bounds = []
+  let bounds = null
 
   if (listing) {
     const elements = listing.querySelectorAll('[data-longitude][data-latitude]')
 
-    markers = Array.from(elements).map((marker) => {
+    markers = Array.from(elements).map(marker => {
       const { longitude, latitude } = marker.dataset
       const title = marker.querySelector('.card__title').innerHTML
       const description = marker.querySelector('.card__meta').innerHTML
@@ -22,10 +25,7 @@ maps.forEach((container) => {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [
-            parseFloat(latitude),
-            parseFloat(longitude)
-          ]
+          coordinates: [parseFloat(latitude), parseFloat(longitude)]
         },
         properties: {
           title,
@@ -35,7 +35,7 @@ maps.forEach((container) => {
       }
     })
 
-    bounds = markers.map((marker) => {
+    bounds = markers.map(marker => {
       return marker.geometry.coordinates
     })
   }
@@ -49,31 +49,110 @@ maps.forEach((container) => {
 
   map.addControl(new System.NavigationControl())
 
-  // Loop through the markers and add them to the map.
-  markers.forEach((data) => {
-    const element = document.createElement('div')
-    element.className = 'map__marker'
+  map.on('load', () => {
+    map.addSource('woodlands', {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features: markers
+      },
+      cluster: true,
+      clusterMaxZoom: 14,
+      clusterRadius: 50
+    })
 
-    const marker = new System.Marker(element)
+    map.addLayer({
+      id: 'woodlands',
+      type: 'circle',
+      source: 'woodlands',
+      filter: ['has', 'point_count'],
+      paint: {
+        'circle-color': [
+          'step',
+          ['get', 'point_count'],
+          steps.small.color,
+          steps.small.at,
+          steps.medium.color,
+          steps.medium.at,
+          steps.large.color
+        ],
+        'circle-radius': [
+          'step',
+          ['get', 'point_count'],
+          steps.small.size,
+          steps.small.at,
+          steps.medium.size,
+          steps.medium.at,
+          steps.large.size
+        ]
+      }
+    })
 
-    // Position the marker.
-    marker.setLngLat(data.geometry.coordinates)
+    map.addLayer({
+      id: 'woodland-count',
+      type: 'symbol',
+      source: 'woodlands',
+      filter: ['has', 'point_count'],
+      layout: countLayer
+    })
 
-    // Set the marker popup.
-    marker.setPopup(
-      new System.Popup({ offset: 20 }).setHTML(data.properties.html)
-    )
+    map.addLayer({
+      id: 'woodland-detail',
+      type: 'circle',
+      source: 'woodlands',
+      filter: ['!', ['has', 'point_count']],
+      paint: markerLayer
+    })
 
-    element.addEventListener('click', (event) => {
-      map.flyTo({
-        speed: 0.75,
-        curve: 1.5,
-        essential: false,
-        center: marker.getLngLat()
+    map.on('click', 'woodlands', (event) => {
+      const features = map.queryRenderedFeatures(event.point, {
+        layers: ['woodlands']
+      })
+
+      const center = features[0].geometry.coordinates
+      const clusterId = features[0].properties.cluster_id
+
+      map.getSource('woodlands').getClusterExpansionZoom(clusterId, (err, zoom) => {
+        if (err) return
+
+        map.easeTo({
+          center,
+          zoom
+        })
       })
     })
 
-    // Finally, add the marker to the map.
-    marker.addTo(map)
+    map.on('click', 'woodland-detail', (event) => {
+      const coordinates = event.features[0].geometry.coordinates.slice()
+      const html = event.features[0].properties.html
+
+      // Ensure that if the map is zoomed out such that
+      // multiple copies of the feature are visible, the
+      // popup appears over the copy being pointed to.
+      while (Math.abs(event.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360
+      }
+
+      new System.Popup({ offset: 20 })
+        .setLngLat(coordinates)
+        .setHTML(html)
+        .addTo(map)
+    })
+
+    map.on('mouseenter', 'woodlands', function () {
+      map.getCanvas().style.cursor = 'pointer'
+    })
+
+    map.on('mouseleave', 'woodlands', function () {
+      map.getCanvas().style.cursor = ''
+    })
+
+    map.on('mouseenter', 'woodland-detail', function () {
+      map.getCanvas().style.cursor = 'zoom'
+    })
+
+    map.on('mouseleave', 'woodland-detail', function () {
+      map.getCanvas().style.cursor = ''
+    })
   })
 })

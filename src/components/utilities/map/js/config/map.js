@@ -4,5 +4,8 @@ module.exports = {
   zoom: 5,
   minZoom: 4,
   maxZoom: 22,
-  center: [-3.0580326, 54.6532959]
+  center: [-3.0580326, 54.6532959],
+  fitBoundsOptions: {
+    padding: 30
+  }
 }
