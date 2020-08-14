@@ -1,4 +1,8 @@
 // Layout
+html {
+    scroll-padding-top: theme('height.header');
+}
+
 body {
     @apply bg-background text-text font-body font-normal text-base;
 }

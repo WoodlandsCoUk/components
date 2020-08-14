@@ -85,6 +85,7 @@ module.exports = {
         hero: '2.5rem'
       },
       height: {
+        header: headerHeight,
         screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
         'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
       },
