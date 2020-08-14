@@ -1,5 +1,5 @@
 .form--blog-comment {
-    @apply relative;
+    @apply relative max-w-none;
 
     .grid__inner {
         @apply gap-0;
