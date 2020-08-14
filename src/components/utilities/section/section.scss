@@ -126,7 +126,7 @@ $backgrounds: (
             @apply h-screen order-first;
 
             > .grid {
-                @apply border-t border-gray-light pt-6;
+                @apply border-t border-gray-divider pt-6;
             }
 
             .button.top {

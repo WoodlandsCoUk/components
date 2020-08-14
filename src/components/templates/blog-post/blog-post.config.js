@@ -56,7 +56,8 @@ module.exports = {
     },
     topics: {
       title: 'Topics',
-      list: topics
+      list: topics,
+      modifiers: ['linked', 'linked--alt']
     },
     tags: {
       title: 'Tags',
@@ -74,7 +75,7 @@ module.exports = {
       cards: items,
       button: {
         text: 'More from inside the woodlands',
-        modifiers: ['inline', 'green', 'green--outline']
+        modifiers: ['inline', 'green', 'green--outline', 'transparent']
       }
     }
   }

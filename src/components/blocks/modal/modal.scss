@@ -43,7 +43,7 @@
     }
 
     &__footer {
-        @apply py-5 px-4 bg-gray-light border-t border-gray-dark;
+        @apply py-5 px-4 bg-gray-light border-t border-gray-divider;
 
         @screen sm {
             @apply px-5;

@@ -30,4 +30,20 @@
             }
         }
     }
+
+    &--linked--alt {
+        .section__title + & {
+            @apply -mt-4;
+        }
+
+        .listing__item > a {
+            @apply py-1 border-0 text-brand-green-light text-base;
+
+            &:hover,
+            &:focus,
+            &:active {
+                //
+            }
+        }
+    }
 }
