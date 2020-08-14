@@ -1,0 +1,43 @@
+.social {
+    @apply inline-flex;
+
+    svg {
+        @apply h-full fill-current;
+    }
+
+    a {
+        @apply flex items-center justify-center h-12 w-12 p-2 rounded-full overflow-hidden border-2 border-white text-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply border-brand-yellow;
+
+            svg {
+                fill: theme('colors.brand-yellow.default');
+            }
+        }
+    }
+
+    &--medium {
+        a {
+            @apply h-16 w-16 p-3;
+        }
+    }
+
+    &--large {
+        a {
+            @apply h-24 w-24 p-4;
+        }
+    }
+}
+
+.listing--social {
+    ul {
+        @apply flex justify-center;
+    }
+
+    li {
+        @apply mx-3;
+    }
+}

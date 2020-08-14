@@ -22,7 +22,7 @@
     }
 
     &__contact {
-        @apply mt-4 pt-3 border-t border-gray text-lg text-brand-red;
+        @apply mt-4 pt-3 border-t border-gray-divider text-lg text-brand-red;
 
         &:first-of-type {
             @apply border-t-0;
