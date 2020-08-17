@@ -51,5 +51,9 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       helpers: path.resolve(__dirname, 'src/js/helpers/')
     }
+  },
+  stats: {
+    colors: true,
+    env: true
   }
 }

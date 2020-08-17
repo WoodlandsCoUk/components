@@ -24,7 +24,7 @@ mix.sass('src/sass/site.scss', 'css/site.css')
     postCss: [
       tailwindcss('./tailwind.config.js'),
       autoprefixer({
-        grid: 'autoplace',
+        grid: false, // autoplace
         supports: true
       })
     ]
