@@ -1,1 +1,5 @@
-<div class="map" data-map="{{ map }}"></div>
+{{#if map.id}}
+    <div class="map" data-map="{{ map.id }}" data-longitude="{{ map.longitude }}" data-latitude="{{ map.latitude }}"></div>
+{{else}}
+    <div class="map" data-map="{{ map }}"></div>
+{{/if}}

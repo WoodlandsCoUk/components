@@ -2,31 +2,36 @@ const System = require('mapbox-gl/dist/mapbox-gl.js')
 const config = require('./config/map')
 const steps = require('./config/steps')
 const markerLayer = require('./config/marker')
+const markerObject = require('./config/markerObject')
 const countLayer = require('./config/count')
 
 const maps = document.querySelectorAll('[data-map]')
 
 maps.forEach(container => {
-  const reference = container.dataset.map
-  const listing = document.querySelector(reference)
+  const { map, longitude, latitude } = container.dataset
+  const listing = document.querySelector(map)
+
   let markers = []
   let bounds = null
+  let { center, zoom } = config
+
+  if (latitude && longitude) {
+    markers.push(markerObject(latitude, longitude))
+    center = [latitude, longitude]
+    zoom = 12
+  }
 
   if (listing) {
     const elements = listing.querySelectorAll('[data-longitude][data-latitude]')
 
     markers = Array.from(elements).map(marker => {
-      const { longitude, latitude } = marker.dataset
+      const { latitude, longitude } = marker.dataset
       const title = marker.querySelector('.card__title').innerHTML
       const description = marker.querySelector('.card__meta').innerHTML
       const html = marker.cloneNode(true).innerHTML
 
       return {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [parseFloat(latitude), parseFloat(longitude)]
-        },
+        ...markerObject(latitude, longitude),
         properties: {
           title,
           description,
@@ -40,17 +45,19 @@ maps.forEach(container => {
     })
   }
 
-  const map = new System.Map({
+  const mapElement = new System.Map({
     ...config,
     container,
     bounds,
+    center,
+    zoom,
     accessToken: process.env.MAPBOX_KEY
   })
 
-  map.addControl(new System.NavigationControl())
+  mapElement.addControl(new System.NavigationControl())
 
-  map.on('load', () => {
-    map.addSource('woodlands', {
+  mapElement.on('load', () => {
+    mapElement.addSource('woodlands', {
       type: 'geojson',
       data: {
         type: 'FeatureCollection',
@@ -61,7 +68,7 @@ maps.forEach(container => {
       clusterRadius: 50
     })
 
-    map.addLayer({
+    mapElement.addLayer({
       id: 'woodlands',
       type: 'circle',
       source: 'woodlands',
@@ -88,7 +95,7 @@ maps.forEach(container => {
       }
     })
 
-    map.addLayer({
+    mapElement.addLayer({
       id: 'woodland-count',
       type: 'symbol',
       source: 'woodlands',
@@ -96,7 +103,7 @@ maps.forEach(container => {
       layout: countLayer
     })
 
-    map.addLayer({
+    mapElement.addLayer({
       id: 'woodland-detail',
       type: 'circle',
       source: 'woodlands',
@@ -104,25 +111,25 @@ maps.forEach(container => {
       paint: markerLayer
     })
 
-    map.on('click', 'woodlands', (event) => {
-      const features = map.queryRenderedFeatures(event.point, {
+    mapElement.on('click', 'woodlands', (event) => {
+      const features = mapElement.queryRenderedFeatures(event.point, {
         layers: ['woodlands']
       })
 
       const center = features[0].geometry.coordinates
       const clusterId = features[0].properties.cluster_id
 
-      map.getSource('woodlands').getClusterExpansionZoom(clusterId, (err, zoom) => {
+      mapElement.getSource('woodlands').getClusterExpansionZoom(clusterId, (err, zoom) => {
         if (err) return
 
-        map.easeTo({
+        mapElement.easeTo({
           center,
           zoom
         })
       })
     })
 
-    map.on('click', 'woodland-detail', (event) => {
+    mapElement.on('click', 'woodland-detail', (event) => {
       const coordinates = event.features[0].geometry.coordinates.slice()
       const html = event.features[0].properties.html
 
@@ -136,23 +143,23 @@ maps.forEach(container => {
       new System.Popup({ offset: 20 })
         .setLngLat(coordinates)
         .setHTML(html)
-        .addTo(map)
+        .addTo(mapElement)
     })
 
-    map.on('mouseenter', 'woodlands', function () {
-      map.getCanvas().style.cursor = 'pointer'
+    mapElement.on('mouseenter', 'woodlands', function () {
+      mapElement.getCanvas().style.cursor = 'pointer'
     })
 
-    map.on('mouseleave', 'woodlands', function () {
-      map.getCanvas().style.cursor = ''
+    mapElement.on('mouseleave', 'woodlands', function () {
+      mapElement.getCanvas().style.cursor = ''
     })
 
-    map.on('mouseenter', 'woodland-detail', function () {
-      map.getCanvas().style.cursor = 'zoom'
+    mapElement.on('mouseenter', 'woodland-detail', function () {
+      mapElement.getCanvas().style.cursor = 'zoom'
     })
 
-    map.on('mouseleave', 'woodland-detail', function () {
-      map.getCanvas().style.cursor = ''
+    mapElement.on('mouseleave', 'woodland-detail', function () {
+      mapElement.getCanvas().style.cursor = ''
     })
   })
 })

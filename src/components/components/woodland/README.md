@@ -1,4 +1,4 @@
-# Wood Component
+# Woodland Component
 
 A complex component including the following;
 

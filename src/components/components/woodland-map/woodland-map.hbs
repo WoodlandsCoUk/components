@@ -1,0 +1,23 @@
+<div class="{{modifier 'woodland-maps' modifiers}}">
+    <h4>Wood map</h4>
+
+    <ul>
+        {{#each maps }}
+        <li><button data-modal-open="modal-{{ name }}"><img src="{{ src }}" alt="{{ name }}" title="" /></button></li>
+        {{/each}}
+    </ul>
+
+    {{!-- <h4>Location map</h4>
+
+    <div class="woodland-maps__map">
+        {{ render '@map' this merge=true }}
+    </div> --}}
+</div>
+
+{{#each maps }}
+{{#> @block--modal modifiers="small" title=name uuid=name }}
+<div class="modal__content">
+    <img src="{{ link }}" alt="{{ name }}" title="" />
+</div>
+{{/ @block--modal }}
+{{/each}}
