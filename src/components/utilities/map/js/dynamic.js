@@ -17,7 +17,7 @@ maps.forEach(container => {
 
   if (latitude && longitude) {
     markers.push(markerObject(latitude, longitude))
-    center = [latitude, longitude]
+    center = [longitude, latitude]
     zoom = 12
   }
 

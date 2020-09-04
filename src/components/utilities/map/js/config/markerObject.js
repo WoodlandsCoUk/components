@@ -3,7 +3,7 @@ module.exports = (latitude, longitude, properties = {}) => {
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [parseFloat(latitude), parseFloat(longitude)]
+      coordinates: [parseFloat(longitude), parseFloat(latitude)]
     },
     properties
   }

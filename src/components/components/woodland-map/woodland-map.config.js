@@ -1,9 +1,10 @@
+const faker = require('faker')
+
 const maps = require('./../../../data/maps.js')
 
 const map = {
-  id: '#map',
-  longitude: 51.0618,
-  latitude: 0.195558
+  ...faker.woodland.coordinates(),
+  id: '#map'
 }
 
 module.exports = {
