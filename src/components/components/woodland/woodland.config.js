@@ -71,6 +71,7 @@ module.exports = {
     pdf: {
       button: {
         text: 'Download PDF Details',
+        link: '#',
         modifiers: ['green--dark']
       }
     },
