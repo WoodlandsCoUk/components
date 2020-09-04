@@ -6,6 +6,9 @@ module.exports = {
     './src/components/**/*.hbs',
     './src/components/**/*.js'
   ],
+  future: {
+    removeDeprecatedGapUtilities: true
+  },
   theme: {
     fontFamily: {
       display: ['FreightNeo Pro Bold', 'FreightNeoProBold-Regular', 'serif'],

@@ -19,7 +19,7 @@ $gap: 24;
 
     &--spaced {
         > .grid__inner {
-            @apply col-gap-24;
+            @apply gap-x-24;
         }
     }
 
