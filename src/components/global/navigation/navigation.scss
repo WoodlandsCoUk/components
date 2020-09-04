@@ -242,7 +242,15 @@ body.navigation--shown {
                     }
 
                     > ul {
-                        @apply block;
+                        @apply flex;
+
+                        ul {
+                            @apply block;
+                        }
+
+                        a::after {
+                            @apply hidden;
+                        }
                     }
 
                     > a::after {
@@ -274,13 +282,17 @@ body.navigation--shown {
             }
 
             > ul {
-                @apply hidden absolute bottom-auto bg-brand-green w-full transform -translate-x-1/2 max-w-screen-md p-10;
+                @apply hidden absolute bottom-auto bg-brand-green w-full transform -translate-x-1/2 max-w-screen-md pl-6;
 
                 top: 100%;
                 left: 50%;
 
                 li {
-                    @apply block m-0;
+                    @apply block border-0 border-l border-brand-green-divider m-0 pl-6 ml-6 py-6;
+
+                    &:first-child {
+                        @apply pl-0 ml-0 border-0;
+                    }
 
                     a {
                         @apply px-0;
@@ -293,7 +305,11 @@ body.navigation--shown {
                     ul {
                         @apply relative top-auto left-auto block translate-x-0 p-0 m-0;
 
-                        padding-top: 4px;
+                        // display: block !important;
+
+                        > li {
+                            @apply border-0 p-0 m-0;
+                        }
 
                         a {
                             @apply text-white;
@@ -306,16 +322,12 @@ body.navigation--shown {
                 }
 
                 .navigation__item--has-sub > a {
-                    @apply text-brand-yellow-dark;
+                    @apply text-brand-yellow-dark whitespace-pre;
                 }
 
                 a {
                     @apply normal-case p-0 m-0 border-0;
                 }
-            }
-
-            &:first-child > ul {
-                // @apply block;
             }
         }
 

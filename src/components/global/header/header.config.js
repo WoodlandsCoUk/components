@@ -2,7 +2,7 @@ module.exports = {
   order: 1,
   title: 'Header',
   handle: 'layout-header',
-  status: 'wip',
+  status: 'ready',
   default: 'default',
   context: {
     header: {
