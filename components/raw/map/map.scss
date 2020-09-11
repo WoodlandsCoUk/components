@@ -51,16 +51,12 @@
         }
     }
 
-    &__marker {
-        @apply cursor-pointer bg-cover;
-
-        height: 40px;
-        width: 40px;
-        background-image: url(../images/marker.png);
-    }
-
     .mapboxgl-popup {
         @apply max-w-3xl;
+    }
+
+    &.mapboxgl-map {
+        @apply p-0;
     }
 
     .mapboxgl-popup-content {
@@ -77,7 +73,7 @@
         }
 
         .card__body {
-            @apply px-0 pb-1;
+            @apply p-0 pt-2;
         }
 
         .card__title {
@@ -86,6 +82,11 @@
 
         .card__meta {
             @apply mb-2 text-brand-green font-body-bold text-base;
+        }
+
+        .card__meta,
+        .card__extra {
+            @apply hidden;
         }
 
         .card__more {
