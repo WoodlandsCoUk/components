@@ -1,8 +1,9 @@
 const System = require('mapbox-gl/dist/mapbox-gl.js')
 const config = require('./config/map')
 const steps = require('./config/steps')
-const markerLayer = require('./config/marker')
+const markerLayer = require('./config/markerLayer')
 const markerObject = require('./config/markerObject')
+const popupObject = require('./config/popupObject')
 const countLayer = require('./config/count')
 
 const maps = document.querySelectorAll('[data-map]')
@@ -69,7 +70,7 @@ maps.forEach(container => {
     })
 
     mapElement.addLayer({
-      id: 'woodlands',
+      id: 'woodlands-map',
       type: 'circle',
       source: 'woodlands',
       filter: ['has', 'point_count'],
@@ -96,7 +97,7 @@ maps.forEach(container => {
     })
 
     mapElement.addLayer({
-      id: 'woodland-count',
+      id: 'woodlands-map-count',
       type: 'symbol',
       source: 'woodlands',
       filter: ['has', 'point_count'],
@@ -104,17 +105,21 @@ maps.forEach(container => {
     })
 
     mapElement.addLayer({
-      id: 'woodland-detail',
+      id: 'woodlands-map-detail',
       type: 'circle',
       source: 'woodlands',
       filter: ['!', ['has', 'point_count']],
       paint: markerLayer
     })
 
-    mapElement.on('click', 'woodlands', (event) => {
+    mapElement.on('click', 'woodlands-map', (event) => {
       const features = mapElement.queryRenderedFeatures(event.point, {
-        layers: ['woodlands']
+        layers: ['woodlands-map']
       })
+
+      if (!features) {
+        return
+      }
 
       const center = features[0].geometry.coordinates
       const clusterId = features[0].properties.cluster_id
@@ -129,7 +134,7 @@ maps.forEach(container => {
       })
     })
 
-    mapElement.on('click', 'woodland-detail', (event) => {
+    mapElement.on('click', 'woodlands-map-detail', (event) => {
       const coordinates = event.features[0].geometry.coordinates.slice()
       const html = event.features[0].properties.html
 
@@ -140,25 +145,25 @@ maps.forEach(container => {
         coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360
       }
 
-      new System.Popup({ offset: 20 })
+      new System.Popup(popupObject)
         .setLngLat(coordinates)
         .setHTML(html)
         .addTo(mapElement)
     })
 
-    mapElement.on('mouseenter', 'woodlands', function () {
+    mapElement.on('mouseenter', 'woodlands-map', function () {
       mapElement.getCanvas().style.cursor = 'pointer'
     })
 
-    mapElement.on('mouseleave', 'woodlands', function () {
+    mapElement.on('mouseleave', 'woodlands-map', function () {
       mapElement.getCanvas().style.cursor = ''
     })
 
-    mapElement.on('mouseenter', 'woodland-detail', function () {
-      mapElement.getCanvas().style.cursor = 'zoom'
+    mapElement.on('mouseenter', 'woodlands-map-detail', function () {
+      mapElement.getCanvas().style.cursor = 'pointer'
     })
 
-    mapElement.on('mouseleave', 'woodland-detail', function () {
+    mapElement.on('mouseleave', 'woodlands-map-detail', function () {
       mapElement.getCanvas().style.cursor = ''
     })
   })

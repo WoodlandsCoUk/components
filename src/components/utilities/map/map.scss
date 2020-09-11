@@ -51,14 +51,6 @@
         }
     }
 
-    &__marker {
-        @apply cursor-pointer bg-cover;
-
-        height: 40px;
-        width: 40px;
-        background-image: url(../images/marker.png);
-    }
-
     .mapboxgl-popup {
         @apply max-w-3xl;
     }
