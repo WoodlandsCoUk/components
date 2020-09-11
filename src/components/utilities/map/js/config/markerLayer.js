@@ -1,6 +1,5 @@
 module.exports = {
-  'circle-color': '#02532f',
-  'circle-radius': 10,
-  'circle-stroke-width': 2,
-  'circle-stroke-color': '#fff'
+  'icon-image': 'marker',
+  'icon-anchor': 'center',
+  'icon-size': 0.06
 }

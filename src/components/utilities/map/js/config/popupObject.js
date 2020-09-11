@@ -1,5 +1,5 @@
 module.exports = {
-  offset: 15,
+  offset: 17,
   closeButton: false,
   closeOnClick: true
 }

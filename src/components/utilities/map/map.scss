@@ -55,6 +55,10 @@
         @apply max-w-3xl;
     }
 
+    &.mapboxgl-map {
+        @apply p-0;
+    }
+
     .mapboxgl-popup-content {
         @apply text-center;
 
@@ -69,7 +73,7 @@
         }
 
         .card__body {
-            @apply px-0 pb-1;
+            @apply p-0 pt-2;
         }
 
         .card__title {
@@ -78,6 +82,11 @@
 
         .card__meta {
             @apply mb-2 text-brand-green font-body-bold text-base;
+        }
+
+        .card__meta,
+        .card__extra {
+            @apply hidden;
         }
 
         .card__more {

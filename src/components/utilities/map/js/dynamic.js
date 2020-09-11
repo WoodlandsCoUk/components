@@ -58,6 +58,12 @@ maps.forEach(container => {
   mapElement.addControl(new System.NavigationControl())
 
   mapElement.on('load', () => {
+    mapElement.loadImage('/images/marker.png', (error, image) => {
+      if (!error) {
+        mapElement.addImage('marker', image)
+      }
+    })
+
     mapElement.addSource('woodlands', {
       type: 'geojson',
       data: {
@@ -106,10 +112,10 @@ maps.forEach(container => {
 
     mapElement.addLayer({
       id: 'woodlands-map-detail',
-      type: 'circle',
+      type: 'symbol',
       source: 'woodlands',
       filter: ['!', ['has', 'point_count']],
-      paint: markerLayer
+      layout: markerLayer
     })
 
     mapElement.on('click', 'woodlands-map', (event) => {
@@ -137,6 +143,10 @@ maps.forEach(container => {
     mapElement.on('click', 'woodlands-map-detail', (event) => {
       const coordinates = event.features[0].geometry.coordinates.slice()
       const html = event.features[0].properties.html
+
+      if (!html) {
+        return
+      }
 
       // Ensure that if the map is zoomed out such that
       // multiple copies of the feature are visible, the
