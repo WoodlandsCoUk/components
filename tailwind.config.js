@@ -1,13 +1,19 @@
 const headerHeight = '96px'
 
 module.exports = {
-  purge: [
-    './src/components/**/*.html',
-    './src/components/**/*.hbs',
-    './src/components/**/*.js'
-  ],
   future: {
-    removeDeprecatedGapUtilities: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
+  },
+  purge: {
+    layers: [
+      'utilities'
+    ],
+    content: [
+      './src/components/**/*.html',
+      './src/components/**/*.hbs',
+      './src/components/**/*.js'
+    ]
   },
   theme: {
     fontFamily: {
