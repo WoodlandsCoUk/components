@@ -16,6 +16,7 @@ module.exports = {
   context: {
     media: {
       src: faker.image.imageUrl(400, 225, 'nature', true),
+      video: false,
       modifiers: []
     }
   },
@@ -52,7 +53,7 @@ module.exports = {
       label: 'Video',
       context: {
         media: {
-          video: 'http://www.youtube.com/embed/dP15zlyra3c?html5=1',
+          video: 'http://www.youtube.com/embed/dP15zlyra3c?html5=1&enablejsapi=1',
           modifiers: ['video']
         }
       }

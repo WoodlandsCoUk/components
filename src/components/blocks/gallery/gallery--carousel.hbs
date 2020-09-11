@@ -7,7 +7,9 @@
       {{#each gallery }}
         <li class="gallery__item" data-src="{{ gallery.media.src }}" data-width="{{ gallery.media.width }}" data-height="{{ gallery.media.height }}">
             {{ render '@media' gallery merge=true }}
+            {{#if text}}
             <p class="gallery__description">{{ text }}</p>
+            {{/if}}
         </li>
       {{/each}}
     </ul>

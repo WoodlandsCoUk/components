@@ -88,6 +88,7 @@ carousels.forEach((carousel) => {
   const listImages = listContainer.querySelectorAll('[data-src]')
   const thumbnailContainer = carousel.querySelector('.gallery__thumbnails')
   const thumbnails = thumbnailContainer.querySelectorAll('a')
+  const iframes = listContainer.querySelectorAll('iframe')
 
   // Setup the slider.
   const slider = tns({
@@ -103,6 +104,13 @@ carousels.forEach((carousel) => {
       const index = Array.from(thumbnails).indexOf(thumbnail)
 
       slider.goTo(index)
+    })
+  })
+
+  // Listen to slider changes and pause any video.
+  slider.events.on('indexChanged', () => {
+    iframes.forEach(iframe => {
+      iframe.contentWindow.postMessage('{"event": "command","func": "pauseVideo"}', '*')
     })
   })
 
