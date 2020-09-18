@@ -7,4 +7,12 @@
     .gallery + .tab {
         @apply mt-6;
     }
+
+    .lede {
+        @apply text-center;
+
+        @screen md {
+            @apply text-left;
+        }
+    }
 }
