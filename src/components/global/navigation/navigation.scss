@@ -297,6 +297,12 @@ body.navigation--shown {
                     a {
                         @apply px-0;
 
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            @apply text-white underline;
+                        }
+
                         &::before {
                             @apply hidden;
                         }
@@ -304,8 +310,6 @@ body.navigation--shown {
 
                     ul {
                         @apply relative top-auto left-auto block translate-x-0 p-0 m-0;
-
-                        // display: block !important;
 
                         > li {
                             @apply border-0 p-0 m-0;
@@ -323,6 +327,12 @@ body.navigation--shown {
 
                 .navigation__item--has-sub > a {
                     @apply text-brand-yellow-dark whitespace-pre;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        @apply text-brand-yellow-dark;
+                    }
                 }
 
                 a {
