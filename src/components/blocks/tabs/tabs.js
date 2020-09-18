@@ -15,6 +15,8 @@ tabs.forEach((tab) => {
 
       Array.from(items).filter((i) => i.dataset.tabItem === item.dataset.tabFor).forEach((i) => {
         i.classList.add(classes.active)
+
+        i.dispatchEvent(new CustomEvent('tabActive'))
       })
 
       Array.from(navItems).filter((i) => i.dataset.tabFor !== item.dataset.tabFor).forEach((i) => {
@@ -23,6 +25,8 @@ tabs.forEach((tab) => {
 
       Array.from(items).filter((i) => i.dataset.tabItem !== item.dataset.tabFor).forEach((i) => {
         i.classList.remove(classes.active)
+
+        i.dispatchEvent(new CustomEvent('tabInactive'))
       })
     })
 
