@@ -4,7 +4,7 @@
     }
 
     ul {
-        @apply max-w-md mb-4;
+        @apply mb-4;
     }
 
     li {
@@ -21,6 +21,6 @@
     }
 
     &__map {
-        @apply max-w-lg h-64 p-2 border-gray border;
+        @apply h-64 p-2 border-gray border;
     }
 }

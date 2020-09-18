@@ -121,7 +121,7 @@
         }
 
         > [data-controls="prev"] {
-            transform: translateX(-135%);
+            transform: translateX(0);
 
             &::after {
                 left: 50%;
@@ -131,12 +131,22 @@
         }
 
         > [data-controls="next"] {
-            transform: translateX(135%);
+            transform: translateX(0);
 
             &::after {
                 right: 50%;
                 margin-right: -4px;
                 transform: rotate(315deg);
+            }
+        }
+
+        @screen md {
+            > [data-controls="prev"] {
+                transform: translateX(-135%);
+            }
+
+            > [data-controls="next"] {
+                transform: translateX(135%);
             }
         }
     }

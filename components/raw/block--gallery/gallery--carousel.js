@@ -47,7 +47,7 @@ const gallery = (carousel, index) => {
   const images = carousel.querySelectorAll('[data-src]')
 
   // Map the images to build the gallery items.
-  const items = Array.from(images).map((item) => {
+  const items = Array.from(images).filter(item => !item.dataset.video).map((item) => {
     const { src, height, width } = item.dataset
     const description = item.querySelector('.gallery__description')
     const title = description ? description.innerText : ''
@@ -59,6 +59,8 @@ const gallery = (carousel, index) => {
       title
     }
   })
+
+  console.log(items.length)
 
   // Enable PhotoSwipe if we have PSWP template, the library and any items.
   if (pswp && PhotoSwipe && items.length) {

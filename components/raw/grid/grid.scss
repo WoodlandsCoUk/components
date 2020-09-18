@@ -15,6 +15,24 @@ $gap: 24;
 
     &__item {
         @apply relative;
+
+        &--primary {
+            @apply order-1;
+        }
+
+        &--secondary {
+            @apply order-2;
+        }
+
+        @screen md {
+            &--primary {
+                @apply order-2;
+            }
+
+            &--secondary {
+                @apply order-1;
+            }
+        }
     }
 
     &--spaced {

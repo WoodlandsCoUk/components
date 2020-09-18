@@ -143,8 +143,6 @@
 
 /*! Rule::       \s+ */
 
-/*! https://mths.be/cssesc v3.0.0 by @mathias */
-
 /**
  * @license
  * Lodash <https://lodash.com/>
