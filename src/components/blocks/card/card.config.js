@@ -12,6 +12,7 @@ module.exports = {
       title: 'Default Card',
       text: faker.lorem.paragraph(),
       classes: '',
+      sold: false,
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
         modifiers: ['widescreen']
@@ -30,7 +31,8 @@ module.exports = {
         card: {
           title: 'Card with Banner',
           text: faker.lorem.paragraph(),
-          banner: 'Banner'
+          banner: 'Banner',
+          sold: false
         }
       }
     },
@@ -41,7 +43,8 @@ module.exports = {
         card: {
           title: 'Card with Sold Banner',
           text: faker.lorem.paragraph(),
-          banner: 'Sold',
+          banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+          sold: true,
           modifiers: ['sold']
         }
       }
@@ -55,6 +58,7 @@ module.exports = {
           text: faker.lorem.paragraph(),
           media: {
             video: 'http://www.youtube.com/embed/dP15zlyra3c?html5=1',
+            sold: false,
             modifiers: ['video']
           }
         }
@@ -67,7 +71,8 @@ module.exports = {
         card: {
           title: 'Card with Link',
           text: faker.lorem.paragraph(),
-          link: '#link'
+          link: '#link',
+          sold: false
         }
       }
     },
@@ -82,6 +87,7 @@ module.exports = {
           link: 'page-woodland',
           meta: faker.woodland.meta(),
           banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
+          sold: false,
           modifiers: ['woodland']
         }
       }
@@ -98,7 +104,7 @@ module.exports = {
           meta: faker.woodland.meta(),
           coordinates: faker.woodland.coordinates(),
           banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
-
+          sold: false,
           modifiers: ['woodland', 'woodland--map']
         }
       }

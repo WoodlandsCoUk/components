@@ -31,6 +31,10 @@
 
     &__banner {
         @apply absolute top-0 right-0 bg-brand-green-dark rounded-bl-md px-4 py-3 uppercase text-white text-base font-body-bold;
+
+        &--sold {
+            @apply right-auto left-0 bg-brand-red text-white rounded-bl-none rounded-br-md;
+        }
     }
 
     &__price {
@@ -48,8 +52,8 @@
     }
 
     &--sold {
-        .card__banner {
-            @apply bg-white text-brand-red text-base;
+        .media {
+            @apply opacity-50;
         }
     }
 
