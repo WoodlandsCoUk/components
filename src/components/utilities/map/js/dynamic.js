@@ -118,6 +118,14 @@ maps.forEach(container => {
       layout: markerLayer
     })
 
+    document.querySelector('[data-tab-item="maps"]').addEventListener('tabActive', (event) => {
+      const map = event.target.querySelector('[data-map]')
+
+      if (map && map === container) {
+        mapElement.resize()
+      }
+    })
+
     mapElement.on('click', 'woodlands-map', (event) => {
       const features = mapElement.queryRenderedFeatures(event.point, {
         layers: ['woodlands-map']
