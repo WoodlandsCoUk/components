@@ -31,6 +31,15 @@ module.exports = {
       }
     },
     {
+      name: 'widescreen',
+      label: 'Widescreen',
+      context: {
+        media: {
+          modifiers: ['widescreen']
+        }
+      }
+    },
+    {
       name: 'wide',
       label: 'Wide',
       context: {

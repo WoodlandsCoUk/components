@@ -13,7 +13,7 @@ for (let i = 0; i < itemCount; i++) {
       meta: faker.woodland.meta(),
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
-        modifiers: []
+        modifiers: ['widescreen']
       },
       banner: new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(faker.random.number()).slice(0, -3),
       modifiers: ['woodland']

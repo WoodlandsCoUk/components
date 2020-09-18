@@ -14,7 +14,7 @@ module.exports = {
       classes: '',
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
-        modifiers: []
+        modifiers: ['widescreen']
       }
     }
   },

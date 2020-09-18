@@ -11,7 +11,7 @@ for (let i = 0; i < itemCount; i++) {
       link: '',
       media: {
         src: faker.image.imageUrl(400, 225, 'nature', true),
-        modifiers: []
+        modifiers: ['widescreen']
       },
       banner: 'Banner',
       meta: '',
