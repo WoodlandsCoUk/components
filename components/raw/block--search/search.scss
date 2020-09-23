@@ -1,12 +1,12 @@
 .form--search {
     @apply relative max-w-none;
 
-    &--page {
-        //
+    form {
+        @apply max-w-none w-full;
     }
 
     .form__inner {
-        @apply flex flex-wrap;
+        @apply relative flex flex-wrap;
     }
 
     label {
@@ -56,6 +56,53 @@
 
         > * {
             @apply w-full;
+        }
+
+        &--full {
+            @apply w-full;
+        }
+    }
+
+    html.js &[data-search] {
+        > form {
+            @apply hidden;
+        }
+
+        .button--close {
+            @apply absolute top-0 right-0 pr-4 text-brand-green text-6xl font-thin leading-none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply text-brand-green-light;
+            }
+        }
+
+        &.form--search--shown {
+            > form {
+                @apply fixed inset-0 flex items-baseline bg-white z-10 pt-header px-4;
+                @apply pt-12 z-50;
+
+                .form__inner {
+                    @apply pt-10;
+                }
+            }
+        }
+
+        @screen md {
+            &.form--search--shown > form,
+            > form {
+                @apply block relative inset-auto p-0;
+
+                .form__inner {
+                    @apply pt-0;
+                }
+            }
+
+            .button--close,
+            .button--toggle {
+                @apply hidden;
+            }
         }
     }
 

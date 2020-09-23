@@ -88,6 +88,18 @@ $backgrounds: (
     }
 }
 
+.section--search {
+    @apply pt-8 pb-6;
+
+    + .section {
+        @apply pt-0;
+    }
+
+    @screen md {
+        @apply shadow-md mb-10 pb-8;
+    }
+}
+
 .section--map {
     @apply p-0;
 
