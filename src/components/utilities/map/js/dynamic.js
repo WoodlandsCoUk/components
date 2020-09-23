@@ -7,6 +7,7 @@ const popupObject = require('./config/popupObject')
 const countLayer = require('./config/count')
 
 const maps = document.querySelectorAll('[data-map]')
+const tab = document.querySelector('[data-tab-item="maps"]')
 
 maps.forEach(container => {
   const { map, longitude, latitude } = container.dataset
@@ -118,14 +119,6 @@ maps.forEach(container => {
       layout: markerLayer
     })
 
-    document.querySelector('[data-tab-item="maps"]').addEventListener('tabActive', (event) => {
-      const map = event.target.querySelector('[data-map]')
-
-      if (map && map === container) {
-        mapElement.resize()
-      }
-    })
-
     mapElement.on('click', 'woodlands-map', (event) => {
       const features = mapElement.queryRenderedFeatures(event.point, {
         layers: ['woodlands-map']
@@ -184,5 +177,15 @@ maps.forEach(container => {
     mapElement.on('mouseleave', 'woodlands-map-detail', function () {
       mapElement.getCanvas().style.cursor = ''
     })
+
+    if (tab) {
+      tab.addEventListener('tabActive', (event) => {
+        const map = event.target.querySelector('[data-map]')
+
+        if (map && map === container) {
+          mapElement.resize()
+        }
+      })
+    }
   })
 })
