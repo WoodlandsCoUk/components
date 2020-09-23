@@ -1,14 +1,16 @@
-<form action="/search" method="post" class="form {{modifier 'form--search' modifiers}}">
-    <div class="form__inner">
-        <h4 class="form--search__title">{{ title }}</h4>
+<div class="form {{modifier 'form--search' modifiers}}" data-search="Show Search Filters">
+    <form action="/search" method="post">
+        <div class="form__inner">
+            <h4 class="form--search__title">{{ title }}</h4>
 
-        {{ render '@form--field' fields.location merge=true }}
-        {{ render '@form--field--select' fields.type merge=true }}
+            {{ render '@form--field' fields.location merge=true }}
+            {{ render '@form--field--select' fields.type merge=true }}
 
-        {{ render '@form--switch' fields.sold merge=true }}
+            {{ render '@form--switch' fields.sold merge=true }}
 
-        {{ render '@button' button merge=true }}
-    </div>
+            {{ render '@button' button merge=true }}
+        </div>
+    </form>
 
-    {{!-- {{ render '@button' toggle merge=true }} --}}
-</form>
+    {{ render '@button' toggle merge=true }}
+</div>

@@ -24,7 +24,7 @@ module.exports = {
       button: {
         text: 'Show search filters',
         link: null,
-        modifiers: ['green--dark']
+        modifiers: ['green--dark', 'full', 'toggle']
       }
     },
     fields: {
