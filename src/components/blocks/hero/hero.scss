@@ -75,7 +75,7 @@
         }
 
         .hero__image {
-            @apply order-first max-h-hero;
+            @apply order-first max-h-hero overflow-hidden;
 
             @screen md {
                 @apply block order-last max-h-full;
