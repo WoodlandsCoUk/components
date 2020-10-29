@@ -2,7 +2,7 @@
     @apply text-xl text-brand-green mb-12 font-bold text-center;
 
     > p {
-        @apply mb-6 leading-none;
+        @apply mb-6 leading-none hidden;
     }
 
     &__count {
@@ -29,7 +29,7 @@
         @apply flex flex-row-reverse items-center;
 
         > p {
-            @apply mb-0 ml-4 mr-auto text-left;
+            @apply mb-0 ml-4 mr-auto text-left block;
         }
     }
 }
