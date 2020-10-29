@@ -94,13 +94,13 @@ module.exports = {
         hero: '2.5rem'
       },
       height: {
-        map: '44vh',
+        map: '60vh',
         header: headerHeight,
         screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
         'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
       },
       maxHeight: {
-        map: '44vh',
+        map: '60vh',
         hero: '66vh',
         screen: `calc(100vh - ${headerHeight})`, // Compensate for the fixed header.
         'screen-teaser': `calc(100vh - ${headerHeight} - 4rem)` // Compensate for the fixed header and leave room for scrolling passed.
