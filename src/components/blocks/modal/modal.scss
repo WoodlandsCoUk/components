@@ -40,6 +40,10 @@
         @screen sm {
             @apply px-5;
         }
+
+        .typography strong {
+            font-weight: 600;
+        }
     }
 
     &__footer {
