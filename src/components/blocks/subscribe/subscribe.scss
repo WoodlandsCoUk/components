@@ -32,6 +32,10 @@
         }
     }
 
+    .error {
+        @apply text-brand-red italic;
+    }
+
     button {
         @apply mt-0;
 
