@@ -30,6 +30,10 @@
         }
     }
 
+    .media__content > img {
+        height: unset;
+    }
+
     .tns-outer {
         @apply relative mb-4;
 
