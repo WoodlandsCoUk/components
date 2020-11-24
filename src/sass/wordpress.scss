@@ -1,9 +1,9 @@
-.alignright {
-    float: right;
-    margin-left: 1em;
-}
+@screen xs {
+    .alignright {
+        @apply float-right ml-2;
+    }
 
-.alignleft {
-    float: left;
-    margin-right: 1em;
+    .alignleft {
+        @apply float-left mr-2;
+    }
 }
