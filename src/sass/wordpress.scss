@@ -1,9 +1,11 @@
 @screen xs {
-    .alignright {
-        @apply float-right ml-2;
-    }
+    .typography {
+        .alignright {
+            @apply float-right ml-2 mt-2;
+        }
 
-    .alignleft {
-        @apply float-left mr-2;
+        .alignleft {
+            @apply float-left mr-2 mt-2;
+        }
     }
 }
