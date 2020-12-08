@@ -2,6 +2,9 @@
     <div class="grid__item grid__item--secondary">
         {{ render '@block--gallery--carousel' }}
         {{ render '@block--tabs' this }}
+        {{#> @section modifiers='bg-yellow' }}
+            {{ render '@block--cta--listing' cta merge=true }}
+        {{/ @section }}
     </div>
     <div class="grid__item grid__item--primary">
         <div class="sticky">
