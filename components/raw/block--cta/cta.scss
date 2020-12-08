@@ -2,11 +2,7 @@
     @apply p-5;
 
     .section & {
-        @apply py-3 px-0;
-    }
-
-    @screen md {
-        @apply text-center;
+        @apply py-3;
     }
 
     hr {
@@ -17,7 +13,7 @@
         @apply font-display leading-none text-3xl not-italic text-brand-red-dark font-bold mb-6;
 
         @screen lg {
-            @apply text-4xl;
+            @apply text-4xl ml-6;
         }
     }
 
@@ -33,18 +29,14 @@
         @apply flex flex-row-reverse items-center w-full mb-6;
 
         @screen md {
-            @apply flex-col-reverse w-48 mx-auto px-4 w-1/2;
-        }
-
-        @screen lg {
-            @apply w-1/4 mb-0;
+            @apply mr-auto px-4;
         }
 
         &__title {
             @apply text-base text-gray-dark font-bold uppercase mr-auto ml-5;
 
             @screen md {
-                @apply mx-auto mt-4;
+                @apply mr-auto mt-4;
             }
         }
     }

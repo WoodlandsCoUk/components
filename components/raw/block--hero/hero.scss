@@ -96,10 +96,6 @@
 
         .hero__title {
             @apply mb-4 text-brand-red-dark font-display text-3xl leading-none;
-
-            @screen sm {
-                @apply text-hero;
-            }
         }
 
         .hero__text {

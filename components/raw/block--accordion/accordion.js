@@ -11,7 +11,7 @@ const options = {
   answerClass: 'accordion__item__content',
   itemNumber: 0,
   duration,
-  closeOthers: true,
+  closeOthers: false,
   showItem: false
 }
 
