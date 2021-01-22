@@ -167,6 +167,10 @@
                 .card__meta {
                     @apply font-body-semi-bold text-brand-green;
                 }
+
+                .card__extra {
+                    @apply hidden;
+                }
             }
         }
     }
