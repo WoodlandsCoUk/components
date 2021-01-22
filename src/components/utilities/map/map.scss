@@ -19,7 +19,7 @@
         }
 
         svg {
-            @apply h-full mx-auto;
+            @apply relative h-full mx-auto;
 
             @screen md {
                 @apply mr-0;
