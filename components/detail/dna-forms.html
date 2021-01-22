@@ -18,9 +18,9 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.6.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.7.0" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.6.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.7.0" type="text/css">
 
 
 <title>Forms | Woodlands.co.uk Component Library</title>
@@ -80,6 +80,9 @@
 
         </a>
     </h1>
+
+    <span class="Pen-preview-size" data-role="preview-size"></span>
+
     
 
 <div class="Status Status--tag">
@@ -172,43 +175,43 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-7f6ad7bf6ef0622887e1aea551b4f24a-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item item--full"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__title"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__section item__section--wide"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form form--search"</span> <span class="hljs-attr">data-search</span>=<span class="hljs-string">"Show Search Filters"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/search"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__inner"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form--search__title"</span>&gt;</span>Search for woodlands<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item item--full&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__title&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__section item__section--wide&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form form--search&quot;</span> <span class="hljs-attr">data-search</span>=<span class="hljs-string">&quot;Show Search Filters&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/search&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__inner&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form--search__title&quot;</span>&gt;</span>Search for woodlands<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"form__search_location"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Location<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"form__search_location"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"location"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter location / postcode"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__field&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;form__search_location&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__label&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Location<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form__search_location&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Enter location / postcode&quot;</span> /&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"form__search_type"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Type<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-select"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"form__search_type"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"type"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"woodland"</span>&gt;</span>Woodland<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mixed deciduous"</span>&gt;</span>Mixed Deciduous<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"coniferous"</span>&gt;</span>Coniferous<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"coppice"</span>&gt;</span>Coppice<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"ancient woodland"</span>&gt;</span>Ancient Woodland<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__field&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;form__search_type&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__label&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Type<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-select&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form__search_type&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;woodland&quot;</span>&gt;</span>Woodland<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;mixed deciduous&quot;</span>&gt;</span>Mixed Deciduous<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;coniferous&quot;</span>&gt;</span>Coniferous<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;coppice&quot;</span>&gt;</span>Coppice<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;ancient woodland&quot;</span>&gt;</span>Ancient Woodland<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field form__field--switch form__field--switch--reverse"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"form__search_sold"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sold"</span> /&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"form__search_sold"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Show Sold<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__field form__field--switch form__field--switch--reverse&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form__search_sold&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sold&quot;</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;form__search_sold&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__label&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Show Sold<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--green--dark button--inline "</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--green--dark button--inline &quot;</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--green--dark button--full button--toggle "</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--green--dark button--full button--toggle &quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Show search filters<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
@@ -217,33 +220,33 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item item--full"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__title"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__section item__section--wide"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/contact"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form form--contact"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"form__example__field"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text Field<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"form__example__field"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"example-field"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item item--full&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__title&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__section item__section--wide&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/contact&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form form--contact&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__field&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;form__example__field&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__label&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text Field<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form__example__field&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example-field&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Placeholder&quot;</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"form__example__field"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text Field<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"form__example__field"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"example-field"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__field&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;form__example__field&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__label&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text Field<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form__example__field&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example-field&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Placeholder&quot;</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__field"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"form__example__field--select"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Select Field<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-select"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"form__example__field--select"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"example-field--select"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"0"</span>&gt;</span>Et Nemo Corrupti<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>Quisquam Optio Facere<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>&gt;</span>Ut Et Non<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span>&gt;</span>Eius Asperiores Pariatur<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4"</span>&gt;</span>Itaque Neque Quod<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"5"</span>&gt;</span>Natus Debitis Non<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__field&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;form__example__field--select&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form__label&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Select Field<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-select&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form__example__field--select&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example-field--select&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>Dolore Atque Quis<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>Vel At Repellendus<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>Nam Excepturi Quia<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>Dolores Qui Natus<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;4&quot;</span>&gt;</span>Ratione Molestiae Perspiciatis<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>Temporibus Laborum Et<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--green "</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--green &quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Green Button<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
@@ -257,21 +260,21 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7f6ad7bf6ef0622887e1aea551b4f24a-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item item--full"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__title"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__section item__section--wide"</span>&gt;</span>
-        </span><span class="hljs-template-variable">{{ render '<a href="block--search.html">@block--search</a>' }}</span><span class="xml">
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item item--full&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__title&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__section item__section--wide&quot;</span>&gt;</span>
+        </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="block--search.html">@block--search</a>&#x27;</span> }}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item item--full"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__title"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item__section item__section--wide"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/contact"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form </span></span></span><span class="hljs-template-variable">{{modifier 'form--contact'}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-            </span><span class="hljs-template-variable">{{ render '<a href="form--field.html">@form--field</a>' contact.name merge=true }}</span><span class="xml">
-            </span><span class="hljs-template-variable">{{ render '<a href="form--field.html">@form--field</a>' contact.email merge=true }}</span><span class="xml">
-            </span><span class="hljs-template-variable">{{ render '<a href="form--field.html">@form--field</a>--select' contact.why merge=true }}</span><span class="xml">
-            </span><span class="hljs-template-variable">{{ render '<a href="button--green.html">@button--green</a>' contact.button merge=true }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item item--full&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__title&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item__section item__section--wide&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/contact&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form </span></span></span><span class="hljs-template-variable">{{<span class="hljs-name">modifier</span> <span class="hljs-string">&#x27;form--contact&#x27;</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span>
+            </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="form--field.html">@form--field</a>&#x27;</span> contact.name <span class="hljs-attr">merge</span>=<span class="hljs-literal">true</span> }}</span><span class="xml">
+            </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="form--field.html">@form--field</a>&#x27;</span> contact.email <span class="hljs-attr">merge</span>=<span class="hljs-literal">true</span> }}</span><span class="xml">
+            </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="form--field.html">@form--field</a>--select&#x27;</span> contact.why <span class="hljs-attr">merge</span>=<span class="hljs-literal">true</span> }}</span><span class="xml">
+            </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="button--green.html">@button--green</a>&#x27;</span> contact.button <span class="hljs-attr">merge</span>=<span class="hljs-literal">true</span> }}</span><span class="xml">
         <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
@@ -3737,7 +3740,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-01-22T11:46:22.709Z">
+                            <time datetime="2021-01-22T15:30:32.329Z">
                                 22/01/2021
                             </time>
                         
@@ -3759,7 +3762,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.6.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.7.0"></script>
 
 
 

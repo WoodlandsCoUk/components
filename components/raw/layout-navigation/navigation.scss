@@ -292,6 +292,9 @@ body.navigation--shown {
 
                     &:first-child {
                         @apply pl-0 ml-0 border-0;
+
+                        max-width: 14rem;
+                        min-width: 10rem;
                     }
 
                     a {

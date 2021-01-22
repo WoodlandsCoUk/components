@@ -18,9 +18,9 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.6.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.7.0" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.6.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.7.0" type="text/css">
 
 
 <title>Cards: Call To Action | Woodlands.co.uk Component Library</title>
@@ -80,6 +80,9 @@
 
         </a>
     </h1>
+
+    <span class="Pen-preview-size" data-role="preview-size"></span>
+
     
 
 <div class="Status Status--tag">
@@ -174,15 +177,15 @@ Optionally, include a “banner”.</p>
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-0549d2d31adf26dbef6d2f1b2059a5b6-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card card--cta "</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__body"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/drawings/badger.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Badger"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"drawing "</span> /&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card card--cta &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card__body&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../images/drawings/badger.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Badger&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;drawing &quot;</span> /&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__title"</span>&gt;</span>Call To Action<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__content"</span>&gt;</span>
-            Est voluptas qui qui aliquid. Tempora sed molestiae ut et qui possimus sed voluptatibus.
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card__title&quot;</span>&gt;</span>Call To Action<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card__content&quot;</span>&gt;</span>
+            Tempore aut quia. Ducimus aliquam facere.
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--green--dark button--inline "</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--green--dark button--inline &quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Default Button<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
@@ -195,15 +198,15 @@ Optionally, include a “banner”.</p>
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-0549d2d31adf26dbef6d2f1b2059a5b6-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier 'card' card.modifiers}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ card.classes }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__body"</span>&gt;</span>
-    </span><span class="hljs-template-variable">{{ render '<a href="drawing.html">@drawing</a>' }}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ titlecase card.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__content"</span>&gt;</span>
-      </span><span class="hljs-template-variable">{{ card.text }}</span><span class="xml">
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{<span class="hljs-name">modifier</span> <span class="hljs-string">&#x27;card&#x27;</span> card.modifiers}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">card.classes</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card__body&quot;</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="drawing.html">@drawing</a>&#x27;</span> }}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card__title&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">titlecase</span> card.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card__content&quot;</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{ <span class="hljs-name">card.text</span> }}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> card.button }}</span><span class="xml">
-    </span><span class="hljs-template-variable">{{ render '<a href="button.html">@button</a>' card.button merge=true }}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="button.html">@button</a>&#x27;</span> card.button <span class="hljs-attr">merge</span>=<span class="hljs-literal">true</span> }}</span><span class="xml">
     </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
@@ -3716,7 +3719,7 @@ Optionally, include a “banner”.</p>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-01-22T11:46:22.709Z">
+                            <time datetime="2021-01-22T15:30:32.329Z">
                                 22/01/2021
                             </time>
                         
@@ -3738,7 +3741,7 @@ Optionally, include a “banner”.</p>
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.6.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.7.0"></script>
 
 
 

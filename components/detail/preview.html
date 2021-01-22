@@ -18,9 +18,9 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.6.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.7.0" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.6.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.7.0" type="text/css">
 
 
 <title>Preview | Woodlands.co.uk Component Library</title>
@@ -80,6 +80,9 @@
 
         </a>
     </h1>
+
+    <span class="Pen-preview-size" data-role="preview-size"></span>
+
     
 
 <div class="Status Status--tag">
@@ -171,34 +174,34 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"min-h-screen"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;min-h-screen&quot;</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1&quot;</span> /&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> | Component Library<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Component Library for "</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Component Library, Template, Style Guide, Atomic Design, HTML, SCSS"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Component Library for &quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;keywords&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Component Library, Template, Style Guide, Atomic Design, HTML, SCSS&quot;</span> /&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'html'</span>)[<span class="hljs-number">0</span>].className += <span class="hljs-string">' js'</span>;
+        <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&#x27;html&#x27;</span>)[<span class="hljs-number">0</span>].className += <span class="hljs-string">&#x27; js&#x27;</span>;
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"all"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../css/site.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">&quot;all&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;../../css/site.css&quot;</span> /&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:title"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">" Component Library"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:site_name"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">" Component Library"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:url"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"https://woodlandscouk.github.io/components/"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Component Library for "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot; Component Library&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:site_name&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot; Component Library&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:url&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://woodlandscouk.github.io/components/&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Component Library for &quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-screen"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h-screen&quot;</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/manifest.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/vendor.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/site.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../js/manifest.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../js/vendor.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../js/site.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
@@ -211,38 +214,38 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c9d17694984f26226c47f119c65d1ec2-panel-view">
     <code class="Code Code--lang-handlebars hljs">
         <pre><span class="xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"min-h-screen"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;min-h-screen&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1&quot;</span> /&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span></span><span class="hljs-template-variable">{{ _target.title }}</span><span class="xml"> | Component Library<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">_target.title</span> }}</span><span class="xml"> | Component Library<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Component Library for </span></span></span><span class="hljs-template-variable">{{ _target.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Component Library, Template, Style Guide, Atomic Design, HTML, SCSS"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Component Library for </span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">_target.title</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;keywords&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Component Library, Template, Style Guide, Atomic Design, HTML, SCSS&quot;</span> /&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'html'</span>)[<span class="hljs-number">0</span>].className += <span class="hljs-string">' js'</span>;
+        <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&#x27;html&#x27;</span>)[<span class="hljs-number">0</span>].className += <span class="hljs-string">&#x27; js&#x27;</span>;
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"all"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path '/css/site.css' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">&quot;all&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/css/site.css&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> /&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:title"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _target.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> Component Library"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:site_name"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _target.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> Component Library"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:url"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"https://woodlandscouk.github.io/components/"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Component Library for </span></span></span><span class="hljs-template-variable">{{ _target.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">_target.title</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> Component Library&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:site_name&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">_target.title</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> Component Library&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:url&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://woodlandscouk.github.io/components/&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Component Library for </span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">_target.title</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-screen"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h-screen&quot;</span>&gt;</span>
 
-    </span><span class="hljs-template-variable">{{{ <span class="hljs-builtin-name">yield</span> }}}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{{ <span class="hljs-name"><span class="hljs-builtin-name">yield</span></span> }}}</span><span class="xml">
 
-    </span><span class="hljs-template-tag">{{#<span class="hljs-name">ifeq</span> _target.baseHandle 'block--modal' }}</span><span class="xml">
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--green button--inline"</span> <span class="hljs-attr">data-modal-open</span>=<span class="hljs-string">"modal-</span></span></span><span class="hljs-template-variable">{{ ../_target.context.uuid }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Open Modal Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    </span><span class="hljs-template-tag">{{#<span class="hljs-name">ifeq</span> _target.baseHandle <span class="hljs-string">&#x27;block--modal&#x27;</span> }}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button--green button--inline&quot;</span> <span class="hljs-attr">data-modal-open</span>=<span class="hljs-string">&quot;modal-</span></span></span><span class="hljs-template-variable">{{ .<span class="hljs-name">./_target.context.uuid</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Open Modal Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     </span><span class="hljs-template-tag">{{/<span class="hljs-name">ifeq</span> }}</span><span class="xml">
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path '/js/manifest.js' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path '/js/vendor.js' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path '/js/site.js' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/js/manifest.js&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/js/vendor.js&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/js/site.js&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span></pre>
@@ -3693,7 +3696,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-01-22T11:46:22.709Z">
+                            <time datetime="2021-01-22T15:30:32.329Z">
                                 22/01/2021
                             </time>
                         
@@ -3715,7 +3718,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.6.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.7.0"></script>
 
 
 

@@ -99,7 +99,11 @@
         }
 
         .hero__text {
-            @apply font-body-semi-bold italic text-brand-green text-lg;
+            @apply absolute inset-x-0 px-4 font-body-semi-bold italic text-brand-green text-lg text-center;
+
+            @screen md {
+                @apply relative px-0 text-left;
+            }
 
             @screen xl {
                 @apply text-xl;
@@ -108,6 +112,8 @@
     }
 
     .map--svg {
+        @apply mt-8;
+
         path.disabled {
             @apply text-brand-yellow-light;
         }
