@@ -31,10 +31,20 @@ maps.forEach(container => {
       const title = marker.querySelector('.card__title').innerHTML
       const description = marker.querySelector('.card__meta').innerHTML
       const html = marker.cloneNode(true).innerHTML
+      const markerId = marker.id || (function () {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+          const r = Math.random() * 16 | 0
+          const v = c === 'x' ? r : (r & 0x3 | 0x8)
+          return v.toString(16)
+        })
+      }())
+
+      marker.setAttribute('id', markerId)
 
       return {
         ...markerObject(latitude, longitude),
         properties: {
+          id: markerId,
           title,
           description,
           html
@@ -162,19 +172,19 @@ maps.forEach(container => {
         .addTo(mapElement)
     })
 
-    mapElement.on('mouseenter', 'woodlands-map', function () {
+    mapElement.on('mouseenter', 'woodlands-map', () => {
       mapElement.getCanvas().style.cursor = 'pointer'
     })
 
-    mapElement.on('mouseleave', 'woodlands-map', function () {
+    mapElement.on('mouseleave', 'woodlands-map', () => {
       mapElement.getCanvas().style.cursor = ''
     })
 
-    mapElement.on('mouseenter', 'woodlands-map-detail', function () {
+    mapElement.on('mouseenter', 'woodlands-map-detail', () => {
       mapElement.getCanvas().style.cursor = 'pointer'
     })
 
-    mapElement.on('mouseleave', 'woodlands-map-detail', function () {
+    mapElement.on('mouseleave', 'woodlands-map-detail', () => {
       mapElement.getCanvas().style.cursor = ''
     })
 
@@ -183,7 +193,7 @@ maps.forEach(container => {
       closeOnClick: false
     })
 
-    mapElement.on('mouseenter', 'woodlands-map-count', function (event) {
+    mapElement.on('mouseenter', 'woodlands-map-count', (event) => {
       const count = event.features[0].properties.point_count
       const coordinates = event.features[0].geometry.coordinates.slice()
       const description = event.features[0].properties.description ?? `Zoom in to see ${count} woodlands`
@@ -203,9 +213,59 @@ maps.forEach(container => {
         .addTo(mapElement)
     })
 
-    mapElement.on('mouseleave', 'woodlands-map-count', function () {
+    mapElement.on('mouseleave', 'woodlands-map-count', () => {
       mapElement.getCanvas().style.cursor = ''
       countPopup.remove()
+    })
+
+    mapElement.on('render', () => {
+      var markersTimeout
+      const getVisibleMarkers = () => {
+        const mapBounds = mapElement.getBounds()
+        const visibleMarkers = []
+
+        for (let i = 0; i < markers.length; i++) {
+          const mapMarker = markers[i]
+          const markerCoordinates = mapMarker.geometry.coordinates
+          const markerLngLat = new System.LngLat(markerCoordinates[0], markerCoordinates[1])
+          const markerVisible = mapBounds.contains(markerLngLat)
+
+          if (markerVisible) {
+            visibleMarkers.push(mapMarker)
+          }
+        }
+
+        mapElement.getContainer().dispatchEvent(new CustomEvent('updateVisibleMarkers', {
+          detail: {
+            markers: visibleMarkers
+          }
+        }))
+      }
+
+      window.clearTimeout(markersTimeout)
+      markersTimeout = window.setTimeout(() => {
+        getVisibleMarkers()
+      }, 100)
+    })
+
+    mapElement.getContainer().addEventListener('updateVisibleMarkers', (event) => {
+      const { map } = event.target.dataset
+      const listing = document.querySelector(map)
+
+      if (listing) {
+        const elements = listing.querySelectorAll('[data-longitude][data-latitude]')
+        const visibleIds = Array.from(event.detail.markers).map(marker => {
+          return marker.properties.id
+        })
+
+        Array.from(elements).forEach(marker => {
+          if (visibleIds.includes(marker.id)) {
+            marker.classList.remove('hidden')
+          } else {
+            marker.classList.add('hidden')
+          }
+        })
+      }
     })
 
     if (tab) {
