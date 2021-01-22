@@ -7,7 +7,7 @@ const popupObject = require('./config/popupObject')
 const countLayer = require('./config/count')
 
 const maps = document.querySelectorAll('[data-map]')
-const tab = document.querySelector('[data-tab-item="maps"]')
+const tab = document.querySelector('[data-tab-map]')
 
 maps.forEach(container => {
   const { map, longitude, latitude } = container.dataset
