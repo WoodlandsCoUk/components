@@ -57,13 +57,29 @@ maps.forEach(container => {
     })
   }
 
+  var apiKey = process.env.OS_MAPS_KEY
+
+  var serviceUrl = 'https://api.os.uk/maps/vector/v1/vts'
+
   const mapElement = new System.Map({
     ...config,
     container,
     bounds,
     center,
-    zoom,
-    accessToken: process.env.MAPBOX_KEY
+    zoom: zoom,
+    transformRequest: url => {
+      if (url.includes('?')) {
+        return {
+          url: url + '&srs=3857'
+        }
+      } else {
+        // do not rewrite urls such as `marker.png` that don't have any get params
+        return {
+          url: url
+        }
+      }
+    },
+    style: serviceUrl + '/resources/styles?key=' + apiKey
   })
 
   mapElement.addControl(new System.NavigationControl())
