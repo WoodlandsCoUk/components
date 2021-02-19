@@ -18,6 +18,7 @@ jobs:
           npm run build
         env:
           MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
+          OS_MAPS_KEY: ${{ secrets.OS_MAPS_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
