@@ -66,15 +66,15 @@ maps.forEach(container => {
     accessToken: process.env.MAPBOX_KEY
   })
 
+  mapElement.loadImage('/images/marker.png', (error, image) => {
+    if (!error) {
+      mapElement.addImage('marker', image)
+    }
+  })
+
   mapElement.addControl(new System.NavigationControl())
 
   mapElement.on('load', () => {
-    mapElement.loadImage('/images/marker.png', (error, image) => {
-      if (!error) {
-        mapElement.addImage('marker', image)
-      }
-    })
-
     mapElement.addSource('woodlands', {
       type: 'geojson',
       data: {
