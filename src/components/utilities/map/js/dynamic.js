@@ -52,9 +52,28 @@ maps.forEach(container => {
       }
     })
 
-    bounds = markers.map(marker => {
-      return marker.geometry.coordinates
+    // Hardcode a starting position based on the UK (inc. NI)
+    let latMin = 58.8329
+    let latMax = 49.8437
+    let lngMin = 1.8642
+    let lngMax = -8.7189
+    bounds = []
+    markers.forEach(marker => {
+      if (marker.geometry.coordinates[1] < latMin) {
+        latMin = marker.geometry.coordinates[1]
+      }
+      if (marker.geometry.coordinates[1] >= latMax) {
+        latMax = marker.geometry.coordinates[1]
+      }
+      if (marker.geometry.coordinates[0] < lngMin) {
+        lngMin = marker.geometry.coordinates[0]
+      }
+      if (marker.geometry.coordinates[0] >= lngMax) {
+        lngMax = marker.geometry.coordinates[0]
+      }
     })
+    bounds.push([lngMin, latMin])
+    bounds.push([lngMax, latMax])
   }
 
   const mapElement = new System.Map({
