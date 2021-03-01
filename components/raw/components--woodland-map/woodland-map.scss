@@ -21,6 +21,8 @@
     }
 
     &__map {
-        @apply h-64 p-2 border-gray border;
+        @apply p-2 border-gray border;
+
+        height: 30rem;
     }
 }
