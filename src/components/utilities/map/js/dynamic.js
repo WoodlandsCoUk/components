@@ -1,6 +1,7 @@
 const System = require('mapbox-gl/dist/mapbox-gl.js')
 const config = require('./config/map')
 const steps = require('./config/steps')
+const calculateBounds = require('./config/calculateBounds')
 const markerLayer = require('./config/markerLayer')
 const markerObject = require('./config/markerObject')
 const popupObject = require('./config/popupObject')
@@ -52,17 +53,15 @@ maps.forEach(container => {
       }
     })
 
-    bounds = markers.map(marker => {
-      return marker.geometry.coordinates
-    })
+    bounds = calculateBounds(markers)
   }
 
   const mapElement = new System.Map({
     ...config,
     container,
-    bounds,
     center,
     zoom,
+    bounds,
     accessToken: process.env.MAPBOX_KEY
   })
 
