@@ -1,11 +1,13 @@
 const System = require('mapbox-gl/dist/mapbox-gl.js')
+const { accessToken } = require('./config/env')
 const config = require('./config/map')
+const osConfig = require('./config/map-os')
 const steps = require('./config/steps')
 const calculateBounds = require('./config/calculateBounds')
+const countLayer = require('./config/countLayer')
 const markerLayer = require('./config/markerLayer')
 const markerObject = require('./config/markerObject')
 const popupObject = require('./config/popupObject')
-const countLayer = require('./config/count')
 
 const maps = document.querySelectorAll('[data-map]')
 const tab = document.querySelector('[data-tab-map]')
@@ -62,7 +64,8 @@ maps.forEach(container => {
     center,
     zoom,
     bounds,
-    accessToken: process.env.MAPBOX_KEY
+    accessToken,
+    ...osConfig
   })
 
   mapElement.loadImage('/images/marker.png', (error, image) => {
