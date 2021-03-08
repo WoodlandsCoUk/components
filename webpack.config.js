@@ -39,7 +39,8 @@ module.exports = {
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production',
       DEBUG: false,
-      MAPBOX_KEY: ''
+      MAPBOX_KEY: '',
+      OS_MAPS_KEY: ''
     }),
     new Dotenv(),
     new StylelintPlugin({
