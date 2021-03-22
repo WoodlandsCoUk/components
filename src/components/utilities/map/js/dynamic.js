@@ -4,7 +4,8 @@ const config = require('./config/map')
 const osConfig = require('./config/map-os')
 const steps = require('./config/steps')
 const calculateBounds = require('./config/calculateBounds')
-const countLayer = require('./config/countLayer')
+const countLayerMapbox = require('./config/countLayerMapbox')
+const countLayerOS = require('./config/countLayerOS')
 const markerLayer = require('./config/markerLayer')
 const markerObject = require('./config/markerObject')
 const popupObject = require('./config/popupObject')
@@ -13,12 +14,13 @@ const maps = document.querySelectorAll('[data-map]')
 const tab = document.querySelector('[data-tab-map]')
 
 maps.forEach(container => {
-  const { map, longitude, latitude } = container.dataset
+  const { map, style, longitude, latitude } = container.dataset
   const listing = document.querySelector(map)
 
   let markers = []
   let bounds = null
   let { center, zoom } = config
+  let countLayer = null
 
   if (latitude && longitude) {
     markers.push(markerObject(latitude, longitude))
@@ -58,15 +60,33 @@ maps.forEach(container => {
     bounds = calculateBounds(markers)
   }
 
-  const mapElement = new System.Map({
-    ...config,
-    container,
-    center,
-    zoom,
-    bounds,
-    accessToken,
-    ...osConfig
-  })
+  let mapElementConfig = {}
+
+  if (style === 'mapbox') {
+    mapElementConfig = {
+      ...config,
+      container,
+      center,
+      zoom,
+      bounds,
+      accessToken
+    }
+    countLayer = countLayerMapbox
+  } else {
+    // assume style === 'os'
+    mapElementConfig = {
+      ...config,
+      container,
+      center,
+      zoom,
+      bounds,
+      accessToken,
+      ...osConfig
+    }
+    countLayer = countLayerOS
+  }
+
+  const mapElement = new System.Map(mapElementConfig)
 
   mapElement.loadImage('/images/marker.png', (error, image) => {
     if (!error) {
