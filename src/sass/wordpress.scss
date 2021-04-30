@@ -11,3 +11,11 @@
         }
     }
 }
+
+// Hopefully after rolling out the new site we can refactor the content & remove this
+.partners {
+    float: left;
+    max-width: 12em;
+    margin-right: 3em;
+    min-height: 20em;
+}
