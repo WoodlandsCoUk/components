@@ -153,6 +153,11 @@ maps.forEach(container => {
       })
     })
 
+    const titlePopup = new System.Popup({
+      ...popupObject,
+      closeOnClick: false
+    })
+
     mapElement.on('click', 'woodlands-map-detail', (event) => {
       const coordinates = event.features[0].geometry.coordinates.slice()
       const html = event.features[0].properties.html
@@ -168,6 +173,7 @@ maps.forEach(container => {
         coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360
       }
 
+      titlePopup.remove()
       new System.Popup(popupObject)
         .setLngLat(coordinates)
         .setHTML(html)
@@ -180,11 +186,6 @@ maps.forEach(container => {
 
     mapElement.on('mouseleave', 'woodlands-map', () => {
       mapElement.getCanvas().style.cursor = ''
-    })
-
-    const titlePopup = new System.Popup({
-      ...popupObject,
-      closeOnClick: false
     })
 
     mapElement.on('mouseenter', 'woodlands-map-detail', (event) => {
