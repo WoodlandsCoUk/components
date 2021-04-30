@@ -3,16 +3,16 @@ module.exports = {
   small: {
     at: 5,
     size: 20,
-    color: '#51bbd6' // blue
+    color: '#92a892' // brand-map-hover green
   },
   medium: {
     at: 10,
     size: 30,
-    color: '#f1f075' // yellow
+    color: '#92a892' // brand-map-hover green
   },
   large: {
     at: 15,
     size: 40,
-    color: '#f28cb1' // red
+    color: '#92a892' // brand-map-hover green
   }
 }
