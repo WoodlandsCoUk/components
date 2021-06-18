@@ -212,6 +212,11 @@ maps.forEach(container => {
     mapElement.on('mouseenter', 'woodlands-map-detail', (event) => {
       const coordinates = event.features[0].geometry.coordinates.slice()
       const description = event.features[0].properties.title
+      const html = event.features[0].properties.html
+
+      if (!html) {
+        return
+      }
 
       mapElement.getCanvas().style.cursor = 'pointer'
 
