@@ -105,7 +105,8 @@ maps.forEach(container => {
       },
       cluster: true,
       clusterMaxZoom: 14,
-      clusterRadius: 50
+      clusterRadius: 50,
+      clusterMinPoints: 3
     })
 
     mapElement.addLayer({
