@@ -12,6 +12,10 @@
             @apply transition-all duration-300 ease-in-out;
             @apply object-cover;
         }
+
+        iframe {
+            object-fit: initial;
+        }
     }
 
     &--image {
