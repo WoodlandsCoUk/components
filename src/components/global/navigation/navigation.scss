@@ -43,9 +43,11 @@ body.navigation--shown {
     &__item {
         @apply relative text-2xl border-b border-brand-green-divider;
 
-        > a {
+        > a,
+        > button {
             @apply relative block py-4 px-6 text-white font-normal no-underline;
             @apply origin-top duration-300 ease-in-out opacity-0 transform -translate-x-48;
+            @apply w-full text-left;
 
             transition-property: transform, opacity;
 
@@ -88,7 +90,8 @@ body.navigation--shown {
                 @apply border-b-0 text-lg border-brand-green;
             }
 
-            a {
+            a,
+            button {
                 @apply py-2;
             }
 
@@ -110,7 +113,8 @@ body.navigation--shown {
         }
 
         &--has-sub {
-            > a::after {
+            > a::after,
+            > button::after {
                 @apply block;
             }
         }
@@ -119,7 +123,8 @@ body.navigation--shown {
             @apply hidden;
         }
 
-        &--active > a {
+        &--active > a,
+        &--active > button {
             @apply text-brand-yellow-light;
         }
 
@@ -183,7 +188,8 @@ body.navigation--shown {
         &__item {
             @apply static flex items-center border-0;
 
-            > a {
+            > a,
+            button {
                 @apply relative flex items-center py-10 pb-8 pl-3 pr-0 border-0 opacity-100 translate-x-0 text-white text-base font-normal uppercase tracking-wide;
 
                 transition-property: none;
@@ -208,14 +214,16 @@ body.navigation--shown {
                 }
             }
 
-            &:first-child > a {
+            &:first-child > a,
+            &:first-child > button {
                 &::before {
                     @apply hidden;
                 }
             }
 
             &--has-sub {
-                > a {
+                > a,
+                > button {
                     &,
                     &:hover,
                     &:focus {
@@ -297,7 +305,8 @@ body.navigation--shown {
                         min-width: 10rem;
                     }
 
-                    a {
+                    a,
+                    button {
                         @apply px-0;
 
                         &:hover,
@@ -318,7 +327,8 @@ body.navigation--shown {
                             @apply border-0 p-0 m-0;
                         }
 
-                        a {
+                        a,
+                        button {
                             @apply text-white;
 
                             &::after {
@@ -328,7 +338,8 @@ body.navigation--shown {
                     }
                 }
 
-                .navigation__item--has-sub > a {
+                .navigation__item--has-sub > a,
+                .navigation__item--has-sub > button {
                     @apply text-brand-yellow-dark whitespace-pre;
 
                     &:hover,
@@ -338,7 +349,8 @@ body.navigation--shown {
                     }
                 }
 
-                a {
+                a,
+                button {
                     @apply normal-case p-0 m-0 border-0;
                 }
             }

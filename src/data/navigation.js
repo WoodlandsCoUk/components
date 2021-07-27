@@ -35,7 +35,7 @@ module.exports = [
       {
         main: false,
         text: 'Other land for sale',
-        link: '#',
+        link: false,
         navigation: [
           'Tree planting land',
           'Lakes and rivers'

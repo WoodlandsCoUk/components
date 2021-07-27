@@ -1,5 +1,9 @@
 <li class="navigation__item {{#if navigation}}navigation__item--has-sub{{/if}} {{#ifeq @root/active link}}navigation__item--active{{/ifeq}}">
+    {{#if link}}
     <a href="{{ link }}">{{ text }}</a>
+    {{else}}
+    <button>{{ text }}</button>
+    {{/if}}
 
     {{#if navigation}}
     <ul>

@@ -28,7 +28,7 @@ document.querySelectorAll('.js--navigation').forEach((toggle) => {
 
 // Bind click events for mobile navigation.
 listItems.forEach((listItem) => {
-  listItem.querySelector('a').addEventListener('click', (event) => {
+  listItem.querySelector('a, button').addEventListener('click', (event) => {
     const sub = listItem.querySelector('ul')
     const isActive = listItem.classList.contains(classes.active)
 
