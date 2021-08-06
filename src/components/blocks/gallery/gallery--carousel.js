@@ -47,18 +47,21 @@ const gallery = (carousel, index) => {
   const images = carousel.querySelectorAll('[data-src]')
 
   // Map the images to build the gallery items.
-  const items = Array.from(images).filter(item => !item.dataset.video).map((item) => {
-    const { src, height, width } = item.dataset
-    const description = item.querySelector('.gallery__description')
-    const title = description ? description.innerText : ''
+  const items = Array.from(images).filter(item => !item.dataset.video)
+    .filter((item) => {
+      return !Array.from(item.classList).includes('tns-slide-cloned')
+    }).map((item) => {
+      const { src, height, width } = item.dataset
+      const description = item.querySelector('.gallery__description')
+      const title = description ? description.innerText : ''
 
-    return {
-      w: width,
-      h: height,
-      src,
-      title
-    }
-  })
+      return {
+        w: width,
+        h: height,
+        src,
+        title
+      }
+    })
 
   console.log(items.length)
 
