@@ -19,7 +19,11 @@
     float: left;
     max-width: 12em;
     margin-right: 3em;
-    min-height: 21em;
+    min-height: 19em;
     padding: 1em;
     margin-top: 2em;
+
+    img {
+        margin-bottom: 0;
+    }
 }
