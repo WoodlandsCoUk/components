@@ -27,3 +27,18 @@
         margin-bottom: 0;
     }
 }
+
+.treeidentifier {
+    clear: both;
+}
+
+@media screen and (min-width: 600px) {
+    .blog-post__content img.post-image {
+        float: right;
+        margin-left: 15px;
+    }
+}
+
+.typography strong {
+    font-weight: bold;
+}
