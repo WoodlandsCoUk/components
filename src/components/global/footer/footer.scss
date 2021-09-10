@@ -91,3 +91,9 @@
         @apply pb-12 mb-12 border-b border-brand-green-divider;
     }
 }
+
+@media print {
+    .footer {
+        @apply hidden;
+    }
+}

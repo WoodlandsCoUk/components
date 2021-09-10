@@ -27,6 +27,13 @@ a,
         @apply no-underline;
     }
 }
+
+@media print {
+    main {
+        @apply pt-0;
+    }
+}
+
 // end of general.
 
 // Forms
