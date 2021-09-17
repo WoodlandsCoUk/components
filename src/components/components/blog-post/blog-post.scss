@@ -44,4 +44,10 @@
     &__tag {
         //
     }
+
+    // hacky fixup for the facebook widget
+    .fb_iframe_widget {
+        position: relative;
+        top: 8px;
+    }
 }
