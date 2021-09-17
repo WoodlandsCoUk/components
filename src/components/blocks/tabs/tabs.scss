@@ -43,3 +43,13 @@
         }
     }
 }
+
+@media print {
+    .tab {
+        &__item {
+            html.js & {
+                @apply block;
+            }
+        }
+    }
+}
