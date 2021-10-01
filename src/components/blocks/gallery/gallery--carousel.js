@@ -34,7 +34,11 @@ const photoSwipeConfig = {
   arrowKeys: true,
   focus: true,
   modal: true,
-  history: false
+  history: false,
+  // this should disable the idle hiding of the toolbar
+  timeToIdle: 0,
+  // this is not currently possible to disable, so we make it very long
+  timeToIdleOutside: 100000
 }
 
 // Create the HTML from the <template>.
