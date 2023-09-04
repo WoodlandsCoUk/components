@@ -1,7 +1,7 @@
-name: Test develop branch
+name: Test build
 on:
   push:
-    branches: [ develop ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
