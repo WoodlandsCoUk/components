@@ -5,7 +5,7 @@ const { helpers } = require('./fractal.helpers')
 faker.image.imageUrl = (width, height, category, randomize, https) => {
   const protocol = typeof https !== 'undefined' && https === true ? 'https://' : 'http://'
 
-  var url = `${protocol}placeimg.com/${width || 640}/${height || 480}`
+  var url = `${protocol}picsum.photos/${width || 640}/${height || 480}`
 
   if (typeof category !== 'undefined') {
     url += '/' + category
