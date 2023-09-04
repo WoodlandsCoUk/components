@@ -7,14 +7,6 @@ faker.image.imageUrl = (width, height, category, randomize, https) => {
 
   var url = `${protocol}picsum.photos/${width || 640}/${height || 480}`
 
-  if (typeof category !== 'undefined') {
-    url += '/' + category
-  }
-
-  if (randomize) {
-    url += '?' + faker.random.number()
-  }
-
   return url
 }
 
