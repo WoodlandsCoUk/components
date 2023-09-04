@@ -1,0 +1,96 @@
+@import "mapbox-gl/dist/mapbox-gl";
+
+.map {
+    @apply relative bg-gray-light w-full h-full p-5;
+
+    &__key {
+        @apply absolute top-0 inset-x-0 mt-2 p-3 text-black text-center bg-white bg-opacity-50;
+
+        &:empty {
+            @apply hidden;
+        }
+    }
+
+    &--svg {
+        @apply p-0 bg-transparent block w-full h-map;
+
+        @media (min-height: 900px) and (min-width: 1024px) {
+            max-height: 600px;
+        }
+
+        svg {
+            @apply relative h-full mx-auto;
+
+            @screen md {
+                @apply mr-0;
+            }
+        }
+
+        path {
+            @apply fill-current stroke-1 text-map;
+
+            stroke: theme('colors.background.default');
+
+            &.selected {
+                @apply text-map-selected;
+            }
+
+            &.disabled {
+                @apply text-map-disabled stroke-current;
+            }
+
+            &[key] {
+                @apply cursor-pointer;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    @apply text-map-hover;
+                }
+            }
+        }
+    }
+
+    .mapboxgl-popup {
+        @apply max-w-3xl;
+    }
+
+    &.mapboxgl-map {
+        @apply p-0;
+    }
+
+    .mapboxgl-popup-content {
+        @apply text-center;
+
+        .mapboxgl-popup-close-button {
+            @apply text-2xl mr-2 mt-1 p-1 text-gray-dark z-50 bg-white;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply bg-white text-black;
+            }
+        }
+
+        .card__body {
+            @apply p-0 pt-2;
+        }
+
+        .card__title {
+            @apply text-brand-green-light;
+        }
+
+        .card__meta {
+            @apply mb-2 text-brand-green font-body-bold text-base;
+        }
+
+        .card__meta,
+        .card__extra {
+            @apply hidden;
+        }
+
+        .card__more {
+            @apply text-base;
+        }
+    }
+}

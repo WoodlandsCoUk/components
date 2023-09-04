@@ -1,0 +1,17 @@
+.tags {
+    @apply list-none pl-0 mb-5;
+
+    > * {
+        @apply inline-flex mb-2 mr-1;
+    }
+
+    &--gap {
+        > * {
+            @apply mb-4 mr-3;
+        }
+    }
+
+    &__empty {
+        @apply px-3 py-2 bg-brand-yellow-light rounded-md leading-tight uppercase text-brand-green-dark font-body-semi-bold;
+    }
+}

@@ -1,0 +1,22 @@
+.form__field {
+    @apply relative my-6;
+
+    label {
+        @apply block pr-0 pb-2 w-auto text-left;
+
+        @screen sm {
+            @apply inline-block pr-2 w-48 text-right;
+        }
+    }
+
+    input,
+    select {
+        @apply w-full max-w-md;
+    }
+
+    &--stacked {
+        label {
+            @apply block pr-0 pb-2 w-auto text-left;
+        }
+    }
+}

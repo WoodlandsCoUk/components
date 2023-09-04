@@ -1,0 +1,50 @@
+.form--subscribe {
+    .form__group + .form__group {
+        @apply pb-4;
+    }
+
+    @screen sm {
+        @apply mx-auto max-w-md;
+    }
+
+    label {
+        @apply block pb-3 text-lg font-bold text-brand-green-dark;
+    }
+
+    input {
+        @apply block w-full rounded-md border border-gray px-4 py-3;
+    }
+
+    .tags {
+        @apply mb-0;
+    }
+
+    .tag,
+    .tags__empty {
+        @apply flex mr-0;
+
+        &.hidden {
+            @apply hidden;
+        }
+
+        @screen sm {
+            @apply inline-flex mr-3;
+        }
+    }
+
+    .error {
+        @apply text-brand-red italic;
+    }
+
+    button {
+        @apply mt-0;
+
+        > span {
+            @apply ml-0;
+        }
+    }
+
+    a {
+        @apply text-lg text-brand-green-dark;
+    }
+}

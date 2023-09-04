@@ -1,0 +1,41 @@
+.tag {
+    @apply inline-flex items-center justify-center bg-gray text-brand-green-dark rounded-md leading-none;
+
+    &--dismiss {
+        @apply bg-brand-yellow uppercase text-sm leading-tight font-bold;
+    }
+
+    &__title {
+        @apply w-full px-3 py-2;
+    }
+
+    &__dismiss {
+        @apply py-2 px-3 text-center rounded-r-md cursor-pointer text-brand-red font-bold text-lg leading-none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply text-brand-red-dark;
+        }
+    }
+
+    &--large {
+        .tag__title {
+            @apply px-5 py-4 text-lg;
+        }
+
+        .tag__dismiss {
+            @apply px-5 py-4 text-2xl;
+        }
+    }
+}
+
+a.tag {
+    @apply underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @apply bg-gray-dark;
+    }
+}

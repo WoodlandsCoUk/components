@@ -1,0 +1,157 @@
+$backgrounds: (
+    'transparent': 'transparent',
+    'white': 'white',
+    'gray': 'gray-light',
+    'red': 'brand-red-dark',
+    'green': 'brand-green',
+    'yellow': 'brand-yellow',
+);
+
+.section {
+    @apply relative bg-white py-12 px-5;
+
+    &__inner {
+        @apply mx-auto max-w-screen-xl;
+
+        .section {
+            @apply px-0;
+        }
+    }
+
+    &__title {
+        @apply text-center mt-3 mb-6 text-2xl text-brand-red font-body-semi-bold leading-tight;
+
+        &--upper {
+            @apply uppercase;
+        }
+
+        &--medium {
+            @apply text-lg uppercase text-left;
+        }
+
+        &--small {
+            @apply text-base uppercase text-left;
+        }
+
+        &--alt {
+            @apply text-brand-green-light;
+        }
+
+        &--alt-dark {
+            @apply text-brand-green;
+        }
+    }
+
+    &--short {
+        @apply py-0;
+    }
+
+    &--inset {
+        @apply px-0;
+    }
+
+    &--full {
+        .section__inner {
+            @apply max-w-none;
+        }
+    }
+
+    &--shadow {
+        @apply shadow-md mb-5;
+    }
+
+    @each $prefix, $colors in $backgrounds {
+        &--bg-#{$prefix} {
+            @apply bg-#{$colors};
+
+            & + .section--bg-#{$prefix} {
+                @apply pt-0 -mt-3;
+            }
+        }
+    }
+}
+
+// Page specific sections.
+.section--intro {
+    @apply p-0 bg-brand-yellow overflow-hidden;
+
+    + .section {
+        @apply pt-3;
+    }
+
+    @screen md {
+        @apply max-h-screen-teaser;
+    }
+
+    @media (max-height: 700px) {
+        @apply max-h-full;
+
+        .map--svg {
+            max-height: 70%;
+        }
+    }
+}
+
+.section--search {
+    @apply pt-8 pb-6;
+
+    + .section {
+        @apply pt-0;
+    }
+
+    @screen md {
+        @apply shadow-md mb-10 pb-8;
+    }
+}
+
+.section--map {
+    @apply p-0;
+
+    .section__inner {
+        @apply max-w-none;
+
+        > .grid > .grid__inner {
+            @apply gap-0;
+        }
+    }
+
+    .map--listing {
+        @apply relative overflow-auto py-4 px-5;
+
+        > .grid {
+            @apply mb-6 -mx-5;
+
+            + .button {
+                @apply my-4;
+            }
+        }
+
+        .button.top {
+            @apply hidden;
+        }
+    }
+
+    .map--map {
+        @apply relative;
+
+        height: 60vh;
+    }
+
+    @screen md {
+        .map--listing {
+            @apply h-screen order-first;
+
+            > .grid {
+                @apply border-t border-gray-divider pt-6;
+            }
+
+            .button.top {
+                @apply flex;
+            }
+        }
+
+        .map--map {
+            @apply h-screen order-last;
+        }
+    }
+}

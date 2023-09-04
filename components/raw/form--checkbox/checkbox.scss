@@ -1,0 +1,23 @@
+.form__field.form__field--checkbox {
+    @apply flex items-center;
+
+    label {
+        @apply not-sr-only pl-2 text-lg;
+    }
+
+    input {
+        @apply w-6 h-6 p-0 mr-0;
+    }
+
+    &--reverse {
+        @apply flex-row-reverse;
+
+        label {
+            @apply pl-0 pr-2;
+        }
+
+        input {
+            @apply mr-auto;
+        }
+    }
+}

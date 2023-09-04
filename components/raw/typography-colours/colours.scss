@@ -1,0 +1,7 @@
+.colour {
+    &__item {
+        > div {
+            @apply w-full h-16;
+        }
+    }
+}

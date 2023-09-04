@@ -1,0 +1,107 @@
+.modal {
+    @apply relative z-50 hidden pointer-events-none;
+
+    &__container {
+        @apply fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center pointer-events-auto px-4;
+
+        height: 100vh;
+        width: 100vw;
+    }
+
+    &__item {
+        @apply bg-white rounded-md max-w-3xl max-h-screen overflow-x-hidden overflow-y-auto pointer-events-auto;
+
+        @screen sm {
+            min-width: 400px;
+        }
+    }
+
+    &__header {
+        @apply relative pt-2 my-4 mx-6;
+
+        [data-modal-close] {
+            @apply absolute top-0 right-0 text-gray-dark text-3xl leading-none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply text-gray;
+            }
+        }
+    }
+
+    &__title {
+        @apply text-brand-red text-lg font-bold uppercase text-center;
+    }
+
+    &__content {
+        @apply mb-6 px-4;
+
+        @screen sm {
+            @apply px-5;
+        }
+
+        .typography strong {
+            font-weight: 600;
+        }
+    }
+
+    &__footer {
+        @apply py-5 px-4 bg-gray-light border-t border-gray-divider;
+
+        @screen sm {
+            @apply px-5;
+        }
+    }
+
+    &--is-open {
+        @apply block;
+    }
+
+    &--small {
+        .modal__item {
+            @apply max-w-lg;
+        }
+    }
+
+    &__container,
+    &__item {
+        will-change: transform;
+    }
+
+    &[aria-hidden="false"] .modal__container {
+        animation: modalFadeIn 300ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    &[aria-hidden="false"] .modal__item {
+        animation: modalSlideIn 300ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    &[aria-hidden="true"] .modal__container {
+        animation: modalFadeOut 300ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    &[aria-hidden="true"] .modal__item {
+        animation: modalSlideOut 300ms cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes modalSlideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}

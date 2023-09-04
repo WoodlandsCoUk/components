@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="min-h-screen">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gallery: Carousel | Component Library</title>
+
+    <meta name="description" content="Component Library for Gallery: Carousel" />
+    <meta name="keywords" content="Component Library, Template, Style Guide, Atomic Design, HTML, SCSS" />
+
+    <script>
+        document.getElementsByTagName('html')[0].className += ' js';
+    </script>
+
+    <link media="all" rel="stylesheet" href="../../css/site.css" />
+
+    <meta property="og:title" content="Gallery: Carousel Component Library">
+    <meta property="og:site_name" content="Gallery: Carousel Component Library">
+    <meta property="og:url" content="https://woodlandscouk.github.io/components/">
+    <meta property="og:description" content="Component Library for Gallery: Carousel">
+</head>
+<body class="h-screen">
+
+    <template id="photoswipe">
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</template>
+
+<div class="gallery gallery--carousel">
+    <ul class="gallery__list">
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Libero eos cum.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Natus perspiciatis ducimus quo cumque tenetur sed amet.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Eveniet explicabo in neque unde ea officiis rerum.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Voluptates nulla commodi et esse.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Provident ea rem et exercitationem qui corrupti.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Consequatur voluptatibus ad quia.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Perspiciatis quis expedita expedita non vero.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Mollitia eveniet soluta dolorum architecto illo ut voluptas.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Sed vel ea sunt quia.</p>
+        </li>
+        <li class="gallery__item" data-src="http://picsum.photos/1156/650" data-video="" data-width="1156" data-height="650">
+                <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/1156/650" alt="" title="" />
+        </div>
+    </div>
+
+            <p class="gallery__description">Sunt libero voluptatem.</p>
+        </li>
+        <li class="gallery__item" data-src="http://www.youtube.com/embed/dP15zlyra3c?html5&#x3D;1" data-video="http://www.youtube.com/embed/dP15zlyra3c?html5&#x3D;1&amp;enablejsapi&#x3D;1" data-width="" data-height="">
+                <div class="media">
+    <div class="media__content">
+        <iframe src="http://www.youtube.com/embed/dP15zlyra3c?html5&#x3D;1&amp;enablejsapi&#x3D;1"></iframe>
+    </div>
+</div>
+
+
+        </li>
+    </ul>
+    <ul class="gallery__thumbnails">
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://picsum.photos/1156/650">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+        <li class="gallery__item">
+            <a href="http://www.youtube.com/embed/dP15zlyra3c?html5&#x3D;1">    <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+</a>
+        </li>
+    </ul>
+</div>
+
+
+
+    <script src="../../js/manifest.js"></script>
+    <script src="../../js/vendor.js"></script>
+    <script src="../../js/site.js"></script>
+
+</body>
+</html>
+

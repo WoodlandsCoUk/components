@@ -1,0 +1,17 @@
+.heading {
+    &__item {
+        @apply flex flex-col-reverse justify-end;
+
+        > div {
+            @apply ml-0;
+        }
+    }
+
+    > div {
+        @apply grid grid-cols-1 gap-4;
+
+        @screen lg {
+            @apply grid-cols-2;
+        }
+    }
+}

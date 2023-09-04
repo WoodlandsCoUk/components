@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html class="min-h-screen">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Forms: Default | Component Library</title>
+
+    <meta name="description" content="Component Library for Forms: Default" />
+    <meta name="keywords" content="Component Library, Template, Style Guide, Atomic Design, HTML, SCSS" />
+
+    <script>
+        document.getElementsByTagName('html')[0].className += ' js';
+    </script>
+
+    <link media="all" rel="stylesheet" href="../../css/site.css" />
+
+    <meta property="og:title" content="Forms: Default Component Library">
+    <meta property="og:site_name" content="Forms: Default Component Library">
+    <meta property="og:url" content="https://woodlandscouk.github.io/components/">
+    <meta property="og:description" content="Component Library for Forms: Default">
+</head>
+<body class="h-screen">
+
+    <div class="item item--full">
+    <h2 class="item__title">Search</h2>
+    <div class="item__section item__section--wide">
+        <div class="form form--search" data-search="Show Search Filters">
+    <form action="/search" method="post">
+        <div class="form__inner">
+            <h4 class="form--search__title">Search for woodlands</h4>
+
+            <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+            <div class="form__field">
+    <label for="form__search_type" class="form__label"><span>Type</span></label>
+    <select class="form-select" id="form__search_type" name="type">
+        <option value="woodland">Woodland</option>
+        <option value="mixed deciduous">Mixed Deciduous</option>
+        <option value="coniferous">Coniferous</option>
+        <option value="coppice">Coppice</option>
+        <option value="ancient woodland">Ancient Woodland</option>
+    </select>
+</div>
+
+
+            <div class="form__field form__field--switch form__field--switch--reverse">
+    <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
+</div>
+
+
+            <button class="button button--green--dark button--inline ">
+  <span>Search</span>
+</button>
+
+        </div>
+    </form>
+
+    <button class="button button--green--dark button--full button--toggle ">
+  <span>Show search filters</span>
+</button>
+
+</div>
+
+    </div>
+</div>
+
+<div class="item item--full">
+    <h2 class="item__title">Contact</h2>
+    <div class="item__section item__section--wide">
+        <form action="/contact" method="post" class="form form--contact">
+            <div class="form__field">
+    <label for="form__example__field" class="form__label"><span>Text Field</span></label>
+    <input type="text" class="form-input" id="form__example__field" name="example-field" placeholder="Placeholder" />
+</div>
+
+            <div class="form__field">
+    <label for="form__example__field" class="form__label"><span>Text Field</span></label>
+    <input type="text" class="form-input" id="form__example__field" name="example-field" placeholder="Placeholder" />
+</div>
+
+            <div class="form__field">
+    <label for="form__example__field--select" class="form__label"><span>Select Field</span></label>
+    <select class="form-select" id="form__example__field--select" name="example-field--select">
+        <option value="0">Ipsum In Beatae</option>
+        <option value="1">Cupiditate Aut Et</option>
+        <option value="2">Ipsa Magnam Odit</option>
+        <option value="3">Fugit Voluptatem Dignissimos</option>
+        <option value="4">Repellat Iste Magnam</option>
+        <option value="5">Voluptatum Magnam Rerum</option>
+    </select>
+</div>
+
+            <div class="form__field">
+    <label for="project_details" class="form__label">Details of your project <small>(500 words)</small></label>
+    <textarea class="form__textarea form-input" id="project_details" name="details" placeholder="Enter details of your project…"></textarea>
+</div>
+
+            <button class="button button--green ">
+  <span>Green Button</span>
+</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+    <script src="../../js/manifest.js"></script>
+    <script src="../../js/vendor.js"></script>
+    <script src="../../js/site.js"></script>
+
+</body>
+</html>
+

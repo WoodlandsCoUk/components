@@ -1,0 +1,35 @@
+$quotePadding: 40px;
+
+.quote {
+    @apply flex flex-col p-5 text-brand-red-dark text-center bg-no-repeat bg-brand-yellow mx-auto max-w-screen-lg;
+
+    padding-bottom: $quotePadding;
+
+    &__content {
+        @apply leading-none font-quote tracking-wide text-3xl;
+
+        @screen md {
+            @apply text-4xl max-w-screen-md mx-auto;
+        }
+    }
+
+    &__by {
+        @apply font-body-bold uppercase leading-snug text-base text-brand-green m-6 order-first;
+
+        cite {
+            @apply not-italic;
+        }
+    }
+
+    &__link {
+        @apply mb-0 mt-4;
+
+        a {
+            @apply text-brand-green-dark text-lg font-body-semi-bold;
+        }
+    }
+
+    &__image {
+        @apply mx-auto max-w-xs mt-12;
+    }
+}

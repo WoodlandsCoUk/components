@@ -1,0 +1,219 @@
+@use 'sass:map';
+
+$variants: (
+    'red': (
+        'text': 'white',
+        'bg': 'brand-red',
+        'border': 'brand-red',
+        'dark': (
+            'text': 'white',
+            'bg': 'brand-red-dark',
+            'border': 'brand-red-dark',
+        ),
+        'outline': (
+            'text': 'brand-red',
+            'bg': 'white',
+            'border': 'brand-red',
+        ),
+        'hover': (
+            'text': 'white',
+            'bg': 'brand-red-dark',
+            'border': 'brand-red-dark',
+        )
+    ),
+    'green': (
+        'text': 'white',
+        'bg': 'brand-green-light',
+        'border': 'brand-green-light',
+        'dark': (
+            'text': 'white',
+            'bg': 'brand-green',
+            'border': 'brand-green',
+        ),
+        'outline': (
+            'text': 'brand-green',
+            'bg': 'white',
+            'border': 'brand-green-dark',
+        ),
+        'hover': (
+            'text': 'white',
+            'bg': 'brand-green-dark',
+            'border': 'brand-green-dark',
+        )
+    ),
+    'yellow': (
+        'text': 'brand-red-dark',
+        'bg': 'brand-yellow',
+        'border': 'brand-yellow',
+        'outline': (
+            'text': 'brand-yellow-dark',
+            'bg': 'white',
+            'border': 'brand-yellow-dark',
+        ),
+        'hover': (
+            'text': 'brand-red-dark',
+            'bg': 'brand-yellow-light',
+            'border': 'brand-yellow',
+        )
+    ),
+);
+
+.button {
+    @apply relative flex w-full my-6 justify-center text-center appearance-none no-underline uppercase text-base font-body-semi-bold;
+
+    &:last-child {
+        @apply mb-0;
+    }
+
+    > span {
+        @apply flex items-center justify-center w-full rounded-md px-5 py-4 font-bold tracking-wide;
+        @apply border bg-white text-brand-red-dark border-brand-red-dark;
+    }
+
+    &--inline {
+        > span {
+            @apply px-12;
+
+            @screen sm {
+                @apply w-auto mx-auto;
+            }
+        }
+    }
+
+    &--inline--small {
+        > span {
+            @screen sm {
+                @apply w-auto mx-auto px-6;
+            }
+        }
+    }
+
+    &--left {
+        > span {
+            @apply ml-0;
+        }
+    }
+
+    &--right {
+        > span {
+            @apply mr-0;
+        }
+    }
+
+    &.normal-case {
+        @apply normal-case;
+    }
+
+    &.lowercase {
+        @apply lowercase;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        @apply border-brand-red text-brand-red;
+    }
+
+    &:focus {
+        @apply outline-none;
+    }
+
+    @each $prefix, $colors in $variants {
+        $text: map.get($colors, 'text');
+        $bg: map.get($colors, 'bg');
+        $border: map.get($colors, 'border');
+        $outline: map.get($colors, 'outline');
+        $dark: map.get($colors, 'dark');
+        $hover: map.get($colors, 'hover');
+
+        &--#{$prefix} {
+            @apply text-#{$text};
+
+            > span {
+                @apply text-#{$text} bg-#{$bg} border-#{$border};
+            }
+
+            @if $outline {
+                &--outline {
+                    $text: map.get($outline, 'text');
+                    $bg: map.get($outline, 'bg');
+                    $border: map.get($outline, 'border');
+
+                    @apply text-#{$text};
+
+                    > span {
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
+                }
+            }
+
+            @if $dark {
+                &--dark {
+                    $text: map.get($dark, 'text');
+                    $bg: map.get($dark, 'bg');
+                    $border: map.get($dark, 'border');
+
+                    @apply text-#{$text};
+
+                    > span {
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        $text: map.get($hover, 'text');
+                        $bg: map.get($hover, 'bg');
+                        $border: map.get($hover, 'border');
+
+                        @apply text-#{$text};
+
+                        > span {
+                            @apply text-#{$text} bg-#{$bg} border-#{$border};
+                        }
+                    }
+                }
+            }
+
+            @if $hover {
+                &:hover,
+                &:focus,
+                &:active {
+                    $text: map.get($hover, 'text');
+                    $bg: map.get($hover, 'bg');
+                    $border: map.get($hover, 'border');
+
+                    @apply text-#{$text};
+
+                    > span {
+                        @apply text-#{$text} bg-#{$bg} border-#{$border};
+                    }
+                }
+            }
+        }
+    }
+
+    &--active {
+        > span {
+            @apply bg-gray cursor-default text-brand-green-dark;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            > span {
+                @apply bg-gray text-brand-green-dark;
+            }
+        }
+    }
+
+    &--transparent {
+        > span {
+            @apply bg-transparent;
+        }
+    }
+
+    section.grid + & {
+        @apply mt-12;
+    }
+}

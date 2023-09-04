@@ -1,0 +1,11 @@
+.item {
+    &__item {
+        h1 {
+            @apply text-3xl;
+        }
+
+        h2 {
+            @apply text-xl;
+        }
+    }
+}

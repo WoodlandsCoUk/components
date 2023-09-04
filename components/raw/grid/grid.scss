@@ -1,0 +1,147 @@
+$gap: 24;
+
+.grid {
+    &__inner {
+        @apply relative grid grid-cols-1 gap-8;
+
+        @screen md {
+            @apply grid-cols-2;
+        }
+
+        @screen lg {
+            @apply grid-cols-3;
+        }
+    }
+
+    &__item {
+        @apply relative;
+
+        &--primary {
+            @apply order-1;
+        }
+
+        &--secondary {
+            @apply order-2;
+        }
+
+        @screen md {
+            &--primary {
+                @apply order-2;
+            }
+
+            &--secondary {
+                @apply order-1;
+            }
+        }
+    }
+
+    &--spaced {
+        > .grid__inner {
+            @apply gap-x-24;
+        }
+    }
+
+    &--divider {
+        > .grid__inner > .grid__item {
+            @apply relative;
+
+            &::before {
+                @apply absolute top-0 left-0 block border-0 border-gray-divider h-full -ml-12;
+
+                content: '';
+
+                @screen md {
+                    @apply border-l;
+                }
+            }
+
+            &:first-child::before {
+                @apply hidden;
+            }
+        }
+    }
+
+    &--single {
+        .grid__inner {
+            @screen md {
+                @apply grid-cols-1;
+            }
+
+            @screen lg {
+                @apply grid-cols-1;
+            }
+        }
+    }
+
+    &--2 {
+        > .grid__inner {
+            @screen md {
+                @apply grid-cols-2;
+            }
+
+            @screen lg {
+                @apply grid-cols-2;
+            }
+        }
+    }
+
+    &--2\/3 {
+        > .grid__inner {
+            @screen lg {
+                @apply grid-cols-2/3;
+            }
+        }
+    }
+
+    &--2\/3--reverse {
+        > .grid__inner {
+            @screen lg {
+                @apply grid-cols-3/2;
+            }
+        }
+    }
+
+    &--3 {
+        > .grid__inner {
+            @screen md {
+                @apply grid-cols-3;
+            }
+
+            @screen lg {
+                @apply grid-cols-3;
+            }
+        }
+    }
+
+    &--4 {
+        > .grid__inner {
+            @screen md {
+                @apply grid-cols-2;
+            }
+
+            @screen lg {
+                @apply grid-cols-4;
+            }
+        }
+    }
+}
+
+// Page specific grid tweaks.
+.page--blog-single {
+    .grid--2\/3 {
+        > .grid__inner {
+            @screen md {
+                @apply grid-cols-1;
+            }
+
+            @screen lg {
+                @apply grid-cols-2/3;
+            }
+
+            .grid__item:first-child {
+                @apply mb-6;
+            }
+        }
+    }
+}
+// end of page specific grid tweaks.

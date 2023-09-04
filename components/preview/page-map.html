@@ -1,0 +1,1141 @@
+
+
+<!DOCTYPE html>
+<html class="min-h-screen">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Map: Default | Component Library</title>
+
+    <meta name="description" content="Component Library for Map: Default" />
+    <meta name="keywords" content="Component Library, Template, Style Guide, Atomic Design, HTML, SCSS" />
+
+    <script>
+        document.getElementsByTagName('html')[0].className += ' js';
+    </script>
+
+    <link media="all" rel="stylesheet" href="../../css/site.css" />
+
+    <meta property="og:title" content="Map: Default Component Library">
+    <meta property="og:site_name" content="Map: Default Component Library">
+    <meta property="og:url" content="https://woodlandscouk.github.io/components/">
+    <meta property="og:description" content="Component Library for Map: Default">
+</head>
+<body class="h-screen">
+
+    <header class="header">
+    <div class="header__container">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="page-homepage">Woodlands.co.uk</a></h1>
+
+            <div class="navigation">
+    <nav class="navigation__list">
+        <div class="form form--search form--search--simple">
+    <form action="/search" method="post">
+        <div class="form__inner">
+            <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+            <button class="button button--red button--inline ">
+  <span>Search</span>
+</button>
+
+        </div>
+    </form>
+</div>
+
+
+        <ul>
+                <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-buy">Buy</a>
+
+    <ul>
+            <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-buy">Woodlands for sale</a>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Search for woods</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">South East England</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Northern England</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Cumbria</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Central England</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">East Anglia</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Devon</a>
+
+</li>
+
+    </ul>
+</li>
+
+            <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-buy">Buying a wood</a>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Why buy a wood?</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">How to buy a woodland</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">How we support owners</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Legal guide</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Finance guide</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Our covenant</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Recommended solicitors</a>
+
+</li>
+
+    </ul>
+</li>
+
+            <li class="navigation__item navigation__item--has-sub ">
+    <button>Other land for sale</button>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Tree planting land</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Lakes and rivers</a>
+
+</li>
+
+    </ul>
+</li>
+
+            <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-sell">Sell your wood</a>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Sell your wood to us</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Selling your wood through us</a>
+
+</li>
+
+    </ul>
+</li>
+
+    </ul>
+</li>
+
+                <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-owning">Owning a wood</a>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Planning legislation</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Trees &amp; regulations</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Access &amp; tracks</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Management insurance</a>
+
+</li>
+
+    </ul>
+</li>
+
+                <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-videos-guides">Videos &amp; guides</a>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Woodlands TV</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Woodland activities</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Practical guides</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">What do people do?</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Looking after your wood</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Tree identification</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Wildlife identification</a>
+
+</li>
+
+    </ul>
+</li>
+
+                <li class="navigation__item navigation__item--has-sub ">
+    <a href="page-about">About us</a>
+
+    <ul>
+            <li class="navigation__item  ">
+    <a href="#">Our team</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Press room</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Our research</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Contact us</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Meet us at woodfairs</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Community woodlands</a>
+
+</li>
+
+            <li class="navigation__item  ">
+    <a href="#">Woodland awards</a>
+
+</li>
+
+    </ul>
+</li>
+
+
+            <li class="navigation__item navigation__item--search"><a href="page-search" class="js--navigation-search">Search Woods</a></li>
+        </ul>
+    </nav>
+
+    <button class="hamburger hamburger--squeeze navigation__button js--navigation" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</div>
+
+        </div>
+    </div>
+
+    <div class="form form--search form--search--alt" data-search="Show Search Filters">
+    <form action="/search" method="post">
+        <div class="form__inner">
+            <h4 class="form--search__title">Search for woodlands</h4>
+
+            <div class="form__field">
+    <label for="form__search_location" class="form__label"><span>Location</span></label>
+    <input type="text" class="form-input" id="form__search_location" name="location" placeholder="Enter location / postcode" />
+</div>
+
+            <div class="form__field">
+    <label for="form__search_type" class="form__label"><span>Type</span></label>
+    <select class="form-select" id="form__search_type" name="type">
+        <option value="woodland">Woodland</option>
+        <option value="mixed deciduous">Mixed Deciduous</option>
+        <option value="coniferous">Coniferous</option>
+        <option value="coppice">Coppice</option>
+        <option value="ancient woodland">Ancient Woodland</option>
+    </select>
+</div>
+
+
+            <div class="form__field form__field--switch form__field--switch--reverse">
+    <input type="checkbox" class="form-checkbox" id="form__search_sold" name="sold" />
+    <label for="form__search_sold" class="form__label"><i></i><span>Show Sold</span></label>
+</div>
+
+
+            <button class="button button--red button--inline ">
+  <span>Search</span>
+</button>
+
+        </div>
+    </form>
+
+    <button class="button button--green--dark button--full button--toggle ">
+  <span>Show search filters</span>
+</button>
+
+</div>
+
+</header>
+
+
+<main>
+<section class="section section--map ">
+    <div class="section__inner">
+<section id="" class="grid grid--2/3--reverse">
+    <div class="grid__inner">
+            <div class="grid__item map--map">
+                    <div class="map" data-map="#listing--map"></div>
+
+            </div>
+            <div class="grid__item map--listing">
+                <button class="button button--inline button--inline--small button--green--dark button--left top">
+  <span>← Exit map view</span>
+</button>
+
+
+                <h2 class="section__title section__title--medium normal-case">Woodlands for sale in this location:</h2>
+
+                
+<section id="listing--map" class="grid grid--single">
+    <div class="grid__inner">
+      <div class="card card--woodland card--woodland--map " data-longitude="0.95869" data-latitude="51.2736">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Impedit Dolorem Aut Perferendis Nulla Deleniti Explicabo Et. <span class="card__price">£62,068</span></h3>
+    <p class="card__meta">NR. Lee Manor, Agustinville, Cambridgeshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.195558" data-latitude="51.0618">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Voluptatem Soluta Et Eos Earum. <span class="card__price">£48,787</span></h3>
+    <p class="card__meta">NR. Isabelle Tunnel, Mosciskimouth, Bedfordshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.0148" data-latitude="51.2148">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Omnis Omnis Libero Ex. <span class="card__price">£6,612</span></h3>
+    <p class="card__meta">NR. Wehner Mills, Lake Nettieton, Berkshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.0148" data-latitude="51.2148">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Tempora Modi Quas Eveniet Temporibus Inventore Et. <span class="card__price">£55,157</span></h3>
+    <p class="card__meta">NR. Graciela Path, Janelleport, Borders</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.16044" data-latitude="51.2331">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Officia Voluptatibus Quia Aut Commodi Deleniti Accusantium Tempora Nostrum. <span class="card__price">£86,189</span></h3>
+    <p class="card__meta">NR. Carolina River, North Amaraberg, Cambridgeshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.195558" data-latitude="51.0618">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Cumque Non Laboriosam Dolorem Eaque Rerum. <span class="card__price">£19,269</span></h3>
+    <p class="card__meta">NR. Bashirian Spring, Kyleeborough, Borders</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.199746" data-latitude="51.0598">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Possimus Cum Earum Aliquam Dolorem Illo. <span class="card__price">£56,867</span></h3>
+    <p class="card__meta">NR. Mertz Way, Rubenview, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.0148" data-latitude="51.2148">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Voluptates Dolores Ab Ut Necessitatibus Eveniet Nihil Sunt Pariatur. <span class="card__price">£26,024</span></h3>
+    <p class="card__meta">NR. Schuyler Vista, Murazikchester, Buckinghamshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.610572" data-latitude="51.2336">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Mollitia Ut Minima. <span class="card__price">£39,567</span></h3>
+    <p class="card__meta">NR. Goyette Islands, Binsfort, Buckinghamshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.404422" data-latitude="51.1205">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Sequi Blanditiis Placeat Officia Sed Occaecati. <span class="card__price">£7,450</span></h3>
+    <p class="card__meta">NR. Belle Trail, East Maureenhaven, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.551742" data-latitude="51.1283">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Illum Animi Aliquid Nemo Perferendis Non Et Iure Magni. <span class="card__price">£69,203</span></h3>
+    <p class="card__meta">NR. Keely Causeway, Lefflerbury, Cambridgeshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.346766" data-latitude="51.1564">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Ea Aliquid Enim Nemo. <span class="card__price">£84,312</span></h3>
+    <p class="card__meta">NR. O&#x27;Connell Walks, Parkerstad, Avon</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.193125" data-latitude="51.0601">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Sapiente Velit Quo Illo Provident Repellendus Aut Quibusdam Molestias. <span class="card__price">£45,594</span></h3>
+    <p class="card__meta">NR. Jasmin Shore, Harrisonland, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.16252" data-latitude="51.2325">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Dolores Quaerat Odio Vel Nihil Ipsum. <span class="card__price">£27,705</span></h3>
+    <p class="card__meta">NR. Cynthia Pass, Port Jamar, Borders</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.19216" data-latitude="51.0596">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Officia Dolor Porro. <span class="card__price">£89,761</span></h3>
+    <p class="card__meta">NR. Borer Keys, Cruickshankside, Buckinghamshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="-0.583575" data-latitude="50.853">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Aut Et Ipsam Illum. <span class="card__price">£98,248</span></h3>
+    <p class="card__meta">NR. Braun Underpass, Lake Wallacefort, Borders</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.551742" data-latitude="51.1283">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Dolorem Occaecati Eum Consectetur Saepe Omnis At Sit. <span class="card__price">£73,215</span></h3>
+    <p class="card__meta">NR. Upton Rue, West Ignacioview, Bedfordshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.551742" data-latitude="51.1283">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Voluptatem Sed Explicabo Aut Voluptatem Error Asperiores. <span class="card__price">£65,521</span></h3>
+    <p class="card__meta">NR. Wunsch Trail, Boscostad, Bedfordshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.404422" data-latitude="51.1205">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Libero Totam Praesentium Molestiae Quis Officiis Eius. <span class="card__price">£45,639</span></h3>
+    <p class="card__meta">NR. Elisabeth Isle, Parisianton, Avon</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.604271" data-latitude="51.2296">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Fugiat Sit Enim Qui Alias Consequatur Aspernatur. <span class="card__price">£72,286</span></h3>
+    <p class="card__meta">NR. Zieme Streets, Franeckimouth, Bedfordshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.286227" data-latitude="51.1695">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Veritatis Numquam Illum Eligendi. <span class="card__price">£50,287</span></h3>
+    <p class="card__meta">NR. Mitchell Village, Port Yasmeen, Borders</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.346766" data-latitude="51.1564">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Quis Tenetur Nostrum Sit. <span class="card__price">£7,572</span></h3>
+    <p class="card__meta">NR. Schinner Valley, Schummberg, Buckinghamshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="-1.01212" data-latitude="51.1072">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Doloremque Fugit Dignissimos Sunt. <span class="card__price">£46,435</span></h3>
+    <p class="card__meta">NR. Davis View, Erlingborough, Bedfordshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.960194" data-latitude="51.2751">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Iusto Tempora Ipsa Recusandae Libero Earum Tenetur Accusantium Velit At. <span class="card__price">£69,136</span></h3>
+    <p class="card__meta">NR. Rice Mountains, Reaganville, Avon</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.95869" data-latitude="51.2736">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Sint Sint Optio Doloribus Veniam Et Neque Odio Illo Rem. <span class="card__price">£48,335</span></h3>
+    <p class="card__meta">NR. Mueller Estate, Lake Delfina, Bedfordshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.16252" data-latitude="51.2325">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Molestiae Tempore Facilis Quaerat Adipisci Autem Incidunt. <span class="card__price">£3,275</span></h3>
+    <p class="card__meta">NR. Wiegand Forge, Hillsburgh, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.01953" data-latitude="51.2179">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Voluptatibus Iusto Sed Nobis Consectetur Architecto. <span class="card__price">£1,138</span></h3>
+    <p class="card__meta">NR. Walsh Manors, New Emieland, Bedfordshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.551742" data-latitude="51.1283">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Quaerat Blanditiis Quo. <span class="card__price">£37,706</span></h3>
+    <p class="card__meta">NR. Runolfsdottir Mountains, Giaville, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="-0.586424" data-latitude="50.8522">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Magni Sint Sed Quisquam Reprehenderit Itaque Nisi. <span class="card__price">£26,200</span></h3>
+    <p class="card__meta">NR. Adams Point, Lake Petechester, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.610572" data-latitude="51.2336">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Quo Est Numquam. <span class="card__price">£83,022</span></h3>
+    <p class="card__meta">NR. Krystal Street, South Celestinoville, Borders</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.28978" data-latitude="51.1699">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Fugiat Quod Qui Quia Non Et Vitae Eos Molestiae Temporibus. <span class="card__price">£96,550</span></h3>
+    <p class="card__meta">NR. Hope Extensions, Lake Isobelberg, Bedfordshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.0121" data-latitude="51.22">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Placeat Pariatur Nesciunt Recusandae Ex Voluptatem Sed Sapiente Beatae. <span class="card__price">£77,730</span></h3>
+    <p class="card__meta">NR. Otho Drive, Lake Clark, Buckinghamshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.017139" data-latitude="51.1267">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Consectetur Fugit Maiores In Quae Consectetur Itaque Eum. <span class="card__price">£42,907</span></h3>
+    <p class="card__meta">NR. Buckridge Harbor, North Kade, Borders</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.193125" data-latitude="51.0601">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Magni Voluptate Esse Ut Sed. <span class="card__price">£15,855</span></h3>
+    <p class="card__meta">NR. Charley Points, Port Adellechester, Cambridgeshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.639071" data-latitude="51.2495">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Aspernatur Similique In Amet Nobis. <span class="card__price">£5,901</span></h3>
+    <p class="card__meta">NR. Chance Mountains, New Nolamouth, Cambridgeshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="-1.01361" data-latitude="51.1073">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Magnam Quidem Saepe Sint Magnam Natus Amet. <span class="card__price">£34,927</span></h3>
+    <p class="card__meta">NR. Toy Lakes, Lake Grahammouth, Berkshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.403002" data-latitude="51.1196">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Molestias Ipsum Eveniet A Placeat. <span class="card__price">£55,132</span></h3>
+    <p class="card__meta">NR. Zackery Drive, Kirlinview, Borders</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.960194" data-latitude="51.2751">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Optio Assumenda Porro Quod Sit Incidunt. <span class="card__price">£3,758</span></h3>
+    <p class="card__meta">NR. Ratke Well, West Cortezton, Buckinghamshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.017139" data-latitude="51.1267">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Numquam Enim Ut Dignissimos Excepturi Consequatur Consectetur. <span class="card__price">£38,535</span></h3>
+    <p class="card__meta">NR. Blanda Lights, Port Marjoriemouth, Buckinghamshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.017139" data-latitude="51.1267">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Laboriosam Quos Eaque Sequi Sed Libero Aliquid. <span class="card__price">£5,206</span></h3>
+    <p class="card__meta">NR. Colleen Garden, Cameronshire, Berkshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.286227" data-latitude="51.1695">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Quo Consequatur Consequatur. <span class="card__price">£4,280</span></h3>
+    <p class="card__meta">NR. Reyes Way, Lavernshire, Avon</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.960194" data-latitude="51.2751">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Quos Autem Laboriosam Iste Ut Voluptatibus Veniam Eaque Est. <span class="card__price">£88,306</span></h3>
+    <p class="card__meta">NR. Frami Vista, Kuhnmouth, Berkshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.641774" data-latitude="51.0992">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Nostrum Hic Dolores Qui Vel Accusantium Tempora Ea Quos Exercitationem. <span class="card__price">£82,303</span></h3>
+    <p class="card__meta">NR. Hayley Gardens, Wavabury, Buckinghamshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.959027" data-latitude="51.2757">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Autem Odio Molestiae Quisquam Molestias Distinctio Amet Qui Temporibus Aperiam. <span class="card__price">£97,847</span></h3>
+    <p class="card__meta">NR. Cole Path, Loweberg, Buckinghamshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.1662" data-latitude="51.2371">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Libero Ea Minus Quia Dolorum At Illum Sit. <span class="card__price">£3,252</span></h3>
+    <p class="card__meta">NR. Kshlerin Knolls, Lake Grahamhaven, Berkshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.604271" data-latitude="51.2296">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Distinctio Dolorem Facilis Sequi Voluptas Repellat Aliquam Sequi Modi. <span class="card__price">£6,316</span></h3>
+    <p class="card__meta">NR. Huel Falls, Faustoland, Berkshire</p>
+    <p class="card__extra">About 5 ½ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="0.641774" data-latitude="51.0992">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Perspiciatis Sint Sit Ea Provident Ut. <span class="card__price">£88,308</span></h3>
+    <p class="card__meta">NR. Loma Turnpike, Howefurt, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.0121" data-latitude="51.22">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Omnis Voluptatem Dolorem Dignissimos Facere Doloremque Qui Quam Saepe Omnis. <span class="card__price">£26,909</span></h3>
+    <p class="card__meta">NR. Willie Place, Armanichester, Avon</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="1.01736" data-latitude="51.2169">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Nam Nam Corrupti Et Enim Qui. <span class="card__price">£95,033</span></h3>
+    <p class="card__meta">NR. Yundt Land, East Friedaport, Berkshire</p>
+    <p class="card__extra">About 3 ¼ acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+      <div class="card card--woodland card--woodland--map " data-longitude="-0.583575" data-latitude="50.853">
+      <div class="media">
+        <div class="media__content">
+            <img src="http://picsum.photos/400/225" alt="" title="" />
+        </div>
+    </div>
+
+  <div class="card__body">
+    <h3 class="card__title">Asperiores Nemo Rerum Maiores Voluptatem. <span class="card__price">£61,071</span></h3>
+    <p class="card__meta">NR. Sawayn Trace, South Rodrick, Cambridgeshire</p>
+    <p class="card__extra">Almost 4 acres</p>
+    <a href="page-woodland" class="card__more">See more details</a>
+  </div>
+</div>
+
+    </div>
+</section>
+
+
+                <button class="button button--inline button--inline--small button--green--dark button--left bottom">
+  <span>← Exit map view</span>
+</button>
+
+            </div>
+    </div>
+</section>
+
+    </div>
+</section>
+</main>
+
+
+
+    <script src="../../js/manifest.js"></script>
+    <script src="../../js/vendor.js"></script>
+    <script src="../../js/site.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+.cta {
+    @apply p-5;
+
+    .section & {
+        @apply py-3;
+    }
+
+    hr {
+        @apply my-4;
+    }
+
+    &__title {
+        @apply font-display leading-none text-3xl not-italic text-brand-red-dark font-bold mb-6;
+
+        @screen lg {
+            @apply text-4xl ml-6;
+        }
+    }
+
+    &__text {
+        @apply my-8 text-lg leading-tight;
+    }
+
+    &__items {
+        @apply flex flex-wrap items-start pt-4;
+    }
+
+    &__item {
+        @apply flex flex-row-reverse items-center w-full mb-6;
+
+        @screen md {
+            @apply mr-auto px-4;
+        }
+
+        &__title {
+            @apply text-base text-gray-dark font-bold uppercase mr-auto ml-5;
+
+            @screen md {
+                @apply mr-auto mt-4;
+            }
+        }
+    }
+
+    &--help {
+        @apply text-left bg-brand-yellow bg-no-repeat;
+
+        background-image: url(../images/question-mark.png);
+        background-position: 100% -15px;
+        background-size: 120px auto;
+
+        .cta__inner {
+            @apply max-w-xl mx-auto;
+
+            padding-top: 50px;
+        }
+
+        .managed-by {
+            @apply justify-start ml-0;
+        }
+
+        hr {
+            @apply border-gray-divider;
+        }
+
+        @screen md {
+            @apply text-center;
+
+            background-position: 50% -25px;
+            background-size: 150px auto;
+
+            .cta__inner {
+                padding-top: 80px;
+            }
+
+            .managed-by {
+                @apply justify-center ml-auto;
+            }
+        }
+    }
+}

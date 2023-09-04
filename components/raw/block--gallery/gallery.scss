@@ -1,0 +1,43 @@
+.gallery {
+    @apply relative;
+
+    &__list {
+        @apply mb-4;
+
+        > .gallery__item {
+            @apply hidden;
+
+            &:first-child {
+                @apply block;
+            }
+
+            &.tns-item {
+                @apply inline-block;
+            }
+        }
+    }
+
+    &__item {
+        @apply relative overflow-hidden;
+    }
+
+    &__description {
+        @apply absolute bottom-0 inset-x-0 m-0 px-2 py-4 text-center bg-white bg-opacity-75;
+    }
+
+    &__thumbnails {
+        @apply grid gap-4 grid-cols-2;
+
+        + .button {
+            @apply mt-4;
+        }
+
+        @screen sm {
+            @apply grid-cols-3;
+        }
+
+        @screen md {
+            @apply grid-cols-6;
+        }
+    }
+}

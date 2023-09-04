@@ -1,0 +1,39 @@
+.blog-comment {
+    @apply relative flex flex-col-reverse p-5 bg-gray-light rounded-md;
+
+    &__content.typography {
+        @apply mx-0 w-auto max-w-none;
+    }
+
+    & + & {
+        @apply mt-6;
+    }
+
+    &__meta {
+        @apply pb-2;
+
+        > * {
+            @apply inline-block;
+
+            &::before {
+                @apply inline-block align-middle mr-2 -mt-1 ml-1 rounded-full bg-brand-green-light;
+
+                content: '';
+                height: $dotSize;
+                width: $dotSize;
+            }
+
+            &:first-child::before {
+                @apply hidden;
+            }
+        }
+    }
+
+    &__author {
+        @apply text-gray-text text-xl;
+    }
+
+    &__date {
+        @apply uppercase text-brand-green-light;
+    }
+}

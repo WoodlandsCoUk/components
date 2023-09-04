@@ -1,0 +1,195 @@
+.form--search {
+    @apply relative max-w-none;
+
+    form {
+        @apply max-w-none w-full;
+    }
+
+    .form__inner {
+        @apply relative flex flex-wrap;
+    }
+
+    label {
+        @apply sr-only text-brand-green;
+    }
+
+    &__title {
+        @apply w-full text-center text-2xl font-display text-brand-green-dark mb-6;
+
+        @screen md {
+            @apply hidden;
+        }
+    }
+
+    .form__field {
+        @apply flex w-full mb-4 mt-0;
+
+        input,
+        select {
+            @apply w-full py-4 rounded-lg border-brand-green text-brand-green max-w-none text-lg font-body-italic;
+        }
+
+        ::placeholder {
+            @apply text-brand-green;
+        }
+
+        &--checkbox,
+        &--switch {
+            @apply justify-center w-auto mr-4;
+
+            @screen xs {
+                @apply mb-0;
+            }
+
+            label {
+                @apply not-sr-only pr-2;
+            }
+
+            input {
+                @apply w-6 h-6 p-0;
+            }
+        }
+    }
+
+    .button {
+        @apply my-0 w-auto flex-grow;
+
+        > * {
+            @apply w-full;
+        }
+
+        &--full {
+            @apply w-full;
+        }
+    }
+
+    html.js &[data-search] {
+        > form {
+            @apply hidden;
+        }
+
+        .button--close {
+            @apply absolute top-0 right-0 pr-4 text-brand-green text-6xl font-thin leading-none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @apply text-brand-green-light;
+            }
+        }
+
+        &.form--search--shown {
+            > form {
+                @apply fixed inset-0 flex items-baseline bg-white z-10 pt-header px-4;
+                @apply pt-12 z-50;
+
+                .form__inner {
+                    @apply pt-10;
+                }
+            }
+        }
+
+        @screen md {
+            &.form--search--shown > form,
+            > form {
+                @apply block relative inset-auto p-0;
+
+                .form__inner {
+                    @apply pt-0;
+                }
+            }
+
+            .button--close,
+            .button--toggle {
+                @apply hidden;
+            }
+        }
+    }
+
+    @screen sm {
+        @apply flex flex-wrap;
+
+        .form__field {
+            @apply w-1/2;
+
+            &:first-of-type input {
+                @apply mr-4;
+            }
+
+            &--checkbox,
+            &--switch {
+                @apply w-auto;
+
+                input {
+                    @apply mr-0;
+                }
+            }
+        }
+    }
+
+    @screen md {
+        .form__field {
+            @apply mb-0 w-auto flex-grow;
+
+            &--checkbox {
+                @apply ml-4 flex-grow-0;
+            }
+        }
+
+        .button {
+            @apply flex-grow;
+
+            max-width: 200px;
+        }
+    }
+
+    &--alt {
+        @apply bg-brand-green;
+
+        label {
+            @apply text-white;
+        }
+    }
+
+    &--simple {
+        @apply bg-brand-green py-6 px-3;
+
+        @screen xs {
+            @apply px-6;
+        }
+
+        .form__field {
+            @apply m-0 w-auto flex-grow;
+
+            .form-input {
+                @apply rounded-r-none border-0 m-0;
+            }
+
+            input {
+                @apply text-sm;
+            }
+
+            @screen xs {
+                input {
+                    @apply text-lg;
+                }
+
+                &:first-of-type .form-input {
+                    @apply mr-0;
+                }
+            }
+        }
+
+        .button {
+            margin-left: -1px;
+
+            > span {
+                @apply rounded-l-none px-3 border-2 border-transparent text-xs;
+
+                @screen xs {
+                    @apply text-base;
+                }
+            }
+        }
+    }
+}

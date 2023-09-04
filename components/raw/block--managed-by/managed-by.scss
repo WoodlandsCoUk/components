@@ -1,0 +1,51 @@
+.managed-by {
+    @apply relative py-3 text-left;
+
+    &__person {
+        @apply flex flex-row-reverse content-around items-center -mb-2;
+    }
+
+    &__title {
+        @apply mr-auto text-brand-green-light uppercase text-base font-normal;
+
+        strong {
+            @apply block normal-case text-brand-green font-normal text-xl;
+        }
+    }
+
+    &__avatar {
+        @apply mr-5 ml-0 w-24 h-24 overflow-hidden;
+
+        > img {
+            @apply block rounded-full w-24 h-24;
+        }
+    }
+
+    &__contact {
+        @apply mt-4 pt-3 border-t border-gray-divider text-lg text-brand-red;
+
+        &:first-of-type {
+            @apply border-t-0;
+        }
+
+        a {
+            @apply text-current truncate;
+        }
+    }
+
+    &__manager {
+        @apply relative;
+
+        .managed-by__title {
+            @apply text-brand-red;
+        }
+
+        .managed-by__contact {
+            @apply m-0 p-0 text-brand-green border-0;
+        }
+    }
+
+    &--manager {
+        @apply flex items-center justify-center max-w-md mx-auto;
+    }
+}

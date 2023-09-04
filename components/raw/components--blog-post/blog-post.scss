@@ -1,0 +1,53 @@
+.blog-post {
+    @apply relative;
+
+    &__title {
+        @apply text-brand-red text-2xl font-bold mb-3 leading-tight;
+    }
+
+    &__by {
+        @apply text-brand-green-light text-lg font-body-bold;
+    }
+
+    &__content.typography {
+        @apply mx-0 my-8 pt-8 w-auto max-w-none border-t border-gray-divider;
+    }
+
+    &__meta {
+        @apply text-brand-green-light;
+
+        a {
+            @apply text-current;
+        }
+
+        > * {
+            @apply inline-block;
+
+            &::before {
+                @apply mr-2 ml-1 text-gray-divider;
+
+                content: '|';
+            }
+
+            &:first-child::before {
+                @apply m-0;
+
+                content: '';
+            }
+        }
+    }
+
+    &__date {
+        //
+    }
+
+    &__tag {
+        //
+    }
+
+    // hacky fixup for the facebook widget
+    .fb_iframe_widget {
+        position: relative;
+        top: 8px;
+    }
+}

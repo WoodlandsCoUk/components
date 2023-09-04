@@ -1,0 +1,28 @@
+.woodland-maps {
+    h4 {
+        @apply text-brand-red mb-3 text-lg;
+    }
+
+    ul {
+        @apply mb-4;
+    }
+
+    li {
+        @apply mb-2 inline-block p-2 border-gray border;
+
+        img {
+            @apply block;
+        }
+    }
+
+    a,
+    button {
+        @apply block;
+    }
+
+    &__map {
+        @apply p-2 border-gray border;
+
+        height: 30rem;
+    }
+}

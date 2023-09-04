@@ -1,0 +1,121 @@
+.hero {
+    @apply relative bg-brand-yellow flex items-center justify-center text-center;
+
+    min-height: 200px;
+
+    @screen md {
+        @apply mt-0;
+    }
+
+    > h1 {
+        @apply font-display text-3xl leading-none text-brand-green-dark font-bold;
+
+        @screen sm {
+            @apply text-hero;
+        }
+
+        @screen md {
+            span {
+                &::before {
+                    @apply mr-2 text-xl align-middle text-brand-green-dark;
+
+                    content: '•';
+                }
+            }
+        }
+    }
+
+    &__extra {
+        @apply block text-brand-green-light font-body mt-1;
+
+        font-size: 1.75rem;
+
+        @screen sm {
+            font-size: 2.375rem;
+        }
+
+        @screen md {
+            @apply inline-block mt-0;
+        }
+    }
+
+    &--with-image {
+        @apply relative bg-center bg-no-repeat bg-cover;
+
+        > h1 {
+            @apply inline-block px-5 pt-5 pb-3 text-white bg-gray-dark bg-opacity-75;
+        }
+    }
+
+    &--intro {
+        @apply relative;
+
+        > .grid {
+            @apply w-full;
+
+            > .grid__inner {
+                @apply gap-0;
+            }
+        }
+
+        .hero__content {
+            @apply px-6 pt-10 pb-2 max-w-lg mx-auto text-center order-last;
+
+            @screen md {
+                @apply ml-0 text-left order-first;
+            }
+
+            @screen xl {
+                @apply pt-12 px-0 max-w-xl ml-0;
+            }
+
+            .map svg {
+                @apply mx-auto;
+            }
+        }
+
+        .hero__image {
+            @apply order-first max-h-hero overflow-hidden;
+
+            @screen md {
+                @apply block order-last max-h-full;
+            }
+
+            @screen xl {
+                margin-right: -20vw;
+            }
+
+            @screen 2xl {
+                margin-right: -25vw;
+            }
+
+            img {
+                @apply max-w-none h-full w-full object-cover;
+            }
+        }
+
+        .hero__title {
+            @apply mb-4 text-brand-red-dark font-display text-3xl leading-none;
+        }
+
+        .hero__text {
+            @apply absolute inset-x-0 px-4 font-body-semi-bold italic text-brand-green text-lg text-center;
+
+            @screen md {
+                @apply relative px-0 text-left;
+            }
+
+            @screen xl {
+                @apply text-xl;
+            }
+        }
+    }
+
+    .map--svg {
+        @apply mt-8;
+
+        path.disabled {
+            @apply text-brand-yellow-light;
+        }
+    }
+}

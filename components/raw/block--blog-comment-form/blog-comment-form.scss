@@ -1,0 +1,47 @@
+.form--blog-comment {
+    @apply relative max-w-none;
+
+    .grid__inner {
+        @apply gap-0;
+
+        @screen md {
+            @apply gap-4;
+        }
+    }
+
+    .form__field {
+        @apply mb-4 mt-0;
+    }
+
+    .form__label {
+        @apply block text-xl pb-1 text-brand-green-dark w-auto text-left;
+
+        @screen md {
+            &[for="form__comment__comment"] {
+                @apply sr-only;
+            }
+        }
+
+        small {
+            @apply text-xs;
+        }
+    }
+
+    .form-input,
+    .form-textarea {
+        @apply w-full;
+    }
+
+    .form-textarea {
+        min-height: 200px;
+        max-height: 600px;
+    }
+
+    .button {
+        @apply mt-0;
+
+        > span {
+            @apply ml-0;
+        }
+    }
+}
