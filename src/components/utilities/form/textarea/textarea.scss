@@ -1,0 +1,14 @@
+.form__field {
+    .form__textarea {
+        @apply w-full;
+
+        min-height: 200px;
+        max-height: 600px;
+    }
+
+    .form__label {
+        small {
+            @apply text-xs;
+        }
+    }
+}
