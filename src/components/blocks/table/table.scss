@@ -1,5 +1,5 @@
 table {
     th {
-        padding-right: 1em;
+        @apply pl-4 text-right;
     }
 }
