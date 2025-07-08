@@ -1,7 +1,5 @@
 table {
-    tr {
-        &:nth-child(even) {
-            @apply bg-brand-yellow;
-        }
+    th {
+        padding-right: 1em;
     }
 }

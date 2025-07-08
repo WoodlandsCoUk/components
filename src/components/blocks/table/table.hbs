@@ -1,10 +1,10 @@
 <table>
     <tr>
-        <th></th>
+        <th>Wood name</th>
+        <th>Price</th>
+        <th>Description</th>
     </tr>
     {{#each rows }}
-    <tr>
-        <td>row</td>
-    </tr>
+        {{ render '@tablerow' this merge=true }}
     {{/each}}
 </table>
