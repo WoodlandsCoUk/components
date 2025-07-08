@@ -170,11 +170,25 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-3447708558f0c529f47c961fbf19ae79-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></pre>
+        <pre><span class="hljs-comment">&lt;!-- Error rendering component --&gt;</span>
+<span class="hljs-comment">&lt;!-- Could not render component &#x27;tablerow&#x27; - component not found. --&gt;</span>
+<span class="hljs-comment">&lt;!-- Error: Could not render component &#x27;tablerow&#x27; - component not found.
+    at Object.render (/home/runner/work/components/components/node_modules/@frctl/handlebars/src/helpers/render.js:23:19)
+    at Object.helperWrapper (/home/runner/work/components/components/node_modules/promised-handlebars/index.js:130:23)
+    at Object.&lt;anonymous&gt; (/home/runner/work/components/components/node_modules/promised-handlebars/lib/utils.js:29:28)
+    at Object.wrapper (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), &lt;anonymous&gt;:11:145)
+    at prog (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/runtime.js:268:12)
+    at prepareAndResolveMarkers (/home/runner/work/components/components/node_modules/promised-handlebars/index.js:92:17)
+    at /home/runner/work/components/components/node_modules/promised-handlebars/lib/utils.js:29:28
+    at execIteration (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js:51:19)
+    at Object.&lt;anonymous&gt; (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js:61:13)
+    at Object.helperWrapper (/home/runner/work/components/components/node_modules/promised-handlebars/index.js:130:23)
+    at Object.&lt;anonymous&gt; (/home/runner/work/components/components/node_modules/promised-handlebars/lib/utils.js:29:28)
+    at Object.wrapper (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), &lt;anonymous&gt;:11:49)
+    at main (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/runtime.js:208:32)
+    at ret (/home/runner/work/components/components/node_modules/handlebars/dist/cjs/handlebars/runtime.js:212:12) --&gt;</span></pre>
         
     </code>
 </div>
@@ -187,8 +201,9 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> rows }}</span><span class="xml">
+        </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;tablerow&#x27;</span> this <span class="hljs-attr">merge</span>=<span class="hljs-literal">true</span> }}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>manual row<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
     </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></pre>
@@ -1029,6 +1044,32 @@
 
 
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tablerow.html" data-role="tree-link" data-pjax data-handle="tablerow">
+                <span>Tablerow</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -2267,7 +2308,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2025-07-08T13:00:00.734Z">
+                            <time datetime="2025-07-08T13:30:58.829Z">
                                 7/8/2025
                             </time>
                         
@@ -4598,6 +4639,8 @@
 </div>
 
             </div>
+        
+    
         
     
         
