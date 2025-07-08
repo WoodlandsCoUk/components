@@ -1,4 +1,6 @@
 tr {
+    @apply pr-4;
+
     &:nth-child(even) {
         @apply bg-brand-yellow;
     }
