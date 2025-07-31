@@ -29,7 +29,7 @@
   "dependencies": {
     "@frctl/fractal": "^1.5.2",
     "accordion-js": "^2.8.0",
-    "alpinejs": "^2.8.0",
+    "alpinejs": "^3.14.9",
     "cross-env": "^7.0.3",
     "deepmerge": "^4.2.2",
     "dotenv-webpack": "^2.0.0",
