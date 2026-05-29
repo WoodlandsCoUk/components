@@ -75,3 +75,21 @@ The path to the files are;
 ```
 node_modules/woodlands-co-uk-components/public
 ```
+
+## System config
+
+If you see this error:
+
+```
+ENOSPC: System limit for number of file watchers reached
+```
+
+then do this:
+
+```
+# Add to /etc/sysctl.conf
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+
+# Apply changes
+sudo sysctl -p
+```
