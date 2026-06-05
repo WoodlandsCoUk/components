@@ -1,0 +1,9 @@
+<div class="{{modifier 'gallery' modifiers}}">
+    <ul class="gallery__thumbnails" id="sortable_example">
+      {{#each gallery }}
+        <li class="gallery__item">
+            {{ render '@media' this merge=true }}
+        </li>
+      {{/each}}
+    </ul>
+</div>
