@@ -1,4 +1,7 @@
 import Sortable from 'sortablejs'
 
-var el = document.getElementById('sortable_gallery')
-Sortable.create(el)
+const sortableGalleries = document.querySelectorAll('.gallery__sortable')
+
+sortableGalleries.forEach((sortableGallery) => {
+  Sortable.create(sortableGallery)
+})
